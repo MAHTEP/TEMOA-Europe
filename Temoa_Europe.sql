@@ -1144,21 +1144,16 @@ insert into "technologies" values ('TRA_ROA_2WH_ELC_N','p','TRA','Transport - Tw
 insert into "technologies" values ('TRA_ROA_3WH_GSL_N','p','TRA','Transport - Three-wheelers - Gasoline - New','');
 insert into "technologies" values ('TRA_ROA_3WH_DST_N','p','TRA','Transport - Three-wheelers - Diesel - New','');
 insert into "technologies" values ('TRA_ROA_3WH_ELC_N','p','TRA','Transport - Three-wheelers - Full-electric - New','');
-
 insert into "technologies" values ('TRA_AVI_INT_JTK_N','p','TRA','Transport - International Aviation - Jet kerosene - New','');
 insert into "technologies" values ('TRA_AVI_INT_LH2_N','p','TRA','Transport - International Aviation - Liquid hydrogen - New','');
-
 insert into "technologies" values ('TRA_AVI_DOM_JTK_N','p','TRA','Transport - Domestic Aviation - Jet kerosene - New','');
 insert into "technologies" values ('TRA_AVI_DOM_LH2_N','p','TRA','Transport - Domestic Aviation - Liquid hydrogen - New','');
-
 insert into "technologies" values ('TRA_RAIL_PAS_DST_N','p','TRA','Transport - Passenger Trains - Diesel - New','');
 insert into "technologies" values ('TRA_RAIL_PAS_ELC_N','p','TRA','Transport - Passenger Trains - Electric - New','');
 insert into "technologies" values ('TRA_RAIL_PAS_GH2_N','p','TRA','Transport - Passenger Trains - Hydrogen - New','');
-
 insert into "technologies" values ('TRA_RAIL_FRG_DST_N','p','TRA','Transport - Freight Trains - Diesel - New','');
 insert into "technologies" values ('TRA_RAIL_FRG_ELC_N','p','TRA','Transport - Freight Trains - Electric - New','');
 insert into "technologies" values ('TRA_RAIL_FRG_GH2','p','TRA','Transport - Freight Trains - Hydrogen mainline - New','');
-
 insert into "technologies" values ('TRA_NAV_DOM_DST_N','p','TRA','Transport - Domestic Navigation - Diesel - New','');
 insert into "technologies" values ('TRA_NAV_DOM_LNG_N','p','TRA','Transport - Domestic Navigation - LNG - New','');
 insert into "technologies" values ('TRA_NAV_DOM_DUAL_N','p','TRA','Transport - Domestic Navigation - Dual fuel - New','');
@@ -1166,7 +1161,6 @@ insert into "technologies" values ('TRA_NAV_DOM_AMM_N','p','TRA','Transport - Do
 insert into "technologies" values ('TRA_NAV_DOM_MTH_N','p','TRA','Transport - Domestic Navigation - Methanol - New','');
 insert into "technologies" values ('TRA_NAV_DOM_LH2_N','p','TRA','Transport - Domestic Navigation - Liquid hydrogen - New','');
 insert into "technologies" values ('TRA_NAV_DOM_AMM_FCE_N','p','TRA','Transport - Domestic Navigation - Ammonia fuel cell - New','');
-
 insert into "technologies" values ('TRA_NAV_INT_HFO_N','p','TRA','Transport - International Navigation - Heavy fuel oil - New','');
 insert into "technologies" values ('TRA_NAV_INT_LNG_N','p','TRA','Transport - International Navigation - LNG - New','');
 insert into "technologies" values ('TRA_NAV_INT_AMM_N','p','TRA','Transport - International Navigation - Ammonia - New','');
@@ -13790,15 +13784,7 @@ create TABLE "EmissionLimit" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("emis_comm") REFERENCES "commodities"("comm_name")
 );
-INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2',2.25E+06,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2',1.50E+06,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2',7.50E+05,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2',0.00E+00,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2060,'TOT_CO2',0.00E+00,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2070,'TOT_CO2',0.00E+00,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2080,'TOT_CO2',0.00E+00,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2090,'TOT_CO2',0.00E+00,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2100,'TOT_CO2',0.00E+00,'','');
+
 
 create TABLE "EmissionActivity" (
 	"regions"	text,
@@ -14128,16 +14114,16 @@ insert into "CapacityCredit" values ('EUR',2010,'ELC_SOL_CSP_4_N',2010,0.85,'');
 --insert into "CapacityCredit" values ('EUR',2010,'ELC_SOL_CSP_3_N',2010,0.30,''); -- Values from Scen_BASEextra
 --insert into "CapacityCredit" values ('EUR',2010,'ELC_SOL_CSP_4_N',2010,0.30,''); -- Values from Scen_BASEextra
 
-insert into "CapacityCredit" values ('EUR',2010,'ELC_HYD_DAM_HIG_N',2010,0.75,'');
-insert into "CapacityCredit" values ('EUR',2010,'ELC_HYD_RUN_N',2010,0.75,'');
-
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_1_N',2010,0.29,'');
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_2_N',2010,0.29,'');
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_3_N',2010,0.29,'');
-
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_1_N',2010,0.29,'');
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_2_N',2010,0.29,'');
-insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_3_N',2010,0.29,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_HYD_DAM_HIG_N',2010,0.75,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_HYD_RUN_N',2010,0.75,'');
+----
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_1_N',2010,0.29,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_2_N',2010,0.29,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_CEN_3_N',2010,0.29,'');
+----
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_1_N',2010,0.29,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_2_N',2010,0.29,'');
+----insert into "CapacityCredit" values ('EUR',2010,'ELC_WIN_ON_DEC_3_N',2010,0.29,'');
 
 create TABLE "Output_V_Capacity" (
 	"regions"	text,
@@ -17855,68 +17841,68 @@ create table "MinActivity" (
 --INSERT INTO "MinActivity" values ('EUR',2020,'TRA_AVI_DOM_E',0.8*0.000*1.596,'','');
 --INSERT INTO "MinActivity" values ('EUR',2010,'TRA_AVI_INT_E',0.8*0.900*11.086,'','');
 --INSERT INTO "MinActivity" values ('EUR',2020,'TRA_AVI_INT_E',0.8*0.000*11.086,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_GSL_E',0.8*0.900*1.456,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_DST_E',0.8*0.900*34.830,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_NGA_E',0.8*0.900*0.728,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_BIO_E',0.8*0.900*0.371,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_GSL_E',0.8*0.900*1.456,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_DST_E',0.8*0.900*34.830,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_NGA_E',0.8*0.900*0.728,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_BUS_BIO_E',0.8*0.900*0.371,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_GSL_E',0.8*0.900*790.974,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_DST_E',0.8*0.900*342.192,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_LPG_E',0.8*0.900*25.276,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_NGA_E',0.8*0.900*3.364,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_ELC_E',0.8*0.900*0.005,'','');
 INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_CAR_BIO_E',0.8*0.900*8.653,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_GSL_E',0.8*0.900*361.110,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_DST_E',0.8*0.900*77.011,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_LPG_E',0.8*0.900*8.796,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_NGA_E',0.8*0.900*0.178,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_ELC_E',0.8*0.900*0.003,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_BIO_E',0.8*0.900*15.312,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_GSL_E',0.8*0.900*179.866,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_DST_E',0.8*0.900*0.118,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_BIO_E',0.8*0.900*0.239,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_GSL_E',0.8*0.900*29.459,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_DST_E',0.8*0.900*115.030,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_LPG_E',0.8*0.900*4.020,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_BIO_E',0.8*0.900*0.507,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_GSL_E',0.8*0.900*1.217,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_DST_E',0.8*0.900*138.546,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_LPG_E',0.8*0.900*1.217,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_NGA_E',0.8*0.900*0.007,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_BIO_E',0.8*0.900*0.312,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MCY_GSL_E',0.8*0.900*18.112,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MOP_GSL_E',0.8*0.900*2.875,'','');
---INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_3WH_GSL_E',0.8*0.900*8.600,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_GSL_E',0.8*0.000*1.456,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_DST_E',0.8*0.000*34.830,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_NGA_E',0.8*0.000*0.728,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_BIO_E',0.8*0.000*0.371,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_GSL_E',0.8*0.900*361.110,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_DST_E',0.8*0.900*77.011,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_LPG_E',0.8*0.900*8.796,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_NGA_E',0.8*0.900*0.178,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_ELC_E',0.8*0.900*0.003,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LTR_BIO_E',0.8*0.900*15.312,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_GSL_E',0.8*0.900*179.866,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_DST_E',0.8*0.900*0.118,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_HTR_BIO_E',0.8*0.900*0.239,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_GSL_E',0.8*0.900*29.459,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_DST_E',0.8*0.900*115.030,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_LPG_E',0.8*0.900*4.020,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_LCV_BIO_E',0.8*0.900*0.507,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_GSL_E',0.8*0.900*1.217,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_DST_E',0.8*0.900*138.546,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_LPG_E',0.8*0.900*1.217,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_NGA_E',0.8*0.900*0.007,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MTR_BIO_E',0.8*0.900*0.312,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MCY_GSL_E',0.8*0.900*18.112,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_MOP_GSL_E',0.8*0.900*2.875,'','');
+INSERT INTO "MinActivity" values ('EUR',2010,'TRA_ROA_3WH_GSL_E',0.8*0.900*8.600,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_GSL_E',0.8*0.000*1.456,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_DST_E',0.8*0.000*34.830,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_NGA_E',0.8*0.000*0.728,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_BUS_BIO_E',0.8*0.000*0.371,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_GSL_E',0.8*0.000*790.974,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_DST_E',0.8*0.000*342.192,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_LPG_E',0.8*0.000*25.276,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_NGA_E',0.8*0.000*3.364,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_ELC_E',0.8*0.000*0.005,'','');
 INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_BIO_E',0.8*0.000*8.653,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_GSL_E',0.8*0.000*361.110,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_DST_E',0.8*0.000*77.011,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_LPG_E',0.8*0.000*8.796,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_NGA_E',0.8*0.000*0.178,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_ELC_E',0.8*0.000*0.003,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_BIO_E',0.8*0.000*15.312,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_GSL_E',0.8*0.000*179.866,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_DST_E',0.8*0.000*0.118,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_BIO_E',0.8*0.000*0.239,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_GSL_E',0.8*0.000*29.459,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_DST_E',0.8*0.000*115.030,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_LPG_E',0.8*0.000*4.020,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_BIO_E',0.8*0.000*0.507,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_GSL_E',0.8*0.000*1.217,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_DST_E',0.8*0.000*138.546,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_LPG_E',0.8*0.000*1.217,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_NGA_E',0.8*0.000*0.007,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_BIO_E',0.8*0.000*0.312,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MCY_GSL_E',0.8*0.000*18.112,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MOP_GSL_E',0.8*0.000*2.875,'','');
---INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_3WH_GSL_E',0.8*0.000*8.600,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_GSL_E',0.8*0.000*361.110,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_DST_E',0.8*0.000*77.011,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_LPG_E',0.8*0.000*8.796,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_NGA_E',0.8*0.000*0.178,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_ELC_E',0.8*0.000*0.003,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LTR_BIO_E',0.8*0.000*15.312,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_GSL_E',0.8*0.000*179.866,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_DST_E',0.8*0.000*0.118,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_HTR_BIO_E',0.8*0.000*0.239,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_GSL_E',0.8*0.000*29.459,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_DST_E',0.8*0.000*115.030,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_LPG_E',0.8*0.000*4.020,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_LCV_BIO_E',0.8*0.000*0.507,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_GSL_E',0.8*0.000*1.217,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_DST_E',0.8*0.000*138.546,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_LPG_E',0.8*0.000*1.217,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_NGA_E',0.8*0.000*0.007,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MTR_BIO_E',0.8*0.000*0.312,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MCY_GSL_E',0.8*0.000*18.112,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_MOP_GSL_E',0.8*0.000*2.875,'','');
+INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_3WH_GSL_E',0.8*0.000*8.600,'','');
 
 --INSERT INTO "MinActivity" values ('EUR',2010,'IND_AUT_ELC_E',0.8*0.900*0.016,'','');
 --INSERT INTO "MinActivity" values ('EUR',2010,'IND_AUT_ELC_NGA_E',0.8*0.900*1.262,'','');
@@ -18142,378 +18128,5 @@ INSERT INTO "MinActivity" values ('EUR',2020,'TRA_ROA_CAR_BIO_E',0.8*0.000*8.653
 --INSERT INTO "MinActivity" values ('EUR',2040,'IND_OTH_OTH_GEO_E',0.8*0.000*1.810,'','');
 --INSERT INTO "MinActivity" values ('EUR',2040,'IND_OTH_OTH_BIO_E',0.8*0.000*39.880,'','');
 --INSERT INTO "MinActivity" values ('EUR',2040,'IND_OTH_OTH_LTH_E',0.8*0.000*193.330,'','');
-
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_COA_E','ELC_FOSSIL_GRP',0.553,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_PUL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_CCO_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_PFB_N','ELC_FOSSIL_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_CCO_IG_CCS_N','ELC_FOSSIL_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_CCO_FG_CCS_N','ELC_FOSSIL_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_COA_PUL_FG_CCS_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_COA_N','ELC_FOSSIL_GRP',0.526,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NGA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_NGA_E','ELC_FOSSIL_GRP',0.478,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_NGA_N','ELC_FOSSIL_GRP',0.588,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NGA_FG_CCS_N','ELC_FOSSIL_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NGA_SOFC_CCS_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NGA_CCY_ADV_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NGA_FCE_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_OIL_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_OIL_E','ELC_FOSSIL_GRP',0.482,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_OIL_MIX_TUR_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_OIL_MIX_CCY_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_OIL_GBL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_OIL_GPL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_HYD_CONV_E','ELC_HYD_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_HYD_PUM_E','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_HYD_DAM_HIG_N','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_HYD_RUN_N','ELC_HYD_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_HYD_PUM_N','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_E','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_LWR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADV_LWR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_FR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ABR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADS_TRU_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADS_MA_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_BIO_E','ELC_BIO_GRP',0.389,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_E','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_GSF_CEN_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_COM_CEN_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_GSF_DEC_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_COM_DEC_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_GAS_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_GSF_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_COM_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BMU_INC_N','ELC_BIO_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_GSF_CCS_N','ELC_BIO_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_COM_CCS_N','ELC_BIO_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_GSF_CCS_N','ELC_BIO_GRP',1.0,'');
---INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_COM_CCS_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_BIO_N','ELC_BIO_GRP',0.276,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_CHP_GEO_E','ELC_GEO_GRP',0.316,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_GEO_E','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_GEO_FLS_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_GEO_BNY_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_GEO_BNY_HIG_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_E','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_1_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_2_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_3_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_1_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_2_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_3_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_WIN_OFF_N','ELC_WIN_OFF_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_E','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_CEN_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_DEC_1_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_DEC_2_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_1_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_2_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_3_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_4_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_MAR_WAV_N','ELC_MAR_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_MAR_TDL_N','ELC_MAR_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FUS_EU_N','ELC_NUC_FUS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FUS_AS_N','ELC_NUC_FUS_GRP',1.0,'');
-INSERT INTO "MaxGenGroupWeight" VALUES ('EUR','ELC_NUC_FUS_ARC_N','ELC_NUC_FUS_GRP',1.0,'');
-
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_FOSSIL_GRP',7190.0,'(PJ)'); -- 475.26*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_FOSSIL_GRP',7520.0,'(PJ)'); -- 496.84*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_FOSSIL_GRP',7850.0,'(PJ)'); -- 518.42*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_FOSSIL_GRP',8170.0,'(PJ)'); -- 540.00*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_FOSSIL_GRP',8500.0,'(PJ)'); -- 561.58*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_FOSSIL_GRP',8830.0,'(PJ)'); -- 583.17*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_FOSSIL_GRP',9150.0,'(PJ)'); -- 604.75*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_FOSSIL_GRP',9810.0,'(PJ)'); -- 647.91*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_FOSSIL_GRP',10500.0,'(PJ)'); -- 691.08*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_FOSSIL_GRP',11100.0,'(PJ)'); -- 734.24*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_FOSSIL_GRP',11800.0,'(PJ)'); -- 777.40*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_FOSSIL_GRP',12400.0,'(PJ)'); -- 820.57*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_FOSSIL_GRP',13100.0,'(PJ)'); -- 863.73*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_HYD_GRP',2320.0,'(PJ)'); -- 162.83*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_HYD_GRP',2390.0,'(PJ)'); -- 168.14*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_HYD_GRP',2460.0,'(PJ)'); -- 173.62*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_HYD_GRP',2540.0,'(PJ)'); -- 179.28*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_HYD_GRP',2630.0,'(PJ)'); -- 185.13*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_HYD_GRP',2710.0,'(PJ)'); -- 191.16*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_HYD_GRP',2800.0,'(PJ)'); -- 197.40*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_HYD_GRP',2990.0,'(PJ)'); -- 210.48*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_HYD_GRP',3180.0,'(PJ)'); -- 224.43*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_HYD_GRP',3400.0,'(PJ)'); -- 239.30*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_HYD_GRP',3620.0,'(PJ)'); -- 255.16*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_HYD_GRP',3860.0,'(PJ)'); -- 272.07*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_HYD_GRP',4120.0,'(PJ)'); -- 290.09*0.45*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_NUC_FIS_GRP',3650.0,'(PJ)'); -- 129.99*0.89*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_NUC_FIS_GRP',3450.0,'(PJ)'); -- 124.30*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
---INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_NUC_FIS_GRP',3330.0,'(PJ)'); -- 118.60*0.89*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_NUC_FIS_GRP',112.91*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_NUC_FIS_GRP',107.21*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_NUC_FIS_GRP',101.52*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_NUC_FIS_GRP',95.82*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_NUC_FIS_GRP',84.44*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_NUC_FIS_GRP',73.05*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_NUC_FIS_GRP',61.66*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_NUC_FIS_GRP',50.27*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_NUC_FIS_GRP',38.88*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_NUC_FIS_GRP',27.49*0.89*31.536,'(PJ)');
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_BIO_GRP',515.0,'(PJ)'); -- 29.67*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_BIO_GRP',690.0,'(PJ)'); -- 39.86*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_BIO_GRP',868.0,'(PJ)'); -- 50.06*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_BIO_GRP',1050.0,'(PJ)'); -- 60.26*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_BIO_GRP',1220.0,'(PJ)'); -- 70.45*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_BIO_GRP',1400.0,'(PJ)'); -- 80.65*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_BIO_GRP',1580.0,'(PJ)'); -- 90.84*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_BIO_GRP',1930.0,'(PJ)'); -- 111.24*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_BIO_GRP',2280.0,'(PJ)'); -- 131.63*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_BIO_GRP',2640.0,'(PJ)'); -- 152.02*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_BIO_GRP',2990.0,'(PJ)'); -- 172.41*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_BIO_GRP',3340.0,'(PJ)'); -- 192.81*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_BIO_GRP',3700.0,'(PJ)'); -- 213.20*0.55*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_GEO_GRP',44.0,'(PJ)'); -- 1.66*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_GEO_GRP',60.1,'(PJ)'); -- 2.27*0.48*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_GEO_GRP',76.3,'(PJ)'); -- 2.88*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_GEO_GRP',92.5,'(PJ)'); -- 3.49*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_GEO_GRP',109.0,'(PJ)'); -- 4.10*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_GEO_GRP',125.0,'(PJ)'); -- 4.70*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_GEO_GRP',141.0,'(PJ)'); -- 5.31*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_GEO_GRP',173.0,'(PJ)'); -- 6.53*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_GEO_GRP',205.0,'(PJ)'); -- 7.74*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_GEO_GRP',237.0,'(PJ)'); -- 8.96*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_GEO_GRP',270.0,'(PJ)'); -- 10.18*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_GEO_GRP',302.0,'(PJ)'); -- 11.39*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_GEO_GRP',334.0,'(PJ)'); -- 12.61*0.84*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_WIN_ON_GRP',520.7,'(PJ)'); -- 78.63*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_WIN_ON_GRP',969.4,'(PJ)'); -- 146.37*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_WIN_ON_GRP',1570.0,'(PJ)'); -- 236.60*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_WIN_ON_GRP',2190.0,'(PJ)'); -- 330.74*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_WIN_ON_GRP',2640.0,'(PJ)'); -- 398.12*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_WIN_ON_GRP',2740.0,'(PJ)'); -- 413.35*0.21*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_WIN_OFF_GRP',0.0,'(PJ)'); -- 0.00*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_WIN_OFF_GRP',106.6,'(PJ)'); -- 9.39*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_WIN_OFF_GRP',296.0,'(PJ)'); -- 26.05*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_WIN_OFF_GRP',669.0,'(PJ)'); -- 58.90*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_WIN_OFF_GRP',1140.0,'(PJ)'); -- 100.65*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_WIN_OFF_GRP',1620.0,'(PJ)'); -- 142.96*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_WIN_OFF_GRP',1900.0,'(PJ)'); -- 167.57*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_WIN_OFF_GRP',1920.0,'(PJ)'); -- 168.92*0.36*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_SOL_PV_GRP',116.0,'(PJ)'); -- 36.82*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_SOL_PV_GRP',264.0,'(PJ)'); -- 83.80*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_SOL_PV_GRP',602.0,'(PJ)'); -- 190.75*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_SOL_PV_GRP',1330.0,'(PJ)'); -- 420.23*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_SOL_PV_GRP',2560.0,'(PJ)'); -- 810.74*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_SOL_PV_GRP',4280.0,'(PJ)'); -- 1357.09*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_SOL_PV_GRP',6190.0,'(PJ)'); -- 1962.77*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_SOL_PV_GRP',8200.0,'(PJ)'); -- 2601.51*0.10*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_SOL_CSP_GRP',0.0,'(PJ)'); -- 0*0.25*31.536,'
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_SOL_CSP_GRP',18.2,'(PJ)'); -- 2.31*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_SOL_CSP_GRP',18.3,'(PJ)'); -- 2.32*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_SOL_CSP_GRP',18.4,'(PJ)'); -- 2.33*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_SOL_CSP_GRP',18.4,'(PJ)'); -- 2.34*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_SOL_CSP_GRP',18.4,'(PJ)'); -- 2.34*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_SOL_CSP_GRP',18.5,'(PJ)'); -- 2.35*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_SOL_CSP_GRP',18.7,'(PJ)'); -- 2.37*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_SOL_CSP_GRP',18.8,'(PJ)'); -- 2.38*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_SOL_CSP_GRP',18.9,'(PJ)'); -- 2.40*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_SOL_CSP_GRP',19.1,'(PJ)'); -- 2.42*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_SOL_CSP_GRP',19.2,'(PJ)'); -- 2.43*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_SOL_CSP_GRP',19.3,'(PJ)'); -- 2.45*0.25*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2010,'ELC_MAR_GRP',0.0,'(PJ)'); -- 0.00*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2015,'ELC_MAR_GRP',2.27,'(PJ)'); -- 1.20*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2020,'ELC_MAR_GRP',2.5,'(PJ)'); -- 1.32*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2025,'ELC_MAR_GRP',2.74,'(PJ)'); -- 1.45*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2030,'ELC_MAR_GRP',2.97,'(PJ)'); -- 1.57*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_MAR_GRP',3.22,'(PJ)'); -- 1.70*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_MAR_GRP',3.46,'(PJ)'); -- 1.83*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_MAR_GRP',3.94,'(PJ)'); -- 2.08*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_MAR_GRP',4.41,'(PJ)'); -- 2.33*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_MAR_GRP',4.88,'(PJ)'); -- 2.58*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_MAR_GRP',5.35,'(PJ)'); -- 2.83*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_MAR_GRP',5.83,'(PJ)'); -- 3.08*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_MAR_GRP',6.3,'(PJ)'); -- 3.33*0.06*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2035,'ELC_NUC_FUS_GRP',2.65/5,'(PJ)'); -- 0.12*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2040,'ELC_NUC_FUS_GRP',33.8/5,'(PJ)'); -- 1.53*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2050,'ELC_NUC_FUS_GRP',3590.0/5,'(PJ)'); -- 162.73*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2060,'ELC_NUC_FUS_GRP',11700.0/5,'(PJ)'); -- 528.26*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2070,'ELC_NUC_FUS_GRP',19700.0/5,'(PJ)'); -- 893.79*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2080,'ELC_NUC_FUS_GRP',27800.0/5,'(PJ)'); -- 1259.32*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2090,'ELC_NUC_FUS_GRP',35900.0/5,'(PJ)'); -- 1624.71*0.70*31.536
-INSERT INTO "MaxGenGroupLimit" VALUES (2100,'ELC_NUC_FUS_GRP',43400.0/5,'(PJ)'); -- 1967.44*0.70*31.536
-
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_COA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_COA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_COA_PUL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_COA_CCO_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_COA_PFB_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_COA_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NGA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_NGA_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_NGA_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NGA_CCY_ADV_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NGA_FCE_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_OIL_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_OIL_E','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_OIL_MIX_TUR_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_OIL_MIX_CCY_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_OIL_GBL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_OIL_GPL_N','ELC_FOSSIL_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_HYD_CONV_E','ELC_HYD_GRP',1.0,'');
---INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_HYD_PUM_E','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_HYD_DAM_HIG_N','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_HYD_RUN_N','ELC_HYD_GRP',1.0,'');
---INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_HYD_PUM_N','ELC_HYD_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_E','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_LWR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADV_LWR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_FR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ABR_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADS_TRU_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_NUC_FIS_ADS_MA_N','ELC_NUC_FIS_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_BIO_E','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_E','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_GSF_CEN_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_COM_CEN_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_GSF_DEC_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_SLD_COM_DEC_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_GAS_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_GSF_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BIO_CRP_COM_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_BMU_INC_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_BIO_N','ELC_BIO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_CHP_GEO_E','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_GEO_E','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_GEO_FLS_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_GEO_BNY_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_GEO_BNY_HIG_N','ELC_GEO_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_E','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_1_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_2_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_CEN_3_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_1_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_2_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_ON_DEC_3_N','ELC_WIN_ON_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_WIN_OFF_N','ELC_WIN_OFF_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_E','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_CEN_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_DEC_1_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_PV_DEC_2_N','ELC_SOL_PV_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_1_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_2_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_3_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_SOL_CSP_4_N','ELC_SOL_CSP_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_MAR_WAV_N','ELC_MAR_GRP',1.0,'');
-INSERT INTO "MinGenGroupWeight" VALUES ('EUR','ELC_MAR_TDL_N','ELC_MAR_GRP',1.0,'');
-
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_FOSSIL_GRP',5752.0,''); -- 475.26*0.48*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_FOSSIL_GRP',6016.0,''); -- 496.84*0.48*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_FOSSIL_GRP',6280.0,''); -- 518.42*0.48*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_FOSSIL_GRP',0.0,''); -- 540.00*0.48*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_HYD_GRP',1856.0,''); -- 162.83*0.45*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_HYD_GRP',1912.0,''); -- 168.14*0.45*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_HYD_GRP',1968.0,''); -- 173.62*0.45*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_HYD_GRP',0.0,''); -- 179.28*0.45*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_NUC_FIS_GRP',2920.0,''); -- 129.99*0.89*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_NUC_FIS_GRP',2760.0,''); -- 124.30*0.89*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_NUC_FIS_GRP',2664.0,''); -- 118.60*0.89*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_NUC_FIS_GRP',0.0,''); -- 118.60*0.89*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_BIO_GRP',412.0,''); -- 29.67*0.55*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_BIO_GRP',552.0,''); -- 39.86*0.55*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_BIO_GRP',694.4,''); -- 50.06*0.55*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_BIO_GRP',0.0,''); -- 60.26*0.55*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_GEO_GRP',35.2,''); -- 1.66*0.84*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_GEO_GRP',48.1,''); -- 2.27*0.84*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_GEO_GRP',61.0,''); -- 2.88*0.84*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_GEO_GRP',0.0,''); -- 3.49*0.84*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_WIN_ON_GRP',416.6,''); -- 78.63*0.21*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_WIN_ON_GRP',775.4,''); -- 146.37*0.21*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_WIN_ON_GRP',1256.0,''); -- 236.60*0.21*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_WIN_ON_GRP',0.0,''); -- 330.74*0.21*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_WIN_OFF_GRP',0.0,''); -- 0.00*0.36*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_WIN_OFF_GRP',85.3,''); -- 9.39*0.36*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_WIN_OFF_GRP',236.8,''); -- 26.05*0.36*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_WIN_OFF_GRP',0.0,''); -- 58.90*0.36*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_SOL_PV_GRP',92.8,''); -- 36.82*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_SOL_PV_GRP',211.2,''); -- 83.80*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_SOL_PV_GRP',481.6,''); -- 190.75*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_SOL_PV_GRP',0.0,''); -- 420.23*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_SOL_CSP_GRP',0.0,''); -- 0*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_SOL_CSP_GRP',14.6,''); -- 2.31*0.10*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_SOL_CSP_GRP',14.6,''); -- 2.32*0.25*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_SOL_CSP_GRP',0.0,''); -- 2.33*0.25*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2010,'ELC_MAR_GRP',0.0,''); -- 0.00*0.06*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2015,'ELC_MAR_GRP',1.8,''); -- 1.20*0.06*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2020,'ELC_MAR_GRP',2.0,''); -- 1.32*0.06*31.536
-INSERT INTO "MinGenGroupTarget" VALUES (2025,'ELC_MAR_GRP',0.0,''); -- 1.45*0.06*31.536
-
----- New technologies
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_GEO_FLS_N',10.924,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_GEO_FLS_N',50.462,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_GEO_FLS_N',109.235,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_GEO_BNY_N',5.462,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_GEO_BNY_N',27.309,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_GEO_BNY_N',54.618,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_GEO_BNY_HIG_N',63.176,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_GEO_BNY_HIG_N',631.764,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_GEO_BNY_HIG_N',1895.292,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_MAR_TDL_N',18.8,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_MAR_TDL_N',376.2,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_MAR_WAV_N',95.4,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_MAR_WAV_N',715.5,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_MAR_WAV_N',1908.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_CEN_1_N',9.16,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_CEN_1_N',117.72,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_CEN_2_N',581.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_CEN_2_N',7472.7,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_CEN_3_N',416.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_CEN_3_N',5342.95,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_DEC_1_N',0.445,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_DEC_1_N',5.72,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_DEC_2_N',170.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_DEC_2_N',2183.59,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_ON_DEC_3_N',212.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_ON_DEC_3_N',2722.64,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'ELC_WIN_OFF_N',0.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_WIN_OFF_N',9181.04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_PV_DEC_1_N',1188.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_PV_DEC_1_N',2376.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_PV_DEC_2_N',1188.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_PV_DEC_2_N',2376.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_PV_CEN_N',2160.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_PV_CEN_N',4320.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_CSP_1_N',4336.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_CSP_1_N',8672.4,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_CSP_2_N',4336.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_CSP_2_N',8672.4,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'ELC_SOL_CSP_3_N',4336.0,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2100,'ELC_SOL_CSP_3_N',8672.4,'','');
 
 commit;
