@@ -15,11 +15,8 @@ The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo
 
 The subdirectories of TEMOA-Italy are:
 
-1. `temoa-energysystem/`
-Contains the extended TEMOA source code (Detailed info for running TEMOA given at: https://github.com/TemoaProject/temoa).
-
 1. `TEMOA-Europe/`
-Contains the developed database with the techno-economic description of the Italian Energy System.
+Contains the developed database with the techno-economic description of the European Energy System.
 
 
 # Contributions
