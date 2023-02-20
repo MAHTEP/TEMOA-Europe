@@ -13,7 +13,7 @@ The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo
 [^1]: Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 [^2]: PhD students @ the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
-The subdirectories of TEMOA-Italy are:
+The subdirectories of TEMOA-Europe are:
 
 1. `TEMOA-Europe/`
 Contains the developed database with the techno-economic description of the European Energy System.
