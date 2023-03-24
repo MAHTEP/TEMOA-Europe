@@ -1720,10 +1720,6 @@ INSERT INTO "tech_groups" VALUES ('ELC_BIO_GAS_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_BIO_CRP_GSF_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_BIO_CRP_COM_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_BMU_INC_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_BIO_CRP_GSF_CCS_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_BIO_CRP_COM_CCS_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_BIO_SLD_GSF_CCS_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_BIO_SLD_COM_CCS_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_CHP_BIO_N','');
 
 INSERT INTO "tech_groups" VALUES ('ELC_CHP_GEO_E','');
@@ -1759,6 +1755,12 @@ INSERT INTO "tech_groups" VALUES ('ELC_MAR_TDL_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_NUC_FUS_EU_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_NUC_FUS_AS_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_NUC_FUS_ARC_N','');
+
+INSERT INTO "tech_groups" VALUES ('ELC_COA_CCO_IG_CCS_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_COA_CCO_FG_CCS_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_COA_PUL_FG_CCS_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_NGA_FG_CCS_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_NGA_SOFC_CCS_N','');
 
 INSERT INTO "tech_groups" VALUES ('RES_FT_SOL_E','');
 INSERT INTO "tech_groups" VALUES ('COM_FT_SOL_E','');
@@ -1803,6 +1805,7 @@ INSERT INTO "groups" VALUES ('ELC_SOL_PV_GRP','');
 INSERT INTO "groups" VALUES ('ELC_SOL_CSP_GRP','');
 INSERT INTO "groups" VALUES ('ELC_MAR_GRP','');
 INSERT INTO "groups" VALUES ('ELC_NUC_FUS_GRP','');
+INSERT INTO "groups" VALUES ('ELC_FOSSIL_CCS_GRP','');
 
 INSERT INTO "groups" VALUES ('RES_COM_FT_GRP','');
 
@@ -1970,6 +1973,11 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_MAR_TDL_N','ELC_MAR_GRP',1.0,''
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_NUC_FUS_EU_N','ELC_NUC_FUS_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_NUC_FUS_AS_N','ELC_NUC_FUS_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_NUC_FUS_ARC_N','ELC_NUC_FUS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_COA_CCO_IG_CCS_N','ELC_FOSSIL_CCS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_COA_CCO_FG_CCS_N','ELC_FOSSIL_CCS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_COA_PUL_FG_CCS_N','ELC_FOSSIL_CCS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_NGA_FG_CCS_N','ELC_FOSSIL_CCS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_NGA_SOFC_CCS_N','ELC_FOSSIL_CCS_GRP',1.0,'');
 
 create TABLE "MaxInputGroup" (
 	"regions"	      text,
