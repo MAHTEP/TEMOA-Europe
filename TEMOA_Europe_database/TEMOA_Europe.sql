@@ -1674,18 +1674,13 @@ INSERT INTO "tech_groups" VALUES ('ELC_CHP_COA_E','');
 INSERT INTO "tech_groups" VALUES ('ELC_COA_PUL_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_COA_CCO_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_COA_PFB_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_COA_CCO_IG_CCS_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_COA_CCO_FG_CCS_N','');
-INSERT INTO "tech_groups" VALUES ('ELC_COA_PUL_FG_CCS_N','');
 INSERT INTO "tech_groups" VALUES ('ELC_CHP_COA_N','');
 
-INSERT INTO "tech_groups" VALUES ('ELC_NGA_E','')
-INSERT INTO "tech_groups" VALUES ('ELC_CHP_NGA_E','')
-INSERT INTO "tech_groups" VALUES ('ELC_CHP_NGA_N','')
-INSERT INTO "tech_groups" VALUES ('ELC_NGA_FG_CCS_N','')
-INSERT INTO "tech_groups" VALUES ('ELC_NGA_SOFC_CCS_N','')
-INSERT INTO "tech_groups" VALUES ('ELC_NGA_CCY_ADV_N','')
-INSERT INTO "tech_groups" VALUES ('ELC_NGA_FCE_N','')
+INSERT INTO "tech_groups" VALUES ('ELC_NGA_E','');
+INSERT INTO "tech_groups" VALUES ('ELC_CHP_NGA_E','');
+INSERT INTO "tech_groups" VALUES ('ELC_CHP_NGA_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_NGA_CCY_ADV_N','');
+INSERT INTO "tech_groups" VALUES ('ELC_NGA_FCE_N','');
 
 INSERT INTO "tech_groups" VALUES ('ELC_OIL_E','');
 
@@ -17841,5 +17836,6 @@ INSERT INTO "tech_annual" VALUES ('IND_OTH_OTH_GEO_N','');
 INSERT INTO "tech_annual" VALUES ('IND_OTH_OTH_LPG_N','');
 INSERT INTO "tech_annual" VALUES ('IND_OTH_OTH_BIO_N','');
 INSERT INTO "tech_annual" VALUES ('IND_OTH_EC_ELC_N','');
+
 
 commit;
