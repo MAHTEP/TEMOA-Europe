@@ -4,14 +4,15 @@
 
 **TEMOA-Europe** is an energy system optimization model instance based on the **open-source energy system modeling framework** [**TEMOA**](https://temoacloud.com/). TEMOA-Europe is a case study based on the European Reference Energy System.
 
-The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo Nicoli[^2], Gianvito Colucci[^2]  @ Energy Department “Galileo Ferraris” @ [**Politecnico di Torino**](https://www.polito.it/). For any inquiries, please, contact us at:
+The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo Nicoli[^3], Gianvito Colucci[^3]  @ Energy Department “Galileo Ferraris” @ [**Politecnico di Torino**](https://www.polito.it/). For any inquiries, please, contact us at:
 * laura.savoldi@polito.it
 * daniele.lerede@polito.it
 * matteo.nicoli@polito.it
 * gianvito.colucci@polito.it
 
-[^1]: Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
-[^2]: PhD students @ the [**MAHTEP** research group](http://www.mahtep.polito.it/).
+[^1]: Full Professor @ Politecnico di Torino, Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
+[^2]: Post-doctorale researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/).
+[^3]: PhD students @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
 The `TEMOA-Europe/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 up to 2100:
  - `TEMOA_Europe.sql` is the modifialble version of the dataset
