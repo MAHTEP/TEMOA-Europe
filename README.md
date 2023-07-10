@@ -2,7 +2,7 @@
 
 ## Features
 
-**TEMOA-Europe** is an energy system optimization model instance based on the **open-source energy system modeling framework** [**TEMOA**](https://temoacloud.com/). TEMOA-Europe is a case study based on the European Reference Energy System.
+**TEMOA-Europe** is an energy system optimization model instance based on the **open-source energy system modeling framework** [**TEMOA**](https://temoacloud.com/). TEMOA-Europe is a case study based on the OECD Europe Reference Energy System.
 
 The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo Nicoli[^3], Gianvito Colucci[^3]  @ Energy Department “Galileo Ferraris” @ [**Politecnico di Torino**](https://www.polito.it/). For any inquiries, please, contact us at:
 * laura.savoldi@polito.it
@@ -14,14 +14,8 @@ The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo
 [^2]: Post-doctorale researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/).
 [^3]: PhD students @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
-The `TEMOA-Europe/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 up to 2100:
+The `TEMOA-Europe/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to either 2050 or 2100:
  - `TEMOA_Europe.sql` is the modifialble version of the dataset
- - The directory `TEMOA_Europe_Fusion_2035` includes the binary version of the database file and the Excel file with the results for the scenario "Fusion_2035", where fusion energy is available starting from 2035;
- -  The directory `TEMOA_Europe_Fusion_2060` includes the binary version of the database file and the Excel file with the results for the scenario "Fusion_2060", where fusion energy is available starting from 2060;
- -  The directory `TEMOA_Europe_no_fusion` includes the binary version of the database file and the Excel file with the results for the scenario "No_fusion", where fusion energy is not available in the European energy system.
-
-The three scenarios are described in detail in Daniele Lerede's PhD thesis (available soon)
-
 
 # Contributions
 
