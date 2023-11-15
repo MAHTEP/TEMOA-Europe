@@ -11,11 +11,15 @@ The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo
 * gianvito.colucci@polito.it
 
 [^1]: Full Professor @ Politecnico di Torino, Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
-[^2]: Post-doctorale researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/).
+[^2]: Post-doctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/).
 [^3]: PhD students @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
-The `TEMOA-Europe/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to either 2050 or 2100:
- - `TEMOA_Europe.sql` is the modifialble version of the dataset
+The `temoa_energysystem/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to 2050:
+
+ - `TEMOA_Europe.sql` is the text file containing the modifiable version of the database
+ - `TEMOA_Europe.sqlite` is the relational dataset containing all data from `TEMOA_Europe.sql` and the necessary modifications apported through `database_preprocessing.sql` (application of interpolation rules, computation of emission activities, demand projection). `database_preprocessing.sql` is automatically called when running `database_creator.sql`.
+   
+If you already have TEMOA ready to run on your PC, please ensure you are using the version of the model files located in the `temoa_model` folder provided here (the main difference with respect to the standard version of the model is the implementation of capacity retirement for existing technologies).
 
 # Contributions
 
