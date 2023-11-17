@@ -16030,7 +16030,7 @@ INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',2.10E+06,'',
 INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',1.40E+06,'',''); -- Educated guess
 INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',7.00E+05,'',''); -- Educated guess
 INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',3.50E+05,'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',1.00E+05,'',''); -- Net-zero emissions
+INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',3.00E+05,'',''); -- Net-zero emissions
 
 create TABLE "EmissionActivity" (
 	"regions"	text,
