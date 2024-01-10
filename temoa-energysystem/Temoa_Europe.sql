@@ -714,7 +714,7 @@ insert into "technologies" VALUES ('UPS_AGG_OIL_RPP','p','UPS','Upstream - Fuel 
 insert into "technologies" VALUES ('UPS_AGG_OIL_RPG','p','UPS','Upstream - Fuel Tech - Refined Pet Products-Gas (UPS) - NON-OPEC','');
 --insert into "technologies" VALUES ('UPS_FT_RNW_BIO_REN','p','UPS','Upstream - Biofuels (UPS) - NON-OPEC','');
 insert into "technologies" VALUES ('UPS_FT_ELC','p','UPS','Upstream - Fuel Tech - Electricity (UPS) - NON-OPEC','');
-insert into "technologies" VALUES ('UPS_FT_HET','p','UPS','Upstream - Fuel Tech - Heat (UPS) - NON-OPEC','');
+--insert into "technologies" VALUES ('UPS_FT_HET','p','UPS','Upstream - Fuel Tech - Heat (UPS) - NON-OPEC','');
 insert into "technologies" VALUES ('UPS_CONV_STM_EXS','p','UPS','Upstream - Converting heat into steam - NON-OPEC','');
 
 ---- Non-renewable primary energy sources
@@ -1179,10 +1179,9 @@ INSERT INTO "technologies" VALUES ('ELC_BIO_COM_CCS_NEW','p','ELC','Electricity 
 insert into "technologies" VALUES ('HET_NGA_NEW','p','HET','Electricity - Heat production - Natural gas plant - New','');
 insert into "technologies" VALUES ('HET_OIL_NEW','p','HET','Electricity - Heat production - Oil plant - New','');
 insert into "technologies" VALUES ('HET_BIO_NEW','p','HET','Electricity - Heat production - biomass plant - New','');
---insert into "technologies" VALUES ('HET_COA_NEW','p','HET','Electricity - Heat production - Coal plant - New','');
+insert into "technologies" VALUES ('HET_COA_NEW','p','HET','Electricity - Heat production - Coal plant - New','');
 insert into "technologies" VALUES ('HET_GEO_NEW','p','HET','Electricity - Heat production - Geothermal plant - New','');
 insert into "technologies" VALUES ('HET_SOL_NEW','p','HET','Electricity - Heat production - Solar plant - New','');
---insert into "technologies" VALUES ('HET_NUC_NEW','p','HET','Electricity - Heat production - Nuclear - New','');
 ---- CHP
 insert into "technologies" VALUES ('ELC_CHP_NGA_NEW','p','ELC','CHP - Natural gas plant  - New','');
 insert into "technologies" VALUES ('ELC_CHP_COA_NEW','p','ELC','CHP - Coal plant  - New','');
@@ -1721,46 +1720,6 @@ insert into "technologies" VALUES ('IND_IMP_WOD','p','IND','Industry - Import te
 insert into "technologies" VALUES ('IND_SUP_RCP','p','IND','Industry - Supply Technology - Recycled paper','');
 insert into "technologies" VALUES ('IND_SUP_BFS','p','IND','Industry - Supply Technology - Slag','');
 
----- Electricity autoproduction
---insert into "technologies" VALUES ('IND_AUT_ELC_EXS','p','IND','Industry - Autoproduction of electricity other than cogeneration - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_NGA_EXS','p','IND','Industry - Autoproduction of electricity with Natural gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_LPG_EXS','p','IND','Industry - Autoproduction of electricity with LPG - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_COA_EXS','p','IND','Industry - Autoproduction of electricity with Coal- Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_COG_EXS','p','IND','Industry - Autoproduction of electricity with Coke oven gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_BFG_EXS','p','IND','Industry - Autoproduction of electricity with Blast furnace gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_HFO_EXS','p','IND','Industry - Autoproduction of electricity with Heavy fuel oil - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_OIL_EXS','p','IND','Industry - Autoproduction of electricity with Refined petroleum products - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_ETH_EXS','p','IND','Industry - Autoproduction of electricity with Ethane - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_PTC_EXS','p','IND','Industry - Autoproduction of electricity with Petroleum coke - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_BIO_EXS','p','IND','Industry - Autoproduction of electricity with Biofuels - Existing','');
---insert into "technologies" VALUES ('IND_AUT_ELC_HET_EXS','p','IND','Industry - Autoproduction of electricity with Heat - Existing','');
-
----- CHP
---insert into "technologies" VALUES ('IND_CHP_NGA_EXS','p','IND','Industry - Auto CHP with Natural gas - Existing','');
---insert into "technologies" VALUES ('IND_CHP_LPG_EXS','p','IND','Industry - Auto CHP with LPG - Existing','');
---insert into "technologies" VALUES ('IND_CHP_COA_EXS','p','IND','Industry - Auto CHP with Coal - Existing','');
---insert into "technologies" VALUES ('IND_CHP_COG_EXS','p','IND','Industry - Auto CHP with Coke oven gas - Existing','');
---insert into "technologies" VALUES ('IND_CHP_BFG_EXS','p','IND','Industry - Auto CHP with Blast furnace gas - Existing','');
---insert into "technologies" VALUES ('IND_CHP_HFO_EXS','p','IND','Industry - Auto CHP with Heavy fuel oil - Existing','');
---insert into "technologies" VALUES ('IND_CHP_OIL_EXS','p','IND','Industry - Auto CHP with Refined petroleum product - Existing','');
---insert into "technologies" VALUES ('IND_CHP_ETH_EXS','p','IND','Industry - Auto CHP with Ethane - Existing','');
---insert into "technologies" VALUES ('IND_CHP_PTC_EXS','p','IND','Industry - Auto CHP with Petroleum coke - Existing','');
---insert into "technologies" VALUES ('IND_CHP_BIO_EXS','p','IND','Industry - Auto CHP with Biofuels - Existing','');
-
----- Heat autoproduction
---insert into "technologies" VALUES ('IND_AUT_HET_NGA_EXS','p','IND','Industry - Autoproduction of heat with Natural gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_LPG_EXS','p','IND','Industry - Autoproduction of heat with LPG - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_COA_EXS','p','IND','Industry - Autoproduction of heat with Coal- Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_COK_EXS','p','IND','Industry - Autoproduction of heat with Oven coke - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_COG_EXS','p','IND','Industry - Autoproduction of heat with Coke oven gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_BFG_EXS','p','IND','Industry - Autoproduction of heat with Blast furnace gas - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_HFO_EXS','p','IND','Industry - Autoproduction of heat with Heavy fuel oil - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_OIL_EXS','p','IND','Industry - Autoproduction of heat with Refined petroleum products - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_ETH_EXS','p','IND','Industry - Autoproduction of heat with Ethane - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_BIO_EXS','p','IND','Industry - Autoproduction of heat with Biofuels - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_GEO_EXS','p','IND','Industry - Autoproduction of heat with Geothermal energy - Existing','');
---insert into "technologies" VALUES ('IND_AUT_HET_HET_EXS','p','IND','Industry - Autoproduction of heat with Heat - Existing','');
-
 -- Base year technologies
 ---- Chemicals
 insert into "technologies" VALUES ('IND_CH_TECH_EXS','p','IND','Industry - Chemicals - Chemical demand production','');
@@ -2096,30 +2055,6 @@ insert into "technologies" VALUES ('IND_OTH_OTH_GEO_NEW','p','IND','Industry - O
 insert into "technologies" VALUES ('IND_OTH_OTH_LPG_NEW','p','IND','Industry - Other All Other Industry LPG - New','');
 insert into "technologies" VALUES ('IND_OTH_OTH_BIO_NEW','p','IND','Industry - Other All Other Industry BIO - New','');
 insert into "technologies" VALUES ('IND_OTH_EC_ELC_NEW','p','IND','Industry - Specific Electricity Other Industry Electric - New','');
-
--- CHP
---insert into "technologies" VALUES ('IND_CHP_NGA_NEW','p','IND','Industry - Auto CHP with NGA - New','');
---insert into "technologies" VALUES ('IND_CHP_COA_NEW','p','IND','Industry - Auto CHP with COA - New','');
---insert into "technologies" VALUES ('IND_CHP_COK_NEW','p','IND','Industry - Auto CHP with COK - New','');
---insert into "technologies" VALUES ('IND_CHP_HFO_NEW','p','IND','Industry - Auto CHP with HFO - New','');
---insert into "technologies" VALUES ('IND_CHP_OIL_NEW','p','IND','Industry - Auto CHP with OIL - New','');
---insert into "technologies" VALUES ('IND_CHP_BIO_NEW','p','IND','Industry - Auto CHP with BIO - New','');
-----insert into "technologies" VALUES ('IND_CHP_GEO_NEW','p','IND','Industry - Auto CHP with GEO - New','');
---insert into "technologies" VALUES ('IND_CHP_COG_NEW','p','IND','Industry - Auto CHP with COG - New','');
---insert into "technologies" VALUES ('IND_CHP_BFG_NEW','p','IND','Industry - Auto CHP with BFG - New','');
---insert into "technologies" VALUES ('IND_CHP_ETH_NEW','p','IND','Industry - Auto CHP with ETH - New','');
-----insert into "technologies" VALUES ('IND_CH_CHP_NGA_L_CCS_NEW','p','IND','Industry - Auto CHP with NGA Large ICH CCS - New','');
---insert into "technologies" VALUES ('IND_CH_CHP_NGA_L_NEW','p','IND','Industry - Auto CHP with NGA Large ICH Combi - New','');
-----insert into "technologies" VALUES ('IND_IS_CHP_BFG_L_CCS_NEW','p','IND','Industry - Auto CHP with BFG Large IIS CCS - New','');
-----insert into "technologies" VALUES ('IND_IS_CHP_BFG_CCS_NEW','p','IND','Industry - Auto CHP with BFG Large IIS Combi - New','');
---insert into "technologies" VALUES ('IND_CHP_BIO_L_NEW','p','IND','Industry - Auto CHP with BIO Large - New','');
---insert into "technologies" VALUES ('IND_CHP_BIO_IGCC_NEW','p','IND','Industry - Auto CHP with BIO Large IGCC - New','');
-----insert into "technologies" VALUES ('IND_CHP_BIO_IGCC_CCS_NEW','p','IND','Industry - Auto CHP with BIO Large IGCC+CCS - New','');
---insert into "technologies" VALUES ('IND_OTH_CHP_NGA_NEW','p','IND','Industry - Auto CHP with NGA - New','');
---insert into "technologies" VALUES ('IND_OTH_CHP_DST_NEW','p','IND','Industry - Auto CHP with DST - New','');
---insert into "technologies" VALUES ('IND_OTH_CHP_COA_NEW','p','IND','Industry - Auto CHP with COA - New','');
---insert into "technologies" VALUES ('IND_OTH_CHP_BIO_NEW','p','IND','Industry - Auto CHP with BIO - New','');
---insert into "technologies" VALUES ('IND_OTH_CHP_NGA_FCE_NEW','p','IND','Industry - Auto CHP with NGA Fuel cell - New','');
 
 -- Linked technologies
 insert into "technologies" VALUES ('HH2_NGA_CL_CCS_LNK','p','HH2','Linked technologies - Hydrogen production with CCS - Natural gas steam reforming w/ CCS, centralized, large - New','');
@@ -2813,48 +2748,8 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_OTH_GEO_NEW','IND_OTH_OTH_G
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_OTH_LPG_NEW','IND_OTH_OTH_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_OTH_BIO_NEW','IND_OTH_OTH_GRP',1.0,'');
 
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_NGA_NEW','ELC_FOSSIL_GRP',1-0.513,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_COA_NEW','ELC_FOSSIL_GRP',1-0.400,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_COK_NEW','ELC_FOSSIL_GRP',1-0.400,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_HFO_NEW','ELC_FOSSIL_GRP',1-0.419,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_OIL_NEW','ELC_FOSSIL_GRP',1-0.419,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_COG_NEW','ELC_FOSSIL_GRP',1-0.400,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BFG_NEW','ELC_FOSSIL_GRP',1-0.400,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_ETH_NEW','ELC_FOSSIL_GRP',1-0.419,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW','ELC_FOSSIL_GRP',1-0.513,'');
-------INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_IS_CHP_BFG_CCS_NEW','ELC_FOSSIL_GRP',1-0.556,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_CHP_NGA_NEW','ELC_FOSSIL_GRP',1-0.369,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_CHP_DST_NEW','ELC_FOSSIL_GRP',1-0.355,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_CHP_COA_NEW','ELC_FOSSIL_GRP',1-0.244,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW','ELC_FOSSIL_GRP',1-0.625,'');
 --
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_EXS','ELC_SOL_PV_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_NGA_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_LPG_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_COA_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_COG_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_BFG_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_HFO_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_OIL_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_ETH_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_PTC_EXS','ELC_FOSSIL_GRP',1.0,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_AUT_ELC_BIO_EXS','ELC_BIO_GRP',1.0,'');
 --
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_NGA_EXS','ELC_FOSSIL_GRP',0.495,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_LPG_EXS','ELC_FOSSIL_GRP',0.415,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_COA_EXS','ELC_FOSSIL_GRP',0.425,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_COG_EXS','ELC_FOSSIL_GRP',0.481,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BFG_EXS','ELC_FOSSIL_GRP',0.340,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_HFO_EXS','ELC_FOSSIL_GRP',0.388,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_OIL_EXS','ELC_FOSSIL_GRP',0.458,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_ETH_EXS','ELC_FOSSIL_GRP',0.389,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_PTC_EXS','ELC_FOSSIL_GRP',0.607,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BIO_EXS','ELC_BIO_GRP',0.395,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BIO_NEW','ELC_BIO_GRP',1-0.388,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BIO_L_NEW','ELC_BIO_GRP',1-0.394,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_BIO_IGCC_NEW','ELC_BIO_GRP',1-0.500,'');
-----INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_CHP_BIO_NEW','ELC_BIO_GRP',1-0.244,'');
-------INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CHP_GEO_NEW','ELC_GEO_GRP',1-0.194,'');
 
 --INSERT INTO "TechGroupWeight" VALUES ('EUR','HH2_NGA_CL_CCS_NEW','CCS_TECHS_ALL_GRP',1.0,'');
 --INSERT INTO "TechGroupWeight" VALUES ('EUR','HH2_NGA_CS_CCS_NEW','CCS_TECHS_ALL_GRP',1.0,'');
@@ -3062,7 +2957,7 @@ insert into "TechGroupWeight" VALUES ('EUR','HET_GEO_EXS','HET_GEO_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_SOL_EXS','HET_SOL_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_OIL_NEW','HET_OIL_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_NGA_NEW','HET_NGA_GRP',1.0,'');
---insert into "TechGroupWeight" VALUES ('EUR','HET_COA_NEW','HET_COA_GRP',1.0,'');
+insert into "TechGroupWeight" VALUES ('EUR','HET_COA_NEW','HET_COA_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_BIO_NEW','HET_BIO_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_GEO_NEW','HET_GEO_GRP',1.0,'');
 insert into "TechGroupWeight" VALUES ('EUR','HET_SOL_NEW','HET_SOL_GRP',1.0,'');
@@ -3302,40 +3197,6 @@ insert into "tech_retirement" VALUES ('TRA_ROA_MTR_NGA_EXS','');
 insert into "tech_retirement" VALUES ('TRA_ROA_MCY_GSL_EXS','');
 insert into "tech_retirement" VALUES ('TRA_ROA_MOP_GSL_EXS','');
 insert into "tech_retirement" VALUES ('TRA_ROA_3WH_GSL_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_NGA_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_LPG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_COA_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_COG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_BFG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_HFO_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_OIL_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_ETH_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_PTC_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_BIO_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_ELC_HET_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_NGA_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_LPG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_COA_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_COK_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_COG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_BFG_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_HFO_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_OIL_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_ETH_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_BIO_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_GEO_EXS','');
---insert into "tech_retirement" VALUES ('IND_AUT_HET_HET_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_NGA_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_LPG_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_COA_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_COG_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_BFG_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_HFO_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_OIL_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_ETH_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_PTC_EXS','');
---insert into "tech_retirement" VALUES ('IND_CHP_BIO_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_OLF_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_BTX_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_AMM_EXS','');
@@ -3541,7 +3402,6 @@ create TABLE "tech_flex" (
 --INSERT INTO "tech_flex" VALUES ('UPS_WDP_HLW_PYRO_ABWR_TRU_EXS','');
 --INSERT INTO "tech_flex" VALUES ('UPS_WDP_HLW_PYRO_ADS_TRU_EXS','');
 --INSERT INTO "tech_flex" VALUES ('UPS_WDP_HLW_PYRO_ADS_MA_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_AUT_ELC_HET_EXS','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_BOF_EXS','');
 --INSERT INTO "tech_flex" VALUES ('IND_PP_PUL_CHEM_EXS','');
 --INSERT INTO "tech_flex" VALUES ('IND_PP_PUL_MEC_EXS','');
@@ -3574,34 +3434,6 @@ create TABLE "tech_flex" (
 --INSERT INTO "tech_flex" VALUES ('IND_PP_PUL_KRF_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_PP_PUL_SUL_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_PP_PUL_MEC_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_NGA_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_LPG_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_COA_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_COG_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BFG_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_HFO_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_OIL_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_ETH_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_PTC_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BIO_EXS','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_NGA_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_COA_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_COK_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_HFO_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_OIL_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BIO_NEW','');
-------INSERT INTO "tech_flex" VALUES ('IND_CHP_GEO_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_COG_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BFG_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_ETH_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CH_CHP_NGA_L_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BIO_L_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_CHP_BIO_IGCC_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_OTH_CHP_NGA_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_OTH_CHP_DST_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_OTH_CHP_COA_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_OTH_CHP_BIO_NEW','');
-----INSERT INTO "tech_flex" VALUES ('IND_OTH_CHP_NGA_FCE_NEW','');
 --INSERT INTO "tech_flex" VALUES ('ELC_CHP_OIL_EXS','');
 --INSERT INTO "tech_flex" VALUES ('ELC_CHP_NGA_EXS','');
 --INSERT INTO "tech_flex" VALUES ('ELC_CHP_COA_EXS','');
@@ -3664,7 +3496,7 @@ INSERT INTO "tech_annual" VALUES ('UPS_AGG_OIL_RPP','');
 INSERT INTO "tech_annual" VALUES ('UPS_AGG_OIL_RPG','');
 --INSERT INTO "tech_annual" VALUES ('UPS_FT_RNW_BIO_REN','');
 INSERT INTO "tech_annual" VALUES ('UPS_FT_ELC','');
-INSERT INTO "tech_annual" VALUES ('UPS_FT_HET','');
+--INSERT INTO "tech_annual" VALUES ('UPS_FT_HET','');
 --INSERT INTO "tech_annual" VALUES ('UPS_CONV_STM_EXS','');
 INSERT INTO "tech_annual" VALUES ('IMP_BIO_ETH_GLB','');
 INSERT INTO "tech_annual" VALUES ('IMP_OIL_USA','');
@@ -4778,46 +4610,6 @@ INSERT INTO "tech_groups" VALUES ('IND_OTH_OTH_GEO_NEW','');
 INSERT INTO "tech_groups" VALUES ('IND_OTH_OTH_LPG_NEW','');
 INSERT INTO "tech_groups" VALUES ('IND_OTH_OTH_BIO_NEW','');
 
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_NGA_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_LPG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_COA_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_COG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BFG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_HFO_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_OIL_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_ETH_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_PTC_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BIO_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_NGA_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_COA_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_COK_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_HFO_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_OIL_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BIO_NEW','');
-------INSERT INTO "tech_groups" VALUES ('IND_CHP_GEO_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_COG_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BFG_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_ETH_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CH_CHP_NGA_L_NEW','');
-------INSERT INTO "tech_groups" VALUES ('IND_IS_CHP_BFG_CCS_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BIO_L_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_CHP_BIO_IGCC_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_OTH_CHP_NGA_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_OTH_CHP_DST_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_OTH_CHP_COA_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_OTH_CHP_BIO_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_OTH_CHP_NGA_FCE_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_NGA_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_LPG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_COA_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_COG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_BFG_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_HFO_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_OIL_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_ETH_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_PTC_EXS','');
-----INSERT INTO "tech_groups" VALUES ('IND_AUT_ELC_BIO_EXS','');
 
 --INSERT INTO "tech_groups" VALUES ('HH2_NGA_CL_CCS_NEW','');
 --INSERT INTO "tech_groups" VALUES ('HH2_NGA_CS_CCS_NEW','');
@@ -4841,7 +4633,6 @@ INSERT INTO "tech_groups" VALUES ('IND_IS_DRI_DRIEAF_CCS_NEW','');
 INSERT INTO "tech_groups" VALUES ('IND_IS_DRI_ULCORED_CCS_NEW','');
 INSERT INTO "tech_groups" VALUES ('IND_NM_CLK_DRY_PCCS_NEW','');
 INSERT INTO "tech_groups" VALUES ('IND_NM_CLK_DRY_OCCS_NEW','');
-----INSERT INTO "tech_groups" VALUES ('IND_IS_CHP_BFG_CCS_NEW','');
 
 INSERT INTO "tech_groups" VALUES ('ELC_STG_CEN_BTT_NEW','');
 INSERT INTO "tech_groups" VALUES ('ELC_STG_DIS_BTT_NEW','');
@@ -4909,10 +4700,9 @@ insert into "tech_groups" VALUES ('HET_SOL_EXS','');
 insert into "tech_groups" VALUES ('HET_NGA_NEW','');
 insert into "tech_groups" VALUES ('HET_OIL_NEW','');
 insert into "tech_groups" VALUES ('HET_BIO_NEW','');
---insert into "tech_groups" VALUES ('HET_COA_NEW','');
+insert into "tech_groups" VALUES ('HET_COA_NEW','');
 insert into "tech_groups" VALUES ('HET_GEO_NEW','');
 insert into "tech_groups" VALUES ('HET_SOL_NEW','');
---insert into "tech_groups" VALUES ('HET_NUC_NEW','');
 
 INSERT INTO "tech_groups" VALUES ('IND_FT_NAP','');
 INSERT INTO "tech_groups" VALUES ('IND_FT_FS_NAP','');
@@ -5227,10 +5017,9 @@ insert into "LifetimeTech" VALUES ('EUR','ELC_MAR_TDL_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','HET_NGA_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','HET_OIL_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','HET_BIO_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','HET_COA_NEW',20,'');
+insert into "LifetimeTech" VALUES ('EUR','HET_COA_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','HET_GEO_NEW',60,'');
 insert into "LifetimeTech" VALUES ('EUR','HET_SOL_NEW',20,'');
---insert into "LifetimeTech" VALUES ('EUR','HET_NUC_NEW',70,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_CHP_NGA_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_CHP_COA_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_CHP_BIO_NEW',25,'');
@@ -5766,41 +5555,7 @@ insert into "LifetimeTech" VALUES ('EUR','IND_IMP_WOD',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_SUP_RCP',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_SUP_BFS',110,'');
 
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_NGA_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_LPG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_COA_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_COG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_BFG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_HFO_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_OIL_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_ETH_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_PTC_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_BIO_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_ELC_HET_EXS',110,'');
 
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_NGA_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_LPG_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_COA_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_COG_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BFG_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_HFO_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_OIL_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_ETH_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_PTC_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BIO_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_NGA_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_LPG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_COA_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_COK_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_COG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_BFG_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_HFO_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_OIL_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_ETH_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_BIO_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_GEO_EXS',45,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_AUT_HET_HET_EXS',45,'');
 
 insert into "LifetimeTech" VALUES ('EUR','IND_CH_TECH_EXS',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_CH_OLF_EXS',35,'');
@@ -6087,30 +5842,6 @@ insert into "LifetimeTech" VALUES ('EUR','IND_OTH_OTH_GEO_NEW',25,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_OTH_OTH_LPG_NEW',25,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_OTH_OTH_BIO_NEW',25,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_OTH_EC_ELC_NEW',15,'');
-
----- CHP
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_NGA_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_COA_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_COK_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_HFO_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_OIL_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BIO_NEW',25,'');
-----insert into "LifetimeTech" VALUES ('EUR','IND_CHP_GEO_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_COG_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BFG_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_ETH_NEW',25,'');
-----insert into "LifetimeTech" VALUES ('EUR','IND_CH_CHP_NGA_L_CCS_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW',25,'');
-----insert into "LifetimeTech" VALUES ('EUR','IND_IS_CHP_BFG_L_CCS_NEW',25,'');
-----insert into "LifetimeTech" VALUES ('EUR','IND_IS_CHP_BFG_CCS_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BIO_L_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BIO_IGCC_NEW',25,'');
-----insert into "LifetimeTech" VALUES ('EUR','IND_CHP_BIO_IGCC_CCS_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_OTH_CHP_NGA_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_OTH_CHP_DST_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_OTH_CHP_COA_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_OTH_CHP_BIO_NEW',25,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW',25,'');
 
 -- Sequestration
 insert into "LifetimeTech" VALUES ('EUR','HH2_NGA_CL_CCS_LNK',20,'');
@@ -6542,7 +6273,7 @@ insert into "Efficiency" VALUES ('EUR','PRI_GAS_RFG','UPS_AGG_OIL_RPG',2005,'PRI
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','UPS_AGG_OIL_RPG',2005,'PRI_OIL_RPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_FT_ELC',2005,'UPS_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','UPS_FT_ELC',2005,'UPS_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HET','UPS_FT_HET',2005,'UPS_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HET','UPS_FT_HET',2005,'UPS_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','UPS_HET','UPS_CONV_STM_EXS',2005,'UPS_STM',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Primary energy production
 insert into "Efficiency" VALUES ('EUR','MIN_OIL_HOIL','UPS_PRI_HFO_1_EXS',2005,'PRI_OIL_CRH',0.9825,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7253,7 +6984,7 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_NSP','ELC_FT_OIL',2005,'ELC_OIL'
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','ELC_FT_OIL',2005,'ELC_OIL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','ELC_FT_OIL',2005,'ELC_OIL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','ELC_FT_OIL',2005,'ELC_OIL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_BIO_DST_FT','ELC_FT_OIL',2020,'ELC_OIL',0.044,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','RNW_BIO_DST_FT','ELC_FT_OIL',2020,'ELC_OIL',0.044,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_RFG','ELC_FT_OIL',2005,'ELC_OIL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_COA_BCO','ELC_FT_COA',2005,'ELC_COA',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_COA_HCO','ELC_FT_COA',2005,'ELC_COA',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7418,7 +7149,7 @@ INSERT INTO "Efficiency" VALUES ('EUR','ELC_BIO','ELC_BIO_COM_CCS_NEW',2030,'ELC
 insert into "Efficiency" VALUES ('EUR','ELC_NGA','HET_NGA_NEW',2010,'HET',0.952,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_OIL','HET_OIL_NEW',2010,'HET',0.952,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_BIO','HET_BIO_NEW',2010,'HET',0.847,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','ELC_COA','HET_COA_NEW',2010,'HET',0.952,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_COA','HET_COA_NEW',2010,'HET',0.952,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_GEO','HET_GEO_NEW',2010,'HET',0.800,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_SOL_TH','HET_SOL_NEW',2010,'HET',0.960,'');
 
@@ -8436,56 +8167,6 @@ insert into "Efficiency" VALUES ('EUR','ethos','IND_SUP_WOD',2005,'MAT_WOD',1.00
 insert into "Efficiency" VALUES ('EUR','ethos','IND_IMP_WOD',2005,'MAT_WOD',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ethos','IND_SUP_RCP',2005,'MAT_RCP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ethos','IND_SUP_BFS',2005,'MAT_BFS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
----- Electricity autoproduction
---insert into "Efficiency" VALUES ('EUR','IND_SOL','IND_AUT_ELC_EXS',2005,'IND_ELC',0.30,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_AUT_ELC_NGA_EXS',2005,'IND_ELC',0.315,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_AUT_ELC_LPG_EXS',2005,'IND_ELC',0.405,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_AUT_ELC_COA_EXS',2005,'IND_ELC',0.340,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_AUT_ELC_COG_EXS',2005,'IND_ELC',0.316,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_AUT_ELC_BFG_EXS',2005,'IND_ELC',0.265,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_AUT_ELC_HFO_EXS',2005,'IND_ELC',0.200,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_AUT_ELC_OIL_EXS',2005,'IND_ELC',0.238,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_AUT_ELC_ETH_EXS',2005,'IND_ELC',0.209,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_AUT_ELC_PTC_EXS',2005,'IND_ELC',0.272,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_AUT_ELC_BIO_EXS',2005,'IND_ELC',0.243,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HET','IND_AUT_ELC_HET_EXS',2005,'IND_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HET','IND_AUT_ELC_HET_EXS',2005,'IND_SB',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
----- CHP
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_EXS',2005,'IND_ELC',0.391,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_EXS',2005,'IND_SB',0.391*1.02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_CHP_LPG_EXS',2005,'IND_ELC',0.328,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_CHP_LPG_EXS',2005,'IND_SB',0.328*1.41,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_EXS',2005,'IND_ELC',0.319,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_EXS',2005,'IND_SB',0.319*1.35,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_EXS',2005,'IND_ELC',0.361,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_EXS',2005,'IND_SB',0.361*1.08,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_EXS',2005,'IND_ELC',0.255,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_EXS',2005,'IND_SB',0.255*1.94,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_EXS',2005,'IND_ELC',0.291,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_EXS',2005,'IND_SB',0.291*1.58,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_EXS',2005,'IND_ELC',0.389,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_EXS',2005,'IND_SB',0.389*1.18,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_EXS',2005,'IND_ELC',0.292,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_EXS',2005,'IND_SB',0.292*1.57,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_CHP_PTC_EXS',2005,'IND_ELC',0.455,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_CHP_PTC_EXS',2005,'IND_SB',0.455*0.65,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_EXS',2005,'IND_ELC',0.296,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_EXS',2005,'IND_SB',0.296*1.53,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
----- Heat autoproduction
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_AUT_HET_NGA_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_AUT_HET_LPG_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_AUT_HET_COA_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COK','IND_AUT_HET_COK_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_AUT_HET_COG_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_AUT_HET_BFG_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_AUT_HET_HFO_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_AUT_HET_OIL_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_AUT_HET_ETH_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_AUT_HET_BIO_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_AUT_HET_GEO_EXS',2005,'IND_SB',0.78,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HET','IND_AUT_HET_HET_EXS',2005,'IND_SB',10.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 -- Base year technologies
 ---- Chemicals
@@ -9714,102 +9395,6 @@ insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_OTH_OTH_LPG_NEW',2050,'IND
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_OTH_BIO_NEW',2050,'IND_OTH_OTH',0.84,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_OTH_EC_ELC_NEW',2050,'IND_OTH_EC',1.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
----- CHP
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_NEW',2010,'IND_ELC',0.368,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_NEW',2010,'IND_ELC',0.255,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COK','IND_CHP_COK_NEW',2010,'IND_ELC',0.255,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_NEW',2010,'IND_ELC',0.277,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_NEW',2010,'IND_ELC',0.277,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_NEW',2010,'IND_ELC',0.244,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_CHP_GEO_NEW',2010,'IND_ELC',0.128,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_NEW',2010,'IND_ELC',0.255,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_NEW',2010,'IND_ELC',0.255,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_NEW',2010,'IND_ELC',0.277,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CH_CHP_NGA_L_NEW',2010,'IND_ELC',0.410,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_CHP_BFG_CCS_NEW',2010,'IND_ELC',0.412,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_L_NEW',2010,'IND_ELC',0.250,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_IGCC_NEW',2010,'IND_ELC',0.364,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_NEW',2010,'IND_ELC',0.307,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_OTH_CHP_DST_NEW',2010,'IND_ELC',0.288,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_OTH_CHP_COA_NEW',2010,'IND_ELC',0.201,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_FCE_NEW',2010,'IND_ELC',0.524,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_CHP_BIO_NEW',2010,'IND_ELC',0.194,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_NEW',2050,'IND_ELC',0.404,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_NEW',2050,'IND_ELC',0.291,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COK','IND_CHP_COK_NEW',2050,'IND_ELC',0.291,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_NEW',2050,'IND_ELC',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_NEW',2050,'IND_ELC',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_NEW',2050,'IND_ELC',0.283,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_CHP_GEO_NEW',2050,'IND_ELC',0.148,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_NEW',2050,'IND_ELC',0.291,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_NEW',2050,'IND_ELC',0.291,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_NEW',2050,'IND_ELC',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CH_CHP_NGA_L_NEW',2050,'IND_ELC',0.443,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_CHP_BFG_CCS_NEW',2050,'IND_ELC',0.444,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_L_NEW',2050,'IND_ELC',0.283,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_IGCC_NEW',2050,'IND_ELC',0.397,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_NEW',2050,'IND_ELC',0.338,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_OTH_CHP_DST_NEW',2050,'IND_ELC',0.316,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_OTH_CHP_COA_NEW',2050,'IND_ELC',0.226,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_FCE_NEW',2050,'IND_ELC',0.402,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_CHP_BIO_NEW',2050,'IND_ELC',0.370,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_NEW',2100,'IND_ELC',0.450,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_NEW',2100,'IND_ELC',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_COK','IND_CHP_COK_NEW',2100,'IND_ELC',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_NEW',2100,'IND_ELC',0.359,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_NEW',2100,'IND_ELC',0.359,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_NEW',2100,'IND_ELC',0.331,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-------insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_CHP_GEO_NEW',2100,'IND_ELC',0.174,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_NEW',2100,'IND_ELC',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_NEW',2100,'IND_ELC',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_NEW',2100,'IND_ELC',0.359,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CH_CHP_NGA_L_NEW',2100,'IND_ELC',0.485,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-------insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_CHP_BFG_CCS_NEW',2100,'IND_ELC',0.483,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_L_NEW',2100,'IND_ELC',0.325,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_IGCC_NEW',2100,'IND_ELC',0.439,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_NEW',2100,'IND_ELC',0.377,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_OTH_CHP_DST_NEW',2100,'IND_ELC',0.350,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_COA','IND_OTH_CHP_COA_NEW',2100,'IND_ELC',0.257,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_CHP_BIO_NEW',2100,'IND_ELC',0.250,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_FCE_NEW',2100,'IND_ELC',0.590,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_NEW',2010,'IND_HET',0.350,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_NEW',2010,'IND_HET',0.382,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COK','IND_CHP_COK_NEW',2010,'IND_HET',0.382,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_NEW',2010,'IND_HET',0.385,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_NEW',2010,'IND_HET',0.385,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_NEW',2010,'IND_HET',0.386,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_CHP_GEO_NEW',2010,'IND_HET',0.534,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_NEW',2010,'IND_IS_SB',0.382,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_NEW',2010,'IND_IS_SB',0.382,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_NEW',2010,'IND_CH_SB',0.385,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CH_CHP_NGA_L_NEW',2010,'IND_CH_SB',0.390,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_CHP_BFG_CCS_NEW',2010,'IND_IS_SB',0.329,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_L_NEW',2010,'IND_PP_SB',0.384,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_IGCC_NEW',2010,'IND_PP_SB',0.364,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_NEW',2010,'IND_OTH_SB',0.526,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_OTH_CHP_DST_NEW',2010,'IND_OTH_SB',0.524,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_OTH_CHP_COA_NEW',2010,'IND_OTH_SB',0.622,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_CHP_BIO_NEW',2010,'IND_OTH_SB',0.601,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_FCE_NEW',2010,'IND_OTH_SB',0.314,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CHP_NGA_NEW',2050,'IND_HET',0.324,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_CHP_COA_NEW',2050,'IND_HET',0.366,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COK','IND_CHP_COK_NEW',2050,'IND_HET',0.366,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CHP_HFO_NEW',2050,'IND_HET',0.365,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CHP_OIL_NEW',2050,'IND_HET',0.365,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_NEW',2050,'IND_HET',0.369,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_GEO','IND_CHP_GEO_NEW',2050,'IND_HET',0.529,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COG','IND_CHP_COG_NEW',2050,'IND_IS_SB',0.366,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_CHP_BFG_NEW',2050,'IND_IS_SB',0.366,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CHP_ETH_NEW',2050,'IND_CH_SB',0.365,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_CH_CHP_NGA_L_NEW',2050,'IND_CH_SB',0.357,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_CHP_BFG_CCS_NEW',2050,'IND_IS_SB',0.305,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_L_NEW',2050,'IND_PP_SB',0.369,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CHP_BIO_IGCC_NEW',2050,'IND_PP_SB',0.339,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_NEW',2050,'IND_OTH_SB',0.527,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_OTH_CHP_DST_NEW',2050,'IND_OTH_SB',0.534,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_COA','IND_OTH_CHP_COA_NEW',2050,'IND_OTH_SB',0.631,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_OTH_CHP_BIO_NEW',2050,'IND_OTH_SB',0.612,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_OTH_CHP_NGA_FCE_NEW',2050,'IND_OTH_SB',0.306,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Dummy demand technology
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','SEQ_SNK_DMY_TECH',2010,'SNK_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
@@ -11063,11 +10648,6 @@ INSERT INTO "TechOutputSplit" VALUES ('EUR',2040,'UPS_WDP_HLW_PYRO_ADS_MA_EXS','
 INSERT INTO "TechOutputSplit" VALUES ('EUR',2040,'UPS_WDP_HLW_PYRO_ADS_MA_EXS','UPS_MA_HLW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "TechOutputSplit" VALUES ('EUR',2040,'UPS_WDP_HLW_PYRO_ADS_MA_EXS','UPS_FP_HLW',0.994,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
--- Industrial sector
----- Electricity autoproduction
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_AUT_ELC_HET_EXS','IND_ELC',0.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_AUT_ELC_HET_EXS','IND_SB',0.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
 ---- Iron and steel
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_EXS','IND_IS_BOF',0.8,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_EXS','MAT_BFS',0.2,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11157,105 +10737,6 @@ insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_NEW','IND_PP_PU
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_NEW','IND_PP_SB',0.730,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_PP_PUL_MEC_NEW','IND_PP_PUL',0.150,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_PP_PUL_MEC_NEW','IND_PP_SB',0.850,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-
----- CHP
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_NGA_EXS','IND_ELC',0.495,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_LPG_EXS','IND_ELC',0.415,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COA_EXS','IND_ELC',0.425,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COG_EXS','IND_ELC',0.481,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BFG_EXS','IND_ELC',0.340,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_HFO_EXS','IND_ELC',0.388,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_OIL_EXS','IND_ELC',0.458,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_ETH_EXS','IND_ELC',0.389,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_PTC_EXS','IND_ELC',0.607,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_EXS','IND_ELC',0.395,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_NGA_EXS','IND_HET',1-0.495,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_LPG_EXS','IND_HET',1-0.415,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COA_EXS','IND_HET',1-0.425,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COG_EXS','IND_HET',1-0.481,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BFG_EXS','IND_HET',1-0.340,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_HFO_EXS','IND_HET',1-0.388,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_OIL_EXS','IND_HET',1-0.458,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_ETH_EXS','IND_HET',1-0.389,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_PTC_EXS','IND_HET',1-0.607,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_EXS','IND_HET',1-0.395,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_NGA_NEW','IND_ELC',1-0.513,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COA_NEW','IND_ELC',1-0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COK_NEW','IND_ELC',1-0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_HFO_NEW','IND_ELC',1-0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_OIL_NEW','IND_ELC',1-0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_NEW','IND_ELC',1-0.388,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_GEO_NEW','IND_ELC',1-0.194,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COG_NEW','IND_ELC',1-0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BFG_NEW','IND_ELC',1-0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_ETH_NEW','IND_ELC',1-0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_NEW','IND_ELC',1-0.513,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_CHP_BFG_CCS_NEW','IND_ELC',1-0.556,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_L_NEW','IND_ELC',1-0.394,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_NEW','IND_ELC',1-0.500,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_NEW','IND_ELC',1-0.369,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_DST_NEW','IND_ELC',1-0.355,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_COA_NEW','IND_ELC',1-0.244,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_BIO_NEW','IND_ELC',1-0.244,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_FCE_NEW','IND_ELC',1-0.625,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_NGA_NEW','IND_ELC',1-0.554,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COA_NEW','IND_ELC',1-0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COK_NEW','IND_ELC',1-0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_HFO_NEW','IND_ELC',1-0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_OIL_NEW','IND_ELC',1-0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_NEW','IND_ELC',1-0.432,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_GEO_NEW','IND_ELC',1-0.219,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COG_NEW','IND_ELC',1-0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BFG_NEW','IND_ELC',1-0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_ETH_NEW','IND_ELC',1-0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CH_CHP_NGA_L_NEW','IND_ELC',1-0.554,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_L_NEW','IND_ELC',1-0.433,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_IGCC_NEW','IND_ELC',1-0.539,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_NGA_NEW','IND_ELC',1-0.390,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_DST_NEW','IND_ELC',1-0.371,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_COA_NEW','IND_ELC',1-0.263,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_BIO_NEW','IND_ELC',1-0.263,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_NGA_FCE_NEW','IND_ELC',1-0.644,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_NGA_NEW','IND_HET',0.513,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COA_NEW','IND_HET',0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COK_NEW','IND_HET',0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_HFO_NEW','IND_HET',0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_OIL_NEW','IND_HET',0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_NEW','IND_HET',0.388,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_GEO_NEW','IND_HET',0.194,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_COG_NEW','IND_IS_SB',0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BFG_NEW','IND_IS_SB',0.400,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_ETH_NEW','IND_CH_SB',0.419,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_NEW','IND_CH_SB',0.513,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_CHP_BFG_CCS_NEW','IND_IS_SB',0.556,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_L_NEW','IND_PP_SB',0.394,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_NEW','IND_PP_SB',0.500,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_NEW','IND_OTH_SB',0.369,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_DST_NEW','IND_OTH_SB',0.355,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_COA_NEW','IND_OTH_SB',0.244,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_BIO_NEW','IND_OTH_SB',0.244,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_FCE_NEW','IND_OTH_SB',0.625,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_NGA_NEW','IND_HET',0.554,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COA_NEW','IND_HET',0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COK_NEW','IND_HET',0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_HFO_NEW','IND_HET',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_OIL_NEW','IND_HET',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_NEW','IND_HET',0.432,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_GEO_NEW','IND_HET',0.219,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_COG_NEW','IND_IS_SB',0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BFG_NEW','IND_IS_SB',0.442,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_ETH_NEW','IND_CH_SB',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CH_CHP_NGA_L_NEW','IND_CH_SB',0.554,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_L_NEW','IND_PP_SB',0.433,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_CHP_BIO_IGCC_NEW','IND_PP_SB',0.539,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_NGA_NEW','IND_OTH_SB',0.390,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_DST_NEW','IND_OTH_SB',0.371,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_COA_NEW','IND_OTH_SB',0.263,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_BIO_NEW','IND_OTH_SB',0.263,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechOutputSplit" VALUES ('EUR',2050,'IND_OTH_CHP_NGA_FCE_NEW','IND_OTH_SB',0.644,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 -- Electricity sector
 insert into "TechOutputSplit" VALUES ('EUR',2010,'ELC_CHP_OIL_EXS','ELC_CEN',0.482,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11418,8 +10899,8 @@ insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_OIL_HFO','ELC_FT_OIL_GRP',0.
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_OIL_PTC','ELC_FT_OIL_GRP',0.031,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_OIL_LPG','ELC_FT_OIL_GRP',0.001,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_GAS_RFG','ELC_FT_OIL_GRP',0.007,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_DST_FT','ELC_FT_OIL_GRP',0.100,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "MaxInputGroup" VALUES ('EUR',2030,'RNW_BIO_DST_FT','ELC_FT_OIL_GRP',0.200,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_DST_FT','ELC_FT_OIL_GRP',0.100,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2030,'RNW_BIO_DST_FT','ELC_FT_OIL_GRP',0.200,'');
 
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_HCO','ELC_FT_COA_GRP',1.00,'');  -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_BCO','ELC_FT_COA_GRP',0.50,'');  -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11513,7 +10994,6 @@ insert into "MaxInputGroup" VALUES ('EUR',2010,'IND_ELC','IND_OTH_OTH_GRP',0.25,
 insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_ELC','IND_OTH_OTH_GRP',0.35,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2010,'IND_GEO','IND_OTH_OTH_GRP',0.10,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_GEO','IND_OTH_OTH_GRP',0.10,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
 
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'ELC_HYD_DAM','ELC_HYD_GEN_GRP',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'ELC_HYD_DAM','ELC_HYD_GEN_GRP',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11704,7 +11184,7 @@ INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'ELC_DIS','ELC_GEN_GRP',0.500,''
 
 INSERT INTO "MaxOutputGroup" VALUES ('EUR',2010,'MIN_OIL_HOIL','IMP_OIL_GRP',0.65,'');
 INSERT INTO "MaxOutputGroup" VALUES ('EUR',2020,'MIN_OIL_HOIL','IMP_OIL_GRP',0.65,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'MIN_OIL_HOIL','IMP_OIL_GRP',0.85,'');
+INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'MIN_OIL_HOIL','IMP_OIL_GRP',1.00,'');
 
 create TABLE "MinOutputGroup" (
 	"regions"	      text,
@@ -11719,13 +11199,13 @@ create TABLE "MinOutputGroup" (
 	PRIMARY KEY("regions","periods","output_comm","group_name")
 );
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.30,'');
-INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.30,'');
+INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.00,'');
 
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_COA','IMP_EXP_COA_GRP',0.10,'');
-INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_COA','IMP_EXP_COA_GRP',0.10,'');
+INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_COA','IMP_EXP_COA_GRP',0.00,'');
 
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.30,'');
-INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.30,'');
+INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.00,'');
 
 create TABLE "ExistingCapacity" (
 	"regions"	text,
@@ -11908,7 +11388,7 @@ insert into "ExistingCapacity" VALUES ('EUR','UPS_AGG_OIL_RPP',2005,1,'',''); --
 insert into "ExistingCapacity" VALUES ('EUR','UPS_AGG_OIL_RPG',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "ExistingCapacity" VALUES ('EUR','UPS_FT_RNW_BIO_REN',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','UPS_FT_ELC',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','UPS_FT_HET',2005,161.952,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "ExistingCapacity" VALUES ('EUR','UPS_FT_HET',2005,161.952,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','UPS_CONV_STM_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Primary energy production
 insert into "ExistingCapacity" VALUES ('EUR','UPS_PRI_HFO_1_EXS',2005,13795.657,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -12026,11 +11506,12 @@ insert into "ExistingCapacity" VALUES ('EUR','ELC_CHP_NGA_EXS',2005,33.391,'(GW)
 insert into "ExistingCapacity" VALUES ('EUR','ELC_CHP_COA_EXS',2005,41.820,'(GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','ELC_CHP_BIO_EXS',2005,5.483,'(GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','ELC_CHP_GEO_EXS',2005,0.206,'(GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','HET_OIL_EXS',2005,211.280,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','HET_NGA_EXS',2005,658.224,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','HET_COA_EXS',2005,302.056,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','HET_BIO_EXS',2005,227.483,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','HET_GEO_EXS',2005,7.979,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
+insert into "ExistingCapacity" VALUES ('EUR','HET_OIL_EXS',2005,(211.280+1.329),'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','HET_NGA_EXS',2005,(658.224+103.247),'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','HET_COA_EXS',2005,(302.056+20.295),'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','HET_BIO_EXS',2005,(227.483+30.007),'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','HET_GEO_EXS',2005,(7.979+0.131),'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','HET_SOL_EXS',2005,0.109,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 -- Agriculture sector
@@ -12270,40 +11751,6 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_IMP_WOD',2005,409.339*0.3,'','
 insert into "ExistingCapacity" VALUES ('EUR','IND_SUP_RCP',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_SUP_BFS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_EXS',2005,0.016,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_NGA_EXS',2005,1.262,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_LPG_EXS',2005,0.014,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_COA_EXS',2005,2.230,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_COG_EXS',2005,0.341,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_BFG_EXS',2005,1.235,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_HFO_EXS',2005,0.593,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_OIL_EXS',2005,0.057,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_ETH_EXS',2005,0.098,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_PTC_EXS',2005,0.011,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_BIO_EXS',2005,2.283,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_ELC_HET_EXS',2005,23.940,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_NGA_EXS',2005,16.488,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_LPG_EXS',2005,0.056,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_COA_EXS',2005,2.675,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_COG_EXS',2005,0.195,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_BFG_EXS',2005,0.316,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_HFO_EXS',2005,3.402,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_OIL_EXS',2005,0.068,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_ETH_EXS',2005,0.940,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_PTC_EXS',2005,0.174,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_CHP_BIO_EXS',2005,3.942,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_NGA_EXS',2005,103.247,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_LPG_EXS',2005,0.090,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_COA_EXS',2005,20.925,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_COK_EXS',2005,0.132,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_COG_EXS',2005,2.459,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_BFG_EXS',2005,1.123,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_HFO_EXS',2005,4.797,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_OIL_EXS',2005,1.329,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_ETH_EXS',2005,0.054,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_BIO_EXS',2005,30.007,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_GEO_EXS',2005,0.131,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','IND_AUT_HET_HET_EXS',2005,173.860,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_CH_TECH_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_CH_OLF_EXS',2005,42.910,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -12484,7 +11931,7 @@ insert into "CostInvest" VALUES ('EUR','UPS_FT_NGA',2010,10,'','');
 --insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPP',2010,10,'','');
 --insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPG',2010,10,'','');
 insert into "CostInvest" VALUES ('EUR','UPS_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','UPS_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','UPS_FT_HET',2010,10,'','');
 insert into "CostInvest" VALUES ('EUR','HH2_FT_NGA',2015,10,'','');
 insert into "CostInvest" VALUES ('EUR','HH2_FT_COA',2015,10,'','');
 insert into "CostInvest" VALUES ('EUR','HH2_FT_BIO_ETH',2015,10,'','');
@@ -12732,40 +12179,6 @@ insert into "CostInvest" VALUES ('EUR','TRA_ROA_MTR_NGA_EXS',2010,1e6,'',''); --
 insert into "CostInvest" VALUES ('EUR','TRA_ROA_MCY_GSL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','TRA_ROA_MOP_GSL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','TRA_ROA_3WH_GSL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_LPG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_COA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_COG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_BFG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_HFO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_ETH_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_PTC_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_BIO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_ELC_HET_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_LPG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_COA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_COK_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_COG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_BFG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_HFO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_ETH_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_BIO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_GEO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_AUT_HET_HET_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_LPG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_COA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_COG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BFG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_HFO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_ETH_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_PTC_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_CH_OLF_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_CH_BTX_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_CH_AMM_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
@@ -13159,10 +12572,9 @@ INSERT INTO "CostInvest" VALUES ('EUR','ELC_BIO_COM_CCS_NEW',2030,2627.10,'','')
 insert into "CostInvest" VALUES ('EUR','HET_NGA_NEW',2010,110,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','HET_OIL_NEW',2010,110,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','HET_BIO_NEW',2010,330,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','HET_COA_NEW',2010,110,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "CostInvest" VALUES ('EUR','HET_COA_NEW',2010,110,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','HET_GEO_NEW',2010,120,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','HET_SOL_NEW',2010,120,'(MEUR/PJ)','');
---insert into "CostInvest" VALUES ('EUR','HET_NUC_NEW',2010,110,'(MEUR/PJ)','');
 ---- CHP
 insert into "CostInvest" VALUES ('EUR','ELC_CHP_NGA_NEW',2010,950,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_CHP_COA_NEW',2010,1200,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -13775,32 +13187,7 @@ insert into "CostInvest" VALUES ('EUR','IND_OTH_OTH_GEO_NEW',2010,10.20,'(MEUR/P
 insert into "CostInvest" VALUES ('EUR','IND_OTH_OTH_LPG_NEW',2010,4.40,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','IND_OTH_OTH_BIO_NEW',2010,12.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','IND_OTH_EC_ELC_NEW',2010,0.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
----- CHP
---insert into "CostInvest" VALUES ('EUR','IND_CHP_NGA_NEW',2010,795.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_COA_NEW',2010,1200.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_COK_NEW',2010,1200.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_HFO_NEW',2010,1050.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_OIL_NEW',2010,1050.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_NEW',2010,1700.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_CHP_GEO_NEW',2010,3000.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_COG_NEW',2010,1050.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BFG_NEW',2010,1050.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_ETH_NEW',2010,1050.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_CH_CHP_NGA_L_CCS_NEW',2010,660.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW',2010,1230.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_IS_CHP_BFG_L_CCS_NEW',2010,800.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_IS_CHP_BFG_CCS_NEW',2010,800.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_L_NEW',2010,1291.72,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_IGCC_NEW',2010,1563.77,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_IGCC_CCS_NEW',2010,2150.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_NGA_NEW',2010,890.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_DST_NEW',2010,850.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_COA_NEW',2010,1650.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_BIO_NEW',2010,1845.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW',2010,5500.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostInvest" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW',2020,1130.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_CHP_BIO_IGCC_CCS_NEW',2100,1750.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostInvest" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW',2100,900.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
 create TABLE "CostFixed" (
 	"regions"	text NOT NULL,
 	"periods"	integer NOT NULL,
@@ -14109,11 +13496,10 @@ insert into "CostFixed" VALUES ('EUR',2005,'HET_SOL_EXS',2005,4.0,'(MEUR/GW)',''
 insert into "CostFixed" VALUES ('EUR',2010,'HET_NGA_NEW',2010,4.0,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostFixed" VALUES ('EUR',2010,'HET_OIL_NEW',2010,4.0,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostFixed" VALUES ('EUR',2010,'HET_BIO_NEW',2010,6.5,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'HET_COA_NEW',2010,4.0,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "CostFixed" VALUES ('EUR',2010,'HET_COA_NEW',2010,4.0,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostFixed" VALUES ('EUR',2010,'HET_GEO_NEW',2010,4.0,'(MEUR/GW)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostFixed" VALUES ('EUR',2010,'HET_SOL_NEW',2010,4.0,'(MEUR/GW)','');
---insert into "CostFixed" VALUES ('EUR',2010,'HET_NUC_NEW',2010,4.0,'(MEUR/GW)','');
----- CHP
+
 ---- Base year technologies
 insert into "CostFixed" VALUES ('EUR',2005,'ELC_CHP_OIL_EXS',2005,25,'(MEUR/GW)','');
 insert into "CostFixed" VALUES ('EUR',2005,'ELC_CHP_NGA_EXS',2005,110,'(MEUR/GW)','');
@@ -14548,40 +13934,6 @@ insert into "CostFixed" VALUES ('EUR',2030,'TRA_NAV_INT_MTH_NEW',2030,400.0*0.02
 insert into "CostFixed" VALUES ('EUR',2030,'TRA_NAV_INT_LH2_NEW',2030,800.0*0.02,'(MEUR/Bvkm)',''); -- Educated guess
 insert into "CostFixed" VALUES ('EUR',2030,'TRA_NAV_INT_AMM_FCE_NEW',2030,800.0*0.02,'(MEUR/Bvkm)',''); -- Educated guess
 -- Industrial sector
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_NGA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_LPG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_COA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_COG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_BFG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_HFO_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_OIL_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_ETH_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_PTC_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_BIO_EXS',2005,90.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_ELC_HET_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_NGA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_LPG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_COA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_COG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_BFG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_HFO_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_OIL_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_ETH_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_PTC_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_CHP_BIO_EXS',2005,90.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_NGA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_LPG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_COA_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_COK_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_COG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_BFG_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_HFO_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_OIL_EXS',2005,60.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_ETH_EXS',2005,90.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_BIO_EXS',2005,90.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_GEO_EXS',2005,150.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_AUT_HET_HET_EXS',2005,60.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_CH_OLF_EXS',2005,70.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_CH_BTX_EXS',2005,70.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_CH_AMM_EXS',2005,60.0,'(MEUR/PJ)','');
@@ -14837,35 +14189,6 @@ insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_OTH_GEO_NEW',2010,0.01,'(MEU
 insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_OTH_LPG_NEW',2010,0.07,'(MEUR/PJ)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_OTH_BIO_NEW',2010,0.11,'(MEUR/PJ)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_EC_ELC_NEW',2010,4.17,'(MEUR/PJ)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-
----- CHP
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_NGA_NEW',2010,50.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_COA_NEW',2010,56.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_COK_NEW',2010,56.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_HFO_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_OIL_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_BIO_NEW',2010,71.75,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_GEO_NEW',2010,136.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_COG_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_BFG_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_ETH_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_CCS_NEW',2010,40.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_CHP_BFG_L_CCS_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_CHP_BFG_CCS_NEW',2010,45.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_BIO_L_NEW',2010,54.52,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_NEW',2010,75.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2050,'IND_CHP_BIO_IGCC_NEW',2050,68.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_CCS_NEW',2010,76.67,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_NEW',2010,25.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_CHP_DST_NEW',2010,65.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_CHP_COA_NEW',2010,50.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_CHP_BIO_NEW',2010,78.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_FCE_NEW',2010,600.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostFixed" VALUES ('EUR',2050,'IND_OTH_CHP_NGA_FCE_NEW',2050,356.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2100,'IND_OTH_CHP_NGA_FCE_NEW',2100,50.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostFixed" VALUES ('EUR',2100,'IND_CHP_BIO_IGCC_NEW',2100,60.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-------insert into "CostFixed" VALUES ('EUR',2100,'IND_CHP_BIO_IGCC_CCS_NEW',2100,65.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 create TABLE "CostVariable" (
 	"regions"	text NOT NULL,
@@ -15501,29 +14824,6 @@ insert into "CostVariable" VALUES ('EUR',2010,'ELC_CHP_BIO_NEW',2010,0.70,'(MEUR
 --insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_SOL',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ----insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_STM',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2005,'IND_SUP_RCP',2005,90,'(MEUR/t)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
----- CHP
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_NGA_NEW',2010,0.426,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_COA_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_COK_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_HFO_NEW',2010,2.083,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_OIL_NEW',2010,2.083,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_BIO_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_GEO_NEW',2010,0.250,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_COG_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_BFG_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_ETH_NEW',2010,2.083,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_CCS_NEW',2010,0.426,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CH_CHP_NGA_L_NEW',2010,0.426,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2010,'IND_IS_CHP_BFG_L_CCS_NEW',2010,0.426,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2010,'IND_IS_CHP_BFG_CCS_NEW',2010,0.426,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_BIO_L_NEW',2010,0.710,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_NEW',2010,1.258,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2010,'IND_CHP_BIO_IGCC_CCS_NEW',2010,1.258,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_NEW',2010,0.800,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_OTH_CHP_DST_NEW',2010,0.800,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_OTH_CHP_COA_NEW',2010,1.800,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_OTH_CHP_BIO_NEW',2010,0.900,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2010,'IND_OTH_CHP_NGA_FCE_NEW',2010,0.300,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Residential sector
 --insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_DST',2005,1.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -15687,9 +14987,8 @@ insert into "CapacityFactor" VALUES ('EUR','HET_GEO_EXS',2005,0.50,'');
 insert into "CapacityFactor" VALUES ('EUR','HET_NGA_NEW',2010,0.30,'');
 insert into "CapacityFactor" VALUES ('EUR','HET_OIL_NEW',2010,0.20,'');
 insert into "CapacityFactor" VALUES ('EUR','HET_BIO_NEW',2010,0.50,'');
---insert into "CapacityFactor" VALUES ('EUR','HET_COA_NEW',2010,0.50,'');
+insert into "CapacityFactor" VALUES ('EUR','HET_COA_NEW',2010,0.50,'');
 insert into "CapacityFactor" VALUES ('EUR','HET_GEO_NEW',2010,0.50,'');
---insert into "CapacityFactor" VALUES ('EUR','HET_NUC_NEW',2010,0.50,'');
 
 insert into "CapacityFactor" VALUES ('EUR','ELC_NUC_FIS_LWR_NEW',2010,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','ELC_NUC_FIS_EPR_NEW',2020,0.85,'');
@@ -16144,30 +15443,6 @@ insert into "CapacityFactor" VALUES ('EUR','IND_OTH_OTH_LPG_NEW',2010,0.35,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_OTH_OTH_BIO_NEW',2010,0.35,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_OTH_EC_ELC_NEW',2010,0.70,'');
 
----- CHP
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_NGA_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_COA_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_COK_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_HFO_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_OIL_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_BIO_NEW',2010,0.75,'');
-----insert into "CapacityFactor" VALUES ('EUR','IND_CHP_GEO_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_COG_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_BFG_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_ETH_NEW',2010,0.75,'');
-----insert into "CapacityFactor" VALUES ('EUR','IND_CH_CHP_NGA_L_CCS_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW',2010,0.75,'');
-----insert into "CapacityFactor" VALUES ('EUR','IND_IS_CHP_BFG_L_CCS_NEW',2010,0.75,'');
-----insert into "CapacityFactor" VALUES ('EUR','IND_IS_CHP_BFG_CCS_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_BIO_L_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_CHP_BIO_IGCC_NEW',2010,0.75,'');
-----insert into "CapacityFactor" VALUES ('EUR','IND_CHP_BIO_IGCC_CCS_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_OTH_CHP_NGA_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_OTH_CHP_DST_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_OTH_CHP_COA_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_OTH_CHP_BIO_NEW',2010,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW',2010,0.75,'');
-
 create TABLE "CapacityFactorTech" (
 	"regions"	text,
 	"season_name"	text,
@@ -16577,53 +15852,8 @@ insert into "CapacityToActivity" VALUES ('EUR','ELC_CHP_BIO_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_STG_CEN_BTT_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_STG_DIS_BTT_NEW',31.536,'');
 
--- Industry sector
----- CHP
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_NGA_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_LPG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_COA_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_COG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_BFG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_HFO_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_OIL_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_ETH_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_PTC_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_AUT_ELC_BIO_EXS',31.536,'');
 
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_NGA_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_LPG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_COA_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_COG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BFG_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_HFO_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_OIL_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_ETH_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_PTC_EXS',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BIO_EXS',31.536,'');
 
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_NGA_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_COA_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_COK_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_HFO_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_OIL_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BIO_NEW',31.536,'');
-----insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_GEO_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_COG_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BFG_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_ETH_NEW',31.536,'');
-----insert into "CapacityToActivity" VALUES ('EUR','IND_CH_CHP_NGA_L_CCS_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CH_CHP_NGA_L_NEW',31.536,'');
-----insert into "CapacityToActivity" VALUES ('EUR','IND_IS_CHP_BFG_L_CCS_NEW',31.536,'');
-----insert into "CapacityToActivity" VALUES ('EUR','IND_IS_CHP_BFG_CCS_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BIO_L_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BIO_IGCC_NEW',31.536,'');
-----insert into "CapacityToActivity" VALUES ('EUR','IND_CHP_BIO_IGCC_CCS_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_OTH_CHP_NGA_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_OTH_CHP_DST_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_OTH_CHP_COA_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_OTH_CHP_BIO_NEW',31.536,'');
---insert into "CapacityToActivity" VALUES ('EUR','IND_OTH_CHP_NGA_FCE_NEW',31.536,'');
 
 ---- Commercial sector
 --INSERT INTO "CapacityToActivity" VALUES ('EUR','COM_CHP_H2_PEMFC_NEW',31.536,'');
@@ -18947,38 +18177,38 @@ create TABLE "MaxResource" (
 );
 -- Upstream sector
 ---- Oil, coal and uranium
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_BCO',144619.242*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_BCO',971161.167*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HCO',54680.751*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HCO',367330.132*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_1',96114.274*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_2',57668.565*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_3',38445.710*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_1',47646.307*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_2',28587.784*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_3',19058.523*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_1',192811.853*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_2',115687.112*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_3',77124.741*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_1',478.300*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_2',478.300*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_3',239.150*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_1',972.543*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_2',972.543*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_3',486.272*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_BCO',144619.242,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_BCO',971161.167,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HCO',54680.751,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HCO',367330.132,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_1',96114.274,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_2',57668.565,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HOIL_3',38445.710,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_1',47646.307,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_2',28587.784,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_HOIL_3',19058.523,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_1',192811.853,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_2',115687.112,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_HOIL_3',77124.741,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_1',478.300,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_2',478.300,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_HSAN_3',239.150,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_1',972.543,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_2',972.543,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_REC_HSAN_3',486.272,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_SHA_1_EXS',119529.992,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_SHA_2_EXS',119529.992,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_SHA_3_EXS',59764.996,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_1',66717.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_2',88956.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_3',66717.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_1',73529.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_2',98038.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_3',73529.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_1',108475.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_2',144633.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_3',108475.00*2,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_1',66717.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_2',88956.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_LOC_NGA_3',66717.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_1',73529.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_2',98038.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_GRO_NGA_3',73529.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_1',108475.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_2',144633.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "MaxResource" VALUES ('EUR','UPS_DIS_NGA_3',108475.00,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Sequestration
 INSERT INTO "MaxResource" VALUES ('EUR','SEQ_SNK_EOR_ONS_NEW',10400000,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -19057,16 +18287,16 @@ insert into "MaxCapacity" VALUES ('EUR',2035,'ELC_CHP_BIO_EXS',5.483*0.00,'','')
 insert into "MaxCapacity" VALUES ('EUR',2010,'ELC_CHP_GEO_EXS',0.206*0.95,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'ELC_CHP_GEO_EXS',0.206*0.25,'','');
 
-insert into "MaxCapacity" VALUES ('EUR',2010,'HET_OIL_EXS',211.280*0.95,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'HET_OIL_EXS',211.280*0,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'HET_NGA_EXS',658.224*0.95,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'HET_NGA_EXS',658.224*0,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'HET_COA_EXS',302.056*0.95,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'HET_COA_EXS',302.056*0,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'HET_BIO_EXS',227.483*0.95,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'HET_BIO_EXS',227.483*0,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'HET_GEO_EXS',7.979*0.95,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'HET_GEO_EXS',7.979*0,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'HET_OIL_EXS',(211.280+1.329)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2040,'HET_OIL_EXS',(211.280+1.329)*0,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'HET_NGA_EXS',(658.224+103.247)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2040,'HET_NGA_EXS',(658.224+103.247)*0,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'HET_COA_EXS',(302.056+20.295)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2040,'HET_COA_EXS',(302.056+20.295)*0,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'HET_BIO_EXS',(227.483+30.007)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2040,'HET_BIO_EXS',(227.483+30.007)*0,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'HET_GEO_EXS',(7.979+0.131)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2040,'HET_GEO_EXS',(7.979+0.131)*0,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'HET_SOL_EXS',0.109*0.95,'','');
 insert into "MaxCapacity" VALUES ('EUR',2040,'HET_SOL_EXS',0.109*0,'','');
 
@@ -19330,74 +18560,8 @@ insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_MCY_GSL_EXS',0.000*18.112,
 insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_MOP_GSL_EXS',0.000*2.875,'','');
 insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_3WH_GSL_EXS',0.000*8.600,'','');
 
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_EXS',0.95*0.016,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_NGA_EXS',0.95*1.262,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_LPG_EXS',0.95*0.014,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_COA_EXS',0.95*2.230,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_COG_EXS',0.95*0.341,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_BFG_EXS',0.95*1.235,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_HFO_EXS',0.95*0.593,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_OIL_EXS',0.95*0.057,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_ETH_EXS',0.95*0.098,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_PTC_EXS',0.95*0.011,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_BIO_EXS',0.95*2.283,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_ELC_HET_EXS',23.940,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_EXS',0.000*0.016,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_NGA_EXS',0.000*1.262,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_LPG_EXS',0.000*0.014,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_COA_EXS',0.000*2.230,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_COG_EXS',0.000*0.341,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_BFG_EXS',0.000*1.235,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_HFO_EXS',0.000*0.593,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_OIL_EXS',0.000*0.057,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_ETH_EXS',0.000*0.098,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_PTC_EXS',0.000*0.011,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_ELC_BIO_EXS',0.000*2.283,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_NGA_EXS',0.95*103.247,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_LPG_EXS',0.95*0.090,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_COA_EXS',0.95*20.925,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_COK_EXS',0.95*0.132,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_COG_EXS',0.95*2.459,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_BFG_EXS',0.95*1.123,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_HFO_EXS',0.95*4.797,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_OIL_EXS',0.95*1.329,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_ETH_EXS',0.95*0.054,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_BIO_EXS',0.95*30.007,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_GEO_EXS',0.95*0.131,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_NGA_EXS',0.000*103.247,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_LPG_EXS',0.000*0.090,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_COA_EXS',0.000*20.925,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_COK_EXS',0.000*0.132,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_COG_EXS',0.000*2.459,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_BFG_EXS',0.000*1.123,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_HFO_EXS',0.000*4.797,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_OIL_EXS',0.000*1.329,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_ETH_EXS',0.000*0.054,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_BIO_EXS',0.000*30.007,'','');
---insert into "MaxCapacity" VALUES ('EUR',2050,'IND_AUT_HET_GEO_EXS',0.000*0.131,'','');
 
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_AUT_HET_HET_EXS',173.860,'','');
 
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_NGA_EXS',0.95*16.488,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_LPG_EXS',0.95*0.056,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_COA_EXS',0.95*2.675,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_COG_EXS',0.95*0.195,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_BFG_EXS',0.95*0.316,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_HFO_EXS',0.95*3.402,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_OIL_EXS',0.95*0.068,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_ETH_EXS',0.95*0.940,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_PTC_EXS',0.95*0.174,'','');
---insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CHP_BIO_EXS',0.95*3.942,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_NGA_EXS',0.000*16.488,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_LPG_EXS',0.000*0.056,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_COA_EXS',0.000*2.675,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_COG_EXS',0.000*0.195,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_BFG_EXS',0.000*0.316,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_HFO_EXS',0.000*3.402,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_OIL_EXS',0.000*0.068,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_ETH_EXS',0.000*0.940,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_PTC_EXS',0.000*0.174,'','');
---insert into "MaxCapacity" VALUES ('EUR',2035,'IND_CHP_BIO_EXS',0.000*3.942,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CH_OLF_EXS',0.95*42.910,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CH_BTX_EXS',0.95*17.430,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_CH_AMM_EXS',0.95*17.430,'','');
@@ -19696,29 +18860,29 @@ create TABLE "MaxActivity" (
 --insert into "MaxActivity" VALUES ('EUR',2050,'ELC_CHP_GEO_EXS',0.206*0.25*31.536*0.600,'','');
 ----insert into "MaxActivity" VALUES ('EUR',2060,'ELC_CHP_GEO_EXS',0.206*0.000*31.536*0.600,'','');
 --
---insert into "MaxActivity" VALUES ('EUR',2010,'HET_OIL_EXS',211.280*0.95*0.200,'','');
-----insert into "MaxActivity" VALUES ('EUR',2020,'HET_OIL_EXS',211.280*0.75*0.300,'','');
-----insert into "MaxActivity" VALUES ('EUR',2040,'HET_OIL_EXS',211.280*0.45*0.300,'','');
---insert into "MaxActivity" VALUES ('EUR',2050,'HET_OIL_EXS',211.280*0.25*0.200,'','');
-----insert into "MaxActivity" VALUES ('EUR',2060,'HET_OIL_EXS',211.280*0.000*0.200,'','');
---insert into "MaxActivity" VALUES ('EUR',2010,'HET_NGA_EXS',658.224*0.95*0.300,'','');
-----insert into "MaxActivity" VALUES ('EUR',2020,'HET_NGA_EXS',658.224*0.75*0.300,'','');
-----insert into "MaxActivity" VALUES ('EUR',2040,'HET_NGA_EXS',658.224*0.45*0.300,'','');
---insert into "MaxActivity" VALUES ('EUR',2050,'HET_NGA_EXS',658.224*0.25*0.300,'','');
-----insert into "MaxActivity" VALUES ('EUR',2060,'HET_NGA_EXS',658.224*0.000*0.300,'','');
---insert into "MaxActivity" VALUES ('EUR',2010,'HET_COA_EXS',302.056*0.95*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2020,'HET_COA_EXS',302.056*0.75*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2040,'HET_COA_EXS',302.056*0.45*0.500,'','');
---insert into "MaxActivity" VALUES ('EUR',2050,'HET_COA_EXS',302.056*0.25*0.500,'','');
---insert into "MaxActivity" VALUES ('EUR',2010,'HET_BIO_EXS',227.483*0.95*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2020,'HET_BIO_EXS',227.483*0.75*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2040,'HET_BIO_EXS',227.483*0.45*0.500,'','');
---insert into "MaxActivity" VALUES ('EUR',2050,'HET_BIO_EXS',227.483*0.25*0.500,'','');
---insert into "MaxActivity" VALUES ('EUR',2010,'HET_GEO_EXS',7.979*0.95*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2020,'HET_GEO_EXS',7.979*0.75*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2040,'HET_GEO_EXS',7.979*0.45*0.500,'','');
---insert into "MaxActivity" VALUES ('EUR',2050,'HET_GEO_EXS',7.979*0.25*0.500,'','');
-----insert into "MaxActivity" VALUES ('EUR',2060,'HET_GEO_EXS',7.979*0.000*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2010,'HET_OIL_EXS',(211.280+1.329)*0.95*0.200,'','');
+----insert into "MaxActivity" VALUES ('EUR',2020,'HET_OIL_EXS',(211.280+1.329)*0.75*0.300,'','');
+----insert into "MaxActivity" VALUES ('EUR',2040,'HET_OIL_EXS',(211.280+1.329)*0.45*0.300,'','');
+--insert into "MaxActivity" VALUES ('EUR',2050,'HET_OIL_EXS',(211.280+1.329)*0.25*0.200,'','');
+----insert into "MaxActivity" VALUES ('EUR',2060,'HET_OIL_EXS',(211.280+1.329)*0.000*0.200,'','');
+--insert into "MaxActivity" VALUES ('EUR',2010,'HET_NGA_EXS',(658.224+103.247)*0.95*0.300,'','');
+----insert into "MaxActivity" VALUES ('EUR',2020,'HET_NGA_EXS',(658.224+103.247)*0.75*0.300,'','');
+----insert into "MaxActivity" VALUES ('EUR',2040,'HET_NGA_EXS',(658.224+103.247)*0.45*0.300,'','');
+--insert into "MaxActivity" VALUES ('EUR',2050,'HET_NGA_EXS',(658.224+103.247)*0.25*0.300,'','');
+----insert into "MaxActivity" VALUES ('EUR',2060,'HET_NGA_EXS',(658.224+103.247)*0.000*0.300,'','');
+--insert into "MaxActivity" VALUES ('EUR',2010,'HET_COA_EXS',(302.056+20.295)*0.95*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2020,'HET_COA_EXS',(302.056+20.295)*0.75*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2040,'HET_COA_EXS',(302.056+20.295)*0.45*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2050,'HET_COA_EXS',(302.056+20.295)*0.25*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2010,'HET_BIO_EXS',(227.483+30.007)*0.95*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2020,'HET_BIO_EXS',(227.483+30.007)*0.75*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2040,'HET_BIO_EXS',(227.483+30.007)*0.45*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2050,'HET_BIO_EXS',(227.483+30.007)*0.25*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2010,'HET_GEO_EXS',(7.979+0.131)*0.95*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2020,'HET_GEO_EXS',(7.979+0.131)*0.75*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2040,'HET_GEO_EXS',(7.979+0.131)*0.45*0.500,'','');
+--insert into "MaxActivity" VALUES ('EUR',2050,'HET_GEO_EXS',(7.979+0.131)*0.25*0.500,'','');
+----insert into "MaxActivity" VALUES ('EUR',2060,'HET_GEO_EXS',(7.979+0.131)*0.000*0.500,'','');
 --insert into "MaxActivity" VALUES ('EUR',2010,'HET_SOL_EXS',0.109*0.95*0.500,'','');
 ----insert into "MaxActivity" VALUES ('EUR',2020,'HET_SOL_EXS',0.109*0.75*0.500,'','');
 ----insert into "MaxActivity" VALUES ('EUR',2040,'HET_SOL_EXS',0.109*0.45*0.500,'','');
@@ -19987,74 +19151,8 @@ create TABLE "MaxActivity" (
 --insert into "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_MOP_GSL_EXS',0.000*2.875,'','');
 --insert into "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_3WH_GSL_EXS',0.000*8.600,'','');
 --
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_EXS',0.95*0.016*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_NGA_EXS',0.95*1.262*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_LPG_EXS',0.95*0.014*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_COA_EXS',0.95*2.230*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_COG_EXS',0.95*0.341*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_BFG_EXS',0.95*1.235*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_HFO_EXS',0.95*0.593*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_OIL_EXS',0.95*0.057*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_ETH_EXS',0.95*0.098*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_PTC_EXS',0.95*0.011*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_BIO_EXS',0.95*2.283*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_ELC_HET_EXS',23.940,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_EXS',0.000*0.016*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_NGA_EXS',0.000*1.262*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_LPG_EXS',0.000*0.014*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_COA_EXS',0.000*2.230*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_COG_EXS',0.000*0.341*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_BFG_EXS',0.000*1.235*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_HFO_EXS',0.000*0.593*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_OIL_EXS',0.000*0.057*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_ETH_EXS',0.000*0.098*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_PTC_EXS',0.000*0.011*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_ELC_BIO_EXS',0.000*2.283*31.536,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_NGA_EXS',0.95*103.247,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_LPG_EXS',0.95*0.090,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_COA_EXS',0.95*20.925,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_COK_EXS',0.95*0.132,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_COG_EXS',0.95*2.459,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_BFG_EXS',0.95*1.123,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_HFO_EXS',0.95*4.797,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_OIL_EXS',0.95*1.329,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_ETH_EXS',0.95*0.054,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_BIO_EXS',0.95*30.007,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_GEO_EXS',0.95*0.131,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_NGA_EXS',0.000*103.247,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_LPG_EXS',0.000*0.090,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_COA_EXS',0.000*20.925,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_COK_EXS',0.000*0.132,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_COG_EXS',0.000*2.459,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_BFG_EXS',0.000*1.123,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_HFO_EXS',0.000*4.797,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_OIL_EXS',0.000*1.329,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_ETH_EXS',0.000*0.054,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_BIO_EXS',0.000*30.007,'','');
-----insert into "MaxActivity" VALUES ('EUR',2050,'IND_AUT_HET_GEO_EXS',0.000*0.131,'','');
 --
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_AUT_HET_HET_EXS',173.860,'','');
 --
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_NGA_EXS',0.95*16.488,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_LPG_EXS',0.95*0.056,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_COA_EXS',0.95*2.675,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_COG_EXS',0.95*0.195,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_BFG_EXS',0.95*0.316,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_HFO_EXS',0.95*3.402,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_OIL_EXS',0.95*0.068,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_ETH_EXS',0.95*0.940,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_PTC_EXS',0.95*0.174,'','');
-----insert into "MaxActivity" VALUES ('EUR',2010,'IND_CHP_BIO_EXS',0.95*3.942,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_NGA_EXS',0.000*16.488,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_LPG_EXS',0.000*0.056,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_COA_EXS',0.000*2.675,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_COG_EXS',0.000*0.195,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_BFG_EXS',0.000*0.316,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_HFO_EXS',0.000*3.402,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_OIL_EXS',0.000*0.068,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_ETH_EXS',0.000*0.940,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_PTC_EXS',0.000*0.174,'','');
-----insert into "MaxActivity" VALUES ('EUR',2035,'IND_CHP_BIO_EXS',0.000*3.942,'','');
 --insert into "MaxActivity" VALUES ('EUR',2010,'IND_CH_OLF_EXS',0.95*42.910,'','');
 --insert into "MaxActivity" VALUES ('EUR',2010,'IND_CH_BTX_EXS',0.95*17.430,'','');
 --insert into "MaxActivity" VALUES ('EUR',2010,'IND_CH_AMM_EXS',0.95*17.430,'','');
@@ -20406,8 +19504,8 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2050,'IMP_HH2_GLB',3600,'(PJ)','');
 
 -- Upstream sector
 ---- Fuel technologies
---insert into "MaxActivity" VALUES ('EUR',2010,'UPS_FT_HET',161.952,'(PJ)','');
---insert into "MaxActivity" VALUES ('EUR',2010,'UPS_FT_HET',161.952,'(PJ)','');
+----insert into "MaxActivity" VALUES ('EUR',2010,'UPS_FT_HET',161.952,'(PJ)','');
+----insert into "MaxActivity" VALUES ('EUR',2010,'UPS_FT_HET',161.952,'(PJ)','');
 
 --insert into "MaxActivity" VALUES ('EUR',2010,'UPS_HET_REF_RPP_EXS',2.22*1.1,'(PJ)','');
 --insert into "MaxActivity" VALUES ('EUR',2010,'UPS_HET_REF_RPG_EXS',10.87*1.1,'(PJ)','');
@@ -21374,22 +20472,22 @@ insert into "MinActivity" VALUES ('EUR',2035,'ELC_CHP_BIO_EXS',5.483*0.0*31.536*
 insert into "MinActivity" VALUES ('EUR',2010,'ELC_CHP_GEO_EXS',0.206*0.9*31.536*0.80,'','');
 insert into "MinActivity" VALUES ('EUR',2035,'ELC_CHP_GEO_EXS',0.206*0.0*31.536*0.80,'','');
 
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_OIL_EXS',0.9*211.280*0.20,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_OIL_EXS',0.0*211.280*0.20,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_OIL_EXS',0.8*0.227*211.280*0.200,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_NGA_EXS',0.9*658.224*0.30,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_NGA_EXS',0.0*658.224*0.30,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_NGA_EXS',0.8*0.227*658.224*0.300,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_COA_EXS',0.9*302.056*0.50,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_COA_EXS',0.0*302.056*0.50,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_COA_EXS',0.8*0.227*302.056*0.500,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_BIO_EXS',0.9*227.483*0.50,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_BIO_EXS',0.0*227.483*0.50,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_BIO_EXS',0.8*0.227*227.483*0.500,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_GEO_EXS',0.9*7.979*0.50,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_GEO_EXS',0.0*7.979*0.50,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_GEO_EXS',0.8*0.493*7.979*0.500,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_GEO_EXS',0.8*0.227*7.979*0.500,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_OIL_EXS',0.9*(211.280+1.329)*0.20,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_OIL_EXS',0.0*(211.280+1.329)*0.20,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_OIL_EXS',0.8*0.227*(211.280+1.329)*0.200,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_NGA_EXS',0.9*(658.224+103.247)*0.30,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_NGA_EXS',0.0*(658.224+103.247)*0.30,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_NGA_EXS',0.8*0.227*(658.224+103.247)*0.300,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_COA_EXS',0.9*(302.056+20.295)*0.50,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_COA_EXS',0.0*(302.056+20.295)*0.50,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_COA_EXS',0.8*0.227*(302.056+20.295)*0.500,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_BIO_EXS',0.9*(227.483+30.007)*0.50,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_BIO_EXS',0.0*(227.483+30.007)*0.50,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_BIO_EXS',0.8*0.227*(227.483+30.007)*0.500,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_GEO_EXS',0.9*(7.979+0.131)*0.50,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_GEO_EXS',0.0*(7.979+0.131)*0.50,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_GEO_EXS',0.8*0.493*(7.979+0.131)*0.500,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2050,'HET_GEO_EXS',0.8*0.227*(7.979+0.131)*0.500,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'HET_SOL_EXS',0.9*0.109*0.10,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_SOL_EXS',0.0*0.109*0.10,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2040,'HET_SOL_EXS',0.8*0.493*0.109*0.500,'','');
@@ -21690,73 +20788,7 @@ INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_3WH_GSL_EXS',0.0*8.600,'',
 --INSERT INTO "MinActivity" VALUES ('EUR',2100,'IND_FT_HFO',11.000,'(PJ)','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2100,'IND_FT_OIL',11.000,'(PJ)','');
 
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_EXS',0.5*0.016*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_NGA_EXS',0.5*1.262*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_LPG_EXS',0.5*0.014*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_COA_EXS',0.5*2.230*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_COG_EXS',0.5*0.341*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_BFG_EXS',0.5*1.235*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_HFO_EXS',0.5*0.593*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_OIL_EXS',0.5*0.057*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_ETH_EXS',0.5*0.098*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_PTC_EXS',0.5*0.011*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_BIO_EXS',0.5*2.283*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_ELC_HET_EXS',0.5*23.940,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_EXS',0.0*0.016*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_NGA_EXS',0.0*1.262*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_LPG_EXS',0.0*0.014*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_COA_EXS',0.0*2.230*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_COG_EXS',0.0*0.341*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_BFG_EXS',0.0*1.235*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_HFO_EXS',0.0*0.593*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_OIL_EXS',0.0*0.057*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_ETH_EXS',0.0*0.098*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_PTC_EXS',0.0*0.011*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_BIO_EXS',0.0*2.283*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_ELC_HET_EXS',0.0*23.940,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_NGA_EXS',0.5*103.247,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_LPG_EXS',0.5*0.090,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_COA_EXS',0.5*20.925,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_COK_EXS',0.5*0.132,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_COG_EXS',0.5*2.459,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_BFG_EXS',0.5*1.123,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_HFO_EXS',0.5*4.797,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_OIL_EXS',0.5*1.329,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_ETH_EXS',0.5*0.054,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_BIO_EXS',0.5*30.007,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_AUT_HET_GEO_EXS',0.5*0.131,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_NGA_EXS',0.0*103.247,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_LPG_EXS',0.0*0.090,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_COA_EXS',0.0*20.925,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_COK_EXS',0.0*0.132,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_COG_EXS',0.0*2.459,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_BFG_EXS',0.0*1.123,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_HFO_EXS',0.0*4.797,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_OIL_EXS',0.0*1.329,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_ETH_EXS',0.0*0.054,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_BIO_EXS',0.0*30.007,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2050,'IND_AUT_HET_GEO_EXS',0.0*0.131,'','');
 --
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_NGA_EXS',0.5*16.488*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_LPG_EXS',0.5*0.056*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_COA_EXS',0.5*2.675*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_COG_EXS',0.5*0.195*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_BFG_EXS',0.5*0.316*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_HFO_EXS',0.5*3.402*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_OIL_EXS',0.5*0.068*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_ETH_EXS',0.5*0.940*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_PTC_EXS',0.5*0.174*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CHP_BIO_EXS',0.5*3.942*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_NGA_EXS',0.0*16.488*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_LPG_EXS',0.0*0.056*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_COA_EXS',0.0*2.675*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_COG_EXS',0.0*0.195*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_BFG_EXS',0.0*0.316*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_HFO_EXS',0.0*3.402*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_OIL_EXS',0.0*0.068*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_ETH_EXS',0.0*0.940*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_PTC_EXS',0.0*0.174*31.536,'','');
-----INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CHP_BIO_EXS',0.0*3.942*31.536,'','');
 
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_OLF_EXS',0.5*42.910,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_BTX_EXS',0.5*17.430,'','');
@@ -22687,17 +21719,17 @@ insert into "MaxCapacityGroup" VALUES (2050,'ELC_NUC_FIS_GRP',82.76,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_CCS_GRP',30.90,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_CCS_GRP',182.08,'(GW)');
 
-INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.12/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.80/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',4.96/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',30.90/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',182.08/2,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.03,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.20,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',1.24,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',7.72,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',45.52,'(GW)');
 
-INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0.12/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0.80/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',4.96/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',30.90/2,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',182.08/2,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0.03,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0.20,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',1.24,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',7.72,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',45.52,'(GW)');
 
 INSERT INTO "MaxCapacityGroup" VALUES (2015,'HH2_PRD_GRP',0.19,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2020,'HH2_PRD_GRP',1.20,'(GW)');
@@ -22997,31 +22029,23 @@ create TABLE "MyopicBaseyear" (
 	"notes"	text
 );
 
---CREATE TABLE "GrowthRateSeed" (
---	"regions"	text,
---	"tech"	text,
---	"growthrate_seed"	real,
---	"growthrate_seed_units"	text,
---	"growthrate_seed_notes"	text,
---	PRIMARY KEY("regions","tech"),
---	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
---);
---insert into "GrowthRateSeed" VALUES ('EUR','RES_FT_SOL',25.140,'','');
---insert into "GrowthRateSeed" VALUES ('EUR','COM_FT_SOL',3.881,'','');
---insert into "GrowthRateSeed" VALUES ('EUR','RES_FT_HET',1042.605,'','');
---insert into "GrowthRateSeed" VALUES ('EUR','COM_FT_HET',382.840,'','');
---
---CREATE TABLE "GrowthRateMax" (
---	"regions"	text,
---	"tech"	text,
---	"growthrate_max"	real,
---	"growthrate_max_notes"	text,
---	PRIMARY KEY("regions","tech"),
---	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
---);
---insert into "GrowthRateMax" VALUES ('EUR','RES_FT_SOL',2,'');
---insert into "GrowthRateMax" VALUES ('EUR','COM_FT_SOL',2,'');
---insert into "GrowthRateMax" VALUES ('EUR','RES_FT_HET',2,'');
---insert into "GrowthRateMax" VALUES ('EUR','COM_FT_HET',2,'');
+CREATE TABLE "GrowthRateSeed" (
+	"regions"	text,
+	"tech"	text,
+	"growthrate_seed"	real,
+	"growthrate_seed_units"	text,
+	"growthrate_seed_notes"	text,
+	PRIMARY KEY("regions","tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
+CREATE TABLE "GrowthRateMax" (
+	"regions"	text,
+	"tech"	text,
+	"growthrate_max"	real,
+	"growthrate_max_notes"	text,
+	PRIMARY KEY("regions","tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
 
 commit;
