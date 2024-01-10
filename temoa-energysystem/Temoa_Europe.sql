@@ -2223,7 +2223,7 @@ INSERT INTO "groups" VALUES ('TRA_FT_COA_GRP','');
 INSERT INTO "groups" VALUES ('TRA_FT_GSL_GRP','');
 INSERT INTO "groups" VALUES ('TRA_FT_AVG_GRP','');
 INSERT INTO "groups" VALUES ('TRA_FT_DST_GRP','');
-INSERT INTO "groups" VALUES ('TRA_FT_HFO_GRP','');
+--INSERT INTO "groups" VALUES ('TRA_FT_HFO_GRP','');
 --INSERT INTO "groups" VALUES ('TRA_FT_DST_B30_GRP','');
 INSERT INTO "groups" VALUES ('TRA_FT_JTK_DOM_GRP','');
 --INSERT INTO "groups" VALUES ('TRA_FT_JTK_INT_GRP','');
@@ -2395,7 +2395,7 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_COA','TRA_FT_COA_GRP',1.0,''
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_GSL','TRA_FT_GSL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_AVG','TRA_FT_AVG_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_DST','TRA_FT_DST_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_HFO','TRA_FT_HFO_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_HFO','TRA_FT_HFO_GRP',1.0,'');
 --INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_DST_B30','TRA_FT_DST_B30_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_JTK_DOM','TRA_FT_JTK_DOM_GRP',1.0,'');
 --INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_JTK_INT','TRA_FT_JTK_INT_GRP',1.0,'');
@@ -8147,8 +8147,8 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_AVG','TRA_FT_AVG',2005,'TRA_AVG'
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_JTG','TRA_FT_AVG',2005,'TRA_AVG',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SYN_MTH','TRA_FT_AVG',2005,'TRA_AVG',1.0*19.7/34.6,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO_kt','TRA_FT_HFO',2005,'TRA_HFO',0.043,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',0.037,'');
-INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',0.044,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',0.037,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',0.044,'');
 insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_ELC',2005,'TRA_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','TRA_FT_ELC',2005,'TRA_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','TRA_FT_LNG',2010,'TRA_LNG',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -10302,10 +10302,10 @@ INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'PRI_OIL_DST_kt','TRA_FT_DST',0.
 INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'PRI_OIL_DST_kt','TRA_FT_DST',0.520,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'PRI_OIL_DST_kt','TRA_FT_DST',0.050,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'RNW_BIO_EMHV','TRA_FT_DST',0.030,'');
-INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.520,'');
-INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.520,'');
-INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.050,'');
-INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'RNW_BIO_EMHV','TRA_FT_HFO',0.030,'');
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.520,'');
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.520,'');
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'PRI_OIL_HFO_kt','TRA_FT_HFO',0.050,'');
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'RNW_BIO_EMHV','TRA_FT_HFO',0.030,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'PRI_OIL_KER_kt','TRA_FT_JTK_DOM',0.528,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'PRI_OIL_KER_kt','TRA_FT_JTK_DOM',0.528,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'PRI_OIL_KER_kt','TRA_FT_JTK_DOM',0.050,'');
@@ -11390,13 +11390,13 @@ INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_EMHV','TRA_FT_DST_GRP',0
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_HVO','TRA_FT_DST_GRP',0.0484,'');
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_EMHV','TRA_FT_DST_GRP',0.105,'');
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_HVO','TRA_FT_DST_GRP',0.0484,'');
---INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_EMHV','TRA_FT_DST_GRP',0.900,'');
---INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_HVO','TRA_FT_DST_GRP',0.900,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.074,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.074,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_HVO','TRA_FT_HFO_GRP',0.0484,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.105,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_HVO','TRA_FT_HFO_GRP',0.0484,'');
+INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_EMHV','TRA_FT_DST_GRP',0.900,'');
+INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_HVO','TRA_FT_DST_GRP',0.900,'');
+--INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.074,'');
+--INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.074,'');
+--INSERT INTO "MaxInputGroup" VALUES ('EUR',2015,'RNW_BIO_HVO','TRA_FT_HFO_GRP',0.0484,'');
+--INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.105,'');
+--INSERT INTO "MaxInputGroup" VALUES ('EUR',2020,'RNW_BIO_HVO','TRA_FT_HFO_GRP',0.0484,'');
 --INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_EMHV','TRA_FT_HFO_GRP',0.900,'');
 --INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_HVO','TRA_FT_HFO_GRP',0.900,'');
 --INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'RNW_BIO_ETH','TRA_FT_GSL_E85_GRP',0.859,'');
@@ -18526,8 +18526,8 @@ INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_KER_FT','TRA_FT_
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_EMHV','TRA_FT_DST',2005,'TRA_DST',(-73.25)*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_HVO','TRA_FT_DST',2015,'TRA_DST',(-73.25)*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_DST_FT','TRA_FT_DST',2020,'TRA_DST',(-73.25)*1.055,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-74.92)*1.055,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-74.92)*1.055,'(kt/PJ)','');
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-74.92)*1.055,'(kt/PJ)','');
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CO2','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-74.92)*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_CO2','RNW_POT_BIO_GAS','IND_FT_NGA',2005,'IND_NGA',(-53.06)*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_CO2','HH2_BL','IND_FT_NGA',2020,'IND_NGA',(-53.06)*1.055,'(kt/PJ)','');
 
@@ -18566,8 +18566,8 @@ INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_KER_FT','TRA_FT_
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_EMHV','TRA_FT_DST',2005,'TRA_DST',(-3.00)*1.055,'(t/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_HVO','TRA_FT_DST',2015,'TRA_DST',(-3.00)*1.055,'(t/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_DST_FT','TRA_FT_DST',2020,'TRA_DST',(-3.00)*1.055,'(t/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-3.00)*1.055,'(t/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-3.00)*1.055,'(t/PJ)','');
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-3.00)*1.055,'(t/PJ)','');
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_CH4','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-3.00)*1.055,'(t/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_CH4','RNW_POT_BIO_GAS','IND_FT_NGA',2005,'IND_NGA',(-1.00+3.20)*1.055,'(t/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_CH4','HH2_BL','IND_FT_NGA',2020,'IND_NGA',(-1.00)*1.055,'(t/PJ)','');
 
@@ -18602,8 +18602,8 @@ INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_KER_FT','TRA_FT_
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_EMHV','TRA_FT_DST',2005,'TRA_DST',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_HVO','TRA_FT_DST',2015,'TRA_DST',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
 INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_DST_FT','TRA_FT_DST',2020,'TRA_DST',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
-INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
+--INSERT INTO "EmissionActivity" VALUES ('EUR','TRA_N2O','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',(-0.60+0.11)*1.055,'(t/PJ)',''); -- U.S. EPA, "Emission Factors for Greenhouse Gas Inventories", 2014
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_N2O','RNW_POT_BIO_GAS','IND_FT_NGA',2005,'IND_NGA',(-0.1)*1.055,'(t/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','IND_N2O','HH2_BL','IND_FT_NGA',2020,'IND_NGA',(-0.1)*1.055,'(t/PJ)','');
 
