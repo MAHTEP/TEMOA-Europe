@@ -1528,6 +1528,116 @@ we write this equation for all the time-slices defined in the database in each r
     return cap_avail >= cap_target
 
 
+def MinEmissions_Constraint(M, r, p, e):
+    r"""
+
+A modeler can track emissions through use of the :code:`commodity_emissions`
+set and :code:`EmissionActivity` parameter.  The :math:`EAC` parameter is
+analogous to the efficiency table, tying emissions to a unit of activity.  The
+MinEmissions constraint allows the modeler to assign a lower bound per period
+to each emission commodity. Note that this constraint sums emissions from
+technologies with output varying at the time slice and those with constant annual
+output in separate terms.
+
+.. math::
+   :label: MinEmissions
+
+       \sum_{S,D,I,T,V,O|{r,e,i,t,v,o} \in EAC} \left (
+       EAC_{r, e, i, t, v, o} \cdot \textbf{FO}_{r, p, s, d, i, t, v, o}
+       \right ) & \\
+       +
+       \sum_{I,T,V,O|{r,e,i,t \in T^{a},v,o} \in EAC} (
+       EAC_{r, e, i, t, v, o} \cdot & \textbf{FOA}_{r, p, i, t \in T^{a}, v, o}
+        )
+       \ge
+       ELM_{r, p, e}
+
+       \\
+       & \forall \{r, p, e\} \in \Theta_{\text{MinEmissions}}
+
+"""
+    min_emissions = M.MinEmissions[r, p, e]
+
+    # r can be an individual region (r='US'), or a combination of regions separated by a + (r='Mexico+US+Canada'), or 'global'.
+    # Note that regions!=M.regions. We iterate over regions to find actual_emissions and actual_emissions_annual.
+
+    # if r == 'global', the constraint is system-wide
+
+    if r == 'global':
+        regions = M.regions
+    elif '+' in r:
+        regions = r.split('+')
+    else:
+        regions = [r]
+
+    actual_emissions = sum(
+        M.V_FlowOut[reg, p, S_s, S_d, S_i, S_t, S_v, S_o]
+        * M.EmissionActivity[reg, e, S_i, S_t, S_v, S_o]
+        for reg in regions
+        for tmp_r, tmp_e, S_i, S_t, S_v, S_o in M.EmissionActivity.sparse_iterkeys()
+        if tmp_e == e and tmp_r == reg and S_t not in M.tech_annual
+        # EmissionsActivity not indexed by p, so make sure (r,p,t,v) combos valid
+        if (reg, p, S_t, S_v) in M.processInputs.keys()
+        for S_s in M.time_season
+        for S_d in M.time_of_day
+    )
+
+    actual_emissions_flex = sum(
+        M.V_Flex[reg, p, S_s, S_d, S_i, S_t, S_v, S_o]
+        * M.EmissionActivity[reg, e, S_i, S_t, S_v, S_o]
+        for reg in regions
+        for tmp_r, tmp_e, S_i, S_t, S_v, S_o in M.EmissionActivity.sparse_iterkeys()
+        if tmp_e == e and tmp_r == reg and S_t not in M.tech_annual and S_t in M.tech_flex and S_o in M.flex_commodities
+        # EmissionsActivity not indexed by p, so make sure (r,p,t,v) combos valid
+        if (reg, p, S_t, S_v) in M.processInputs.keys()
+        for S_s in M.time_season
+        for S_d in M.time_of_day
+    )
+
+    actual_emissions_curtail = sum(
+        M.V_Curtailment[reg, p, S_s, S_d, S_i, S_t, S_v, S_o]
+        * M.EmissionActivity[reg, e, S_i, S_t, S_v, S_o]
+        for reg in regions
+        for tmp_r, tmp_e, S_i, S_t, S_v, S_o in M.EmissionActivity.sparse_iterkeys()
+        if tmp_e == e and tmp_r == reg and S_t not in M.tech_annual and S_t in M.tech_curtailment
+        # EmissionsActivity not indexed by p, so make sure (r,p,t,v) combos valid
+        if (reg, p, S_t, S_v) in M.processInputs.keys()
+        for S_s in M.time_season
+        for S_d in M.time_of_day
+    )
+
+    actual_emissions_annual = sum(
+        M.V_FlowOutAnnual[reg, p, S_i, S_t, S_v, S_o]
+        * M.EmissionActivity[reg, e, S_i, S_t, S_v, S_o]
+        for reg in regions
+        for tmp_r, tmp_e, S_i, S_t, S_v, S_o in M.EmissionActivity.sparse_iterkeys()
+        if tmp_e == e and tmp_r == reg and S_t in M.tech_annual
+        # EmissionsActivity not indexed by p, so make sure (r,p,t,v) combos valid
+        if (reg, p, S_t, S_v) in M.processInputs.keys()
+    )
+
+    actual_emissions_flex_annual = sum(
+        M.V_FlexAnnual[reg, p, S_i, S_t, S_v, S_o]
+        * M.EmissionActivity[reg, e, S_i, S_t, S_v, S_o]
+        for reg in regions
+        for tmp_r, tmp_e, S_i, S_t, S_v, S_o in M.EmissionActivity.sparse_iterkeys()
+        if tmp_e == e and tmp_r == reg and S_t in M.tech_annual and S_t in M.tech_flex and S_o in M.flex_commodities
+        # EmissionsActivity not indexed by p, so make sure (r,p,t,v) combos valid
+        if (reg, p, S_t, S_v) in M.processInputs.keys()
+    )
+
+    if int is type(
+            actual_emissions + actual_emissions_annual + actual_emissions_flex + actual_emissions_curtail + actual_emissions_flex_annual):
+        msg = (
+            "Warning: No technology produces emission '%s', though limit was "
+            "specified as %s.\n"
+        )
+        SE.write(msg % (e, min_emissions))
+        return Constraint.Skip
+
+    expr = actual_emissions + actual_emissions_annual + actual_emissions_flex + actual_emissions_curtail + actual_emissions_flex_annual >= min_emissions
+    return expr
+
 def EmissionLimit_Constraint(M, r, p, e):
     r"""
 
@@ -2092,6 +2202,65 @@ These shares can vary by model time period.
 
     max_outp = value(M.MaxOutputGroup[r, p, o, g])
     expr = (outp + outp_annual) <= max_outp * (total_outp + total_outp_annual)
+    return expr
+
+def MinOutputGroup_Constraint(M, r, p, o, g):
+    r"""
+
+Allows users to specify minimum shares of commodity outputs to a group of technologies.
+These shares can vary by model time period.
+
+"""
+    outp = sum(
+        M.V_FlowOut[r, p, s, d, S_i, S_t, S_v, o] * M.TechGroupWeight[r, S_t, g]
+        for S_r, S_p, S_t, S_v in M.activeActivity_rptv
+        if S_r == r
+        if S_p == p
+        if S_t in M.tech_groups
+        if S_t not in M.tech_annual
+        for S_i in M.processInputs[r, p, S_t, S_v]
+        for S_o in M.ProcessOutputsByInput[r, p, S_t, S_v, S_i] if S_o == o
+        for s in M.time_season
+        for d in M.time_of_day
+    )
+
+    outp_annual = sum(
+        M.V_FlowOutAnnual[r, p, S_i, S_t, S_v, o] * M.TechGroupWeight[r, S_t, g]
+        for S_r, S_p, S_t, S_v in M.activeActivity_rptv
+        if S_r == r
+        if S_p == p
+        if S_t in M.tech_groups
+        if S_t in M.tech_annual
+        for S_i in M.processInputs[r, p, S_t, S_v]
+        for S_o in M.ProcessOutputsByInput[r, p, S_t, S_v, S_i] if S_o == o
+    )
+
+    total_outp = sum(
+        M.V_FlowOut[r, p, s, d, S_i, S_t, S_v, S_o] * M.TechGroupWeight[r, S_t, g]
+        for S_r, S_p, S_t, S_v in M.activeActivity_rptv
+        if S_r == r
+        if S_p == p
+        if S_t in M.tech_groups
+        if S_t not in M.tech_annual
+        for S_i in M.processInputs[r, p, S_t, S_v]
+        for S_o in M.ProcessOutputsByInput[r, p, S_t, S_v, S_i]
+        for s in M.time_season
+        for d in M.time_of_day
+    )
+
+    total_outp_annual = sum(
+        M.V_FlowOutAnnual[r, p, S_i, S_t, S_v, S_o] * M.TechGroupWeight[r, S_t, g]
+        for S_r, S_p, S_t, S_v in M.activeActivity_rptv
+        if S_r == r
+        if S_p == p
+        if S_t in M.tech_groups
+        if S_t in M.tech_annual
+        for S_i in M.processInputs[r, p, S_t, S_v]
+        for S_o in M.ProcessOutputsByInput[r, p, S_t, S_v, S_i]
+    )
+
+    min_outp = value(M.MinOutputGroup[r, p, o, g])
+    expr = (outp + outp_annual) >= min_outp * (total_outp + total_outp_annual)
     return expr
 
 def MaxCapacity_Constraint(M, r, p, t):

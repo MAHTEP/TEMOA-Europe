@@ -1,33 +1,45 @@
 import os
 import sqlite3
 
+sqlite_database = 'Temoa_Europe.sqlite'
+sql_modules = ['Temoa_Europe.sql']
+
+Deleting = True
+Reading = True
+Preprocessing = True
+Simplifying = False
+
 # Check if the SQLite database already exists and delete it
-database_name = 'Temoa_Europe.sqlite'
-if os.path.exists(database_name):
-    os.remove(database_name)
-    print('\n'f"Existing {database_name} database deleted.\n")
 
-# Connect to the SQLite database
-conn = sqlite3.connect(database_name)
-cursor = conn.cursor()
+if Deleting:
+    if os.path.exists(sqlite_database):
+        os.remove(sqlite_database)
+        print("{:>62}".format('Existing SQLite database deleted.'))
 
-# Execute the SQL script
-sql_file_path = 'Temoa_Europe.sql'
-with open(sql_file_path, 'r') as sql_file:
-    sql_script = sql_file.read()
+# Create the SQLite database and execute the SQL code(s)
 
-try:
-    cursor.executescript(sql_script)
+if Reading:
+    for sql in sql_modules:
+        conn = sqlite3.connect(sqlite_database)
+        with open(sql, mode='r', encoding='utf-8-sig') as sql_code:
+            conn.executescript(sql_code.read())
+        conn.commit()
+        conn.close()
+    print("{:>62}".format('SQLite database created and SQL code executed.'))
 
-except sqlite3.Error as e:
-    print('Error occurred during SQL execution:')
-    print(str(e))
+# Execute the database_preprocessing.py script
 
-conn.commit()
-conn.close()
+if Preprocessing:
+    with open("database_preprocessing.py") as preprocessing:
+        exec(preprocessing.read())
+    print("{:>62}".format('SQLite database preprocessed.'))
 
-# Continue with the rest of the code
-print('SQLite database created and filled according to the SQL code.\n')
+# Simplify the SQLite database by removing the selected set of milestone years
 
-with open("database_preprocessing.py") as preprocessing:
-    exec(preprocessing.read())
+if Simplifying:
+    conn = sqlite3.connect(sqlite_database)
+    with open('database_simplifier.sql', mode='r', encoding='utf-8-sig') as sql_code:
+        conn.executescript(sql_code.read())
+    conn.commit()
+    conn.close()
+    print("{:>62}".format('SQLite database simplified.'))

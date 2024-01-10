@@ -218,6 +218,7 @@ def temoa_create_model(name="Temoa"):
     M.MinActivity = Param(M.RegionalGlobalIndices, M.time_optimize, M.tech_all)
     M.GrowthRateMax = Param(M.RegionalIndices, M.tech_all)
     M.GrowthRateSeed = Param(M.RegionalIndices, M.tech_all)
+    M.MinEmissions = Param(M.RegionalGlobalIndices, M.time_optimize, M.commodity_emissions)
     M.EmissionLimit = Param(M.RegionalGlobalIndices, M.time_optimize, M.commodity_emissions)
     M.EmissionActivity_reitvo = Set(dimen=6, initialize=EmissionActivityIndices)
     M.EmissionActivity = Param(M.EmissionActivity_reitvo, default = 0)
@@ -228,7 +229,8 @@ def temoa_create_model(name="Temoa"):
     M.MaxCapacityGroup = Param(M.time_optimize, M.groups)
     M.MinInputGroup = Param(M.regions, M.time_optimize, M.commodity_physical, M.groups)
     M.MaxInputGroup = Param(M.regions, M.time_optimize, M.commodity_physical, M.groups)
-    M.MaxOutputGroup = Param(M.regions, M.time_optimize, M.commodity_physical, M.groups)
+    M.MaxOutputGroup = Param(M.regions, M.time_optimize, M.commodity_carrier, M.groups)
+    M.MinOutputGroup = Param(M.regions, M.time_optimize, M.commodity_carrier, M.groups)
     M.LinkedTechs = Param(M.RegionalIndices, M.tech_all, M.commodity_emissions)
 
     # Define parameters associated with electric sector operation
@@ -428,6 +430,13 @@ def temoa_create_model(name="Temoa"):
         M.ReserveMargin_rpsd, rule=ReserveMargin_Constraint
     )
 
+    M.MinEmissionsConstraint_rpe = Set(
+        dimen=3, initialize=lambda M: M.MinEmissions.sparse_iterkeys()
+    )
+    M.MinEmissionsConstraint = Constraint(
+        M.MinEmissionsConstraint_rpe, rule=MinEmissions_Constraint
+    )
+
     M.EmissionLimitConstraint_rpe = Set(
         dimen=3, initialize=lambda M: M.EmissionLimit.sparse_iterkeys()
     )
@@ -509,7 +518,14 @@ def temoa_create_model(name="Temoa"):
     M.MaxOutputGroupConstraint = Constraint(
         M.MaxOutputGroup_Constraint_rpig, rule=MaxOutputGroup_Constraint
     )
-    
+
+    M.MinOutputGroup_Constraint_rpig = Set(
+        dimen=4, initialize=lambda M: M.MinOutputGroup.sparse_iterkeys()
+    )
+    M.MinOutputGroupConstraint = Constraint(
+        M.MinOutputGroup_Constraint_rpig, rule=MinOutputGroup_Constraint
+    )
+
     M.MaxCapacityConstraint_rpt = Set(
         dimen=3, initialize=lambda M: M.MaxCapacity.sparse_iterkeys()
     )

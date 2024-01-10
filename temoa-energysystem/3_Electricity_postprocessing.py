@@ -11,7 +11,7 @@ years = np.array([2010,	2015, 2020, 2025, 2030,	2035, 2040, 2045, 2050])
 # Set to_excel_flag to 1 to export data into a Excel file
 # The arrays are used to select the technologies/commodities that should be considered.
 
-technologies_in_flag = 1
+technologies_in_flag = 0
 technologies_out_flag = 1
 commodities_in_flag = 0
 commodities_out_flag = 1
@@ -49,14 +49,14 @@ technologies=[
 'ELC_NUC_FIS_ADS_MA_NEW',
 'ELC_CHP_BIO_EXS',
 'ELC_BIO_EXS',
-'ELC_BIO_SLD_GSF_CEN_NEW',
-'ELC_BIO_SLD_COM_CEN_NEW',
-'ELC_BIO_SLD_GSF_DEC_NEW',
-'ELC_BIO_SLD_COM_DEC_NEW',
+'ELC_BIO_GSF_CEN_NEW',
+'ELC_BIO_COM_CEN_NEW',
+'ELC_BIO_GSF_DEC_NEW',
+'ELC_BIO_COM_DEC_NEW',
 'ELC_BIO_GAS_NEW',
 'ELC_BIO_CRP_GSF_NEW',
 'ELC_BIO_CRP_COM_NEW',
-'ELC_BIO_BMU_INC_NEW',
+'ELC_BIO_MUN_INC_NEW',
 'ELC_CHP_BIO_NEW',
 'ELC_CHP_GEO_EXS',
 'ELC_GEO_EXS',
@@ -89,8 +89,8 @@ technologies=[
 'ELC_NGA_SOFC_CCS_NEW',
 'ELC_BIO_CRP_GSF_CCS_NEW',
 'ELC_BIO_CRP_COM_CCS_NEW',
-'ELC_BIO_SLD_GSF_CCS_NEW',
-'ELC_BIO_SLD_COM_CCS_NEW',
+'ELC_BIO_GSF_CCS_NEW',
+'ELC_BIO_COM_CCS_NEW',
 'ELC_STG_CEN_BTT_NEW',
 'ELC_STG_DIS_BTT_NEW',
 'ELC_HH2_PEMFC_NEW',
