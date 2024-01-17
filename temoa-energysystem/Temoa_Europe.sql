@@ -21209,7 +21209,7 @@ INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_WIN_OFF_GRP',160.62,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_SOL_PV_GRP',1917.96,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_SOL_PV_GRP',2186.37,'(GW)');
 
---Solar PV (low)
+----Solar PV (low)
 INSERT INTO "MaxCapacityGroup" VALUES (2025,'ELC_SOL_PV_GRP',309.82,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_SOL_PV_GRP',495.18,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_SOL_PV_GRP',714.13,'(GW)');
@@ -21217,12 +21217,21 @@ INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_SOL_PV_GRP',927.27,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_SOL_PV_GRP',1081.61,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_SOL_PV_GRP',1130.72,'(GW)');
 
+---- Solar CSP (stagnation)
 INSERT INTO "MaxCapacityGroup" VALUES (2025,'ELC_SOL_CSP_GRP',2.33,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_SOL_CSP_GRP',2.34,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_SOL_CSP_GRP',2.34,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_SOL_CSP_GRP',2.35,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_SOL_CSP_GRP',2.36,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_SOL_CSP_GRP',2.37,'(GW)');
+
+------ Solar CSP (saturation capacity 1 TW)
+--INSERT INTO "MaxCapacityGroup" VALUES (2025,'ELC_SOL_CSP_GRP',18.54,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_SOL_CSP_GRP',109.24,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_SOL_CSP_GRP',255.45,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_SOL_CSP_GRP',401.65,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_SOL_CSP_GRP',547.77,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_SOL_CSP_GRP',693.45,'(GW)');
 
 INSERT INTO "MaxCapacityGroup" VALUES (2025,'ELC_MAR_GRP',1.41,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_MAR_GRP',1.53,'(GW)');
@@ -21325,17 +21334,33 @@ insert into "MaxCapacityGroup" VALUES (2050,'ELC_NUC_FIS_GRP',82.76,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_CCS_GRP',30.90,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_CCS_GRP',182.08,'(GW)');
 
-INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.03,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.20,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',1.24,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',7.72,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',45.52,'(GW)');
+---- Fossil w/ CCS (Saturation capacity 500 GW)
+--INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.03,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.20,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',1.24,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',7.72,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',45.52,'(GW)');
 
+-- Fossil w/ CCS (Saturation capacity 2 TW)
+INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.13,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.80,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',4.97,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',30.90,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',182.07,'(GW)');
+
+-- Biomass w/ CCS (Saturation capacity 500 GW)
 INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0.03,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0.20,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',1.24,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',7.72,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',45.52,'(GW)');
+
+---- Biomass w/ CCS (Saturation capacity 2 TW)
+--INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0.13,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0.80,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',4.97,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',30.90,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',182.07,'(GW)');
 
 INSERT INTO "MaxCapacityGroup" VALUES (2015,'HH2_PRD_GRP',0.19,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2020,'HH2_PRD_GRP',1.20,'(GW)');
