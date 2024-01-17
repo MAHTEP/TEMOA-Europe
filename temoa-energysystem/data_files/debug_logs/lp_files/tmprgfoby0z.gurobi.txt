@@ -1,0 +1,18 @@
+section:problem
+name: x499876
+sense:minimize
+lower_bound: -inf
+number_of_objectives: 1
+number_of_constraints: 549649
+number_of_variables: 499360
+number_of_binary_variables: 0
+number_of_integer_variables: 0
+number_of_continuous_variables: 499360
+number_of_nonzeros: 3532768
+section:solver
+status: error
+return_code: 0
+message: Unhandled Gurobi solve status (-1006)
+wall_time: 2409.172999858856
+termination_condition: error
+termination_message: Unhandled Gurobi solve status (-1006)
