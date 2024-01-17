@@ -21334,19 +21334,19 @@ insert into "MaxCapacityGroup" VALUES (2050,'ELC_NUC_FIS_GRP',82.76,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_CCS_GRP',30.90,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_CCS_GRP',182.08,'(GW)');
 
----- Fossil w/ CCS (Saturation capacity 500 GW)
---INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.03,'(GW)');
---INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.20,'(GW)');
---INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',1.24,'(GW)');
---INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',7.72,'(GW)');
---INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',45.52,'(GW)');
+-- Fossil w/ CCS (Saturation capacity 500 GW)
+INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.03,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.20,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',1.24,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',7.72,'(GW)');
+INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',45.52,'(GW)');
 
--- Fossil w/ CCS (Saturation capacity 2 TW)
-INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.13,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.80,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',4.97,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',30.90,'(GW)');
-INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',182.07,'(GW)');
+---- Fossil w/ CCS (Saturation capacity 2 TW)
+--INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_FOSSIL_CCS_GRP',0.13,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_FOSSIL_CCS_GRP',0.80,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_FOSSIL_CCS_GRP',4.97,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_FOSSIL_CCS_GRP',30.90,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_FOSSIL_CCS_GRP',182.07,'(GW)');
 
 -- Biomass w/ CCS (Saturation capacity 500 GW)
 INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0.03,'(GW)');
