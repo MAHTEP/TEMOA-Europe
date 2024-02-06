@@ -1460,15 +1460,15 @@ insert into "technologies" VALUES ('RES_WH_NGA_STD_NEW','p','RES','Residential -
 insert into "technologies" VALUES ('RES_WH_NGA_CND_NEW','p','RES','Residential - Water heating - Natural gas Condensing Standard - New','');
 insert into "technologies" VALUES ('RES_WH_NGA_SOL_NEW','p','RES','Residential - Water heating - Natural gas & Solar - New','');
 insert into "technologies" VALUES ('RES_WH_HET_STD_NEW','p','RES','Residential - Water heating - Heat Standard - New','');
-insert into "technologies" VALUES ('RES_WH_BIO_WDS_NEW','p','RES','Residential - Water heating - Woodstoves Standard - New','');
-insert into "technologies" VALUES ('RES_WH_BIO_PLT_NEW','p','RES','Residential - Water heating - Woodpellet Standard - New','');
+insert into "technologies" VALUES ('RES_WH_BIO_WDS_NEW','p','RES','Residential - Water heating - Wood stoves Standard - New','');
+insert into "technologies" VALUES ('RES_WH_BIO_PLT_NEW','p','RES','Residential - Water heating - Wood pellet Standard - New','');
 insert into "technologies" VALUES ('RES_WH_COA_NEW','p','RES','Residential - Water heating - Coal Standard - New','');
 --insert into "technologies" VALUES ('RES_WH_SOL_IMP_NEW','p','RES','Residential - Water heating - Solar Improved - New','');
 --insert into "technologies" VALUES ('RES_WH_SOL_STD_NEW','p','RES','Residential - Water heating - Solar Standard - New','');
 insert into "technologies" VALUES ('RES_CW_RED_NEW','p','RES','Residential - Cloth washing - Electric Reduced water - New','');
 insert into "technologies" VALUES ('RES_CW_ULS_NEW','p','RES','Residential - Cloth washing - Electric Ultra sound - New','');
-insert into "technologies" VALUES ('RES_CD_STD_NEW','p','RES','Residentiial - Cloth drying - Standard - New','');
-insert into "technologies" VALUES ('RES_CD_IMP_NEW','p','RES','Residentiial - Cloth drying - Improved - New','');
+insert into "technologies" VALUES ('RES_CD_STD_NEW','p','RES','Residential - Cloth drying - Standard - New','');
+insert into "technologies" VALUES ('RES_CD_IMP_NEW','p','RES','Residential - Cloth drying - Improved - New','');
 insert into "technologies" VALUES ('RES_DW_STD_NEW','p','RES','Residential - Dish washing - Standard - New','');
 insert into "technologies" VALUES ('RES_DW_IMP_NEW','p','RES','Residential - Dish washing - Improved - New','');
 insert into "technologies" VALUES ('RES_DW_ADV_NEW','p','RES','Residential - Dish washing - Advanced - New','');
@@ -1704,7 +1704,7 @@ insert into "technologies" VALUES ('IND_FT_BIO','p','IND','Industry - Fuel Techn
 insert into "technologies" VALUES ('IND_FT_BIO_GAS','p','IND','Industry - Fuel Technology - Biogas','');
 insert into "technologies" VALUES ('IND_FT_GEO','p','IND','Industry - Fuel Technology - Geothermal energy','');
 insert into "technologies" VALUES ('IND_FT_ELC','p','IND','Industry - Fuel Technology - Electricity','');
-insert into "technologies" VALUES ('IND_FT_ELC_DIS','p','IND','Industry - Fuel Technology - Electricity distribution','');
+insert into "technologies" VALUES ('IND_DIS_ELC','p','IND','Industry - Distribution - Electricity distribution','');
 insert into "technologies" VALUES ('IND_FT_HET','p','IND','Industry - Fuel Technology - Heat','');
 --insert into "technologies" VALUES ('IND_FT_SOL','p','IND','Industry Fuel Technology - Solar energy','');
 
@@ -5540,7 +5540,7 @@ insert into "LifetimeTech" VALUES ('EUR','IND_FT_BIO',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_BIO_GAS',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_GEO',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_ELC',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_FT_ELC_DIS',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_DIS_ELC',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_HET',110,'');
 --insert into "LifetimeTech" VALUES ('EUR','IND_FT_SOL',10,'');
 --insert into "LifetimeTech" VALUES ('EUR','IND_FT_STM',110,'');
@@ -6265,7 +6265,7 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_NSP','UPS_AGG_OIL_RPP',2005,'PRI
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','UPS_AGG_OIL_RPP',2005,'PRI_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_RFG','UPS_AGG_OIL_RPG',2005,'PRI_OIL_RPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','UPS_AGG_OIL_RPG',2005,'PRI_OIL_RPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_FT_ELC',2005,'UPS_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_FT_ELC',2005,'UPS_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','UPS_FT_ELC',2005,'UPS_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HET','UPS_FT_HET',2005,'UPS_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','UPS_HET','UPS_CONV_STM_EXS',2005,'UPS_STM',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -6729,7 +6729,7 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','HH2_FT_BIO',2015,'HH2_
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','HH2_FT_ELC',2015,'HH2_ELC_CEN',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','HH2_FT_ELC',2015,'HH2_ELC_CEN',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','HH2_FT_ELC',2015,'HH2_ELC_DIS',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_NEW',2015,'HH2_CU',0.746,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7198,7 +7198,7 @@ INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','AGR_FT_BIO',2005,'AGR_
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','AGR_FT_BIO',2005,'AGR_BIO',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_GEO','AGR_FT_GEO',2005,'AGR_GEO',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','AGR_FT_SOL',2005,'AGR_SOL',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','AGR_FT_ELC',2005,'AGR_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','AGR_FT_ELC',2005,'AGR_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','AGR_FT_ELC',2005,'AGR_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','HET','AGR_FT_HET',2005,'AGR_HET',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -7278,7 +7278,7 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','RES_FT_BIO',2005,'RES_
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','RES_FT_BIO',2005,'RES_BIO',1.00,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','RES_FT_GEO',2005,'RES_GEO',1.00,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','RES_FT_SOL',2005,'RES_SOL',1.00,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','RES_FT_ELC',2005,'RES_ELC',0.925,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','RES_FT_ELC',2005,'RES_ELC',0.900,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','RES_FT_ELC',2005,'RES_ELC',0.950,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','RES_FT_HET',2005,'RES_HET',1.00,'PJ/PJ'); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -7603,7 +7603,7 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','COM_FT_BIO',2005,'COM_
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','COM_FT_BIO',2005,'COM_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','COM_FT_GEO',2005,'COM_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','COM_FT_SOL',2005,'COM_SOL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','COM_FT_ELC',2005,'COM_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','COM_FT_ELC',2005,'COM_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','COM_FT_ELC',2005,'COM_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','COM_FT_HET',2005,'COM_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -7874,7 +7874,7 @@ insert into "Efficiency" VALUES ('EUR','SYN_MTH','TRA_FT_AVG',2005,'TRA_AVG',1.0
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','TRA_FT_HFO',2005,'TRA_HFO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_EMHV','TRA_FT_HFO',2005,'TRA_HFO',0.037,'');
 --INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_HVO','TRA_FT_HFO',2015,'TRA_HFO',0.044,'');
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_ELC',2005,'TRA_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_ELC',2005,'TRA_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_DIS','TRA_FT_ELC',2005,'TRA_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','TRA_FT_LNG',2010,'TRA_LNG',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_BIO_ETH','TRA_FT_ETH',2010,'TRA_ETH',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8143,13 +8143,13 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','IND_FT_BIO',2005,'IND_
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BIO_GAS',2005,'IND_BGS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','IND_FT_GEO',2005,'IND_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','IND_FT_ELC',2005,'IND_ELC',0.925,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','ELC_DIS','IND_FT_ELC',2005,'IND_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_FT_ELC_DIS',2005,'IND_IS_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_FT_ELC_DIS',2005,'IND_NF_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_FT_ELC_DIS',2005,'IND_CH_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_FT_ELC_DIS',2005,'IND_NM_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_FT_ELC_DIS',2005,'IND_PP_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_CEN','IND_FT_ELC',2005,'IND_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','ELC_DIS','IND_FT_ELC',2005,'IND_ELC',0.950*0.95,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_IS_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_NF_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_CH_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_NM_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_PP_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','IND_FT_HET',2005,'IND_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','IND_FT_SOL',2005,'IND_SOL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','IND_CH_MTH','IND_FT_SYN_MTH',2005,'SYN_MTH',20.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11664,17 +11664,17 @@ insert into "ExistingCapacity" VALUES ('EUR','TRA_FT_HFO',2005,2312.448,'',''); 
 insert into "ExistingCapacity" VALUES ('EUR','TRA_FT_ELC',2005,275.442,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Base year technologies
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_COA_EXS',2005,0.77*0.00038,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_DST_EXS',2005,0.77*0.96426,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_ELC_EXS',2005,0.77*0.03536,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_COA_EXS',2005,4.11*0.001,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_DST_EXS',2005,4.11*0.046,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_ELC_EXS',2005,4.11*0.953,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_DST_EXS',2005,0.32*0.731,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_HFO_EXS',2005,0.32*0.223,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_GSL_EXS',2005,0.32*0.046,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_INT_DST_EXS',2005,0.38*0.147,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_INT_HFO_EXS',2005,0.38*0.853,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_COA_EXS',2005,0.77*0.00038*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_DST_EXS',2005,0.77*0.96426*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_FRG_ELC_EXS',2005,0.77*0.03536*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_COA_EXS',2005,4.11*0.001*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_DST_EXS',2005,4.11*0.046*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_RAIL_PAS_ELC_EXS',2005,4.11*0.953*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_DST_EXS',2005,0.32*0.731*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_HFO_EXS',2005,0.32*0.223*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_DOM_GSL_EXS',2005,0.32*0.046*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_INT_DST_EXS',2005,0.38*0.147*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_NAV_INT_HFO_EXS',2005,0.38*0.853*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_AVI_DOM_JTK_EXS',2005,1.60,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_AVI_DOM_AVG_EXS',2005,1.60,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "ExistingCapacity" VALUES ('EUR','TRA_AVI_INT_JTK_EXS',2005,11.09,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11695,9 +11695,9 @@ insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_CAR_ELC_EXS',2005,0.005,''
 --insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LTR_NGA_EXS',2005,0.178,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LTR_ELC_EXS',2005,0.003,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LTR_BIO_EXS',2005,15.312,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_DST_EXS',2005,(179.866+0.239),'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_GSL_EXS',2005,0.118,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_BIO_EXS',2005,0.239,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_DST_EXS',2005,(179.866+0.239)*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_GSL_EXS',2005,0.118*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_HTR_BIO_EXS',2005,0.239*0.95,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LCV_GSL_EXS',2005,29.459+0.507,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LCV_DST_EXS',2005,115.030,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_LCV_LPG_EXS',2005,4.020,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11727,7 +11727,7 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO',2005,973.622,'',''); -
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO_GAS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_GEO',2005,11.741,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ELC',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ELC_DIS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_DIS_ELC',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HET',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 --insert into "ExistingCapacity" VALUES ('EUR','IND_FT_SOL',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11915,108 +11915,108 @@ create TABLE "CostInvest" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods")
 );
-insert into "CostInvest" VALUES ('EUR','UPS_FT_NGA',2010,10,'','');
---insert into "CostInvest" VALUES ('EUR','UPS_FT_COA',2010,10,'','');
---insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPP',2010,10,'','');
---insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','UPS_FT_ELC',2010,10,'','');
---insert into "CostInvest" VALUES ('EUR','UPS_FT_HET',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','HH2_FT_NGA',2015,10,'','');
-insert into "CostInvest" VALUES ('EUR','HH2_FT_COA',2015,10,'','');
-insert into "CostInvest" VALUES ('EUR','HH2_FT_BIO_ETH',2015,10,'','');
-insert into "CostInvest" VALUES ('EUR','HH2_FT_BIO',2015,10,'','');
-insert into "CostInvest" VALUES ('EUR','HH2_FT_ELC',2015,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_OIL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_BGS',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_CRP',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_MUN',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_HYD',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_GEO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_PV',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_TH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_CSP',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_WAV',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_TDL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_WIN_ON',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','ELC_FT_WIN_OFF',2010,10,'','');
---insert into "CostInvest" VALUES ('EUR','ELC_FT_HH2',2025,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_DST',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_GSL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_HFO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_KER',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_GEO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_SOL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','AGR_FT_HET',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_DST',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_HFO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_KER',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_GEO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_SOL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','COM_FT_HET',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_DST',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_HFO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_KER',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_GEO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_SOL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','RES_FT_HET',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_GSL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_DST',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_JTK_DOM',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_AVG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_HFO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_LNG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_ETH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','TRA_FT_MTH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_COK',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_COG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_BFG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_HFO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_OIL',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_ETH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_NAP',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_PTC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_BIO_GAS',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_GEO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_ELC',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_ELC_DIS',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_HET',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_LTH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_BIO',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_COA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_DST',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_ETH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_MTH',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_NGA',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_LNG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_LPG',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_NAP',2010,10,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_FS_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','UPS_FT_NGA',2010,10,'','');
+----insert into "CostInvest" VALUES ('EUR','UPS_FT_COA',2010,10,'','');
+----insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPP',2010,10,'','');
+----insert into "CostInvest" VALUES ('EUR','UPS_AGG_OIL_RPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','UPS_FT_ELC',2010,10,'','');
+----insert into "CostInvest" VALUES ('EUR','UPS_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','HH2_FT_NGA',2015,10,'','');
+--insert into "CostInvest" VALUES ('EUR','HH2_FT_COA',2015,10,'','');
+--insert into "CostInvest" VALUES ('EUR','HH2_FT_BIO_ETH',2015,10,'','');
+--insert into "CostInvest" VALUES ('EUR','HH2_FT_BIO',2015,10,'','');
+--insert into "CostInvest" VALUES ('EUR','HH2_FT_ELC',2015,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_OIL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_BGS',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_CRP',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_MUN',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_HYD',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_GEO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_PV',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_TH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_SOL_CSP',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_WAV',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_TDL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_WIN_ON',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','ELC_FT_WIN_OFF',2010,10,'','');
+----insert into "CostInvest" VALUES ('EUR','ELC_FT_HH2',2025,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_DST',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_GSL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_KER',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_GEO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_SOL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','AGR_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_DST',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_KER',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_GEO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_SOL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','COM_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_DST',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_KER',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_GEO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_SOL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','RES_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_GSL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_DST',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_JTK_DOM',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_AVG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_LNG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_ETH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','TRA_FT_MTH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_COK',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_COG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_BFG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_HFO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_OIL',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_ETH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_NAP',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_PTC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_BIO_GAS',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_GEO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_DIS_ELC',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_HET',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_LTH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_BIO',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_COA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_DST',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_ETH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_MTH',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_NGA',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_LNG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_LPG',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_NAP',2010,10,'','');
+--insert into "CostInvest" VALUES ('EUR','IND_FT_FS_HFO',2010,10,'','');
 
 insert into "CostInvest" VALUES ('EUR','ELC_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','ELC_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
@@ -12814,45 +12814,29 @@ insert into "CostInvest" VALUES ('EUR','COM_RF_ELC_NEW',2010,0.60,'(MEUR/PJ)',''
 insert into "CostInvest" VALUES ('EUR','TRA_FT_AMM_ELCSYS_CU',2020,15.59,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','TRA_FT_AMM_ELCSYS_DT',2020,15.59,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- New technologies
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2010,1800,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2010,1920,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2010,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2010,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2010,3190,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2010,2640,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2010,3020,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2020,1764,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2020,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2020,1920,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2020,1920,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2020,2870,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2020,2136,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2020,2790,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2020,6020,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2030,1764,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2030,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2030,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2030,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2030,2070,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2030,2064,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2030,2120,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2030,3020,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2040,1764,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2040,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2040,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2040,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2040,1940,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2040,2028,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2040,2020,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2040,2820,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2050,1764,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2050,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2050,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2050,1908,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2050,1850,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2050,2016,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2050,1940,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
-insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2050,2670,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2010,1500,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2010,1750,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_LPG_NEW',2010,1530,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_NGA_NEW',2010,1620,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2010,2870,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2010,1950,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2010,2640,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2020,2540,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2020,1830,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2020,2410,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2020,3770,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2030,2200,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2030,1770,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2030,2190,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2030,3310,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2040,2060,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2040,1740,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2040,2080,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2040,3060,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2050,1980,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2050,1730,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2050,2010,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
+insert into "CostInvest" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2050,2920,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
 --insert into "CostInvest" VALUES ('EUR','TRA_ROA_LTR_GSL_NEW',2010,1584,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
 --insert into "CostInvest" VALUES ('EUR','TRA_ROA_LTR_DST_NEW',2010,1764,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
 --insert into "CostInvest" VALUES ('EUR','TRA_ROA_LTR_LPG_NEW',2010,1548,'(MEUR/Bvkm)',''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
@@ -14602,13 +14586,6 @@ insert into "CostVariable" VALUES ('EUR',2005,'UPS_REP_ADV_PUREX_LWR_UOX_EXS',20
 insert into "CostVariable" VALUES ('EUR',2005,'UPS_REP_ADV_PUREX_LWR_MOX_EXS',2005,0.90,'(MEUR/t)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2005,'UPS_REP_ADV_PUREX_FR_MOX_EXS',2005,0.90,'(MEUR/t)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ------ Hydrogen
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_NGA',2015,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_COA',2015,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_OIL_RPP',2015,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_BIO_ETH',2015,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_BIO',2015,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_ELC',2015,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
 --insert into "CostVariable" VALUES ('EUR',2015,'HH2_NGA_CL_NEW',2015,0.08,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "CostVariable" VALUES ('EUR',2030,'HH2_NGA_CL_NEW',2030,0.05,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "CostVariable" VALUES ('EUR',2015,'HH2_NGA_CS_NEW',2015,0.14,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -14792,52 +14769,59 @@ insert into "CostVariable" VALUES ('EUR',2010,'ELC_CHP_BIO_NEW',2010,0.70,'(MEUR
 
 ---- Industry sector
 ------ Fuel technologies
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_NGA',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_LPG',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COA',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COK',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COG',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_BFG',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_OXY',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_HFO',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_OIL',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ETH',2005,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_NAP',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_PTC',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_BIO',2005,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_BIO_GAS',2005,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_GEO',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ELC',2005,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ELC_DIS',2005,2.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_HET',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_SOL',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-----insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_STM',2005,1.5,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2005,'IND_SUP_RCP',2005,90,'(MEUR/t)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Residential sector
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_DST',2005,1.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_HFO',2005,1.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_KER',2005,2.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_LPG',2005,2.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_NGA',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_COA',2005,1.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_BIO',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_ELC',2005,2.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_HET',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
 -- Commercial sector
 --INSERT INTO "CostVariable" VALUES ('EUR',2025,'COM_CHP_HH2_PEMFC_NEW',2025,13.89,'MEUR/PJ',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "CostVariable" VALUES ('EUR',2030,'COM_CHP_HH2_PEMFC_NEW',2030,6.94,'MEUR/PJ',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_DST',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_HFO',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_KER',2005,2.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_LPG',2005,2.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_NGA',2005,0.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_COA',2005,1.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_BIO',2005,4.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_ELC',2005,2.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_HET',2005,0.50,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+-- Excise
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_KER',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_DST',2005,0.58,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_HFO',2005,0.39,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_LPG',2005,0.00,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_KER',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_DST',2005,0.58,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_HFO',2005,0.39,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_LPG',2005,0.00,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_KER',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_DST',2005,0.58,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_HFO',2005,0.39,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_LPG',2005,0.00,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_GSL',2005,11.22,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_DST',2005,9.17,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_JTK_DOM',2005,9.35,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_AVG',2005,9.35,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_HFO',2005,9.17,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_LPG',2005,2.75,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_NGA',2005,2.60,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2010,'TRA_FT_LNG',2010,2.60,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2010,'TRA_FT_ELC',2010,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COK',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COG',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_BFG',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_LPG',2005,0.00,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_HFO',2005,0.39,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_OIL',2005,0.58,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_OIL',2005,0.58,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_NGA',2015,0.30,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_COA',2015,0.30,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_ELC',2015,0.28,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
 
 create TABLE "CapacityFactor" (
 	"regions"	text,
@@ -15712,19 +15696,19 @@ insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_SO
 insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_SOL_PV_DEC_2_NEW',2010,0.12,'');
 insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_SOL_PV_DEC_2_NEW',2010,0.00,'');
 
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_HYD_DAM_HIG_NEW',2010,0.25,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_HYD_DAM_HIG_NEW',2010,0.25,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_HYD_DAM_HIG_NEW',2010,0.35,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_HYD_DAM_HIG_NEW',2010,0.35,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_HYD_DAM_HIG_NEW',2010,0.40,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_HYD_DAM_HIG_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_HYD_DAM_HIG_NEW',2010,0.30,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_HYD_DAM_HIG_NEW',2010,0.30,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_HYD_DAM_HIG_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_HYD_DAM_HIG_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_HYD_DAM_HIG_NEW',2010,0.45,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_HYD_DAM_HIG_NEW',2010,0.45,'');
 
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_HYD_RUN_NEW',2010,0.25,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_HYD_RUN_NEW',2010,0.25,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_HYD_RUN_NEW',2010,0.35,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_HYD_RUN_NEW',2010,0.35,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_HYD_RUN_NEW',2010,0.40,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_HYD_RUN_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_HYD_RUN_NEW',2010,0.30,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_HYD_RUN_NEW',2010,0.30,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_HYD_RUN_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_HYD_RUN_NEW',2010,0.40,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_HYD_RUN_NEW',2010,0.45,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_HYD_RUN_NEW',2010,0.45,'');
 
 create TABLE "CapacityToActivity" (
 	"regions"	text,
@@ -17220,16 +17204,16 @@ insert into "Demand" VALUES ('EUR',2005,'RES_WH',1591.8,'(PJ)',''); -- EUROfusio
 -- Transport sector
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_BUS',40.4,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_LCV',158.9,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_HTR',195.1,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_HTR',195.1*0.95,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_MTR',153.0,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_CAR',1359.2,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_LTR',537.5,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_2WH',22.3,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_ROA_3WH',9.1,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'TRA_RAIL_FRG',0.77,'(Bfkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'TRA_RAIL_PAS',4.11,'(Bpkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'TRA_NAV_DOM',0.32,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'TRA_NAV_INT',0.38,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'TRA_RAIL_FRG',0.77*0.95,'(Bfkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'TRA_RAIL_PAS',4.11*0.95,'(Bpkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'TRA_NAV_DOM',0.32*0.95,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'TRA_NAV_INT',0.38*0.95,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_AVI_DOM',1.60,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Demand" VALUES ('EUR',2005,'TRA_AVI_INT',11.09,'(Bvkm)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'TRA_NEU',117.94,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -17615,9 +17599,9 @@ INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'IND_CO2',(446.0+188.0)*1E+03,'',
 INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'IND_CO2',(445.0+171.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'IND_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 
-INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TRA_CO2',957.0E+03*1.1,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TRA_CO2',963.0E+03*1.1,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TRA_CO2',866.0E+03*1.1,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TRA_CO2',957.0E+03*1.025,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TRA_CO2',963.0E+03*1.025,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TRA_CO2',866.0E+03*1.025,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TRA_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 
 INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'RES_CO2',501.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
@@ -17640,17 +17624,17 @@ INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'ELC_CO2',1228.0E+03,'',''); -- h
 INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'ELC_CO2',888.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'ELC_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 
----- Decarbonization scenario
---INSERT INTO "EmissionLimit" VALUES ('EUR',1990,'TOT_CO2_EQ_GWP_100',5.604e+06*0.8,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm
---INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TOT_CO2_EQ_GWP_100',5.09E+06*0.8,'','');
---INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TOT_CO2_EQ_GWP_100',4.70E+06*0.8,'','');
---INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TOT_CO2_EQ_GWP_100',4.15E+06*0.8,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TOT_CO2_EQ_GWP_100',2.69E+06,'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',2.02E+06,'',''); -- Fit for 55 target (- 55% wrt 1990 levels)
-INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',1.34E+06,'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',6.72E+05,'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',3.36E+05,'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',5.604e+06*0.8*(1-1),'',''); -- Net-zero emissions
+------ Decarbonization scenario
+----INSERT INTO "EmissionLimit" VALUES ('EUR',1990,'TOT_CO2_EQ_GWP_100',5.604e+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TOT_CO2_EQ_GWP_100',5.09E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TOT_CO2_EQ_GWP_100',4.70E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TOT_CO2_EQ_GWP_100',4.15E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
+INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.400),'','');
+INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.550),'',''); -- Fit for 55 target (- 55% wrt 1990 levels)
+INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'',''); -- Educated guess
+INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.850),'',''); -- Educated guess
+INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.925),'',''); -- Educated guess
+INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-1),'',''); -- Net-zero emissions
 
 create TABLE "EmissionActivity" (
 	"regions"	text,
@@ -18553,9 +18537,9 @@ insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_CAR_ELC_EXS',0.00*(0.005),
 --insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LTR_NGA_EXS',0.000*0.178,'','');
 --insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LTR_ELC_EXS',0.000*0.003,'','');
 --insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LTR_BIO_EXS',0.000*15.312,'','');
-insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_DST_EXS',0.000*(179.866+0.239),'','');
-insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_GSL_EXS',0.000*0.118,'','');
---insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_BIO_EXS',0.000*0.239,'','');
+insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_DST_EXS',0.000*(179.866+0.239)*0.95,'','');
+insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_GSL_EXS',0.000*0.118*0.95,'','');
+--insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_HTR_BIO_EXS',0.000*0.239*0.95,'','');
 insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LCV_GSL_EXS',0.000*(29.459+0.507),'','');
 insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LCV_DST_EXS',0.000*115.030,'','');
 insert into "MaxCapacity" VALUES ('EUR',2020,'TRA_ROA_LCV_LPG_EXS',0.000*4.020,'','');
@@ -18777,20 +18761,20 @@ INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'IMP_GAS_PIP_MEA',703.400,'','');
 INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'UPS_REP_ADV_PUREX_FR_MOX_EXS',704000,'','');
 
 ---- Maximum capacity projected according to the S-curves in Lopes Cardozo et al., Fusion, expensive and taking forever?, Journal of Fusion Energy, 2015
-INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'ELC_NUC_FIS_FR_NEW',0.06,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'ELC_NUC_FIS_FR_NEW',0.34,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_FR_NEW',2.13,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_FR_NEW',13.24,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_FR_NEW',78.03,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ABWR_NEW',0.06,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ABWR_NEW',0.34,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ABWR_NEW',2.13,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ADS_TRU_NEW',0.06,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ADS_TRU_NEW',0.34,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ADS_TRU_NEW',2.13,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ADS_MA_NEW',0.06,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ADS_MA_NEW',0.34,'','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ADS_MA_NEW',2.13,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'ELC_NUC_FIS_FR_NEW',0.03,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'ELC_NUC_FIS_FR_NEW',0.20,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_FR_NEW',1.24,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_FR_NEW',7.72,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_FR_NEW',45.52,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ABWR_NEW',0.03,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ABWR_NEW',0.20,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ABWR_NEW',1.24,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ADS_TRU_NEW',0.03,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ADS_TRU_NEW',0.20,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ADS_TRU_NEW',1.24,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ADS_MA_NEW',0.03,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ADS_MA_NEW',0.20,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ADS_MA_NEW',1.24,'','');
 
 --INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'ELC_HH2_PEMFC_NEW',0.13/2,'','');
 --INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'ELC_HH2_PEMFC_NEW',0.80/2,'','');
@@ -19508,12 +19492,12 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_BUS_DPH_NEW',6.84E+00,'','
 INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_BUS_DPH_NEW',1.60E+01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_BUS_DPH_NEW',2.51E+01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_BUS_DPH_NEW',5.01E+01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_DPH_NEW',2.49E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_DPH_NEW',1.55E-01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_DPH_NEW',9.63E-01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_DPH_NEW',5.99E+00,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_DPH_NEW',3.53E+01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_DPH_NEW',8.25E+01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_DPH_NEW',2.49E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_DPH_NEW',1.55E-01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_DPH_NEW',9.63E-01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_DPH_NEW',5.99E+00*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_DPH_NEW',3.53E+01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_DPH_NEW',8.25E+01*0.95,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_ROA_MTR_DPH_NEW',2.60E-02,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_MTR_DPH_NEW',1.62E-01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_MTR_DPH_NEW',1.01E+00,'','');
@@ -19561,12 +19545,12 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_MTR_ELC_NEW',4.70E+00,'','
 INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_MTR_ELC_NEW',2.77E+01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_MTR_ELC_NEW',6.47E+01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_MTR_ELC_NEW',1.02E+02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_ELC_NEW',3.32E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_ELC_NEW',2.06E-01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_ELC_NEW',1.28E+00,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_ELC_NEW',7.98E+00,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_ELC_NEW',4.70E+01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_ELC_NEW',1.10E+02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_ELC_NEW',3.32E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_ELC_NEW',2.06E-01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_ELC_NEW',1.28E+00*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_ELC_NEW',7.98E+00*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_ELC_NEW',4.70E+01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_ELC_NEW',1.10E+02*0.95,'','');
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_ROA_CAR_FCE_NEW',8.11E+00,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_CAR_FCE_NEW',5.04E+01,'','');
@@ -19599,96 +19583,96 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_MTR_FCE_NEW',7.55E-01,'','
 INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_MTR_FCE_NEW',4.70E+00,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_MTR_FCE_NEW',2.77E+01,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_MTR_FCE_NEW',6.47E+01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_FCE_NEW',3.32E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_FCE_NEW',2.06E-01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_FCE_NEW',1.28E+00,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_FCE_NEW',7.98E+00,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_FCE_NEW',4.70E+01,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_FCE_NEW',1.10E+02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_ROA_HTR_FCE_NEW',3.32E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_ROA_HTR_FCE_NEW',2.06E-01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_ROA_HTR_FCE_NEW',1.28E+00*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_ROA_HTR_FCE_NEW',7.98E+00*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_ROA_HTR_FCE_NEW',4.70E+01*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_ROA_HTR_FCE_NEW',1.10E+02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_RAIL_FRG_GH2_NEW',5.91E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_GH2_NEW',3.67E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_RAIL_FRG_GH2_NEW',2.28E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_RAIL_FRG_GH2_NEW',1.42E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_RAIL_FRG_GH2_NEW',8.37E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_RAIL_FRG_GH2_NEW',5.91E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_GH2_NEW',3.67E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_RAIL_FRG_GH2_NEW',2.28E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_RAIL_FRG_GH2_NEW',1.42E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_RAIL_FRG_GH2_NEW',8.37E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_RAIL_PAS_GH2_NEW',3.22E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_GH2_NEW',2.00E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_RAIL_PAS_GH2_NEW',1.25E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_RAIL_PAS_GH2_NEW',7.75E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_RAIL_PAS_GH2_NEW',4.57E-01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_RAIL_PAS_GH2_NEW',3.22E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_GH2_NEW',2.00E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_RAIL_PAS_GH2_NEW',1.25E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_RAIL_PAS_GH2_NEW',7.75E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_RAIL_PAS_GH2_NEW',4.57E-01*0.95,'','');
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_AVI_DOM_LH2_NEW',1.56E-04,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_AVI_DOM_LH2_NEW',9.72E-04,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_AVI_DOM_LH2_NEW',6.04E-03,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_DOM_DUAL_NEW',2.40E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_DOM_DUAL_NEW',1.49E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_DUAL_NEW',9.27E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_DUAL_NEW',5.77E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_DUAL_NEW',3.40E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_DUAL_NEW',7.94E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_DUAL_NEW',1.25E-01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_DOM_DUAL_NEW',2.40E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_DOM_DUAL_NEW',1.49E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_DUAL_NEW',9.27E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_DUAL_NEW',5.77E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_DUAL_NEW',3.40E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_DUAL_NEW',7.94E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_DUAL_NEW',1.25E-01*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_DOM_LNG_NEW',2.40E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_DOM_LNG_NEW',1.49E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_LNG_NEW',9.27E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_LNG_NEW',5.77E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_LNG_NEW',3.40E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_LNG_NEW',7.94E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_LNG_NEW',1.25E-01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_DOM_LNG_NEW',2.40E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_DOM_LNG_NEW',1.49E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_LNG_NEW',9.27E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_LNG_NEW',5.77E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_LNG_NEW',3.40E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_LNG_NEW',7.94E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_LNG_NEW',1.25E-01*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_MTH_NEW',2.40E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_MTH_NEW',1.49E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_MTH_NEW',9.27E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_MTH_NEW',5.77E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_MTH_NEW',3.40E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_MTH_NEW',2.40E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_MTH_NEW',1.49E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_MTH_NEW',9.27E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_MTH_NEW',5.77E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_MTH_NEW',3.40E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_LH2_NEW',2.40E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_LH2_NEW',1.49E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_LH2_NEW',9.27E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_LH2_NEW',5.77E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_LH2_NEW',3.40E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_LH2_NEW',2.40E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_LH2_NEW',1.49E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_LH2_NEW',9.27E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_LH2_NEW',5.77E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_LH2_NEW',3.40E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_AMM_FCE_NEW',2.40E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_AMM_FCE_NEW',1.49E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_AMM_FCE_NEW',9.27E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_AMM_FCE_NEW',5.77E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_AMM_FCE_NEW',3.40E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_DOM_AMM_FCE_NEW',2.40E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_AMM_FCE_NEW',1.49E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_DOM_AMM_FCE_NEW',9.27E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_DOM_AMM_FCE_NEW',5.77E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_DOM_AMM_FCE_NEW',3.40E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_INT_LNG_NEW',2.85E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_INT_LNG_NEW',1.77E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_LNG_NEW',1.10E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_LNG_NEW',6.85E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_LNG_NEW',4.03E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_LNG_NEW',9.43E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_LNG_NEW',1.48E-01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_INT_LNG_NEW',2.85E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_INT_LNG_NEW',1.77E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_LNG_NEW',1.10E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_LNG_NEW',6.85E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_LNG_NEW',4.03E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_LNG_NEW',9.43E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_LNG_NEW',1.48E-01*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_INT_DUAL_NEW',2.85E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_INT_DUAL_NEW',1.77E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_DUAL_NEW',1.10E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_DUAL_NEW',6.85E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_DUAL_NEW',4.03E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_DUAL_NEW',9.43E-02,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_DUAL_NEW',1.48E-01,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2020,'TRA_NAV_INT_DUAL_NEW',2.85E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'TRA_NAV_INT_DUAL_NEW',1.77E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_DUAL_NEW',1.10E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_DUAL_NEW',6.85E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_DUAL_NEW',4.03E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_DUAL_NEW',9.43E-02*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_DUAL_NEW',1.48E-01*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_MTH_NEW',2.85E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_MTH_NEW',1.77E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_MTH_NEW',1.10E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_MTH_NEW',6.85E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_MTH_NEW',4.03E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_MTH_NEW',2.85E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_MTH_NEW',1.77E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_MTH_NEW',1.10E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_MTH_NEW',6.85E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_MTH_NEW',4.03E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_LH2_NEW',2.85E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_LH2_NEW',1.77E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_LH2_NEW',1.10E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_LH2_NEW',6.85E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_LH2_NEW',4.03E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_LH2_NEW',2.85E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_LH2_NEW',1.77E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_LH2_NEW',1.10E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_LH2_NEW',6.85E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_LH2_NEW',4.03E-02*0.95,'','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_AMM_FCE_NEW',2.85E-05,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_AMM_FCE_NEW',1.77E-04,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_AMM_FCE_NEW',1.10E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_AMM_FCE_NEW',6.85E-03,'','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_AMM_FCE_NEW',4.03E-02,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'TRA_NAV_INT_AMM_FCE_NEW',2.85E-05*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'TRA_NAV_INT_AMM_FCE_NEW',1.77E-04*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'TRA_NAV_INT_AMM_FCE_NEW',1.10E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'TRA_NAV_INT_AMM_FCE_NEW',6.85E-03*0.95,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'TRA_NAV_INT_AMM_FCE_NEW',4.03E-02*0.95,'','');
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IND_FT_ELC',4145.937,'(PJ)',''); -- IEA
 INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IND_FT_ELC',4145.129,'(PJ)',''); -- IEA
@@ -20046,11 +20030,11 @@ INSERT INTO "MinActivity" VALUES ('EUR',2030,'IMP_GAS_LNG_USA',2594.41,'(PJ)',''
 
 --Electricity sector
 ---- Base year technologies
-insert into "MinActivity" VALUES ('EUR',2010,'ELC_OIL_EXS',38.594*31.536*0.5*0.30,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'ELC_OIL_EXS',38.594*31.536*0.6*0.30,'','');
 insert into "MinActivity" VALUES ('EUR',2040,'ELC_OIL_EXS',38.594*31.536*0.000*0.30,'','');
 insert into "MinActivity" VALUES ('EUR',2010,'ELC_NGA_EXS',185.139*31.536*0.9*0.35,'','');
 insert into "MinActivity" VALUES ('EUR',2035,'ELC_NGA_EXS',185.139*31.536*0.000*0.35,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'ELC_COA_EXS',230.98*31.536*0.5*0.35,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'ELC_COA_EXS',230.98*31.536*0.6*0.35,'','');
 insert into "MinActivity" VALUES ('EUR',2035,'ELC_COA_EXS',230.98*31.536*0.000*0.35,'','');
 insert into "MinActivity" VALUES ('EUR',2010,'ELC_BIO_EXS',13.940*31.536*0.9*0.50,'','');
 insert into "MinActivity" VALUES ('EUR',2035,'ELC_BIO_EXS',13.940*31.536*0.000*0.50,'','');
@@ -20293,30 +20277,30 @@ INSERT INTO "MinActivity" VALUES ('EUR',2030,'RES_LG_ELC_FLU_EXS',0.0*93.145*0.1
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'RES_LG_ELC_FLU_LAM_EXS',0.5*10.260*0.114,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2030,'RES_LG_ELC_FLU_LAM_EXS',0.0*10.260*0.114,'','');
 
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_COA_EXS',0.5*0.77*0.00038,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_COA_EXS',0.0*0.77*0.00038,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_DST_EXS',0.5*0.77*0.96426,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_DST_EXS',0.0*0.77*0.96426,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_ELC_EXS',0.5*0.77*0.03536,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_ELC_EXS',0.0*0.77*0.03536,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_COA_EXS',0.5*4.11*0.001,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_COA_EXS',0.0*4.11*0.001,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_DST_EXS',0.5*4.11*0.046,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_DST_EXS',0.0*4.11*0.046,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_ELC_EXS',0.5*4.11*0.953,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_ELC_EXS',0.0*4.11*0.953,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_DST_EXS',0.5*0.32*0.731,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_DST_EXS',0.0*0.32*0.731,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_HFO_EXS',0.5*0.32*0.223,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_HFO_EXS',0.0*0.32*0.223,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_GSL_EXS',0.5*0.32*0.046,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_GSL_EXS',0.0*0.32*0.046,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_INT_DST_EXS',0.5*0.38*0.147,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_INT_DST_EXS',0.0*0.38*0.147,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_INT_HFO_EXS',0.5*0.38*0.853,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_INT_HFO_EXS',0.0*0.38*0.853,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'TRA_AVI_DOM_JTK_EXS',0.5*1.60*0.980,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'TRA_AVI_DOM_JTK_EXS',0.0*1.60*0.980,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_COA_EXS',0.5*0.77*0.00038*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_COA_EXS',0.0*0.77*0.00038*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_DST_EXS',0.5*0.77*0.96426*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_DST_EXS',0.0*0.77*0.96426*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_FRG_ELC_EXS',0.5*0.77*0.03536*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_FRG_ELC_EXS',0.0*0.77*0.03536*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_COA_EXS',0.5*4.11*0.001*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_COA_EXS',0.0*4.11*0.001*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_DST_EXS',0.5*4.11*0.046*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_DST_EXS',0.0*4.11*0.046*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_RAIL_PAS_ELC_EXS',0.5*4.11*0.953*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_RAIL_PAS_ELC_EXS',0.0*4.11*0.953*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_DST_EXS',0.5*0.32*0.731*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_DST_EXS',0.0*0.32*0.731*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_HFO_EXS',0.5*0.32*0.223*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_HFO_EXS',0.0*0.32*0.223*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_DOM_GSL_EXS',0.5*0.32*0.046*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_DOM_GSL_EXS',0.0*0.32*0.046*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_INT_DST_EXS',0.5*0.38*0.147*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_INT_DST_EXS',0.0*0.38*0.147*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_NAV_INT_HFO_EXS',0.5*0.38*0.853*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_NAV_INT_HFO_EXS',0.0*0.38*0.853*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'TRA_AVI_DOM_JTK_EXS',0.5*1.60*0.980*0.95,'','');
+insert into "MinActivity" VALUES ('EUR',2035,'TRA_AVI_DOM_JTK_EXS',0.0*1.60*0.980*0.95,'','');
 insert into "MinActivity" VALUES ('EUR',2010,'TRA_AVI_DOM_AVG_EXS',0.5*1.60*0.020,'','');
 insert into "MinActivity" VALUES ('EUR',2035,'TRA_AVI_DOM_AVG_EXS',0.0*1.60*0.020,'','');
 --insert into "MinActivity" VALUES ('EUR',2010,'TRA_AVI_INT_JTK_EXS',0.5*11.09,'','');
@@ -20337,9 +20321,9 @@ INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_CAR_ELC_EXS',0.5*0.005,'',
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LTR_NGA_EXS',0.5*0.178,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LTR_ELC_EXS',0.5*0.003,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LTR_BIO_EXS',0.5*15.312,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_DST_EXS',0.5*(179.866+0.239),'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_GSL_EXS',0.5*0.118,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_BIO_EXS',0.5*0.239,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_DST_EXS',0.5*(179.866+0.239)*0.95,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_GSL_EXS',0.5*0.118*0.95,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_HTR_BIO_EXS',0.5*0.239*0.95,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LCV_GSL_EXS',0.5*(29.459+0.507),'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LCV_DST_EXS',0.5*115.030,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'TRA_ROA_LCV_LPG_EXS',0.5*4.020,'','');
@@ -20368,9 +20352,9 @@ INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_CAR_ELC_EXS',0.0*0.005,'',
 --INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LTR_NGA_EXS',0.0*0.178,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LTR_ELC_EXS',0.0*0.003,'','');
 --INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LTR_BIO_EXS',0.0*15.312,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_DST_EXS',0.0*(179.866+0.239),'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_GSL_EXS',0.0*0.118,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_BIO_EXS',0.0*0.239,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_DST_EXS',0.0*(179.866+0.239)*0.95,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_GSL_EXS',0.0*0.118*0.95,'','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_HTR_BIO_EXS',0.0*0.239*0.95,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LCV_GSL_EXS',0.0*(29.459+0.507),'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LCV_DST_EXS',0.0*115.030,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_LCV_LPG_EXS',0.0*4.020,'','');
@@ -21092,9 +21076,9 @@ INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_LCV_AFV_GRP',158.90*0.015,'
 INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_MTR_AFV_GRP',153.0*0.009,'');
 INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_MTR_AFV_GRP',153.0*0.009,'');
 INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_MTR_AFV_GRP',153.0*0.009,'');
-INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_HTR_AFV_GRP',195.10*0.009,'');
-INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_HTR_AFV_GRP',195.10*0.009,'');
-INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_HTR_AFV_GRP',195.10*0.009,'');
+INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_HTR_AFV_GRP',195.10*0.009*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_HTR_AFV_GRP',195.10*0.009*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_HTR_AFV_GRP',195.10*0.009*0.95,'');
 
 INSERT INTO "MaxActivityGroup" VALUES (2025,'TRA_ROA_CAR_AFV_GRP',6.94E+02,'');
 INSERT INTO "MaxActivityGroup" VALUES (2030,'TRA_ROA_CAR_AFV_GRP',1.09E+03,'');
@@ -21124,12 +21108,12 @@ INSERT INTO "MaxActivityGroup" VALUES (2040,'TRA_ROA_MTR_AFV_GRP',1.74E+02,'');
 INSERT INTO "MaxActivityGroup" VALUES (2045,'TRA_ROA_MTR_AFV_GRP',2.01E+02,'');
 INSERT INTO "MaxActivityGroup" VALUES (2050,'TRA_ROA_MTR_AFV_GRP',2.03E+02,'');
 
-INSERT INTO "MaxActivityGroup" VALUES (2025,'TRA_ROA_HTR_AFV_GRP',8.25E+01,'');
-INSERT INTO "MaxActivityGroup" VALUES (2030,'TRA_ROA_HTR_AFV_GRP',1.30E+02,'');
-INSERT INTO "MaxActivityGroup" VALUES (2035,'TRA_ROA_HTR_AFV_GRP',1.77E+02,'');
-INSERT INTO "MaxActivityGroup" VALUES (2040,'TRA_ROA_HTR_AFV_GRP',2.22E+02,'');
-INSERT INTO "MaxActivityGroup" VALUES (2045,'TRA_ROA_HTR_AFV_GRP',2.56E+02,'');
-INSERT INTO "MaxActivityGroup" VALUES (2050,'TRA_ROA_HTR_AFV_GRP',2.58E+02,'');
+INSERT INTO "MaxActivityGroup" VALUES (2025,'TRA_ROA_HTR_AFV_GRP',8.25E+01*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2030,'TRA_ROA_HTR_AFV_GRP',1.30E+02*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2035,'TRA_ROA_HTR_AFV_GRP',1.77E+02*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2040,'TRA_ROA_HTR_AFV_GRP',2.22E+02*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2045,'TRA_ROA_HTR_AFV_GRP',2.56E+02*0.95,'');
+INSERT INTO "MaxActivityGroup" VALUES (2050,'TRA_ROA_HTR_AFV_GRP',2.58E+02*0.95,'');
 
 CREATE TABLE "MaxCapacityGroup" (
 	"periods"	integer,
