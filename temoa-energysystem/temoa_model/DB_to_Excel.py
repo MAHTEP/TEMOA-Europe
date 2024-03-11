@@ -100,6 +100,36 @@ def make_excel(ifile, ofile, scenario):
 	for col, val in enumerate(df_costs.columns.values):
 		worksheet.write(0, col, val, header_format)
 
+	#DS: my mod
+	query = "SELECT regions, tech, sector, output_name,  vintage, output_cost FROM Output_Costs WHERE output_name='V_CostInvest' AND scenario='" + scenario + "'"
+	df_extra = pd.read_sql_query(query, con)
+	df_extra.columns = ['Region', 'Technology', 'Sector', 'Output Name', 'Vintage', 'Cost']
+	df_extra.to_excel(writer, sheet_name='V_CostInvest', index=False, encoding='utf-8', startrow=1, header=False)
+	worksheet = writer.sheets['V_CostInvest']
+	worksheet.set_column('A:A', 10)
+	worksheet.set_column('B:B', 10)
+	worksheet.set_column('C:C', 10)
+	worksheet.set_column('D:D', 10)
+	worksheet.set_column('E:E', 10)
+	worksheet.set_column('F:F', 10)
+	for col, val in enumerate(df_extra.columns.values):
+		worksheet.write(0, col, val, header_format)
+
+	#DS: my mod
+	query = "SELECT regions, tech, sector, output_name,  vintage, output_cost FROM Output_Costs WHERE output_name='V_CumCap' AND scenario='" + scenario + "'"
+	df_extra = pd.read_sql_query(query, con)
+	df_extra.columns = ['Region', 'Technology', 'Sector', 'Output Name', 'Vintage', 'V_CumCap']
+	df_extra.to_excel(writer, sheet_name='V_CumCap', index=False, encoding='utf-8', startrow=1, header=False)
+	worksheet = writer.sheets['V_CumCap']
+	worksheet.set_column('A:A', 10)
+	worksheet.set_column('B:B', 10)
+	worksheet.set_column('C:C', 10)
+	worksheet.set_column('D:D', 10)
+	worksheet.set_column('E:E', 10)
+	worksheet.set_column('F:F', 10)
+	for col, val in enumerate(df_extra.columns.values):
+		worksheet.write(0, col, val, header_format)
+
 	writer.save()
 
 	#prepare results for IamDataFrame

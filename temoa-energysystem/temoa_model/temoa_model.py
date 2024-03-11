@@ -24,6 +24,7 @@ received this license file.  If not, see <http://www.gnu.org/licenses/>.
 from temoa_rules import *
 from temoa_initialize import *
 from temoa_run import *
+from endogenous_technology_learning import * # ETL
 
 import IPython
 
@@ -246,6 +247,10 @@ def temoa_create_model(name="Temoa"):
     M.StorageInitFrac = Param(M.StorageInit_rtv)
 
     M.MyopicBaseyear = Param(default=0, mutable=True)
+
+    M.LearningRate_rt = Set(dimen=2, initialize=LearningIndexes) # ETL
+    M.V_CostInvest_rtp = Set(dimen=3, initialize=CostInvestIndexes) # ETL
+    M.LearningRate = Param(M.LearningRate_rt) # ETL
 
     # ---------------------------------------------------------------
     # Define Decision Variables.

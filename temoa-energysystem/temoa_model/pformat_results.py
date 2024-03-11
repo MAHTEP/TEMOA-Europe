@@ -39,6 +39,7 @@ import sys
 import pandas as pd
 
 from temoa_config import TemoaConfig
+from endogenous_technology_learning import *
 
 # Need line below to import DB_to_Excel.py from data_processing
 sys.path.append(os.path.join(os.getcwd(), 'data_processing'))
@@ -283,7 +284,8 @@ def pformat_results ( pyomo_instance, pyomo_result, options ):
 
 			icost = value( m.V_NewCapacity[r, t, v] )
 			if abs(icost) < epsilon: continue
-			icost *= value( m.CostInvest[r, t, v] )*(
+			icost *= value(V_CostInvest(m, r, t, v))*( #DS: my mod
+					 #value( m.CostInvest[r, t, v] )*(
 				(
 					1 -  x**( -min( value(m.LifetimeProcess[r, t, v]), P_e - v ) )
 				)/(
@@ -299,6 +301,25 @@ def pformat_results ( pyomo_instance, pyomo_result, options ):
 			)
 	
 			svars[	'Costs'	][ 'V_DiscountedInvestmentByProcess', r, t, v] += icost
+
+# ETL
+
+		for r, t, v in m.V_CostInvest_rtp:
+			try:
+				val = (value(V_CostInvest(m, r, t, v)))
+				if abs(val) < epsilon: continue
+				svars[	'Costs' ]['V_CostInvest', r, t, v] = val
+			except ValueError:
+				continue
+			except KeyError:
+				continue
+
+# ETL
+
+		for (r, t, p) in m.V_CostInvest_rtp:
+			val = V_CapIncrease(m, r, t, p)
+			svars[	'Costs' ]['V_CumCap', r, t, p] = val
+
 
 
 		for r, p, t, v in m.CostFixed.sparse_iterkeys():

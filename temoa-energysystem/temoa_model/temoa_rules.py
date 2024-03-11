@@ -332,7 +332,7 @@ loan rates and periods.
 """
     return sum(PeriodCost_rule(M, p) for p in M.time_optimize)
 
-
+from endogenous_technology_learning import * # ETL
 def PeriodCost_rule(M, p):
     P_0 = min(M.time_optimize)
     P_e = M.time_future.last()  # End point of modeled horizon
@@ -349,7 +349,8 @@ def PeriodCost_rule(M, p):
     loan_costs = sum(
         M.V_NewCapacity[r, S_t, S_v]
         * (
-            value(M.CostInvest[r, S_t, S_v])
+            V_CostInvest(M, r, S_t, S_v) # ETL
+            #value(M.CostInvest[r, S_t, S_v]) # ETL
             * value(M.LoanAnnualize[r, S_t, S_v])
             * (
                 value(M.LifetimeLoanProcess[r, S_t, S_v])

@@ -16,7 +16,7 @@
 
 # Scenario Name (Mandatory) 
 # This scenario name is used to store results within the output .sqlite file
---scenario=test_run
+--scenario=test_run_ETL
 
 # Path to folder containing input dataset (Mandatory)
 # This is the location where database files reside

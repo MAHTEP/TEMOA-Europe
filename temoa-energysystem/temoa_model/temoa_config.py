@@ -175,7 +175,8 @@ def db_2_dat(ifile, ofile, options):
 		['param','RampUp',                    '',                    '',             2],
 		['param','RampDown',                  '',                    '',             2],
 		['param','StorageInitFrac',           '',                    '',             3],
-		['param','StorageDuration',           '',                    '',             2]]
+		['param','StorageDuration',           '',                    '',             2],
+		['param','LearningRate', 			  '', 					 '', 			 2]]  # DS: my mod
 
 	with open(ofile, 'w') as f:
 		f.write('data ;\n\n')
