@@ -27,9 +27,9 @@ if Postprocessing:
     with open("7_Biorefineries.py") as Biorefineries_postprocessing:
         exec(Biorefineries_postprocessing.read())
     print("{:>62}".format('7_Biorefineries_postprocessing processed.'))
-    with open("8_Biorefineries_feedstock.py") as Biorefineries_feedstock_postprocessing:
+    with open("8_Biorefineries feedstock.py") as Biorefineries_feedstock_postprocessing:
         exec(Biorefineries_feedstock_postprocessing.read())
     print("{:>62}".format('8_Biorefineries_feedstock_postprocessing processed.'))
-    with open("9_Industrial_consumption.py") as Industry_postprocessing:
+    with open("9_Industrial consumption.py") as Industry_postprocessing:
         exec(Industry_postprocessing.read())
-    print("{:>62}".format('9_Industry_postprocessing processed.'))                
+    print("{:>62}".format('9_Industrial consumption postprocessing processed.'))
