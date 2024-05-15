@@ -164,6 +164,7 @@ commodities_in = [
 'PRI_OIL_KER',
 'PRI_OIL_GSL',
 'PRI_OIL_NAP',
+'RNW_BIO_NAP',
 'PRI_OIL_GSL_kt',
 'PRI_OIL_DST_kt',
 'PRI_OIL_KER_kt',

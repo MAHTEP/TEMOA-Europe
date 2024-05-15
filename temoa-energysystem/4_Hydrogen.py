@@ -40,7 +40,8 @@ technologies=[
 'HH2_NGA_CS_CCS_NEW',
 'HH2_COA_CL_CCS_NEW',
 'HH2_COA_CM_CCS_NEW',
-'HH2_BIO_CM_CCS_NEW'
+'HH2_BIO_CM_CCS_NEW',
+'IMP_HH2_DMY_TECH'
 ]
 commodities_in = [
 ]

@@ -92,9 +92,10 @@ create TABLE "commodities" (
 	FOREIGN KEY("flag") REFERENCES "commodity_labels"("comm_labels")
 );
 insert into "commodities" VALUES ('ethos','p','Dummy generation commodity');
+
 -- Upstream sector
 ---- Sector-specific commodities
-insert into "commodities" VALUES ('IMP_ELC_CEN','p','Imported electricity');
+insert into "commodities" VALUES ('IMP_ELC','p','Imported electricity');
 insert into "commodities" VALUES ('IMP_GAS_NGA','p','Imported pipeline natural gas');
 insert into "commodities" VALUES ('IMP_OIL_PRD','p','Imported oil products');
 insert into "commodities" VALUES ('IMP_COA','p','Imported coal');
@@ -130,6 +131,7 @@ insert into "commodities" VALUES ('PRI_OIL_KER','p','Kerosene');
 insert into "commodities" VALUES ('PRI_OIL_LPG','p','Liquid petroleum gas');
 insert into "commodities" VALUES ('PRI_OIL_LUB','p','Lubricants');
 insert into "commodities" VALUES ('PRI_OIL_NAP','p','Naphtha');
+insert into "commodities" VALUES ('RNW_BIO_NAP','p','Bio-naphtha');
 insert into "commodities" VALUES ('PRI_OIL_NSP','p','Non specified oil');
 insert into "commodities" VALUES ('PRI_OIL_PTC','p','Petroleum coke');
 insert into "commodities" VALUES ('PRI_OIL_WAX','p','Paraffin wax');
@@ -276,8 +278,7 @@ insert into "commodities" VALUES ('HH2_COA','p','Coal (HH2)');
 --insert into "commodities" VALUES ('HH2_OIL_RPP','p','Refined Petroelum Products-Liq (HH2)');
 insert into "commodities" VALUES ('HH2_BIO','p','Biofuels (HH2)');
 insert into "commodities" VALUES ('HH2_BIO_ETH','p','Ethanol from crop (HH2)');
-insert into "commodities" VALUES ('HH2_ELC_CEN','p','Centralized electricity (HH2)');
-insert into "commodities" VALUES ('HH2_ELC_DIS','p','Decentralized electricity (HH2)');
+insert into "commodities" VALUES ('HH2_ELC','p','Electricity (HH2)');
 
 insert into "commodities" VALUES ('HH2_CU','p','Hydrogen, centralized production, underground storage');
 insert into "commodities" VALUES ('HH2_CT','p','Hydrogen, centralized production, tank storage');
@@ -309,17 +310,13 @@ insert into "commodities" VALUES ('ELC_BGS','p','Renewable biogas');
 insert into "commodities" VALUES ('ELC_MUN','p','Municipal waste');
 insert into "commodities" VALUES ('ELC_BIO','p','Biofuels');
 insert into "commodities" VALUES ('ELC_CEN','p','Electricity (centralized)');
---insert into "commodities" VALUES ('ELC_HYD_CEN','p','Hydropower electricity (centralized)');
---insert into "commodities" VALUES ('ELC_STG_WIN_CEN','p','Storable wind electricity (Centralized)');
---insert into "commodities" VALUES ('ELC_STG_WIN_DIS','p','Storable wind electricity (decentralized)');
---insert into "commodities" VALUES ('ELC_STG_SOL_CEN','p','Storable solar electricity (Centralized)');
---insert into "commodities" VALUES ('ELC_STG_SOL_DIS','p','Storable solar electricity (decentralized)');
+insert into "commodities" VALUES ('ELC_VRES_STG_CEN','p','Electricity from VRES (centralized)');
+insert into "commodities" VALUES ('ELC_VRES_STG_DIS','p','Electricity from VRES (decentralized)');
+insert into "commodities" VALUES ('ELC_HYD_STG_CEN','p','Electricity from hydroelectric (decentralized)');
 insert into "commodities" VALUES ('ELC_COA','p','Coal');
 insert into "commodities" VALUES ('ELC_CRP','p','Crop');
---INSERT INTO "commodities" VALUES ('ELC_DIS','p','Diesel');
 insert into "commodities" VALUES ('ELC_DIS','p','Electricity (decentralized)');
 insert into "commodities" VALUES ('ELC_GEO','p','Geothermal energy');
---insert into "commodities" VALUES ('ELC_HYD','p','Hydroelectric energy');
 insert into "commodities" VALUES ('ELC_HYD_DAM','p','Hydroelectric energy - Dam');
 insert into "commodities" VALUES ('ELC_HYD_ROR','p','Hydroelectric energy - Run on river');
 insert into "commodities" VALUES ('ELC_NGA','p','Natural gas');
@@ -331,8 +328,9 @@ insert into "commodities" VALUES ('ELC_WAV','p','Wave energy');
 insert into "commodities" VALUES ('ELC_TDL','p','Tidal energy');
 insert into "commodities" VALUES ('ELC_WIN_ON','p','Wind energy - Onshore');
 insert into "commodities" VALUES ('ELC_WIN_OFF','p','Wind energy - Offshore');
---insert into "commodities" VALUES ('ELC_HH2','p','Hydrogen');
+insert into "commodities" VALUES ('ELC_HH2','p','Hydrogen');
 insert into "commodities" VALUES ('HET','p','Heat');
+insert into "commodities" VALUES ('ELC','p','Electricity in the grid');
 
 -- Agriculture sector
 ---- Sector-specific commodities
@@ -713,7 +711,6 @@ insert into "technologies" VALUES ('IMP_HCO_DMY_ANNUAL_TECH','p','IMP','Import/E
 insert into "technologies" VALUES ('IMP_BCO_DMY_ANNUAL_TECH','p','IMP','Import/Export - Dummy brown coal import technology','');
 insert into "technologies" VALUES ('IMP_NGA_DMY_ANNUAL_TECH','p','IMP','Import/Export - Dummy  natural gas import technology','');
 insert into "technologies" VALUES ('IMP_OIL_DMY_ANNUAL_TECH','p','IMP','Import/Export - Dummy oil import technology','');
-insert into "technologies" VALUES ('IMP_ELC_DMY_TECH','p','IMP','Import/Export - Dummy transformation technology for electricity','');
 insert into "technologies" VALUES ('IMP_GAS_LNG_DMY_TECH','p','IMP','Import/Export - Dummy transformation technology for LNG','');
 insert into "technologies" VALUES ('IMP_EMHV_DMY_TECH','p','IMP','Import/Export - Dummy EMHV import technology','');
 insert into "technologies" VALUES ('IMP_WOD_DMY_TECH','p','IMP','Import/Export - Dummy wood import technology','');
@@ -905,7 +902,7 @@ insert into "technologies" VALUES ('UPS_HET_REF_COA_EXS','p','UPS','Upstream - C
 --insert into "technologies" VALUES ('UPS_SHA_NGA_2_NEW','p','UPS','Upstream - Natural gas (ground) - Shale gas - Step 2 - New','');
 --insert into "technologies" VALUES ('UPS_SHA_NGA_3_NEW','p','UPS','Upstream - Natural gas (ground) - Shale gas - Step 3 - New','');
 ---- Gas storage
-insert into "technologies" VALUES ('UPS_GAS_NGA_STG_EXS','ps','UPS','Upstream - Natural gas storage - New','');
+--insert into "technologies" VALUES ('UPS_GAS_NGA_STG_EXS','ps','UPS','Upstream - Natural gas storage - New','');
 
 ---- Nuclear fuel cycle
 ---- Fuel production
@@ -1083,6 +1080,7 @@ INSERT INTO "technologies" VALUES ('SEQ_SNK_DMY_TECH','p','SEQ','Dummy demand te
 INSERT INTO "technologies" VALUES ('OUT_DMY_TECH','p','SEQ','Dummy demand technology to produce OUT_DMY','');
 
 -- Electricity sector
+insert into "technologies" VALUES ('ELC_TRANS_TECH','p','ELC','Import/Export - Dummy electricity transmission technology','');
 ---- Fuel technologies
 insert into "technologies" VALUES ('ELC_FT_NGA','p','ELC','Electricity - Fuel technology - Natural gas','');
 insert into "technologies" VALUES ('ELC_FT_OIL','p','ELC','Electricity - Fuel technology - Oil','');
@@ -1100,7 +1098,7 @@ insert into "technologies" VALUES ('ELC_FT_WAV','p','ELC','Electricity - Fuel te
 insert into "technologies" VALUES ('ELC_FT_TDL','p','ELC','Electricity - Fuel technology - Tide energy','');
 insert into "technologies" VALUES ('ELC_FT_WIN_ON','p','ELC','Electricity - Fuel technology - Wind energy - Onshore','');
 insert into "technologies" VALUES ('ELC_FT_WIN_OFF','p','ELC','Electricity - Fuel technology - Wind energy - Offshore','');
---insert into "technologies" VALUES ('ELC_FT_HH2','p','ELC','Electricity - Fuel technology - Hydrogen','');
+insert into "technologies" VALUES ('ELC_FT_HH2','p','ELC','Electricity - Fuel technology - Hydrogen','');
 
 ---- Base year technologies
 insert into "technologies" VALUES ('ELC_OIL_EXS','pb','ELC','Electricity - Oil-based capacity - Existing','');
@@ -1172,7 +1170,7 @@ insert into "technologies" VALUES ('ELC_SOL_CSP_4_NEW','p','ELC','Electricity - 
 insert into "technologies" VALUES ('ELC_MAR_WAV_NEW','p','ELC','Electricity - Marine offshore wave plant - New','');
 insert into "technologies" VALUES ('ELC_MAR_TDL_NEW','p','ELC','Electricity - Marine tidal stream plant - New','');
 insert into "technologies" VALUES ('ELC_HYD_PUM_NEW','ps','ELC','Electricity - Pumped hydro daynite storage - New','');
---insert into "technologies" VALUES ('ELC_HH2_PEMFC_NEW','p','ELC','Electricity - PEM fuel cell system - New','');
+insert into "technologies" VALUES ('ELC_HH2_PEMFC_NEW','p','ELC','Electricity - PEM fuel cell system - New','');
 ---- Sequestration technologies
 INSERT INTO "technologies" VALUES ('ELC_COA_CCO_IG_CCS_NEW','p','ELC','Electricity - IGCC+CO2 removal from input gas - New','');
 INSERT INTO "technologies" VALUES ('ELC_COA_CCO_FG_CCS_NEW','p','ELC','Electricity - IGCC+CO2 removal from flue gas - New','');
@@ -1688,7 +1686,6 @@ insert into "technologies" VALUES ('IND_FT_GEO','p','IND','Industry - Fuel Techn
 insert into "technologies" VALUES ('IND_FT_ELC','p','IND','Industry - Fuel Technology - Electricity','');
 insert into "technologies" VALUES ('IND_DIS_ELC','p','IND','Industry - Distribution - Electricity distribution','');
 insert into "technologies" VALUES ('IND_FT_HET','p','IND','Industry - Fuel Technology - Heat','');
---insert into "technologies" VALUES ('IND_FT_SOL','p','IND','Industry Fuel Technology - Solar energy','');
 
 ---- Sector fuel production
 insert into "technologies" VALUES ('IND_FT_LTH','p','IND','Industry Fuel Technology - Low-temperature heat','');
@@ -1831,7 +1828,7 @@ insert into "technologies" VALUES ('IND_CH_FS_NGA_NEW','p','IND','Industry - Che
 insert into "technologies" VALUES ('IND_IS_BOF_BFBOF_NEW','p','IND','Industry - Iron and steel - Blast furnace-Basic oxygen furnace (BF-BOF)','');
 insert into "technologies" VALUES ('IND_IS_DRI_DRIEAF_NEW','p','IND','Industry - Iron and steel - Direct reduced iron-Electric arc furnace (DRI-EAF)','');
 insert into "technologies" VALUES ('IND_IS_DRI_HDREAF_NEW','p','IND','Industry - Iron and steel - Hydrogen direct reduction (HDR)-EAF','');
-insert into "technologies" VALUES ('IND_IS_BOF_SRD_NEW','p','IND','Industry - Iron and steel - Smelting reduction - New','');
+--insert into "technologies" VALUES ('IND_IS_BOF_SRD_NEW','p','IND','Industry - Iron and steel - Smelting reduction - New','');
 insert into "technologies" VALUES ('IND_IS_BOF_BFBOF_CCS_NEW','p','IND','Industry - Iron and steel - Blast furnace-Basic oxygen furnace (BF-BOF) with CCS - New','');
 insert into "technologies" VALUES ('IND_IS_BOF_TGR_CCS_NEW','p','IND','Industry - Iron and steel - Blast furnace-Top gas recovery-Basic oxygen furnace (BF-BOF) with CCS - New','');
 insert into "technologies" VALUES ('IND_IS_BOF_HISBOF_NEW','p','IND','Industry - Iron and steel - HIsarna-BOF','');
@@ -2625,7 +2622,7 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_BIO_GSF_CCS_NEW','ELC_GEN_GRP',
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_BIO_COM_CCS_NEW','ELC_GEN_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_STG_CEN_BTT_NEW','ELC_GEN_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_STG_DIS_BTT_NEW','ELC_GEN_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_HH2_PEMFC_NEW','ELC_GEN_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','ELC_HH2_PEMFC_NEW','ELC_GEN_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IMP_OIL_DMY_ANNUAL_TECH','IMP_OIL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','EXP_OIL_GLB','EXP_OIL_GRP',1.0,'');
@@ -3527,7 +3524,7 @@ create TABLE "tech_flex" (
 --INSERT INTO "tech_flex" VALUES ('IND_CH_CHL_MEMB_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_BOF_BFBOF_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_DRI_DRIEAF_NEW','');
---INSERT INTO "tech_flex" VALUES ('IND_IS_BOF_SRD_NEW','');
+----INSERT INTO "tech_flex" VALUES ('IND_IS_BOF_SRD_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_BOF_BFBOF_CCS_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_DRI_DRIEAF_CCS_NEW','');
 --INSERT INTO "tech_flex" VALUES ('IND_IS_DRI_ULCORED_CCS_NEW','');
@@ -3634,7 +3631,7 @@ INSERT INTO "tech_annual" VALUES ('EXP_OIL_GLB','');
 --INSERT INTO "tech_annual" VALUES ('UPS_PRI_HOIL_EXS','');
 --INSERT INTO "tech_annual" VALUES ('IMP_L2G_ON','');
 --INSERT INTO "tech_annual" VALUES ('IMP_L2G_OFF','');
---INSERT INTO "tech_annual" VALUES ('UPS_GAS_NGA_STG_EXS','');
+----INSERT INTO "tech_annual" VALUES ('UPS_GAS_NGA_STG_EXS','');
 INSERT INTO "tech_annual" VALUES ('IMP_HCO_DMY_ANNUAL_TECH','');
 INSERT INTO "tech_annual" VALUES ('IMP_BCO_DMY_ANNUAL_TECH','');
 INSERT INTO "tech_annual" VALUES ('IMP_NGA_DMY_ANNUAL_TECH','');
@@ -4167,7 +4164,6 @@ INSERT INTO "tech_annual" VALUES ('IND_FT_BIO','');
 INSERT INTO "tech_annual" VALUES ('IND_FT_BGS','');
 INSERT INTO "tech_annual" VALUES ('IND_FT_BIO_ETH','');
 INSERT INTO "tech_annual" VALUES ('IND_FT_GEO','');
---INSERT INTO "tech_annual" VALUES ('IND_FT_SOL','');
 INSERT INTO "tech_annual" VALUES ('IND_FT_LTH','');
 INSERT INTO "tech_annual" VALUES ('IND_SUP_RCP','');
 INSERT INTO "tech_annual" VALUES ('IND_FT_FS_BIO','');
@@ -4416,7 +4412,7 @@ INSERT INTO "tech_groups" VALUES ('ELC_SOL_CSP_4_NEW','');
 INSERT INTO "tech_groups" VALUES ('ELC_MAR_EXS','');
 INSERT INTO "tech_groups" VALUES ('ELC_MAR_WAV_NEW','');
 INSERT INTO "tech_groups" VALUES ('ELC_MAR_TDL_NEW','');
---INSERT INTO "tech_groups" VALUES ('ELC_HH2_PEMFC_NEW','');
+INSERT INTO "tech_groups" VALUES ('ELC_HH2_PEMFC_NEW','');
 --INSERT INTO "tech_groups" VALUES ('RES_FT_SOL','');
 --INSERT INTO "tech_groups" VALUES ('COM_FT_SOL','');
 INSERT INTO "tech_groups" VALUES ('RES_FT_BIO','');
@@ -4936,7 +4932,7 @@ insert into "LifetimeTech" VALUES ('EUR','UPS_BIO_REF_GEN2_LGC_ETH_CCS_NEW',20,'
 insert into "LifetimeTech" VALUES ('EUR','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',20,'');
 
-insert into "LifetimeTech" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',50,'');
+--insert into "LifetimeTech" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',50,'');
 
 ---- Hydrogen
 --insert into "LifetimeTech" VALUES ('EUR','HH2_NGA_CL_NEW',20,'');
@@ -5035,7 +5031,7 @@ insert into "LifetimeTech" VALUES ('EUR','ELC_FT_GEO',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_SOL_PV',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_SOL_TH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_SOL_CSP',110,'');
---insert into "LifetimeTech" VALUES ('EUR','ELC_FT_HH2',110,'');
+insert into "LifetimeTech" VALUES ('EUR','ELC_FT_HH2',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_WAV',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_TDL',110,'');
 insert into "LifetimeTech" VALUES ('EUR','ELC_FT_WIN_OFF',110,'');
@@ -5111,7 +5107,7 @@ INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_SOL_CSP_2_NEW',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_SOL_CSP_3_NEW',40,'');
 INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_SOL_CSP_4_NEW',40,'');
 INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_HYD_PUM_NEW',50,'');
---INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_HH2_PEMFC_NEW',15,'');
+INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_HH2_PEMFC_NEW',15,'');
 ---- Sequestration technologies
 INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_COA_CCO_IG_CCS_NEW',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EUR','ELC_COA_CCO_FG_CCS_NEW',30,'');
@@ -5596,7 +5592,6 @@ insert into "LifetimeTech" VALUES ('EUR','IND_FT_GEO',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_ELC',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_DIS_ELC',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_HET',110,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_FT_SOL',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_LTH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_SUP_WOD',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IMP_WOD',110,'');
@@ -5751,7 +5746,7 @@ insert into "LifetimeTech" VALUES ('EUR','IND_CH_EC_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_BFBOF_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_DRI_DRIEAF_NEW',20,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_SCR_NEW',20,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_SRD_NEW',30,'');
+--insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_SRD_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_BFBOF_CCS_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_TGR_CCS_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_BOF_HISBOF_NEW',30,'');
@@ -5958,7 +5953,7 @@ insert into "LifetimeTech" VALUES ('EUR','IMP_HCO_DMY_ANNUAL_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_BCO_DMY_ANNUAL_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_NGA_DMY_ANNUAL_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_OIL_DMY_ANNUAL_TECH',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IMP_ELC_DMY_TECH',110,'');
+insert into "LifetimeTech" VALUES ('EUR','ELC_TRANS_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_GAS_LNG_DMY_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_EMHV_DMY_TECH',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IMP_WOD_DMY_TECH',110,'');
@@ -6005,11 +6000,11 @@ create TABLE "Efficiency" (
 );
 -- Import
 ---- Electricity
-INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_AFR',2005,'IMP_ELC_CEN',0.98,'');
-INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_OEE',2005,'IMP_ELC_CEN',0.98,'');
-INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_RUS',2005,'IMP_ELC_CEN',0.98,'');
-INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_MEA',2010,'IMP_ELC_CEN',0.98,'');
-INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_CAC',2050,'IMP_ELC_CEN',0.98,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_AFR',2005,'IMP_ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_OEE',2005,'IMP_ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_RUS',2005,'IMP_ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_MEA',2010,'IMP_ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_ELC_CAC',2050,'IMP_ELC',1.00,'');
 ---- Oil
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_OIL_USA',2005,'IMP_OIL_PRD',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_OIL_CAN',2005,'IMP_OIL_PRD',1.00,'');
@@ -6056,7 +6051,12 @@ INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_COA_OLA',2005,'IMP_COA',1.00
 INSERT INTO "Efficiency" VALUES ('EUR','MIN_COA_BCO','EXP_COA_GLB',2005,'EXP_COA',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','MIN_COA_HCO','EXP_COA_GLB',2005,'EXP_COA',1.00,'');
 
-INSERT INTO "Efficiency" VALUES ('EUR','IMP_ELC_CEN','IMP_ELC_DMY_TECH',2005,'ELC_CEN',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','IMP_ELC','ELC_TRANS_TECH',2005,'ELC',0.98,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_CEN','ELC_TRANS_TECH',2005,'ELC',0.90,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_DIS','ELC_TRANS_TECH',2005,'ELC',0.95,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_HYD_STG_CEN','ELC_TRANS_TECH',2005,'ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_VRES_STG_CEN','ELC_TRANS_TECH',2020,'ELC',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_VRES_STG_DIS','ELC_TRANS_TECH',2020,'ELC',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IMP_GAS_LNG','IMP_GAS_LNG_DMY_TECH',2005,'PRI_GAS_LNG',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IMP_GAS_NGA','IMP_NGA_DMY_ANNUAL_TECH',2005,'MIN_GAS_NGA',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IMP_OIL_PRD','IMP_OIL_DMY_ANNUAL_TECH',2005,'MIN_OIL_HOIL',1.00,'');
@@ -6255,15 +6255,15 @@ INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'RNW_BIO_DST_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_NEW',2020,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'RNW_BIO_KER_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'RNW_BIO_KER_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_NEW',2020,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_LGC_ETH_CCS_NEW',2030,'RNW_BIO_ETH',1.973E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_WAT','UPS_BIO_REF_GEN2_LGC_ETH_CCS_NEW',2030,'RNW_BIO_ETH',1.973E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -6276,19 +6276,20 @@ INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_DST_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_KER_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_KER_FT',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'UPS_ELC',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'PRI_OIL_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+INSERT INTO "Efficiency" VALUES ('EUR','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_NAP',2.026E-01,'');  -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_BIO_EMHV_GLB',2005,'IMP_RNW_BIO_EMHV',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_BIO_WOD_GLB',2005,'IMP_RNW_BIO_WOD',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','ethos','IMP_BIO_ETH_GLB',2005,'IMP_RNW_BIO_ETH',1.00,'');
+
 
 ---- Fuel technologies
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_NGA','UPS_FT_NGA',2005,'UPS_NGA',1.00*0.992,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -6315,8 +6316,7 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_NSP','UPS_AGG_OIL_RPP',2005,'PRI
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','UPS_AGG_OIL_RPP',2005,'PRI_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_RFG','UPS_AGG_OIL_RPG',2005,'PRI_OIL_RPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','UPS_AGG_OIL_RPG',2005,'PRI_OIL_RPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_FT_ELC',2005,'UPS_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','UPS_FT_ELC',2005,'UPS_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_FT_ELC',2005,'UPS_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HET','UPS_FT_HET',2005,'UPS_HET',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','UPS_HET','UPS_CONV_STM_EXS',2005,'UPS_STM',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Primary energy production
@@ -6416,7 +6416,7 @@ insert into "Efficiency" VALUES ('EUR','MIN_OIL_ADD','UPS_PRI_ADD_EXS',2005,'PRI
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','IMP_L2G_ON',2005,'PRI_GAS_NGA',0.98,'');
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','IMP_L2G_OFF',2010,'PRI_GAS_NGA',0.98,'');
 ---- Natural gas storage
-insert into "Efficiency" VALUES ('EUR','PRI_GAS_NGA','UPS_GAS_NGA_STG_EXS',2005,'PRI_GAS_NGA',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','PRI_GAS_NGA','UPS_GAS_NGA_STG_EXS',2005,'PRI_GAS_NGA',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Secondary transformation
 insert into "Efficiency" VALUES ('EUR','PRI_COA_HCO','UPS_SCN_COA_OVC',2005,'PRI_COA_OVC',0.820,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','UPS_SCN_COA_OVC',2005,'PRI_COA_OVC',0.820,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -6750,145 +6750,145 @@ insert into "Efficiency" VALUES ('EUR','PRI_COA_BCO','HH2_FT_COA',2015,'HH2_COA'
 --insert into "Efficiency" VALUES ('EUR','PRI_OIL_DST','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','PRI_OIL_NAP','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','RNW_BIO_NAP','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','PRI_OIL_NSP','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','HH2_FT_OIL_RPP',2015,'HH2_OIL_RPP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_BIO_ETH','HH2_FT_BIO_ETH',2015,'HH2_BIO_ETH',0.027,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','HH2_FT_BIO',2015,'HH2_BIO',1.00/3,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','HH2_FT_BIO',2015,'HH2_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','HH2_FT_ELC',2015,'HH2_ELC_CEN',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','HH2_FT_ELC',2015,'HH2_ELC_DIS',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','HH2_FT_ELC',2015,'HH2_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_NEW',2015,'HH2_CU',0.746,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CL_NEW',2015,'HH2_CU',0.746,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CL_NEW',2015,'HH2_CU',0.746,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_NEW',2050,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CL_NEW',2050,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CL_NEW',2050,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CS_NEW',2015,'HH2_CT',0.623,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CS_NEW',2015,'HH2_CT',0.623,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CS_NEW',2015,'HH2_CT',0.623,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CS_NEW',2050,'HH2_CT',0.666,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CS_NEW',2050,'HH2_CT',0.666,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CS_NEW',2050,'HH2_CT',0.666,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_DM_NEW',2015,'HH2_DT',0.621,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_NGA_DM_NEW',2015,'HH2_DT',0.621,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_DM_NEW',2015,'HH2_DT',0.621,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_DM_NEW',2025,'HH2_DT',0.748,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_NGA_DM_NEW',2025,'HH2_DT',0.748,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_DM_NEW',2025,'HH2_DT',0.748,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_DS_NEW',2015,'HH2_DT',0.533,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_NGA_DS_NEW',2015,'HH2_DT',0.533,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_DS_NEW',2015,'HH2_DT',0.533,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_DS_NEW',2030,'HH2_DT',0.625,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_NGA_DS_NEW',2030,'HH2_DT',0.625,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_DS_NEW',2030,'HH2_DT',0.625,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CL_NEW',2015,'HH2_CU',0.543,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CL_NEW',2015,'HH2_CU',0.543,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CL_NEW',2015,'HH2_CU',0.543,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CL_NEW',2030,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CL_NEW',2030,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CL_NEW',2030,'HH2_CU',0.787,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CM_NEW',2015,'HH2_CU',0.571,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CM_NEW',2015,'HH2_CU',0.571,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CM_NEW',2015,'HH2_CU',0.571,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','HH2_OIL_RPP','HH2_OIL_CT_NEW',2015,'HH2_CT',0.734,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_OIL_CT_NEW',2015,'HH2_CT',0.734,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_OIL_CT_NEW',2015,'HH2_CT',0.734,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_SR_C_NEW',2015,'HH2_CT',0.712,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_BIO_SR_C_NEW',2015,'HH2_CT',0.712,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_SR_C_NEW',2015,'HH2_CT',0.712,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_DS_NEW',2015,'HH2_DT',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_BIO_DS_NEW',2015,'HH2_DT',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_DS_NEW',2015,'HH2_DT',0.313,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_CM_NEW',2015,'HH2_DT',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_BIO_CM_NEW',2015,'HH2_DT',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_CM_NEW',2015,'HH2_DT',0.336,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_CM_NEW',2020,'HH2_CU',0.525,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_BIO_CM_NEW',2020,'HH2_CU',0.525,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_CM_NEW',2020,'HH2_CU',0.525,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO_ETH','HH2_BIO_ETH_D_NEW',2015,'HH2_DT',0.011,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_BIO_ETH_D_NEW',2015,'HH2_DT',0.011,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_ALK_DS_NEW',2015,'HH2_WE_DT',0.630,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_ALK_DS_NEW',2030,'HH2_WE_DT',0.650,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_ALK_DS_NEW',2050,'HH2_WE_DT',0.700,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_ALK_CL_NEW',2015,'HH2_WE_CU',0.700,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_ALK_CL_NEW',2030,'HH2_WE_CU',0.710,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_ALK_CL_NEW',2050,'HH2_WE_CU',0.800,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_PEM_DS_NEW',2015,'HH2_WE_DT',0.560,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_PEM_DS_NEW',2030,'HH2_WE_DT',0.630,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_PEM_DS_NEW',2050,'HH2_WE_DT',0.670,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_PEM_CL_NEW',2015,'HH2_WE_CU',0.600,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_PEM_CL_NEW',2030,'HH2_WE_CU',0.680,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_PEM_CL_NEW',2050,'HH2_WE_CU',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_SOEC_DS_NEW',2015,'HH2_WE_DT',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_SOEC_DS_NEW',2030,'HH2_WE_DT',0.770,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_SOEC_DS_NEW',2050,'HH2_WE_DT',0.770,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_SOEC_CL_NEW',2015,'HH2_WE_CU',0.810,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_SOEC_CL_NEW',2030,'HH2_WE_CU',0.840,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_SOEC_CL_NEW',2050,'HH2_WE_CU',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_DIS','HH2_WE_AEM_DS_NEW',2050,'HH2_WE_DT',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_ETH_D_NEW',2015,'HH2_DT',0.011,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_DS_NEW',2015,'HH2_WE_DT',0.630,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_DS_NEW',2030,'HH2_WE_DT',0.650,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_DS_NEW',2050,'HH2_WE_DT',0.700,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_CL_NEW',2015,'HH2_WE_CU',0.700,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_CL_NEW',2030,'HH2_WE_CU',0.710,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_ALK_CL_NEW',2050,'HH2_WE_CU',0.800,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_DS_NEW',2015,'HH2_WE_DT',0.560,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_DS_NEW',2030,'HH2_WE_DT',0.630,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_DS_NEW',2050,'HH2_WE_DT',0.670,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_CL_NEW',2015,'HH2_WE_CU',0.600,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_CL_NEW',2030,'HH2_WE_CU',0.680,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_PEM_CL_NEW',2050,'HH2_WE_CU',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_DS_NEW',2015,'HH2_WE_DT',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_DS_NEW',2030,'HH2_WE_DT',0.770,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_DS_NEW',2050,'HH2_WE_DT',0.770,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_CL_NEW',2015,'HH2_WE_CU',0.810,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_CL_NEW',2030,'HH2_WE_CU',0.840,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_SOEC_CL_NEW',2050,'HH2_WE_CU',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_AEM_DS_NEW',2050,'HH2_WE_DT',0.740,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_CCS_NEW',2030,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CL_CCS_NEW',2030,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CL_CCS_NEW',2030,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_CCS_NEW',2040,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CL_CCS_NEW',2040,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CL_CCS_NEW',2040,'HH2_CU',0.637,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CL_CCS_NEW',2045,'HH2_CU',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CL_CCS_NEW',2045,'HH2_CU',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CL_CCS_NEW',2045,'HH2_CU',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CS_CCS_NEW',2030,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CS_CCS_NEW',2030,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CS_CCS_NEW',2030,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CS_CCS_NEW',2040,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CS_CCS_NEW',2040,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CS_CCS_NEW',2040,'HH2_CT',0.582,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_NGA','HH2_NGA_CS_CCS_NEW',2045,'HH2_CT',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_NGA_CS_CCS_NEW',2045,'HH2_CT',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_NGA_CS_CCS_NEW',2045,'HH2_CT',0.695,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CL_CCS_NEW',2030,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CL_CCS_NEW',2030,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CL_CCS_NEW',2030,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CL_CCS_NEW',2040,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CL_CCS_NEW',2040,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CL_CCS_NEW',2040,'HH2_CU',0.532,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CL_CCS_NEW',2045,'HH2_CU',0.609,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_COA_CL_CCS_NEW',2045,'HH2_CU',0.609,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_COA_CL_CCS_NEW',2045,'HH2_CU',0.609,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_COA','HH2_COA_CM_CCS_NEW',2030,'HH2_CU',0.581,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_CM_CCS_NEW',2030,'HH2_CT',0.328,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_BIO_CM_CCS_NEW',2030,'HH2_CT',0.328,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_CM_CCS_NEW',2030,'HH2_CT',0.328,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_BIO','HH2_BIO_CM_CCS_NEW',2040,'HH2_CT',0.514,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_BIO_CM_CCS_NEW',2040,'HH2_CT',0.514,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_BIO_CM_CCS_NEW',2040,'HH2_CT',0.514,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','HH2_WE_DMY_CU_NEW',2020,'HH2_CU',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','HH2_WE_DMY_DT_NEW',2020,'HH2_DT',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_STG_CT_NEW',2015,'HH2_CT',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_DT','HH2_STG_DT_NEW',2015,'HH2_DT',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_STG_UG_NEW',2015,'HH2_CU',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_TRA_LH2_C_1_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_C_1_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_C_1_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_LH2_C_1_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_TRA_GH2_C_1_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_1_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_C_1_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_GH2_C_1_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_TRA_LH2_C_2_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_C_2_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_C_2_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_LH2_C_2_NEW',2015,'TRA_LH2',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_TRA_GH2_C_2_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_2_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_C_2_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_GH2_C_2_NEW',2015,'TRA_GH2',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_IND_C_1_NEW',2015,'IND_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_IND_C_1_NEW',2015,'IND_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_IND_C_1_NEW',2015,'IND_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_RES_HH2_C_1_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_RES_HH2_C_1_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_RES_HH2_C_1_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_TRA_GH2_C_3_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_3_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_C_3_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_TRA_GH2_C_4_NEW',2015,'TRA_GH2',0.929,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_4_NEW',2015,'TRA_GH2',0.929,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_C_4_NEW',2015,'TRA_GH2',0.929,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_GH2_C_4_NEW',2015,'TRA_GH2',0.929,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_RES_HH2_C_2_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_RES_HH2_C_2_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_RES_HH2_C_2_NEW',2015,'RES_HH2',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_TRA_GH2_C_5_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_5_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_C_5_NEW',2015,'TRA_GH2',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','HH2_DT','HH2_DEL_RES_HH2_D_1_NEW',2015,'RES_HH2',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_RES_HH2_D_1_NEW',2015,'RES_HH2',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_RES_HH2_D_1_NEW',2015,'RES_HH2',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_DT','HH2_DEL_TRA_LH2_D_1_NEW',2015,'TRA_LH2',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_D_1_NEW',2015,'TRA_LH2',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_D_1_NEW',2015,'TRA_LH2',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_DT','HH2_DEL_TRA_GH2_D_1_NEW',2015,'TRA_GH2',0.889,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_GH2_D_1_NEW',2015,'TRA_GH2',0.889,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_GH2_D_1_NEW',2015,'TRA_GH2',0.889,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','HH2_WE_DEL_IND_C_1_NEW',2015,'IND_HH2_WE',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_DEL_IND_C_1_NEW',2015,'IND_HH2_WE',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_DEL_IND_C_1_NEW',2015,'IND_HH2_WE',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','HH2_WE_DEL_IND_D_1_NEW',2015,'IND_HH2_WE',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_WE_DEL_IND_D_1_NEW',2015,'IND_HH2_WE',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_WE_DEL_IND_D_1_NEW',2015,'IND_HH2_WE',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_BLD_NEW',2020,'HH2_BL',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_BLD_NEW',2020,'HH2_BL',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_DT','HH2_BLD_NEW',2020,'HH2_BL',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CU','HH2_DEL_TRA_LH2_INT_C_1_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_C_1_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_INT_C_1_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_LH2_INT_C_1_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_CT','HH2_DEL_TRA_LH2_INT_C_2_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_C_2_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_INT_C_2_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','TRA_GSL','HH2_DEL_TRA_LH2_INT_C_2_NEW',2015,'TRA_LH2_INT',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_DT','HH2_DEL_TRA_LH2_INT_D_1_NEW',2015,'TRA_LH2_INT',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_D_1_NEW',2015,'TRA_LH2_INT',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','HH2_ELC','HH2_DEL_TRA_LH2_INT_D_1_NEW',2015,'TRA_LH2_INT',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',89.29,'(kt/PJ)');
+insert into "Efficiency" VALUES ('EUR','ELC','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',89.29,'(kt/PJ)');
 insert into "Efficiency" VALUES ('EUR','HET','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',89.29,'(kt/PJ)');
 
 --insert into "Efficiency" VALUES ('EUR','HH2_CU','UPS_SF_NGA_CU_NEW',2020,'SYN_CCUS_NGA',1.7428E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
@@ -6917,14 +6917,14 @@ insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_DST_CU_NEW',2030,'SYN_C
 insert into "Efficiency" VALUES ('EUR','HH2_CT','UPS_SF_DST_CT_NEW',2030,'SYN_CCUS_DST',1.3272E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_DST_CT_NEW',2030,'SYN_CCUS_DST',1.3272E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_SF_KER_COELCSYS_EM_NEW',2025,'SYN_CCUS_KER',1.3544E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_SF_KER_COELCSYS_EM_NEW',2025,'SYN_CCUS_KER',1.3544E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_KER_COELCSYS_EM_NEW',2025,'SYN_CCUS_KER',1.3544E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_SF_KER_COELCSYS_EM_NEW',2030,'SYN_CCUS_KER',1.3637E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_SF_KER_COELCSYS_EM_NEW',2030,'SYN_CCUS_KER',1.3637E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_KER_COELCSYS_EM_NEW',2030,'SYN_CCUS_KER',1.3637E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_SF_DST_COELCSYS_EM_NEW',2025,'SYN_CCUS_DST',1.3089E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_SF_DST_COELCSYS_EM_NEW',2025,'SYN_CCUS_DST',1.3089E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_DST_COELCSYS_EM_NEW',2025,'SYN_CCUS_DST',1.3089E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_SF_DST_COELCSYS_EM_NEW',2030,'SYN_CCUS_DST',1.3176E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_SF_DST_COELCSYS_EM_NEW',2030,'SYN_CCUS_DST',1.3176E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_DST_COELCSYS_EM_NEW',2030,'SYN_CCUS_DST',1.3176E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
 insert into "Efficiency" VALUES ('EUR','HH2_CU','UPS_SF_GSL_CU_NEW',2030,'SYN_CCUS_GSL',1.4180E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
@@ -6933,7 +6933,7 @@ insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_GSL_CU_NEW',2030,'SYN_C
 insert into "Efficiency" VALUES ('EUR','HH2_CT','UPS_SF_GSL_CT_NEW',2030,'SYN_CCUS_GSL',1.4180E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_GSL_CT_NEW',2030,'SYN_CCUS_GSL',1.4180E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','UPS_SF_GSL_COELCSYS_EM_NEW',2030,'SYN_CCUS_GSL',1.4076E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','UPS_SF_GSL_COELCSYS_EM_NEW',2030,'SYN_CCUS_GSL',1.4076E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','UPS_SF_GSL_COELCSYS_EM_NEW',2030,'SYN_CCUS_GSL',1.4076E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','UPS_SLU2BIOGAS_NEW',2010,'RNW_POT_BIO_GAS',0.592,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -6990,7 +6990,7 @@ insert into "Efficiency" VALUES ('EUR','SNK_CO2','SEQ_REM_DSA_OFF_NEW',2030,'SNK
 insert into "Efficiency" VALUES ('EUR','SNK_DOC_DMY','SEQ_REM_DOC_NEW',2030,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','SEQ_REM_DOC_NEW',2030,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','SEQ_REM_MIN_NEW',2030,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','SEQ_REM_MIN_NEW',2030,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','SEQ_REM_MIN_NEW',2030,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_AFF_DMY','SEQ_REM_AFF_NEW',2010,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_CO2','SEQ_REM_AFF_NEW',2010,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SNK_BKS_DMY','SEQ_REM_CO2_BKS_NEW',2010,'SNK_DMY',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7024,7 +7024,7 @@ insert into "Efficiency" VALUES ('EUR','PRI_GAS_OXY','ELC_FT_COA',2005,'ELC_COA'
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','ELC_FT_BIO',2005,'ELC_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','ELC_FT_BIO',2005,'ELC_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','ELC_FT_BIO',2005,'ELC_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','ELC_FT_BIO',2005,'ELC_BIO',1.00/3,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','ELC_FT_BIO',2005,'ELC_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','ELC_FT_BGS',2010,'ELC_BGS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_CRP_STC','ELC_FT_CRP',2010,'ELC_CRP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_CRP_SUG','ELC_FT_CRP',2010,'ELC_CRP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7042,25 +7042,27 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_WAV','ELC_FT_WAV',2005,'ELC_WAV'
 insert into "Efficiency" VALUES ('EUR','RNW_POT_TDL','ELC_FT_TDL',2005,'ELC_TDL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_WIN_ON','ELC_FT_WIN_ON',2005,'ELC_WIN_ON',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_WIN_OFF','ELC_FT_WIN_OFF',2005,'ELC_WIN_OFF',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','HH2_CT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
---insert into "Efficiency" VALUES ('EUR','HH2_CU','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
---insert into "Efficiency" VALUES ('EUR','HH2_DT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
---insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
---insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
+insert into "Efficiency" VALUES ('EUR','HH2_CT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
+insert into "Efficiency" VALUES ('EUR','HH2_CU','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
+insert into "Efficiency" VALUES ('EUR','HH2_DT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
+insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
+insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','ELC_FT_HH2',2025,'ELC_HH2',1.00,'');
 
 ---- Base year technologies
 insert into "Efficiency" VALUES ('EUR','ELC_OIL','ELC_OIL_EXS',2005,'ELC_CEN',0.348,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_NGA','ELC_NGA_EXS',2005,'ELC_CEN',0.477*1.15,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_COA','ELC_COA_EXS',2005,'ELC_CEN',0.380,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_BIO','ELC_BIO_EXS',2005,'ELC_CEN',0.267,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_DAM','ELC_HYD_GEN_EXS',2005,'ELC_HYD_STG_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_ROR','ELC_HYD_GEN_EXS',2005,'ELC_HYD_STG_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_HYD_DAM','ELC_HYD_GEN_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_HYD_ROR','ELC_HYD_GEN_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','ELC_HYD_PUM_EXS',2005,'ELC_CEN',0.75,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_STG_CEN','ELC_HYD_PUM_EXS',2005,'ELC_HYD_STG_CEN',0.75,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','UPS_NUC_HET_LWR_UOX','ELC_NUC_FIS_EXS',2005,'ELC_CEN',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','UPS_NUC_HET_LWR_MOX','ELC_NUC_FIS_EXS',2005,'ELC_CEN',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_GEO','ELC_GEO_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_WIN_ON','ELC_WIN_ON_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_SOL_PV','ELC_SOL_PV_EXS',2005,'ELC_DIS',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_PV','ELC_SOL_PV_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_WAV','ELC_MAR_EXS',2005,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','ELC_OIL','ELC_CHP_OIL_EXS',2005,'ELC_CEN',0.516,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7120,6 +7122,8 @@ insert into "Efficiency" VALUES ('EUR','ELC_MUN','ELC_BIO_MUN_INC_NEW',2010,'ELC
 --insert into "Efficiency" VALUES ('EUR','ELC_HYD_DAM','ELC_HYD_DAM_LOW_NEW',2010,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_HYD_DAM','ELC_HYD_GEN_DAM_NEW',2010,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_HYD_ROR','ELC_HYD_GEN_RUN_NEW',2010,'ELC_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_DAM','ELC_HYD_GEN_DAM_NEW',2010,'ELC_HYD_STG_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_ROR','ELC_HYD_GEN_RUN_NEW',2010,'ELC_HYD_STG_CEN',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_GEO','ELC_GEO_FLS_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
 insert into "Efficiency" VALUES ('EUR','ELC_GEO','ELC_GEO_BNY_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
 insert into "Efficiency" VALUES ('EUR','ELC_GEO','ELC_GEO_BNY_HIG_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
@@ -7131,10 +7135,18 @@ insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_1_NEW',2010,'E
 insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_2_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
 insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_3_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
 insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_4_NEW',2010,'ELC_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_WIN_ON','ELC_WIN_ON_CEN_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_WIN_OFF','ELC_WIN_OFF_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_PV','ELC_SOL_PV_CEN_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_PV','ELC_SOL_PV_DEC_NEW',2020,'ELC_VRES_STG_DIS',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_1_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_2_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_3_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
+insert into "Efficiency" VALUES ('EUR','ELC_SOL_CSP','ELC_SOL_CSP_4_NEW',2020,'ELC_VRES_STG_CEN',1.00,''); -- Educated guess
 insert into "Efficiency" VALUES ('EUR','ELC_WAV','ELC_MAR_WAV_NEW',2010,'ELC_CEN',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_TDL','ELC_MAR_TDL_NEW',2010,'ELC_CEN',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','ELC_HYD_PUM_NEW',2010,'ELC_CEN',0.80,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','ELC_HH2','ELC_HH2_PEMFC_NEW',2025,'ELC_DIS',0.45,'');
+insert into "Efficiency" VALUES ('EUR','ELC_HYD_STG_CEN','ELC_HYD_PUM_NEW',2010,'ELC_HYD_STG_CEN',0.80,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC_HH2','ELC_HH2_PEMFC_NEW',2025,'ELC_DIS',0.45,'');
 ------ Sequestration technologies
 INSERT INTO "Efficiency" VALUES ('EUR','ELC_COA','ELC_COA_CCO_IG_CCS_NEW',2030,'ELC_CEN',0.403,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','ELC_COA','ELC_COA_CCO_FG_CCS_NEW',2030,'ELC_CEN',0.403,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -7167,8 +7179,8 @@ insert into "Efficiency" VALUES ('EUR','ELC_BIO','ELC_CHP_BIO_NEW',2010,'HET',0.
 insert into "Efficiency" VALUES ('EUR','ELC_BIO','ELC_CHP_BIO_NEW',2050,'ELC_CEN',0.250,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC_BIO','ELC_CHP_BIO_NEW',2050,'HET',0.250,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- Storage technologies
-INSERT INTO "Efficiency" VALUES ('EUR','ELC_CEN','ELC_STG_CEN_BTT_NEW',2020,'ELC_CEN',0.85,''); -- NREL, Annual Technology Baseline, 2022
-INSERT INTO "Efficiency" VALUES ('EUR','ELC_DIS','ELC_STG_DIS_BTT_NEW',2020,'ELC_DIS',0.85,''); -- NREL, Annual Technology Baseline, 2022
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_VRES_STG_CEN','ELC_STG_CEN_BTT_NEW',2020,'ELC_VRES_STG_CEN',0.85,''); -- NREL, Annual Technology Baseline, 2022
+INSERT INTO "Efficiency" VALUES ('EUR','ELC_VRES_STG_DIS','ELC_STG_DIS_BTT_NEW',2020,'ELC_VRES_STG_DIS',0.85,''); -- NREL, Annual Technology Baseline, 2022
 
 -- Agriculture sector
 ---- Fuel technologies
@@ -7202,8 +7214,7 @@ INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','AGR_FT_BIO',2005,'AGR_
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','AGR_FT_BIO',2005,'AGR_BIO',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_GEO','AGR_FT_GEO',2005,'AGR_GEO',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','AGR_FT_SOL',2005,'AGR_SOL',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','AGR_FT_ELC',2005,'AGR_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','AGR_FT_ELC',2005,'AGR_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','AGR_FT_ELC',2005,'AGR_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "Efficiency" VALUES ('EUR','HET','AGR_FT_HET',2005,'AGR_HET',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Base year technologies
@@ -7277,14 +7288,13 @@ insert into "Efficiency" VALUES ('EUR','PRI_COA_BCO','RES_FT_COA',2005,'RES_COA'
 insert into "Efficiency" VALUES ('EUR','PRI_COA_OVC','RES_FT_COA',2005,'RES_COA',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','RES_FT_LPG',2005,'RES_LPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','RES_FT_BIO',2005,'RES_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','RES_FT_BIO',2005,'RES_BIO',1.00/3,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','RES_FT_BIO',2005,'RES_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','RES_FT_BIO',2005,'RES_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','RES_FT_BIO',2005,'RES_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','RES_FT_BIO_PLT',2005,'RES_BIO_PLT',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','RES_FT_GEO',2005,'RES_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','RES_FT_SOL',2005,'RES_SOL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','RES_FT_ELC',2005,'RES_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','RES_FT_ELC',2005,'RES_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','RES_FT_ELC',2005,'RES_ELC',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','RES_FT_HET',2005,'RES_HET',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Base year technologies
@@ -7593,14 +7603,13 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','COM_FT_HFO',2005,'COM_HFO'
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_KER','COM_FT_KER',2005,'COM_KER',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','COM_FT_LPG',2005,'COM_LPG',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','COM_FT_BIO',2005,'COM_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','COM_FT_BIO',2005,'COM_BIO',1.00/3,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','COM_FT_BIO',2005,'COM_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_SLU','COM_FT_BIO',2005,'COM_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','COM_FT_BIO',2005,'COM_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','COM_FT_BIO_PLT',2005,'COM_BIO_PLT',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','COM_FT_GEO',2005,'COM_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','COM_FT_SOL',2005,'COM_SOL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','COM_FT_ELC',2005,'COM_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','COM_FT_ELC',2005,'COM_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','COM_FT_ELC',2005,'COM_ELC',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','COM_FT_HET',2005,'COM_HET',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Base year technologies
@@ -7843,21 +7852,20 @@ INSERT INTO "Efficiency" VALUES ('EUR','SYN_DST_kt','TRA_FT_JTK',2010,'TRA_JTK',
 --INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_ETBE','TRA_FT_GSL_E85',2005,'TRAGSLE85',0.036,'');
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','TRA_FT_HFO',2005,'TRA_HFO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','TRA_FT_HFO_INT',2005,'TRA_HFO_INT',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_ELC',2005,'TRA_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_DIS','TRA_FT_ELC',2005,'TRA_ELC',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','TRA_FT_ELC',2005,'TRA_ELC',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','TRA_FT_LNG',2010,'TRA_LNG',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','TRA_FT_LNG_INT',2010,'TRA_LNG_INT',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SYN_MTH','TRA_FT_MTH',2010,'TRA_MTH',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','IND_CH_MTH','TRA_FT_SYN_MTH_NEW',2010,'TRA_MTH',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','SYN_MTH','TRA_FT_MTH_INT',2010,'TRA_MTH_INT',1.0,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','TRA_FT_AMM_ELCSYS_CU',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_AMM_ELCSYS_CU',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','TRA_FT_AMM_ELCSYS_CU',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','TRA_FT_AMM_ELCSYS_DT',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_AMM_ELCSYS_DT',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','TRA_FT_AMM_ELCSYS_DT',2020,'TRA_AMM',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_CU','TRA_FT_AMM_INT_ELCSYS_CU',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_AMM_INT_ELCSYS_CU',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','TRA_FT_AMM_INT_ELCSYS_CU',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HH2_WE_DT','TRA_FT_AMM_INT_ELCSYS_DT',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','TRA_FT_AMM_INT_ELCSYS_DT',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','TRA_FT_AMM_INT_ELCSYS_DT',2020,'TRA_AMM_INT',0.461,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 -- Transport sector
 ---- Base year technologies
@@ -8076,16 +8084,16 @@ insert into "Efficiency" VALUES ('EUR','PRI_OIL_GSL','IND_FT_OIL',2005,'IND_OIL'
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_ETH','IND_FT_ETH',2005,'IND_ETH',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_RFG','IND_FT_ETH',2005,'IND_ETH',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_NAP','IND_FT_NAP',2005,'IND_NAP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_BIO_NAP','IND_FT_NAP',2005,'IND_NAP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_PTC','IND_FT_PTC',2005,'IND_PTC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_LIQ','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','IND_FT_BIO',2005,'IND_BIO',1.00/3,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BGS',2005,'IND_BGS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_BIO_ETH','IND_FT_BIO_ETH',2005,'IND_BIO_ETH',0.027,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','IND_FT_GEO',2005,'IND_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','ELC_CEN','IND_FT_ELC',2005,'IND_ELC',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','ELC_DIS','IND_FT_ELC',2005,'IND_ELC',0.950*0.95,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','ELC','IND_FT_ELC',2005,'IND_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_IS_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_NF_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_CH_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8093,7 +8101,6 @@ insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_NM_ELC'
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_PP_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_OTH_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','HET','IND_FT_HET',2005,'IND_HET',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','RNW_POT_SOL_TH','IND_FT_SOL',2005,'IND_SOL',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HET','IND_FT_LTH',2005,'IND_LTH',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ethos','IND_SUP_WOD',2005,'MAT_WOD',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ethos','IND_IMP_WOD',2005,'MAT_WOD',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8193,6 +8200,7 @@ insert into "Efficiency" VALUES ('EUR','SYN_CCUS_NGA','IND_FT_FS_NGA',2040,'IND_
 insert into "Efficiency" VALUES ('EUR','PRI_GAS_LNG','IND_FT_FS_LNG',2005,'IND_FS_LNG',1.00,'');
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_LPG','IND_FT_FS_LPG',2005,'IND_FS_LPG',1.00,'');
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_NAP','IND_FT_FS_NAP',2005,'IND_FS_NAP',1.00,'');
+insert into "Efficiency" VALUES ('EUR','RNW_BIO_NAP','IND_FT_FS_NAP',2005,'IND_FS_NAP',1.00,'');
 insert into "Efficiency" VALUES ('EUR','PRI_OIL_HFO','IND_FT_FS_HFO',2005,'IND_FS_HFO',1.00,'');
 
 insert into "Efficiency" VALUES ('EUR','IND_FS_NGA','IND_CH_FS_NGA_EXS',2005,'IND_CH_FS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8820,25 +8828,25 @@ insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_BFBOF_NEW',2030,'IN
 --insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_BOF_BFBOF_NEW',2030,'IND_IS_BOF',6.06E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_BFBOF_NEW',2030,'IND_IS_BOF',6.06E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ----insert into "Efficiency" VALUES ('EUR','IND_IS_SB','IND_IS_BOF_BFBOF_NEW',2030,'IND_IS_BOF',6.06E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',1.79E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',1.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_EAF',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2010,'IND_IS_SB_REC',5.36E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_EAF',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_DRIEAF_NEW',2030,'IND_IS_SB_REC',6.49E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_SCR_NEW',2010,'IND_IS_SCR',0.149,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_SCR_NEW',2010,'IND_IS_SCR',0.149,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -8846,12 +8854,12 @@ insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_SCR_NEW',2010,'IND_IS_S
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_SCR_NEW',2030,'IND_IS_SCR',0.233,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_SCR_NEW',2030,'IND_IS_SCR',0.233,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_SCR_NEW',2030,'IND_IS_SCR',0.233,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_SRD_NEW',2010,'PRI_GAS_BFG',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_SRD_NEW',2030,'IND_IS_BOF',2.61E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_BOF_BFBOF_CCS_NEW',2030,'PRI_GAS_BFG',2.68E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_BOF_BFBOF_CCS_NEW',2030,'PRI_GAS_BFG',2.68E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_BFBOF_CCS_NEW',2030,'PRI_GAS_BFG',2.68E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -8885,10 +8893,10 @@ insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_TGR_CCS_NEW',2040,'
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_TGR_CCS_NEW',2040,'IND_IS_BOF',2.92E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_BOF_TGR_CCS_NEW',2040,'IND_IS_BOF',2.92E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_HISBOF_NEW',2025,'IND_IS_BOF',7.32E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_BOF_HISBOF_NEW',2025,'IND_IS_BOF',7.32E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_HISBOF_NEW',2025,'IND_IS_BOF',7.32E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_HISBOF_NEW',2025,'IND_IS_BOF',7.32E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_HISBOF_NEW',2030,'IND_IS_BOF',8.14E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_BOF_HISBOF_NEW',2030,'IND_IS_BOF',8.14E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_HISBOF_NEW',2030,'IND_IS_BOF',8.14E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_HISBOF_NEW',2030,'IND_IS_BOF',8.14E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_HISBOF_CCS_NEW',2030,'IND_IS_BOF',7.13E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_HISBOF_CCS_NEW',2030,'IND_IS_BOF',7.13E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -8913,18 +8921,18 @@ insert into "Efficiency" VALUES ('EUR','IND_COK','IND_IS_DRI_ULCORED_CCS_NEW',20
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_DRI_ULCORED_CCS_NEW',2030,'IND_IS_SB_REC',1.69E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_ULCORED_CCS_NEW',2030,'IND_IS_SB_REC',1.69E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_EAF',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_EAF',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_HH2','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_EAF',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_EAF',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_EAF',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_SB_REC',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_SB_REC',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_HH2','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_SB_REC',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_SB_REC',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_DRI_HDREAF_NEW',2030,'IND_IS_SB_REC',1.18E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_BOF_ULCOWIN_NEW',2030,'IND_IS_BOF',6.40E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_ULCOWIN_NEW',2030,'IND_IS_BOF',6.40E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_BOF_ULCOWIN_NEW',2030,'IND_IS_BOF',6.40E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_BOF_ULCOLYSIS_NEW',2030,'IND_IS_BOF',6.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_ULCOWIN_NEW',2030,'IND_IS_BOF',6.40E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_BOF_ULCOLYSIS_NEW',2030,'IND_IS_BOF',6.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_BOF_ULCOLYSIS_NEW',2030,'IND_IS_BOF',6.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_FEA_NEW',2010,'PRI_GAS_BFG',0.0307,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_FEA_NEW',2010,'PRI_GAS_BFG',0.0307,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -9123,18 +9131,22 @@ insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2010,'IND_
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',4.17E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',4.17E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_RCP','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',4.17E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',4.41E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',4.41E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_RCP','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',4.41E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_RCP','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',3.82E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',3.82E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',3.82E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_RCP','IND_PP_PUL_RCP_NEW',2030,'IND_PP_PUL',3.82E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_PUL','IND_PP_PAP_NEW',2010,'IND_PP_PAP',1.39E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PAP_NEW',2010,'IND_PP_PAP',1.39E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PAP_NEW',2010,'IND_PP_PAP',1.39E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PAP_NEW',2010,'IND_PP_PAP',1.39E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_PUL','IND_PP_PAP_NEW',2030,'IND_PP_PAP',1.55E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PAP_NEW',2030,'IND_PP_PAP',1.55E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PAP_NEW',2030,'IND_PP_PAP',1.55E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PAP_NEW',2030,'IND_PP_PAP',1.55E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Energy services
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_CH_OTH_HFO_NEW',2010,'IND_CH_OTH',0.86,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_OTH_DST_NEW',2010,'IND_CH_OTH',0.86,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -9391,7 +9403,10 @@ INSERT INTO "Efficiency" VALUES ('EUR','HET','OUT_DMY_TECH',2010,'OUT_DMY',1.00,
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_HET','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_ELC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','PRI_OIL_NAP','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','ELC_CEN','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','RNW_BIO_NAP','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','ELC_CEN','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','ELC_DIS','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+INSERT INTO "Efficiency" VALUES ('EUR','ELC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IND_CH_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IND_IS_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
@@ -9615,87 +9630,88 @@ insert into "TechInputSplit" VALUES ('EUR',2040,'UPS_UOX_UREX_TRU','UPS_FT_ABWR_
 --insert into "TechInputSplit" VALUES ('EUR',2015,'PRI_OIL_DST','HH2_FT_OIL_RPP',0.050,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'PRI_OIL_HFO','HH2_FT_OIL_RPP',0.489,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'PRI_OIL_NAP','HH2_FT_OIL_RPP',0.009,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'RNW_BIO_NAP','HH2_FT_OIL_RPP',0.009,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'PRI_OIL_NSP','HH2_FT_OIL_RPP',0.180,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'PRI_OIL_PTC','HH2_FT_OIL_RPP',0.270,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_NGA','HH2_NGA_CL_NEW',0.985,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_NGA_CL_NEW',0.015,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_NGA_CL_NEW',0.015,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_CL_NEW',0.983,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC_CEN','HH2_NGA_CL_NEW',0.017,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC','HH2_NGA_CL_NEW',0.017,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_NGA','HH2_NGA_CS_NEW',0.981,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_NGA_CS_NEW',0.019,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_NGA_CS_NEW',0.019,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_CS_NEW',0.986,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC_CEN','HH2_NGA_CS_NEW',0.014,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC','HH2_NGA_CS_NEW',0.014,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_NGA','HH2_NGA_DM_NEW',0.845,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_DIS','HH2_NGA_DM_NEW',0.155,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_NGA_DM_NEW',0.155,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_DM_NEW',0.950,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC_DIS','HH2_NGA_DM_NEW',0.050,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC','HH2_NGA_DM_NEW',0.050,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_NGA','HH2_NGA_DS_NEW',0.965,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_DIS','HH2_NGA_DS_NEW',0.035,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_NGA_DS_NEW',0.035,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_DS_NEW',0.969,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC_DIS','HH2_NGA_DS_NEW',0.031,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC','HH2_NGA_DS_NEW',0.031,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_COA','HH2_COA_CL_NEW',0.962,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_COA_CL_NEW',0.038,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_COA_CL_NEW',0.038,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_COA','HH2_COA_CL_NEW',0.983,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC_CEN','HH2_COA_CL_NEW',0.017,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_ELC','HH2_COA_CL_NEW',0.017,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_COA','HH2_COA_CM_NEW',0.920,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_COA_CM_NEW',0.080,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_COA_CM_NEW',0.080,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_OIL_RPP','HH2_OIL_CT_NEW',0.954,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_OIL_CT_NEW',0.046,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_OIL_CT_NEW',0.046,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_BIO','HH2_BIO_SR_C_NEW',0.969,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_BIO_SR_C_NEW',0.031,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_BIO_SR_C_NEW',0.031,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_BIO','HH2_BIO_DS_NEW',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_DIS','HH2_BIO_DS_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_BIO_DS_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_BIO','HH2_BIO_CM_NEW',0.933,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_BIO_CM_NEW',0.067,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_BIO_CM_NEW',0.067,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2020,'HH2_BIO','HH2_BIO_CM_NEW',0.947,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2020,'HH2_ELC_CEN','HH2_BIO_CM_NEW',0.053,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2020,'HH2_ELC','HH2_BIO_CM_NEW',0.053,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_BIO_ETH','HH2_BIO_ETH_D_NEW',0.998,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_DIS','HH2_BIO_ETH_D_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_BIO_ETH_D_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_TRA_LH2_C_1_NEW',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_C_1_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_C_1_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_LH2_C_1_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_TRA_GH2_C_1_NEW',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_1_NEW',0.206,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_C_1_NEW',0.206,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_GH2_C_1_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_TRA_LH2_C_2_NEW',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_C_2_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_C_2_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_LH2_C_2_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_TRA_GH2_C_2_NEW',0.792,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_2_NEW',0.206,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_C_2_NEW',0.206,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_GH2_C_2_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_IND_C_1_NEW',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_IND_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_IND_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_RES_HH2_C_1_NEW',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_RES_HH2_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_RES_HH2_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_TRA_GH2_C_3_NEW',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_3_NEW',0.083,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_C_3_NEW',0.083,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_TRA_GH2_C_4_NEW',0.929,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_4_NEW',0.068,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_C_4_NEW',0.068,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_GH2_C_4_NEW',0.003,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_RES_HH2_C_2_NEW',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_RES_HH2_C_2_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_RES_HH2_C_2_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_TRA_GH2_C_5_NEW',0.917,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_C_5_NEW',0.083,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_C_5_NEW',0.083,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_DT','HH2_DEL_RES_HH2_D_1_NEW',1.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_RES_HH2_D_1_NEW',0.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_RES_HH2_D_1_NEW',0.000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_DT','HH2_DEL_TRA_LH2_D_1_NEW',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_D_1_NEW',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_D_1_NEW',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_DT','HH2_DEL_TRA_GH2_D_1_NEW',0.889,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_GH2_D_1_NEW',0.111,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_GH2_D_1_NEW',0.111,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_WE_CU','HH2_WE_DEL_IND_C_1_NEW',0.938,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_WE_DEL_IND_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_WE_DEL_IND_C_1_NEW',0.062,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_WE_DT','HH2_WE_DEL_IND_D_1_NEW',0.9999,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_WE_DEL_IND_D_1_NEW',0.0001,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_WE_DEL_IND_D_1_NEW',0.0001,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CU','HH2_DEL_TRA_LH2_INT_C_1_NEW',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_C_1_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_INT_C_1_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_LH2_INT_C_1_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_CT','HH2_DEL_TRA_LH2_INT_C_2_NEW',0.807,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_C_2_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_INT_C_2_NEW',0.190,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'TRA_GSL','HH2_DEL_TRA_LH2_INT_C_2_NEW',0.002,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_DT','HH2_DEL_TRA_LH2_INT_D_1_NEW',0.689,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC_CEN','HH2_DEL_TRA_LH2_INT_D_1_NEW',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2015,'HH2_ELC','HH2_DEL_TRA_LH2_INT_D_1_NEW',0.311,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Sequestration
 -- Synfuels production
@@ -9725,14 +9741,14 @@ insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_DST_CU_NEW',9.
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_CT','UPS_SF_DST_CT_NEW',1.710E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_DST_CT_NEW',9.829E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','UPS_SF_KER_COELCSYS_EM_NEW',3.240E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "TechInputSplit" VALUES ('EUR',2025,'ELC','UPS_SF_KER_COELCSYS_EM_NEW',3.240E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2025,'SNK_CO2','UPS_SF_KER_COELCSYS_EM_NEW',9.676E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','UPS_SF_KER_COELCSYS_EM_NEW',2.540E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','UPS_SF_KER_COELCSYS_EM_NEW',2.540E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_KER_COELCSYS_EM_NEW',9.746E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','UPS_SF_DST_COELCSYS_EM_NEW',3.129E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "TechInputSplit" VALUES ('EUR',2025,'ELC','UPS_SF_DST_COELCSYS_EM_NEW',3.129E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2025,'SNK_CO2','UPS_SF_DST_COELCSYS_EM_NEW',9.687E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','UPS_SF_DST_COELCSYS_EM_NEW',2.450E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','UPS_SF_DST_COELCSYS_EM_NEW',2.450E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_DST_COELCSYS_EM_NEW',9.755E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_CU','UPS_SF_GSL_CU_NEW',1.740E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
@@ -9741,11 +9757,11 @@ insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_GSL_CU_NEW',9.
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_CT','UPS_SF_GSL_CT_NEW',1.740E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_GSL_CT_NEW',9.826E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','UPS_SF_GSL_COELCSYS_EM_NEW',2.498E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','UPS_SF_GSL_COELCSYS_EM_NEW',2.498E-02,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','UPS_SF_GSL_COELCSYS_EM_NEW',9.750E-01,''); -- G. Colucci et al., A dynamic accounting method for CO2 emissions to assess the penetration of low-carbon fuels: application to the TEMOA-Italy energy system optimization model, Applied Energy, 2023
 
 ---- Direct air capture
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_DIS','SEQ_DAC_CHEM_NEW',0.1786,'');
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','SEQ_DAC_CHEM_NEW',0.1786,'');
 insert into "TechInputSplit" VALUES ('EUR',2030,'HET','SEQ_DAC_CHEM_NEW',0.8214,'');
 
 ---- Sinks
@@ -9770,7 +9786,7 @@ insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','SEQ_REM_DSA_OFF_NEW',
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_DOC_DMY','SEQ_REM_DOC_NEW',0.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','SEQ_REM_DOC_NEW',0.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'SNK_CO2','SEQ_REM_MIN_NEW',0.8,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','SEQ_REM_MIN_NEW',0.2,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','SEQ_REM_MIN_NEW',0.2,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'UPS_NUC_HET_LWR_UOX','ELC_NUC_FIS_EXS',0.500,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -9780,30 +9796,30 @@ insert into "TechInputSplit" VALUES ('EUR',2020,'UPS_NUC_HET_LWR_UOX','ELC_NUC_F
 
 ---- Hydrogen
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_CL_CCS_NEW',0.968,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','HH2_NGA_CL_CCS_NEW',0.032,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','HH2_NGA_CL_CCS_NEW',0.032,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2040,'HH2_NGA','HH2_NGA_CL_CCS_NEW',0.968,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','HH2_NGA_CL_CCS_NEW',0.032,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2040,'ELC','HH2_NGA_CL_CCS_NEW',0.032,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2045,'HH2_NGA','HH2_NGA_CL_CCS_NEW',0.973,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','HH2_NGA_CL_CCS_NEW',0.025,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2045,'ELC','HH2_NGA_CL_CCS_NEW',0.025,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_NGA','HH2_NGA_CS_CCS_NEW',0.961,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','HH2_NGA_CS_CCS_NEW',0.039,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','HH2_NGA_CS_CCS_NEW',0.039,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2040,'HH2_NGA','HH2_NGA_CS_CCS_NEW',0.961,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','HH2_NGA_CS_CCS_NEW',0.039,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2040,'ELC','HH2_NGA_CS_CCS_NEW',0.039,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2045,'HH2_NGA','HH2_NGA_CS_CCS_NEW',0.973,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','HH2_NGA_CS_CCS_NEW',0.023,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2045,'ELC','HH2_NGA_CS_CCS_NEW',0.023,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_COA','HH2_COA_CL_CCS_NEW',0.941,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','HH2_COA_CL_CCS_NEW',0.059,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','HH2_COA_CL_CCS_NEW',0.059,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2040,'HH2_COA','HH2_COA_CL_CCS_NEW',0.941,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','HH2_COA_CL_CCS_NEW',0.059,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2040,'ELC','HH2_COA_CL_CCS_NEW',0.059,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2045,'HH2_COA','HH2_COA_CL_CCS_NEW',0.986,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','HH2_COA_CL_CCS_NEW',0.014,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2045,'ELC','HH2_COA_CL_CCS_NEW',0.014,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2035,'HH2_BIO','HH2_BIO_CM_CCS_NEW',0.911,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2035,'ELC_CEN','HH2_BIO_CM_CCS_NEW',0.089,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2035,'ELC','HH2_BIO_CM_CCS_NEW',0.089,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2045,'HH2_BIO','HH2_BIO_CM_CCS_NEW',0.927,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','HH2_BIO_CM_CCS_NEW',0.073,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2045,'ELC','HH2_BIO_CM_CCS_NEW',0.073,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 -- Agriculture sector
 ---- Fuel technologies
@@ -9911,13 +9927,13 @@ INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'PRI_OIL_KER_kt','TRA_FT_JTK',1.
 INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'PRI_OIL_KER_kt','TRA_FT_JTK',1.00,'');
 INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'PRI_OIL_KER_kt','TRA_FT_JTK',0.050,'');
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_WE_DT','TRA_FT_AMM_ELCSYS_DT',0.89,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','TRA_FT_AMM_ELCSYS_DT',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','TRA_FT_AMM_ELCSYS_DT',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_WE_CU','TRA_FT_AMM_ELCSYS_CU',0.89,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','TRA_FT_AMM_ELCSYS_CU',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','TRA_FT_AMM_ELCSYS_CU',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_WE_DT','TRA_FT_AMM_INT_ELCSYS_DT',0.89,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','TRA_FT_AMM_INT_ELCSYS_DT',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','TRA_FT_AMM_INT_ELCSYS_DT',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2030,'HH2_WE_CU','TRA_FT_AMM_INT_ELCSYS_CU',0.89,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','TRA_FT_AMM_INT_ELCSYS_CU',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2030,'ELC','TRA_FT_AMM_INT_ELCSYS_CU',0.11,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 ---- New technologies
 insert into "TechInputSplit" VALUES ('EUR',2010,'TRA_GSL','TRA_ROA_CAR_GPH_NEW',0.55,''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
 insert into "TechInputSplit" VALUES ('EUR',2010,'TRA_ELC','TRA_ROA_CAR_GPH_NEW',0.45,''); -- D. Lerede et al., Analysis of the effects of electrification of the road transport sector on the possible penetration of nuclear fusion in the long-term european energy mix, Energies, vol. 13, no. 14, 3634, 2020
@@ -10312,21 +10328,21 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_IS_BOF_BFBOF_NEW'
 --insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_MD','IND_IS_BOF_BFBOF_NEW',0.03,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_BOF_BFBOF_NEW',0.04,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ----insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_SB','IND_IS_BOF_BFBOF_NEW',0.01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',0.70,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',0.70,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COK','IND_IS_DRI_DRIEAF_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_DRI_DRIEAF_NEW',0.07,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_ELC','IND_IS_DRI_DRIEAF_NEW',0.05,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_IS_DRI_DRIEAF_NEW',0.05,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_DRI_DRIEAF_NEW',0.95,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_ELC','IND_IS_DRI_HDREAF_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_EC','IND_IS_DRI_HDREAF_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_HH2','IND_IS_DRI_HDREAF_NEW',0.60,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_NGA','IND_IS_DRI_HDREAF_NEW',0.05,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_MD','IND_IS_DRI_HDREAF_NEW',0.13,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_IS_SCR_NEW',0.42,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_SCR_NEW',0.51,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_BFG','IND_IS_SCR_NEW',0.07,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_IS_BOF_SRD_NEW',0.07,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_IS_BOF_SRD_NEW',0.91,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_BOF_SRD_NEW',0.02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_IS_BOF_SRD_NEW',0.07,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_IS_BOF_SRD_NEW',0.91,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_IS_BOF_SRD_NEW',0.02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_BFG','IND_IS_BOF_BFBOF_CCS_NEW',0.01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_COK','IND_IS_BOF_BFBOF_CCS_NEW',0.57,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_EC','IND_IS_BOF_BFBOF_CCS_NEW',0.05,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -10360,8 +10376,8 @@ insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_MD','IND_IS_DRI_ULCORED_
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_NGA','IND_IS_DRI_ULCORED_CCS_NEW',0.07,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_COA','IND_IS_BOF_ULCOWIN_NEW',0.06,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_NGA','IND_IS_BOF_ULCOWIN_NEW',0.14,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_ELC','IND_IS_BOF_ULCOWIN_NEW',0.80,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_ELC','IND_IS_BOF_ULCOLYSIS_NEW',0.92,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_EC','IND_IS_BOF_ULCOWIN_NEW',0.80,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2030,'IND_IS_EC','IND_IS_BOF_ULCOLYSIS_NEW',0.92,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_NGA','IND_IS_BOF_ULCOLYSIS_NEW',0.08,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_IS_EC','IND_FEA_NEW',0.48,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COK','IND_FEA_NEW',0.52,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -10473,52 +10489,17 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_SCH_NEW',0
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_SCH_NEW',0.30,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_SCH_NEW',0.44,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_SCH_NEW',0.26,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_RCP_NEW',0.21,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_RCP_NEW',0.33,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_RCP','IND_PP_PUL_RCP_NEW',0.46,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PUL','IND_PP_PAP_NEW',0.08,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PAP_NEW',0.35,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PAP_NEW',0.57,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
---
---INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'ELC_CEN','TRA_FT_ELC',1-0.036,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'ELC_CEN','TRA_FT_ELC',1-0.094,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'ELC_CEN','TRA_FT_ELC',1-0.152,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','TRA_FT_ELC',1-0.210,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','TRA_FT_ELC',1-0.268,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2035,'ELC_CEN','TRA_FT_ELC',1-0.326,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','TRA_FT_ELC',1-0.384,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','TRA_FT_ELC',1-0.442,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'ELC_CEN','TRA_FT_ELC',1-0.500,'');
---
---INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'ELC_CEN','AGR_FT_ELC',1-0.036,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'ELC_CEN','AGR_FT_ELC',1-0.094,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'ELC_CEN','AGR_FT_ELC',1-0.152,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','AGR_FT_ELC',1-0.210,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','AGR_FT_ELC',1-0.268,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2035,'ELC_CEN','AGR_FT_ELC',1-0.326,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','AGR_FT_ELC',1-0.384,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','AGR_FT_ELC',1-0.442,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'ELC_CEN','AGR_FT_ELC',1-0.500,'');
---
---INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'ELC_CEN','COM_FT_ELC',1-0.036,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'ELC_CEN','COM_FT_ELC',1-0.094,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'ELC_CEN','COM_FT_ELC',1-0.152,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','COM_FT_ELC',1-0.210,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','COM_FT_ELC',1-0.268,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2035,'ELC_CEN','COM_FT_ELC',1-0.326,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','COM_FT_ELC',1-0.384,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','COM_FT_ELC',1-0.442,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'ELC_CEN','COM_FT_ELC',1-0.500,'');
---
---INSERT INTO "TechInputSplit" VALUES ('EUR',2010,'ELC_CEN','RES_FT_ELC',1-0.036,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2015,'ELC_CEN','RES_FT_ELC',1-0.094,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2020,'ELC_CEN','RES_FT_ELC',1-0.152,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2025,'ELC_CEN','RES_FT_ELC',1-0.210,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2030,'ELC_CEN','RES_FT_ELC',1-0.268,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2035,'ELC_CEN','RES_FT_ELC',1-0.326,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2040,'ELC_CEN','RES_FT_ELC',1-0.384,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2045,'ELC_CEN','RES_FT_ELC',1-0.442,'');
---INSERT INTO "TechInputSplit" VALUES ('EUR',2050,'ELC_CEN','RES_FT_ELC',1-0.500,'');
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_RCP_NEW',0.18,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_RCP_NEW',0.30,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_DH','IND_PP_PUL_RCP_NEW',0.21,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_RCP','IND_PP_PUL_RCP_NEW',0.23,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PUL','IND_PP_PAP_NEW',0.08,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PAP_NEW',0.35,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PAP_NEW',0.57,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PAP_NEW',0.214,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PAP_NEW',0.647,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_DH','IND_PP_PAP_NEW',0.040,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PUL','IND_PP_PAP_NEW',0.099,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 create TABLE "TechOutputSplit" (
 	"regions"	TEXT,
@@ -10551,18 +10532,18 @@ insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_LGC_ETH_NEW',
 insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_LGC_ETH_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_DST_NEW','RNW_BIO_DST_FT',0.987,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_DST_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_DST_NEW','PRI_OIL_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_DST_NEW','RNW_BIO_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_KER_NEW','RNW_BIO_KER_FT',0.987,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_KER_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_KER_NEW','PRI_OIL_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+insert into "TechOutputSplit" VALUES ('EUR',2020,'UPS_BIO_REF_GEN2_FT_LGC_KER_NEW','RNW_BIO_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_LGC_ETH_CCS_NEW','RNW_BIO_ETH',0.998,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_LGC_ETH_CCS_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW','RNW_BIO_DST_FT',0.987,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW','PRI_OIL_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW','RNW_BIO_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW','RNW_BIO_KER_FT',0.987,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW','UPS_ELC',0.002,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
-insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW','PRI_OIL_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
+insert into "TechOutputSplit" VALUES ('EUR',2030,'UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW','RNW_BIO_NAP',0.011,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
 insert into "TechOutputSplit" VALUES ('EUR',2010,'UPS_WOD2NGA_NEW','RNW_POT_BIO_WOD',8.333E-01,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "TechOutputSplit" VALUES ('EUR',2010,'UPS_WOD2NGA_NEW','UPS_HET',1.667E-01,''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -10748,14 +10729,16 @@ insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_CH_MTH_NGASR_CCS_NEW','IND
 --insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_CH_CHL_MEMB_NEW','IND_CH_CHL',0.700,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 --insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_CH_CHL_MEMB_NEW','IND_CH_CHL',0.540,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Iron and steel
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_BFBOF_NEW','IND_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_BFBOF_NEW','PRI_GAS_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_BFBOF_NEW','IND_IS_BOF',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_DRI_DRIEAF_NEW','IND_IS_EAF',0.83,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_DRI_DRIEAF_NEW','IND_IS_SB_REC',0.17,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW','IND_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW','IND_IS_BOF',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_BOF_BFBOF_CCS_NEW','IND_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW','PRI_GAS_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW','IND_IS_BOF',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_BOF_BFBOF_CCS_NEW','PRI_GAS_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_BOF_BFBOF_CCS_NEW','IND_IS_BOF',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_BOF_TGR_CCS_NEW','PRI_GAS_BFG',0.78,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_BOF_TGR_CCS_NEW','IND_IS_BOF',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_DRI_DRIEAF_CCS_NEW','IND_IS_EAF',0.83,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_DRI_DRIEAF_CCS_NEW','IND_IS_SB_REC',0.17,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_DRI_ULCORED_CCS_NEW','IND_IS_EAF',0.83,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -11249,14 +11232,21 @@ INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'ELC_DIS','ELC_GEN_GRP',0.500,''
 --INSERT INTO "MaxOutputGroup" VALUES ('EUR',2045,'ELC_DIS','ELC_GEN_GRP',0.226,'');
 --INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'ELC_DIS','ELC_GEN_GRP',0.294,'');
 
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2010,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2020,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2010,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2020,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'MIN_OIL_HOIL','IMP_OIL_GRP',0.80,'');
 
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2010,'ELC_CEN','ELC_SOL_PV_GRP',1-0.40,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2020,'ELC_CEN','ELC_SOL_PV_GRP',1-0.40,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2025,'ELC_CEN','ELC_SOL_PV_GRP',1-0.50,'');
-INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'ELC_CEN','ELC_SOL_PV_GRP',1-0.50,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2010,'ELC_CEN','ELC_SOL_PV_GRP',1-0.40,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2020,'ELC_CEN','ELC_SOL_PV_GRP',1-0.40,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2025,'ELC_CEN','ELC_SOL_PV_GRP',1-0.50,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'ELC_CEN','ELC_SOL_PV_GRP',1-0.50,'');
+
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2025,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.30,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.30,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2025,'EXP_COA','IMP_EXP_COA_GRP',0.10,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'EXP_COA','IMP_EXP_COA_GRP',0.10,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2025,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.30,'');
+--INSERT INTO "MaxOutputGroup" VALUES ('EUR',2050,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.30,'');
 
 create TABLE "MinOutputGroup" (
 	"regions"	      text,
@@ -11271,13 +11261,13 @@ create TABLE "MinOutputGroup" (
 	PRIMARY KEY("regions","periods","output_comm","group_name")
 );
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.30,'');
-INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.10,'');
+INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_GAS_NGA','IMP_EXP_NGA_GRP',0.00,'');
 
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_COA','IMP_EXP_COA_GRP',0.10,'');
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_COA','IMP_EXP_COA_GRP',0.00,'');
 
 INSERT INTO "MinOutputGroup" VALUES ('EUR',2025,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.30,'');
-INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.10,'');
+INSERT INTO "MinOutputGroup" VALUES ('EUR',2050,'EXP_OIL_PRD','IMP_EXP_OIL_GRP',0.00,'');
 
 create TABLE "ExistingCapacity" (
 	"regions"	text,
@@ -11331,11 +11321,12 @@ INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_HCO_DMY_ANNUAL_TECH',2005,1,''
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_BCO_DMY_ANNUAL_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_NGA_DMY_ANNUAL_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_OIL_DMY_ANNUAL_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_ELC_DMY_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "ExistingCapacity" VALUES ('EUR','ELC_TRANS_TECH',2005,12851.043,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_GAS_LNG_DMY_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_EMHV_DMY_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_WOD_DMY_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "ExistingCapacity" VALUES ('EUR','IMP_ETH_DMY_ANNUAL_TECH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
 -- Upstream sector
 ---- Non-renewable primary energy sources
 --INSERT INTO "ExistingCapacity" VALUES ('EUR','UPS_LOC_LOIL_1_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11482,7 +11473,7 @@ insert into "ExistingCapacity" VALUES ('EUR','UPS_PRI_COA_BCO_EXS',2005,4132.524
 insert into "ExistingCapacity" VALUES ('EUR','UPS_PRI_ADD_EXS',2005,77.691,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "ExistingCapacity" VALUES ('EUR','UPS_G2L_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IMP_L2G_ON',2005,3801.877,'',''); -- Gas Infrastructure Europe, "Securing gas supplies for Europe: Developing infrastructure for LNG", 2012
-insert into "ExistingCapacity" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',2005,5861.731,'',''); -- Gas Storage Europe, "Storage Map 2021", 2021
+--insert into "ExistingCapacity" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',2005,5861.731,'',''); -- Gas Storage Europe, "Storage Map 2021", 2021
 ---- Secondary transformation
 insert into "ExistingCapacity" VALUES ('EUR','UPS_SCN_COA_OVC',2005,1834.620,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','UPS_SCN_GAS_TWN',2005,22.332,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11803,7 +11794,6 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ELC',2005,4428.489,'',''); 
 insert into "ExistingCapacity" VALUES ('EUR','IND_DIS_ELC',2005,4428.489,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HET',2005,681.479,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
---insert into "ExistingCapacity" VALUES ('EUR','IND_FT_SOL',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_LTH',2005,128.231,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_SUP_WOD',2005,409.339,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11971,13 +11961,13 @@ INSERT INTO "MinCapacity" VALUES ('EUR',2015,'IMP_L2G_OFF',582.064,'(PJ)',''); -
 INSERT INTO "MinCapacity" VALUES ('EUR',2020,'IMP_L2G_OFF',582.064,'(PJ)',''); -- Molnar, Economics of Gas Transportation by Pipeline and LNG, 2022
 --INSERT INTO "MinCapacity" VALUES ('EUR',2025,'IMP_L2G_OFF',0,'(PJ)',''); -- Molnar, Economics of Gas Transportation by Pipeline and LNG, 2022
 
---INSERT INTO "MinCapacity" VALUES ('EUR',2025,'IMP_L2G_ON',7987.107,'(PJ)',''); -- Gas Infrastructure Europe, 2023
---INSERT INTO "MinCapacity" VALUES ('EUR',2030,'IMP_L2G_ON',8637.752,'(PJ)',''); -- Gas Infrastructure Europe, 2023
---INSERT INTO "MinCapacity" VALUES ('EUR',2035,'IMP_L2G_ON',0,'(PJ)',''); -- Gas Infrastructure Europe, 2023
---
---INSERT INTO "MinCapacity" VALUES ('EUR',2025,'IMP_L2G_OFF',2625.441,'(PJ)',''); -- Gas Infrastructure Europe, 2023
---INSERT INTO "MinCapacity" VALUES ('EUR',2030,'IMP_L2G_OFF',3198.712,'(PJ)',''); -- Gas Infrastructure Europe, 2023
---INSERT INTO "MinCapacity" VALUES ('EUR',2035,'IMP_L2G_OFF',0,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+INSERT INTO "MinCapacity" VALUES ('EUR',2025,'IMP_L2G_ON',7987.107,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+INSERT INTO "MinCapacity" VALUES ('EUR',2030,'IMP_L2G_ON',8637.752,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+INSERT INTO "MinCapacity" VALUES ('EUR',2035,'IMP_L2G_ON',0,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+
+INSERT INTO "MinCapacity" VALUES ('EUR',2025,'IMP_L2G_OFF',2625.441,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+INSERT INTO "MinCapacity" VALUES ('EUR',2030,'IMP_L2G_OFF',3198.712,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+INSERT INTO "MinCapacity" VALUES ('EUR',2035,'IMP_L2G_OFF',0,'(PJ)',''); -- Gas Infrastructure Europe, 2023
 
 create TABLE "CostInvest" (
 	"regions"	text,
@@ -11990,6 +11980,8 @@ create TABLE "CostInvest" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods")
 );
+insert into "CostInvest" VALUES ('EUR','ELC_TRANS_TECH',2010,70,'(MEUR/PJ)','');
+
 insert into "CostInvest" VALUES ('EUR','UPS_FT_NGA',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','UPS_FT_ELC',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','UPS_FT_ADS_TRU',2010,100,'','');
@@ -12576,10 +12568,10 @@ insert into "CostInvest" VALUES ('EUR','ELC_MAR_WAV_NEW',2010,3340,'(MEUR/GW)','
 insert into "CostInvest" VALUES ('EUR','ELC_MAR_WAV_NEW',2050,2060,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_MAR_TDL_NEW',2010,2400,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_MAR_TDL_NEW',2050,1440,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,3000,'(MEUR/GW)','');
-----INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2030,2000,'(MEUR/GW)','');
-----INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2040,1500,'(MEUR/GW)','');
-----INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2050,1000,'(MEUR/GW)','');
+INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,3000,'(MEUR/GW)','');
+--INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2030,2000,'(MEUR/GW)','');
+--INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2040,1500,'(MEUR/GW)','');
+--INSERT INTO "CostInvest" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2050,1000,'(MEUR/GW)','');
 ---- Sequestration technologies
 INSERT INTO "CostInvest" VALUES ('EUR','ELC_COA_CCO_IG_CCS_NEW',2030,2820.58,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "CostInvest" VALUES ('EUR','ELC_COA_CCO_FG_CCS_NEW',2030,2693.22,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -13036,7 +13028,7 @@ insert into "CostInvest" VALUES ('EUR','IND_CH_EC_NEW',2010,1.00E+01,'(MEUR/PJ)'
 insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_BFBOF_NEW',2010,586.21,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_IS_DRI_DRIEAF_NEW',2010,549.07,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_IS_SCR_NEW',2010,244.03,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_SRD_NEW',2010,521.22,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_SRD_NEW',2010,521.22,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_BFBOF_CCS_NEW',2030,825.00,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_BFBOF_CCS_NEW',2050,611.00,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_IS_BOF_TGR_CCS_NEW',2040,661.00,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -13211,6 +13203,7 @@ insert into "CostFixed" VALUES ('EUR',2015,'HH2_FT_ELC',2015,10,'','');
 --insert into "CostFixed" VALUES ('EUR',2005,'ELC_FT_TDL',2005,10,'','');
 --insert into "CostFixed" VALUES ('EUR',2005,'ELC_FT_WIN_ON',2005,10,'','');
 --insert into "CostFixed" VALUES ('EUR',2005,'ELC_FT_WIN_OFF',2005,10,'','');
+--insert into "CostFixed" VALUES ('EUR',2005,'ELC_FT_HH2',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'AGR_FT_NGA',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'AGR_FT_DST',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'AGR_FT_GSL',2005,10,'','');
@@ -14087,7 +14080,7 @@ insert into "CostFixed" VALUES ('EUR',2010,'IND_CH_EC_NEW',2010,1.00E+00,'(MEUR/
 insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_BOF_BFBOF_NEW',2010,14.59,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_DRI_DRIEAF_NEW',2010,20.89,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_SCR_NEW',2010,20.89,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW',2010,14.59,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "CostFixed" VALUES ('EUR',2010,'IND_IS_BOF_SRD_NEW',2010,14.59,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2030,'IND_IS_BOF_BFBOF_CCS_NEW',2030,14.59,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2040,'IND_IS_BOF_TGR_CCS_NEW',2040,14.15,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2025,'IND_IS_BOF_HISBOF_NEW',2025,14.50,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -14234,6 +14227,20 @@ create TABLE "CostVariable" (
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
 );
+------ Export
+--INSERT INTO "CostVariable" VALUES ('EUR',2010,'EXP_COA_GLB',2010,-3.25,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2010,'EXP_GAS_NGA_GLB',2010,-8.74,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2010,'EXP_OIL_GLB',2010,-13.48,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2015,'EXP_COA_GLB',2015,-1.97,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2015,'EXP_GAS_NGA_GLB',2015,-7.20,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2015,'EXP_OIL_GLB',2015,-8.66,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2020,'EXP_COA_GLB',2020,-2.16,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2020,'EXP_GAS_NGA_GLB',2020,-3.42,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2020,'EXP_OIL_GLB',2020,-7.04,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2025,'EXP_COA_GLB',2025,-3.19,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2025,'EXP_GAS_NGA_GLB',2025,-11.08,'(M€/PJ)','');
+--INSERT INTO "CostVariable" VALUES ('EUR',2025,'EXP_OIL_GLB',2025,-13.11,'(M€/PJ)','');
+
 ---- Import
 INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_ELC_AFR',2010,28,'(M€/PJ)',''); -- Assuming 100 €/MWh as the import price for electricity from non-EU countries (https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Electricity_price_statistics)
 INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_ELC_OEE',2010,28,'(M€/PJ)',''); -- Assuming 100 €/MWh as the import price for electricity from non-EU countries (https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Electricity_price_statistics)
@@ -14242,137 +14249,136 @@ INSERT INTO "CostVariable" VALUES ('EUR',2050,'IMP_ELC_CAC',2050,28,'(M€/PJ)',
 INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_ELC_RUS',2010,28,'(M€/PJ)',''); -- Assuming 100 €/MWh as the import price for electricity from non-EU countries (https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Electricity_price_statistics)
 --INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_ELC_RUS',2010,1e3,'(M€/PJ)',''); -- Cost *10 due to the geopolitic situation
 
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_USA',2010,13.55+0.182,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_CAN',2010,13.48+0.135,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_MEX',2010,13.48+0.241,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_OLA',2010,13.48+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_BRA',2010,13.48+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_RUS',2010,13.59+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_MEA',2010,13.32+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_AFR',2010,13.48+0.244,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_CHI',2010,13.48+0.459,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_JPN',2010,13.48+0.545,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_ODA',2010,13.48+0.402,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_USA',2010,13.55+0.182,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_CAN',2010,13.48+0.135,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_MEX',2010,13.48+0.241,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_OLA',2010,13.48+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_BRA',2010,13.48+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_RUS',2010,13.59+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_MEA',2010,13.32+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_AFR',2010,13.48+0.244,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_CHI',2010,13.48+0.459,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_JPN',2010,13.48+0.545,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_OIL_ODA',2010,13.48+0.402,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_USA',2015,8.31+0.182,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_CAN',2015,8.66+0.135,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_MEX',2015,8.66+0.241,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_OLA',2015,8.66+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_BRA',2015,8.66+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_RUS',2015,8.93+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_MEA',2015,8.73+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_AFR',2015,8.66+0.244,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_CHI',2015,8.66+0.459,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_JPN',2015,8.66+0.545,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_ODA',2015,8.66+0.402,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_USA',2015,8.31+0.182,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_CAN',2015,8.66+0.135,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_MEX',2015,8.66+0.241,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_OLA',2015,8.66+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_BRA',2015,8.66+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_RUS',2015,8.93+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_MEA',2015,8.73+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_AFR',2015,8.66+0.244,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_CHI',2015,8.66+0.459,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_JPN',2015,8.66+0.545,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_OIL_ODA',2015,8.66+0.402,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_USA',2020,6.71+0.182,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_CAN',2020,7.04+0.135,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_MEX',2020,7.04+0.241,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_OLA',2020,7.04+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_BRA',2020,7.04+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_RUS',2020,7.22+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_MEA',2020,7.19+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_AFR',2020,7.04+0.244,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_CHI',2020,7.04+0.459,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_JPN',2020,7.04+0.545,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_ODA',2020,7.04+0.402,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_USA',2020,6.71+0.182,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_CAN',2020,7.04+0.135,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_MEX',2020,7.04+0.241,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_OLA',2020,7.04+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_BRA',2020,7.04+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_RUS',2020,7.22+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_MEA',2020,7.19+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_AFR',2020,7.04+0.244,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_CHI',2020,7.04+0.459,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_JPN',2020,7.04+0.545,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_OIL_ODA',2020,7.04+0.402,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_USA',2025,11.59+0.182,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_CAN',2025,11.78+0.135,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_MEX',2025,11.78+0.241,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_OLA',2025,11.78+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_BRA',2025,11.78+0.201,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_RUS',2025,12.02+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_MEA',2025,11.74+0.502,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_AFR',2025,11.78+0.244,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_CHI',2025,11.78+0.459,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_JPN',2025,11.78+0.545,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_ODA',2025,11.78+0.402,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_USA',2025,12.75+0.182,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_CAN',2025,13.11+0.135,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_MEX',2025,13.11+0.241,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_OLA',2025,13.11+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_BRA',2025,13.11+0.201,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_RUS',2025,13.48+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_MEA',2025,13.10+0.502,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_AFR',2025,13.11+0.244,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_CHI',2025,13.11+0.459,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_JPN',2025,13.11+0.545,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_OIL_ODA',2025,13.11+0.402,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_AFR',2010,8.74+0.185,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_RUS',2010,8.74+0.240,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_CAC',2010,8.74+0.414,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_AFR',2010,8.74+0.185,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_RUS',2010,8.74+0.240,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_PIP_CAC',2010,8.74+0.414,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_AFR',2015,7.20+0.185,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_RUS',2015,7.20+0.240,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_CAC',2015,7.20+0.414,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_AFR',2015,7.20+0.185,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_RUS',2015,7.20+0.240,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_PIP_CAC',2015,7.20+0.414,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_AFR',2020,3.42+0.185,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_RUS',2020,3.42+0.240,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_CAC',2020,3.42+0.414,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_AFR',2020,3.42+0.185,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_RUS',2020,3.42+0.240,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_PIP_CAC',2020,3.42+0.414,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_AFR',2025,17.00+0.185,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',2025,17.00+0.240,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',2025,17.00+0.240,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_CAC',2025,17.00+0.414,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2030,'IMP_GAS_PIP_MEA',2030,17.00+0.414,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_AFR',2025,11.08+0.185,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',2025,11.08+0.240,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_PIP_CAC',2025,11.08+0.414,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2030,'IMP_GAS_PIP_MEA',2030,11.08+0.414,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_AFR',2010,11.44+0.071,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_MEA',2010,11.44+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_GLB',2010,11.44+1.142,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_OLA',2010,11.44+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_USA',2010,11.44+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_AFR',2010,11.44+0.071,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_MEA',2010,11.44+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_GLB',2010,11.44+1.142,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_OLA',2010,11.44+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_GAS_LNG_USA',2010,11.44+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_AFR',2015,11.53+0.071,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_MEA',2015,11.53+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_GLB',2015,11.53+1.142,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_OLA',2015,11.53+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_USA',2015,11.53+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_AFR',2015,11.53+0.071,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_MEA',2015,11.53+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_GLB',2015,11.53+1.142,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_OLA',2015,11.53+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_GAS_LNG_USA',2015,11.53+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_AFR',2020,8.77+0.071,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_MEA',2020,8.77+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_GLB',2020,8.77+1.142,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_OLA',2020,8.77+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_RUS',2020,8.77+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_USA',2020,8.77+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_AFR',2020,8.77+0.071,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_MEA',2020,8.77+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_GLB',2020,8.77+1.142,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_OLA',2020,8.77+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_RUS',2020,8.77+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_GAS_LNG_USA',2020,8.77+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_AFR',2025,11.35+0.071,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_MEA',2025,11.35+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_GLB',2025,11.35+1.142,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_OLA',2025,11.35+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_RUS',2025,11.35+0.178,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_USA',2025,11.35+0.500,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_AFR',2025,14.24+0.071,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_MEA',2025,14.24+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_GLB',2025,14.24+1.142,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_OLA',2025,14.24+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_RUS',2025,14.24+0.178,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_GAS_LNG_USA',2025,14.24+0.500,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_AFR',2010,3.13+0.87,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_CAC',2010,3.25+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_AUS',2010,3.38+1.13,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_CAN',2010,3.25+0.41,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_OEE',2010,3.25+1.96,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_RUS',2010,3.25+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_ODA',2010,3.25+1.39,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_USA',2010,3.25+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_OLA',2010,3.25+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_AFR',2010,3.13+0.87,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_CAC',2010,3.25+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_AUS',2010,3.38+1.13,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_CAN',2010,3.25+0.41,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_OEE',2010,3.25+1.96,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_RUS',2010,3.25+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_ODA',2010,3.25+1.39,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_USA',2010,3.25+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2010,'IMP_COA_OLA',2010,3.25+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_AFR',2015,1.93+0.87,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_CAC',2015,1.97+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_AUS',2015,2.01+1.13,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_CAN',2015,1.97+0.41,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_OEE',2015,1.97+1.96,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_RUS',2015,1.97+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_ODA',2015,1.97+1.39,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_USA',2015,1.97+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_OLA',2015,1.97+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_AFR',2015,1.93+0.87,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_CAC',2015,1.97+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_AUS',2015,2.01+1.13,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_CAN',2015,1.97+0.41,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_OEE',2015,1.97+1.96,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_RUS',2015,1.97+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_ODA',2015,1.97+1.39,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_USA',2015,1.97+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2015,'IMP_COA_OLA',2015,1.97+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_AFR',2020,2.24+0.87,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_CAC',2020,2.16+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_AUS',2020,2.07+1.13,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_CAN',2020,2.16+0.41,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_OEE',2020,2.16+1.96,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_RUS',2020,2.16+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_ODA',2020,2.16+1.39,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_USA',2020,2.16+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_OLA',2020,2.16+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_AFR',2020,2.24+0.87,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_CAC',2020,2.16+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_AUS',2020,2.07+1.13,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_CAN',2020,2.16+0.41,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_OEE',2020,2.16+1.96,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_RUS',2020,2.16+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_ODA',2020,2.16+1.39,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_USA',2020,2.16+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2020,'IMP_COA_OLA',2020,2.16+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_AFR',2025,4.09+0.87,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_CAC',2025,4.40+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_AUS',2025,4.71+1.13,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_CAN',2025,4.40+0.41,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_OEE',2025,4.40+1.96,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_RUS',2025,4.40+4.57,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_ODA',2025,4.40+1.39,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_USA',2025,4.40+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_OLA',2025,4.40+0.61,'(M€/PJ)',''); -- World Bank data - Update May 2023 + own estimations for 2025 values based on the historical trend post-2020 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_AFR',2025,2.62+0.87,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_CAC',2025,3.19+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_AUS',2025,3.75+1.13,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_CAN',2025,3.19+0.41,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_OEE',2025,3.19+1.96,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_RUS',2025,3.19+4.57,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_ODA',2025,3.19+1.39,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_USA',2025,3.19+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_COA_OLA',2025,3.19+0.61,'(M€/PJ)',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 INSERT INTO "CostVariable" VALUES ('EUR',2025,'IMP_HH2_GLB',2025,41.7,'(M€/PJ)',''); -- 5 €/kg https://www.hydrogeninsight.com/production/green-hydrogen-made-in-germany-will-be-cheaper-than-shipped-imports-in-2030-study/2-1-1477657
 INSERT INTO "CostVariable" VALUES ('EUR',2050,'IMP_HH2_GLB',2050,13.9,'(M€/PJ)',''); -- 1.67 €/kg https://www.hydrogeninsight.com/production/green-hydrogen-made-in-germany-will-be-cheaper-than-shipped-imports-in-2030-study/2-1-1477657
@@ -14789,7 +14795,7 @@ insert into "CostVariable" VALUES ('EUR',2010,'SEQ_SNK_AFF_4_NEW',2010,0.03709,'
 insert into "CostVariable" VALUES ('EUR',2050,'SEQ_SNK_AFF_2_NEW',2050,0.01909,'(EUR/ktCO2)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2050,'SEQ_SNK_AFF_3_NEW',2050,0.02727,'(EUR/ktCO2)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2050,'SEQ_SNK_AFF_4_NEW',2050,0.04773,'(EUR/ktCO2)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
--- Electricity
+
 ---- New technologies
 insert into "CostVariable" VALUES ('EUR',2010,'ELC_COA_PUL_NEW',2010,0.30,'(MEUR/PJ)','');
 insert into "CostVariable" VALUES ('EUR',2010,'ELC_COA_CCO_NEW',2010,0.30,'(MEUR/PJ)','');
@@ -14813,10 +14819,10 @@ insert into "CostVariable" VALUES ('EUR',2010,'ELC_BIO_CRP_COM_NEW',2010,0.70,'(
 insert into "CostVariable" VALUES ('EUR',2010,'ELC_BIO_MUN_INC_NEW',2010,5.00,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2010,'ELC_HYD_GEN_DAM_NEW',2010,1.40,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostVariable" VALUES ('EUR',2010,'ELC_HYD_GEN_RUN_NEW',2010,1.11,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---INSERT INTO "CostVariable" VALUES ('EUR',2025,'ELC_HH2_PEMFC_NEW',2025,29.17,'(MEUR/PJ)','');
---INSERT INTO "CostVariable" VALUES ('EUR',2030,'ELC_HH2_PEMFC_NEW',2030,22.22,'(MEUR/PJ)','');
---INSERT INTO "CostVariable" VALUES ('EUR',2040,'ELC_HH2_PEMFC_NEW',2040,18.06,'(MEUR/PJ)','');
---INSERT INTO "CostVariable" VALUES ('EUR',2050,'ELC_HH2_PEMFC_NEW',2050,8.33,'(MEUR/PJ)','');
+INSERT INTO "CostVariable" VALUES ('EUR',2025,'ELC_HH2_PEMFC_NEW',2025,29.17,'(MEUR/PJ)','');
+INSERT INTO "CostVariable" VALUES ('EUR',2030,'ELC_HH2_PEMFC_NEW',2030,22.22,'(MEUR/PJ)','');
+INSERT INTO "CostVariable" VALUES ('EUR',2040,'ELC_HH2_PEMFC_NEW',2040,18.06,'(MEUR/PJ)','');
+INSERT INTO "CostVariable" VALUES ('EUR',2050,'ELC_HH2_PEMFC_NEW',2050,8.33,'(MEUR/PJ)','');
 ---- Sequestration technologies
 INSERT INTO "CostVariable" VALUES ('EUR',2030,'ELC_COA_CCO_IG_CCS_NEW',2030,0.60,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "CostVariable" VALUES ('EUR',2030,'ELC_COA_CCO_FG_CCS_NEW',2030,0.78,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -15097,7 +15103,7 @@ insert into "CapacityFactor" VALUES ('EUR','ELC_GEO_BNY_HIG_NEW',2010,0.90,'');
 insert into "CapacityFactor" VALUES ('EUR','ELC_MAR_WAV_NEW',2010,0.20,'');
 insert into "CapacityFactor" VALUES ('EUR','ELC_MAR_TDL_NEW',2010,0.20,'');
 insert into "CapacityFactor" VALUES ('EUR','ELC_HYD_PUM_NEW',2010,0.25,'');
---INSERT INTO "CapacityFactor" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,0.90,'');
+INSERT INTO "CapacityFactor" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,0.90,'');
 ---- Sequestration technologies
 INSERT INTO "CapacityFactor" VALUES ('EUR','ELC_BIO_CRP_GSF_CCS_NEW',2030,0.65,'');
 INSERT INTO "CapacityFactor" VALUES ('EUR','ELC_BIO_CRP_COM_CCS_NEW',2030,0.65,'');
@@ -15174,7 +15180,7 @@ insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_LPGPOX_NEW',2010,0.85,'')
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_COAGSF_NEW',2010,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_BIOGSF_NEW',2025,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_ELCSYS_NEW',2015,0.95,'');
-insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_NGASR_CCS_NEW',2010,0.85,'');
+insert into "CapacityFactor" VALUES ('EUR','IND_CH_MTH_NGASR_CCS_NEW',2030,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_CHL_MERC_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_CHL_DIAP_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_CH_CHL_MEMB_NEW',2010,0.95,'');
@@ -15183,7 +15189,7 @@ insert into "CapacityFactor" VALUES ('EUR','IND_CH_EC_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_BFBOF_NEW',2010,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_DRI_DRIEAF_NEW',2010,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_SCR_NEW',2010,0.85,'');
-insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_SRD_NEW',2010,0.85,'');
+--insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_SRD_NEW',2010,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_BFBOF_CCS_NEW',2030,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_TGR_CCS_NEW',2040,0.85,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_BOF_HISBOF_NEW',2025,0.85,'');
@@ -15333,18 +15339,6 @@ insert into "CapacityFactorTech" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW
 insert into "CapacityFactorTech" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',0.00,'');
 insert into "CapacityFactorTech" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',0.21,'');
 insert into "CapacityFactorTech" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_1_NEW',2030,0.25,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW',2030,0.27,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',2030,0.22,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_1_NEW',2050,0.25,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW',2050,0.27,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',2050,0.22,'');
---insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
 
 INSERT INTO "CapacityFactorTech" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_2_NEW',0.3,'');
 INSERT INTO "CapacityFactorTech" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_2_NEW',0,'');
@@ -15394,16 +15388,6 @@ insert into "CapacityFactorTech" VALUES ('EUR','winter','night','RES_FT_SOL',0.0
 insert into "CapacityFactorTech" VALUES ('EUR','intermediate','peak','RES_FT_SOL',0.110,'');
 insert into "CapacityFactorTech" VALUES ('EUR','summer','peak','RES_FT_SOL',0.110,'');
 insert into "CapacityFactorTech" VALUES ('EUR','winter','peak','RES_FT_SOL',0.110,'');
-
---insert into "CapacityFactorTech" VALUES ('EUR','intermediate','day','IND_FT_SOL',0.29*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','intermediate','night','IND_FT_SOL',0.00*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','summer','day','IND_FT_SOL',0.36*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','summer','night','IND_FT_SOL',0.00*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','winter','day','IND_FT_SOL',0.12*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','winter','night','IND_FT_SOL',0.00*1.25,'');
---insert into "CapacityFactorTech" VALUES ('EUR','intermediate','peak','IND_FT_SOL',0.110,'');
---insert into "CapacityFactorTech" VALUES ('EUR','summer','peak','IND_FT_SOL',0.110,'');
---insert into "CapacityFactorTech" VALUES ('EUR','winter','peak','IND_FT_SOL',0.110,'');
 
 insert into "CapacityFactorTech" VALUES ('EUR','intermediate','day','AGR_FT_SOL',0.29*1.25,'');
 insert into "CapacityFactorTech" VALUES ('EUR','intermediate','night','AGR_FT_SOL',0.00*1.25,'');
@@ -15538,7 +15522,7 @@ create TABLE "CapacityFactorProcess" (
 	FOREIGN KEY("season_name") REFERENCES "time_season"("t_season"),
 	FOREIGN KEY("time_of_day_name") REFERENCES "time_of_day"("t_day")
 );
----- New technologies
+---- New tecogies
 insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_ON_CEN_NEW',2010,0.285,'');
 insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_ON_CEN_NEW',2010,0.285,'');
 insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_ON_CEN_NEW',2010,0.238,'');
@@ -15668,7 +15652,7 @@ insert into "CapacityToActivity" VALUES ('EUR','ELC_MAR_TDL_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_SOL_CSP_2_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_SOL_CSP_3_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_SOL_CSP_4_NEW',31.536,'');
---INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_HH2_PEMFC_NEW',31.536,'');
+INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_HH2_PEMFC_NEW',31.536,'');
 ---- Sequestration technologies
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_COA_CCO_IG_CCS_NEW',31.536,'');
 INSERT INTO "CapacityToActivity" VALUES ('EUR','ELC_COA_CCO_FG_CCS_NEW',31.536,'');
@@ -15787,7 +15771,7 @@ INSERT INTO "StorageDuration" VALUES ('EUR','HH2_STG_UG_NEW',6,'');
 INSERT INTO "StorageDuration" VALUES ('EUR','HH2_STG_CT_NEW',6,'');
 INSERT INTO "StorageDuration" VALUES ('EUR','HH2_STG_DT_NEW',6,'');
 
-INSERT INTO "StorageDuration" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',7000,'');
+--INSERT INTO "StorageDuration" VALUES ('EUR','UPS_GAS_NGA_STG_EXS',7000,'');
 
 create TABLE "PlanningReserveMargin" (
 	"regions"	text,
@@ -15866,7 +15850,7 @@ INSERT INTO "DiscountRate" VALUES ('EUR','ELC_NUC_FIS_ADS_TRU_NEW',2040,0.15,'')
 INSERT INTO "DiscountRate" VALUES ('EUR','ELC_NUC_FIS_ADS_MA_NEW',2040,0.15,''); -- Educated guess
 INSERT INTO "DiscountRate" VALUES ('EUR','ELC_STG_CEN_BTT_NEW',2020,0.10,''); -- Assumption
 INSERT INTO "DiscountRate" VALUES ('EUR','ELC_STG_DIS_BTT_NEW',2020,0.10,''); -- Assumption
---INSERT INTO "DiscountRate" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,0.05,''); -- Assumption
+INSERT INTO "DiscountRate" VALUES ('EUR','ELC_HH2_PEMFC_NEW',2025,0.05,''); -- Assumption
 
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_GSL_NEW',2010,0.073,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_DST_NEW',2010,0.073,'');
@@ -16315,7 +16299,6 @@ INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','winter','night','RES_LG'
 ----INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','summer','night','TRA_ROA_BUS',0.03,'');
 ----INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','winter','day','TRA_ROA_BUS',0.3,'');
 ----INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','winter','night','TRA_ROA_BUS',0.03,'');
-----
 ----
 ----INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','intermediate','day','TRA_ROA_CAR',0.31,'');
 ----INSERT INTO "DemandSpecificDistribution" VALUES ('EUR','intermediate','night','TRA_ROA_CAR',0.03,'');
@@ -17520,11 +17503,11 @@ INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'ELC_CO2',1e9,'',''); -- https://
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TOT_CO2_EQ_GWP_100',5.09E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TOT_CO2_EQ_GWP_100',4.70E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TOT_CO2_EQ_GWP_100',4.15E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
---INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TOT_CO2_EQ_GWP_100',4.15E+06,'','');
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'','');
 INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.550),'',''); -- Fit for 55 target (- 55% wrt 1990 levels)
-INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.850),'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.925),'',''); -- Educated guess
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'',''); -- Educated guess
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.900),'',''); -- Educated guess
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.925),'',''); -- Educated guess
 INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-1),'',''); -- Net-zero emissions
 
 create TABLE "EmissionActivity" (
@@ -17606,15 +17589,15 @@ INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_DST_FT',-53.06*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'UPS_ELC',0.0*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'UPS_ELC',-53.06*1.055,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'PRI_OIL_NAP',0.0,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'PRI_OIL_NAP',-53.06*1.055,'(kt/PJ)','');
+INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_NAP',0.0,'(kt/PJ)','');
+INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_DST_CCS_NEW',2030,'RNW_BIO_NAP',-53.06*1.055,'(kt/PJ)','');
 
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_KER_FT',0.0*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_KER_FT',-53.06*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'UPS_ELC',0.0*1.055,'(kt/PJ)','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'UPS_ELC',-53.06*1.055,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'PRI_OIL_NAP',0.0*1.055,'(kt/PJ)','');
-INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'PRI_OIL_NAP',-53.06*1.055,'(kt/PJ)','');
+INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_BIO_REF_FS_LGC','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_NAP',0.0*1.055,'(kt/PJ)','');
+INSERT INTO "EmissionActivity" VALUES ('EUR','UPS_CO2','UPS_NGA','UPS_BIO_REF_GEN2_FT_LGC_KER_CCS_NEW',2030,'RNW_BIO_NAP',-53.06*1.055,'(kt/PJ)','');
 
 insert into "EmissionActivity" VALUES ('EUR','UPS_CO2','PRI_COA_HCO','UPS_COA2DST_NEW',2010,'SYN_DST',103.69*1.055/0.450,'(kt/PJ)',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 insert into "EmissionActivity" VALUES ('EUR','UPS_CO2','PRI_COA_HCO','UPS_COA2DST_NEW',2010,'UPS_HET',103.69*1.055/0.450,'(kt/PJ)',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -18067,7 +18050,7 @@ INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ethos','SEQ_SNK_AFF_2_NE
 INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ethos','SEQ_SNK_AFF_3_NEW',2010,'SNK_AFF_DMY',-1.0,'','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ethos','SEQ_SNK_AFF_4_NEW',2010,'SNK_AFF_DMY',-1.0,'','');
 
-INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ELC_DIS','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',-1.0,'','');
+INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ELC','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',-1.0,'','');
 INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','HET','SEQ_DAC_CHEM_NEW',2030,'SNK_CO2',-1.0,'','');
 
 INSERT INTO "EmissionActivity" VALUES ('EUR','TOT_CO2','ethos','SEQ_SNK_CO2_BKS_NEW',2010,'SNK_BKS_DMY',-1.0,'','');
@@ -18681,12 +18664,12 @@ INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_NUC_FIS_ADS_MA_NEW',0.03,'',''
 INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_NUC_FIS_ADS_MA_NEW',0.20,'','');
 INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_NUC_FIS_ADS_MA_NEW',1.24,'','');
 
---INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'ELC_HH2_PEMFC_NEW',0.13/2,'','');
---INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'ELC_HH2_PEMFC_NEW',0.80/2,'','');
---INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'ELC_HH2_PEMFC_NEW',4.97/2,'','');
---INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_HH2_PEMFC_NEW',30.88/2,'','');
---INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_HH2_PEMFC_NEW',181.96/2,'','');
---INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_HH2_PEMFC_NEW',425.10/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'ELC_HH2_PEMFC_NEW',0.13/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'ELC_HH2_PEMFC_NEW',0.80/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'ELC_HH2_PEMFC_NEW',4.97/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'ELC_HH2_PEMFC_NEW',30.88/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2045,'ELC_HH2_PEMFC_NEW',181.96/2,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'ELC_HH2_PEMFC_NEW',425.10/2,'','');
 
 ---- Regasification
 INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'IMP_L2G_ON',5542.792,'(PJ)',''); -- Molnar, Economics of Gas Transportation by Pipeline and LNG, 2022
@@ -18702,15 +18685,16 @@ INSERT INTO "MaxCapacity" VALUES ('EUR',2020,'IMP_L2G_OFF',582.064,'(PJ)',''); -
 INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'IMP_L2G_OFF',2625.441,'(PJ)',''); -- Gas Infrastructure Europe, 2023
 INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'IMP_L2G_OFF',3198.712,'(PJ)',''); -- Gas Infrastructure Europe, 2023
 INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'IMP_L2G_OFF',1e6,'(PJ)',''); -- Gas Infrastructure Europe, 2023
+
 ---- Gas storage
-INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'UPS_GAS_NGA_STG_EXS',6225.587,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
-INSERT INTO "MaxCapacity" VALUES ('EUR',2015,'UPS_GAS_NGA_STG_EXS',6754.159,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
-INSERT INTO "MaxCapacity" VALUES ('EUR',2020,'UPS_GAS_NGA_STG_EXS',6818.179,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
-INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'UPS_GAS_NGA_STG_EXS',7187.416,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
-INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'UPS_GAS_NGA_STG_EXS',7187.416,'(PJ)',''); -- 5% increase with respect to the previous period
-INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'UPS_GAS_NGA_STG_EXS',7546.787,'(PJ)','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'UPS_GAS_NGA_STG_EXS',7924.126,'(PJ)','');
-INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'UPS_GAS_NGA_STG_EXS',9173.167,'(PJ)','');
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'UPS_GAS_NGA_STG_EXS',6225.587,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2015,'UPS_GAS_NGA_STG_EXS',6754.159,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2020,'UPS_GAS_NGA_STG_EXS',6818.179,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2025,'UPS_GAS_NGA_STG_EXS',7187.416,'(PJ)',''); -- Gas Storage Europe, Storage Map 2021, 2021
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2030,'UPS_GAS_NGA_STG_EXS',7187.416,'(PJ)',''); -- 5% increase with respect to the previous period
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'UPS_GAS_NGA_STG_EXS',7546.787,'(PJ)','');
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2040,'UPS_GAS_NGA_STG_EXS',7924.126,'(PJ)','');
+--INSERT INTO "MaxCapacity" VALUES ('EUR',2050,'UPS_GAS_NGA_STG_EXS',9173.167,'(PJ)','');
 
 INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'UPS_BIO_REF_GEN1_ETHAMIDE_EXS',2246.45,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'UPS_BIO_REF_GEN1_ETHSUG_EXS',1311.08,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -19122,8 +19106,9 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_CHI',8.581,'(PJ)','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_JPN',34.325,'(PJ)','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_ODA',523.383,'(PJ)','');
 
---INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_RUS',18571.906*0.2,'(PJ)','');
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_RUS',0.000,'(PJ)','');
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_RUS',0,'(PJ)','');
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_OIL_RUS',18571.906*0.285,'(PJ)','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'IMP_OIL_RUS',0,'(PJ)','');
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IMP_GAS_PIP_AFR',1633.180*1.01,'(PJ)','');   -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IMP_GAS_PIP_AFR',1783.46*1.01,'(PJ)','');
@@ -19133,7 +19118,8 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2030,'IMP_GAS_PIP_AFR',2778.430,'(PJ)','
 INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IMP_GAS_PIP_RUS',13298.229*1.01,'(PJ)',''); -- EUROfusion TIMES Model + IEA statistical difference
 INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IMP_GAS_PIP_RUS',14462.654*1.01,'(PJ)','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IMP_GAS_PIP_RUS',13449.259*1.01,'(PJ)',''); -- Bruegel, Annual Report 2022 (2021 data) + IEA statistical difference
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',13449.259*0.285,'(PJ)',''); -- RePowerEU
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',13449.259*0.285,'(PJ)',''); -- RePowerEU
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_GAS_PIP_RUS',0.0,'(PJ)',''); -- RePowerEURePowerEU
 INSERT INTO "MaxActivity" VALUES ('EUR',2030,'IMP_GAS_PIP_RUS',0.0,'(PJ)',''); -- RePowerEU
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IMP_GAS_PIP_CAC',25.00*1.01,'(PJ)','');  -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -19200,8 +19186,18 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IMP_COA_USA',5985.591*0.196,'(PJ)'
 INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IMP_COA_USA',6219.416*0.147,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
 INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IMP_COA_USA',3835.112*0.170,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
 
---INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_RUS',3835.112*0.549*0.2,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_RUS',0.00,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_AFR',3835.112*0.023*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_AUS',3835.112*0.151*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_CAC',3835.112*0.020*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_CAN',3835.112*0.026*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_ODA',3835.112*0.001*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_OEE',3835.112*0.000*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_OLA',3835.112*0.060*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_USA',3835.112*0.170*1.5,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_RUS',0.00,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_COA_RUS',3835.112*0.549*0.285,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'IMP_COA_RUS',0.00,'(PJ)',''); -- https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics
 
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IMP_HH2_GLB',600,'(PJ)','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'IMP_HH2_GLB',3600,'(PJ)','');
@@ -19670,6 +19666,16 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2040,'IND_NF_ALU_SEC_NEW',14.833*0.318*0
 INSERT INTO "MaxActivity" VALUES ('EUR',2045,'IND_NF_ALU_SEC_NEW',14.808*0.318*0.75,'','');
 INSERT INTO "MaxActivity" VALUES ('EUR',2050,'IND_NF_ALU_SEC_NEW',14.776*0.318*0.75,'','');
 
+INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IND_SUP_RCP',101.70*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IND_SUP_RCP',103.18*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IND_SUP_RCP',106.02*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IND_SUP_RCP',104.08*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2030,'IND_SUP_RCP',111.18*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2035,'IND_SUP_RCP',112.78*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2040,'IND_SUP_RCP',114.57*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2045,'IND_SUP_RCP',115.89*0.615*0.85,'','');
+INSERT INTO "MaxActivity" VALUES ('EUR',2050,'IND_SUP_RCP',117.64*0.615*0.85,'','');
+
 create table "MinActivity" (
 	"regions"	text,
 	"periods"	integer,
@@ -19874,8 +19880,10 @@ insert into "MinActivity" VALUES ('EUR',2010,'ELC_HYD_GEN_EXS',134.758*31.536*0.
 insert into "MinActivity" VALUES ('EUR',2045,'ELC_HYD_GEN_EXS',134.758*31.536*0.00*0.50,'','');
 --insert into "MinActivity" VALUES ('EUR',2010,'ELC_HYD_PUM_EXS',53.209*31.536*0.50*0.25,'','');
 --insert into "MinActivity" VALUES ('EUR',2055,'ELC_HYD_PUM_EXS',53.209*31.536*0.00*0.25,'','');
-insert into "MinActivity" VALUES ('EUR',2010,'ELC_NUC_FIS_EXS',3297.880*0.9*0.800,'','');
-insert into "MinActivity" VALUES ('EUR',2035,'ELC_NUC_FIS_EXS',3297.880*0.0*0.000,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'ELC_NUC_FIS_EXS',3588.595*0.8,'','');
+insert into "MinActivity" VALUES ('EUR',2015,'ELC_NUC_FIS_EXS',3071.109*0.8,'','');
+insert into "MinActivity" VALUES ('EUR',2020,'ELC_NUC_FIS_EXS',2626.999*0.8,'','');
+insert into "MinActivity" VALUES ('EUR',2050,'ELC_NUC_FIS_EXS',0,'','');
 insert into "MinActivity" VALUES ('EUR',2010,'ELC_GEO_EXS',0.900*31.536*0.9*0.85,'','');
 insert into "MinActivity" VALUES ('EUR',2045,'ELC_GEO_EXS',0.900*31.536*0.0*0.85,'','');
 --insert into "MinActivity" VALUES ('EUR',2010,'ELC_WIN_ON_EXS',0.5*71.613*3.6,'','');
@@ -20662,10 +20670,10 @@ INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_FT_OIL_BIO_GRP',11828.738+732.2
 --INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_CAR_GSL_GRP',(1359.20)*0.55,'');
 --INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_CAR_GSL_GRP',(1359.20)*0.55,'');
 --INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_CAR_GSL_GRP',(1359.20)*0.55,'');
-
-INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
-INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
-INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
+--
+--INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
+--INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
+--INSERT INTO "MaxActivityGroup" VALUES (2020,'TRA_ROA_CAR_DST_GRP',(1359.20)*0.45,'');
 
 INSERT INTO "MaxActivityGroup" VALUES (2010,'TRA_ROA_CAR_AFV_GRP',1359.20*0.035,'');
 INSERT INTO "MaxActivityGroup" VALUES (2015,'TRA_ROA_CAR_AFV_GRP',1400.45*0.035,'');
@@ -20722,9 +20730,9 @@ INSERT INTO "MaxActivityGroup" VALUES (2050,'TRA_ROA_HTR_AFV_GRP',1.59E+02,'');
 --INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_HET_GRP',688.488,'(PJ)'); -- IEA
 --INSERT INTO "MaxActivityGroup" VALUES (2020,'IND_FT_HET_GRP',683.886,'(PJ)'); -- IEA
 
-INSERT INTO "MaxActivityGroup" VALUES (2010,'FT_GSL_GRP',3838.061*1.10,'(PJ)'); -- IEA
-INSERT INTO "MaxActivityGroup" VALUES (2015,'FT_GSL_GRP',3265.071*1.10,'(PJ)'); -- IEA
-INSERT INTO "MaxActivityGroup" VALUES (2020,'FT_GSL_GRP',2966.780*1.10,'(PJ)'); -- IEA
+INSERT INTO "MaxActivityGroup" VALUES (2010,'FT_GSL_GRP',3838.061,'(PJ)'); -- IEA
+INSERT INTO "MaxActivityGroup" VALUES (2015,'FT_GSL_GRP',3265.071,'(PJ)'); -- IEA
+INSERT INTO "MaxActivityGroup" VALUES (2020,'FT_GSL_GRP',2966.780,'(PJ)'); -- IEA
 
 INSERT INTO "MaxActivityGroup" VALUES (2010,'FT_NAP_GRP',1656.569,'(PJ)'); -- IEA
 INSERT INTO "MaxActivityGroup" VALUES (2015,'FT_NAP_GRP',1417.113,'(PJ)'); -- IEA
@@ -20953,9 +20961,9 @@ INSERT INTO "MinActivityGroup" VALUES (2010,'FT_ETH_LPG_GRP',1259.676,'(PJ)'); -
 INSERT INTO "MinActivityGroup" VALUES (2015,'FT_ETH_LPG_GRP',1379.228,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2020,'FT_ETH_LPG_GRP',1326.049,'(PJ)'); -- IEA
 
-INSERT INTO "MinActivityGroup" VALUES (2010,'FT_GSL_GRP',3838.061,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2015,'FT_GSL_GRP',3265.071,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2020,'FT_GSL_GRP',2966.780,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2010,'FT_GSL_GRP',3838.061*0.80,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'FT_GSL_GRP',3265.071*0.80,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'FT_GSL_GRP',2966.780*0.80,'(PJ)'); -- IEA
 
 INSERT INTO "MinActivityGroup" VALUES (2010,'HET_SOL_GRP',0.206,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2015,'HET_SOL_GRP',1.062,'(PJ)'); -- IEA
@@ -21001,9 +21009,9 @@ INSERT INTO "MinActivityGroup" VALUES (2010,'COM_FT_OIL_GRP',814.010,'(PJ)'); --
 INSERT INTO "MinActivityGroup" VALUES (2015,'COM_FT_OIL_GRP',719.145,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2020,'COM_FT_OIL_GRP',540.830,'(PJ)'); -- IEA
 
---INSERT INTO "MinActivityGroup" VALUES (2010,'AGR_FT_OIL_GRP',746.206,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2015,'AGR_FT_OIL_GRP',634.722,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2020,'AGR_FT_OIL_GRP',810.761,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2010,'AGR_FT_OIL_GRP',746.206,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'AGR_FT_OIL_GRP',634.722,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'AGR_FT_OIL_GRP',810.761,'(PJ)'); -- IEA
 
 CREATE TABLE "MaxCapacityGroup" (
 	"periods"	integer,

@@ -1282,6 +1282,7 @@ if print_status:
     print("{:>1} {:>2} {:>1} {:>2} {:>1} {:>50} {:>6} {:>1}".format('[', print_i, '/', len(print_outcome), ']', 'CostFixed interpolated.',
                                                                     np.format_float_positional(abs(end_time - start_time), 2), 's'))
 
+
 # CostVariable (adaptation of the previous database_preprocessing.py)
 
 start_time = time.time()
@@ -1388,8 +1389,7 @@ for i_tech in range(0, len(CostVariable.tech)):
 
                     for j_year in range(0, len(year_list)):
                         year_periods = year_list[j_year]
-                        if start <= year_periods < stop and year_periods != time_periods[
-                            len(time_periods) - 1]:
+                        if start <= year_periods < stop:
                             if year_periods > time_existing[len(time_existing) - 1]:
                                 regions.append(CostVariable.regions[i_tech])
                                 periods.append(int(year_periods))

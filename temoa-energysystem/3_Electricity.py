@@ -96,7 +96,7 @@ technologies=[
 ]
 commodities_in = [
 ]
-commodities_out = ['ELC_CEN','ELC_DIS','IMP_ELC_CEN']
+commodities_out = ['ELC_CEN','ELC_DIS','ELC_HYD_STG_CEN','ELC_VRES_STG_CEN','ELC_VRES_STG_DIS','IMP_ELC_CEN']
 
 # Input
 
