@@ -11,8 +11,8 @@ The developing team includes Prof. Laura Savoldi[^1], Daniele Lerede[^2], Matteo
 * gianvito.colucci@polito.it
 
 [^1]: Full Professor @ Politecnico di Torino, Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
-[^2]: Post-doctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/).
-[^3]: PhD students @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
+[^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
+[^3]: PhD student @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
 The `temoa_energysystem/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to 2050:
 
