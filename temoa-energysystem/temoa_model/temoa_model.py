@@ -250,7 +250,11 @@ def temoa_create_model(name="Temoa"):
 
     M.LearningRate_rt = Set(dimen=2, initialize=LearningIndexes) # ETL
     M.V_CostInvest_rtp = Set(dimen=3, initialize=CostInvestIndexes) # ETL
+<<<<<<< Updated upstream
     M.LearningRate = Param(M.LearningRate_rt) # ETL
+=======
+    M.LearningRate = Param(M.LearningRate_rt, default=-1) # ETL
+>>>>>>> Stashed changes
 
     # ---------------------------------------------------------------
     # Define Decision Variables.
