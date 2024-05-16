@@ -2,7 +2,7 @@
 
 ## Specific instructions for the ETL algorithm
 
-In general, please refer to the 2050 branch. If you wish to apply the ETL algorithm, please just substitute temoa_model folder you find here in the "standard formulation" environment.
+In general, please refer to the **main** branch. If you wish to apply the ETL algorithm, please just substitute temoa_model folder you find here in the "standard formulation" environment.
 
 ## Features of TEMOA-Europe
 
