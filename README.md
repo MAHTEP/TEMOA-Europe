@@ -1,6 +1,10 @@
 # TEMOA-Europe
 
-## Features
+## Specific instructions for the ETL algorithm
+
+In general, please refer to the 2050 branch. If you wish to apply the ETL algorithm, please just substitute temoa_model folder you find here in the "standard formulation" environment.
+
+## Features of TEMOA-Europe
 
 **TEMOA-Europe** is an energy system optimization model instance based on the **open-source energy system modeling framework** [**TEMOA**](https://temoacloud.com/). TEMOA-Europe is a case study based on the OECD Europe Reference Energy System.
 
