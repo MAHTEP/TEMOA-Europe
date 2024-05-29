@@ -469,7 +469,6 @@ insert into "commodities" VALUES ('IND_NAP','p','Naphtha (PJ)');
 insert into "commodities" VALUES ('IND_NGA','p','Natural gas (PJ)');
 insert into "commodities" VALUES ('IND_OIL','p','Refined petroleum products (PJ)');
 insert into "commodities" VALUES ('IND_PTC','p','Petroleum coke (PJ)');
---insert into "commodities" VALUES ('IND_SOL','p','Solar energy (PJ)');
 ------ Chemicals
 --insert into "commodities" VALUES ('IND_CH_HVC','p','HVC (Mt)');
 insert into "commodities" VALUES ('IND_CH_BTX','p','Aromatics (Mt)');
@@ -512,11 +511,8 @@ insert into "commodities" VALUES ('IND_IS_BOF','p','BOF steel (Mt)');
 insert into "commodities" VALUES ('IND_IS_EAF','p','EAF steel (Mt)');
 insert into "commodities" VALUES ('IND_IS_SCR','p','Scrap steel (Mt)');
 insert into "commodities" VALUES ('MAT_BFS','p','Blast furnace slag (Mt)');
--- INSERT INTO "commodities" VALUES ('IND_IS_FS','p','Iron and steel - Feedstock');
 insert into "commodities" VALUES ('IND_IS_MD','p','Iron and steel - Machine drive (PJ)');
 insert into "commodities" VALUES ('IND_IS_EC','p','Iron and steel - Electro-chemical process (PJ)');
---INSERT INTO "commodities" VALUES ('IND_IS_OTH','p','Iron and steel - Other energy use (PJ)');
---insert into "commodities" VALUES ('IND_IS_SB','p','Iron and steel - Steam boiler (PJ)');
 insert into "commodities" VALUES ('IND_IS_SB_REC','p','Iron and steel - Recovered Steam boiler (PJ)');
 insert into "commodities" VALUES ('IND_IS_ELC','p','Iron and steel - Electricity (PJ)');
 ------ Non-ferrous metals
@@ -544,7 +540,7 @@ insert into "commodities" VALUES ('IND_NM_ELC','p','Non-metallic minerals - Elec
 insert into "commodities" VALUES ('IND_PP_PUL','p','Pulp for paper and paperboard (PJ)');
 insert into "commodities" VALUES ('IND_PP_PAP','p','Paper and paperboard (PJ)');
 insert into "commodities" VALUES ('IND_PP_PRN','p','Printing volume (PJ)');
---INSERT INTO "commodities" VALUES ('IND_PP_EC','p','Pulp and paper - Electric process (PJ)');
+INSERT INTO "commodities" VALUES ('IND_PP_EC','p','Pulp and paper - Electric process (PJ)');
 insert into "commodities" VALUES ('IND_PP_MD','p','Pulp and paper - Machine drive (PJ)');
 --INSERT INTO "commodities" VALUES ('IND_PP_OTH','p','Pulp and paper - Other energy use (PJ)');
 insert into "commodities" VALUES ('IND_PP_PH','p','Pulp and paper - Process heat (PJ)');
@@ -1761,8 +1757,9 @@ insert into "technologies" VALUES ('IND_PP_PUL_CHEM_EXS','p','IND','Industry - P
 insert into "technologies" VALUES ('IND_PP_PUL_MEC_EXS','p','IND','Industry - Pulp and paper - Mechanical pulping - Existing','');
 insert into "technologies" VALUES ('IND_PP_PUL_RCP_EXS','p','IND','Industry - Pulp and paper - Recycled fiber pulping - Existing','');
 insert into "technologies" VALUES ('IND_PP_PAP_EXS','p','IND','Industry - Pulp and paper - Paper mill - Existing','');
-insert into "technologies" VALUES ('IND_PP_OTH_EXS','p','IND','Industry - Pulp and paper - Printing processes - Existing','');
+insert into "technologies" VALUES ('IND_PP_PRN_EXS','p','IND','Industry - Pulp and paper - Printing processes - Existing','');
 
+insert into "technologies" VALUES ('IND_PP_SB_BIO_EXS','p','IND','Industry - Pulp and paper - Steam - Biomass - Existing','');
 insert into "technologies" VALUES ('IND_PP_PH_HFO_EXS','p','IND','Industry - Pulp and paper - Process Heat - Heavy fuel oil - Existing','');
 insert into "technologies" VALUES ('IND_PP_PH_NGA_EXS','p','IND','Industry - Pulp and paper - Process Heat - Natural gas - Existing','');
 insert into "technologies" VALUES ('IND_PP_PH_COA_EXS','p','IND','Industry - Pulp and paper - Process Heat - Coal - Existing','');
@@ -1772,7 +1769,7 @@ insert into "technologies" VALUES ('IND_PP_DH_OIL_EXS','p','IND','Industry - Pul
 insert into "technologies" VALUES ('IND_PP_DH_NGA_EXS','p','IND','Industry - Pulp and paper - Distric Heat - Natural gas - Existing','');
 insert into "technologies" VALUES ('IND_PP_DH_LPG_EXS','p','IND','Industry - Pulp and paper - Distric Heat - LPG - Existing','');
 
---INSERT INTO "technologies" VALUES ('IND_PP_EC_EXS','p','IND','Industry - Pulp and paper - Electric appliances and lighting - Existing','');
+INSERT INTO "technologies" VALUES ('IND_PP_EC_EXS','p','IND','Industry - Pulp and paper - Electric appliances and lighting - Existing','');
 
 ---- New technologies
 ---- Chemicals
@@ -1869,19 +1866,20 @@ insert into "technologies" VALUES ('IND_NM_EC_NEW','p','IND','Industry - Non-met
 insert into "technologies" VALUES ('IND_PP_PUL_KRF_NEW','p','IND','Industry - Pulp and paper - Chemical pulping - Kraft process - New','');
 insert into "technologies" VALUES ('IND_PP_PUL_SUL_NEW','p','IND','Industry - Pulp and paper - Chemical pulping - Sulfite process - New','');
 insert into "technologies" VALUES ('IND_PP_PUL_MEC_NEW','p','IND','Industry - Pulp and paper - Mechanical pulping - New','');
-insert into "technologies" VALUES ('IND_PP_PUL_SCH_NEW','p','IND','Industry - Pulp and paper - Semi-chemical pulping - New','');
+--insert into "technologies" VALUES ('IND_PP_PUL_SCH_NEW','p','IND','Industry - Pulp and paper - Semi-chemical pulping - New','');
 insert into "technologies" VALUES ('IND_PP_PUL_RCP_NEW','p','IND','Industry - Pulp and paper - Recycled fiber pulping - New','');
 insert into "technologies" VALUES ('IND_PP_PAP_NEW','p','IND','Industry - Pulp and paper - Paper production and printing - New','');
 
 ---- Steam production
 --insert into "technologies" VALUES ('IND_PP_SB_BIO_EXS','p','IND','Industry - Pulp and paper - Steam - Biomass - Existing','');
 --insert into "technologies" VALUES ('IND_IS_SB_GEO_EXS','p','IND','Industry - Steam - Geothermal energy - Existing','');
-insert into "technologies" VALUES ('IND_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
-insert into "technologies" VALUES ('IND_IS_HET_REC','p','IND','Industry - Steam - Iron and steel - Heat recovery - Existing','');
-insert into "technologies" VALUES ('IND_CH_HET_REC','p','IND','Industry - Steam - Chemicals - Heat recovery - Existing','');
-insert into "technologies" VALUES ('IND_PP_HET_REC','p','IND','Industry - Steam - Pulp and paper - Heat recovery - Existing','');
---insert into "technologies" VALUES ('IND_HET_STM_EXS','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
---insert into "technologies" VALUES ('IND_SB_TECH_EXS','p','IND','Industry - Steam - Technology to produce sector-specific steam - Existing',''); -- New
+insert into "technologies" VALUES ('IND_NF_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
+insert into "technologies" VALUES ('IND_NM_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
+insert into "technologies" VALUES ('IND_CH_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
+insert into "technologies" VALUES ('IND_PP_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
+insert into "technologies" VALUES ('IND_OTH_STM_HET','p','IND','Industry - Steam - Technology to produce sector-specific steam with heat - Existing','');
+insert into "technologies" VALUES ('IND_HET_IND_REC','p','IND','Industry - Heat recovery for industry','');
+insert into "technologies" VALUES ('IND_HET_OUT_REC','p','IND','Industry - Heat recovery for other sectors','');
 
 ---- Machine drive
 insert into "technologies" VALUES ('IND_IS_MD_ELC_EXS','p','IND','Industry - Iron and steel - Machine Drive - Electricity - Existing','');
@@ -1952,11 +1950,14 @@ insert into "technologies" VALUES ('IND_CH_OTH_BIO_NEW','p','IND','Industry - Ot
 insert into "technologies" VALUES ('IND_PP_PH_HFO_NEW','p','IND','Industry - Process Heat Pulp and Paper Heavy Fuel - New','');
 insert into "technologies" VALUES ('IND_PP_PH_NGA_NEW','p','IND','Industry - Process Heat Pulp and Paper Natural Gas - New','');
 insert into "technologies" VALUES ('IND_PP_PH_BIO_NEW','p','IND','Industry - Process Heat Pulp and Paper biomass - New','');
+insert into "technologies" VALUES ('IND_PP_PH_REC_NEW','p','IND','Industry - Process Heat Pulp and Paper recovered heat - New','');
 --insert into "technologies" VALUES ('IND_PP_PH_SOL_NEW','p','IND','Industry - Process Heat Pulp and Paper Solar - New','');
+insert into "technologies" VALUES ('IND_PP_EC_NEW','p','IND','Industry - Electricity Pulp and Paper - New','');
 insert into "technologies" VALUES ('IND_PP_DH_NGA_NEW','p','IND','Industry - Process Heat Pulp and Paper Natural Gas - New','');
 insert into "technologies" VALUES ('IND_PP_DH_OIL_NEW','p','IND','Industry - Process Heat Pulp and Paper Natural Gas - New','');
 --insert into "technologies" VALUES ('IND_PP_DH_ELC_NEW','p','IND','Industry - Process Heat Pulp and Paper Electric - New','');
 insert into "technologies" VALUES ('IND_PP_DH_LPG_NEW','p','IND','Industry - Process Heat Pulp and Paper LPG - New','');
+insert into "technologies" VALUES ('IND_PP_DH_REC_NEW','p','IND','Industry - Process Heat Pulp and Paper recovered heat - New','');
 --insert into "technologies" VALUES ('IND_PP_DH_SOL_NEW','p','IND','Industry - Process Heat Pulp and Paper Solar - New','');
 --INSERT INTO "technologies" VALUES ('IND_PP_OTH_HFO_NEW','p','IND','Industry - Other Pulp and Paper Heavy Oil - New','');
 --INSERT INTO "technologies" VALUES ('IND_PP_OTH_DST_NEW','p','IND','Industry - Other Pulp and Paper Distillate Oil - New','');
@@ -2258,6 +2259,7 @@ INSERT INTO "groups" VALUES ('RES_FT_ORE_GRP','');
 INSERT INTO "groups" VALUES ('COM_FT_ORE_GRP','');
 INSERT INTO "groups" VALUES ('RES_FT_OIL_GRP','');
 INSERT INTO "groups" VALUES ('COM_FT_OIL_GRP','');
+INSERT INTO "groups" VALUES ('IND_CH_FS_EXS_GRP','');
 
 create TABLE "TechGroupWeight" (
 	"regions"	text,
@@ -2285,29 +2287,47 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_DST','TRA_FT_OIL_BIO_GRP',1.
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_LPG','TRA_FT_OIL_BIO_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_HFO','TRA_FT_OIL_BIO_GRP',1.0,'');
 --INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_HFO_INT','TRA_FT_OIL_BIO_GRP',1.0,'');
+
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_NGA','IND_FT_GAS_NGA_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_NGA','IND_FT_NGA_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_ETH','IND_FT_NGA_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_NGA','IND_FT_NGA_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_NGA_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_LNG','IND_FT_NGA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_ETH','IND_FT_NGA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_NGA','IND_FT_NGA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_NGA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_LNG','IND_FT_NGA_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_NGA','IND_FT_FS_NGA_GRP',1.0,'');
-
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_NGA','IND_FT_FS_GAS_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_LNG','IND_FT_FS_GAS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_FS_GAS_GRP',1.0,'');
+
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_COA','IND_FT_COA_COMP_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COA','IND_FT_COA_COMP_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_BFG','IND_FT_COA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COG','IND_FT_COA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COK','IND_FT_COA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COA','IND_FT_COA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_COA','IND_FT_COA_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_HFO','IND_FT_HFO_GRP',1.0,'');
+
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_HFO','IND_FT_OIL_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_OIL','IND_FT_OIL_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_LPG','IND_FT_OIL_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_HFO','IND_FT_OIL_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_LPG','IND_FT_OIL_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_DST','IND_FT_OIL_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_OIL_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_MTH','IND_FT_OIL_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_NAP','IND_FT_OIL_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_DST','IND_FT_FS_OIL_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_FS_OIL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_LPG','IND_FT_FS_OIL_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_NAP','IND_FT_FS_OIL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_HFO','IND_FT_FS_OIL_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_MTH','IND_FT_FS_OIL_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_MTH','IND_FT_FS_OIL_GRP',1.0,'');
+--INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_ETH','IND_FT_FS_OIL_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_HET','IND_FT_HET_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_IS_HET_REC','IND_FT_HET_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_HET_REC','IND_FT_HET_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_PP_HET_REC','IND_FT_HET_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_HET_IND_REC','IND_FT_HET_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_HET_OUT_REC','IND_FT_HET_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','AGR_APP_EXS','AGR_APP_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','AGR_MAC_EXS','AGR_MAC_GRP',1.0,'');
@@ -2355,19 +2375,6 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','TRA_FT_JTK','TRA_FT_JTK_GRP',1.0,''
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','AGR_FT_GSL','AGR_FT_GSL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','AGR_FT_DST','AGR_FT_DST_GRP',1.0,'');
-
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_COA','IND_FT_COA_COMP_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COA','IND_FT_COA_COMP_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_BFG','IND_FT_COA_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COG','IND_FT_COA_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COK','IND_FT_COA_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_COA','IND_FT_COA_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_HFO','IND_FT_HFO_GRP',1.0,'');
-
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_HFO','IND_FT_OIL_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_OIL','IND_FT_OIL_GRP',1.0,'');
-INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_LPG','IND_FT_OIL_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_NAP','IND_FT_OIL_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','UPS_SCN_FREF','UPS_SCN_FREF_GRP',1.0,'');
 
@@ -3133,8 +3140,8 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_OTH_SB_ELC_NEW','IND_OTH_SB_GRP
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_BIO','IND_FT_BIO_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_BGS','IND_FT_BIO_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_BIO_ETH','IND_FT_BIO_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_BIO','IND_FT_BIO_GRP',1.0,'');
---INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_BIO_ETH','IND_FT_BIO_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_BIO','IND_FT_BIO_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_FT_FS_BIO_ETH','IND_FT_BIO_GRP',1.0,'');
 
 INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_BIO','COM_FT_BIO_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_BIO_PLT','COM_FT_BIO_GRP',1.0,'');
@@ -3151,6 +3158,16 @@ INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_DST','COM_FT_OIL_GRP',1.0,''
 INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_HFO','COM_FT_OIL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_KER','COM_FT_OIL_GRP',1.0,'');
 INSERT INTO "TechGroupWeight" VALUES ('EUR','COM_FT_LPG','COM_FT_OIL_GRP',1.0,'');
+
+
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_NGA_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_LPG_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_LNG_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_COA_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_HFO_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_DST_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_ETH_EXS','IND_CH_FS_EXS_GRP',1.0,'');
+INSERT INTO "TechGroupWeight" VALUES ('EUR','IND_CH_FS_NAP_EXS','IND_CH_FS_EXS_GRP',1.0,'');
 
 CREATE TABLE "tech_retirement" (
 	"tech"	text,
@@ -3309,14 +3326,14 @@ insert into "tech_retirement" VALUES ('IND_CH_AMM_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_MTH_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_CHL_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_OCH_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_NGA_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_LPG_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_LNG_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_COA_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_HFO_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_DST_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_ETH_EXS','');
---insert into "tech_retirement" VALUES ('IND_CH_FS_NAP_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_NGA_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_LPG_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_LNG_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_COA_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_HFO_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_DST_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_ETH_EXS','');
+insert into "tech_retirement" VALUES ('IND_CH_FS_NAP_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_OTH_HFO_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_OTH_DST_EXS','');
 insert into "tech_retirement" VALUES ('IND_CH_OTH_NGA_EXS','');
@@ -3344,15 +3361,15 @@ insert into "tech_retirement" VALUES ('IND_IS_BOF_EXS','');
 insert into "tech_retirement" VALUES ('IND_IS_DRI_EXS','');
 insert into "tech_retirement" VALUES ('IND_IS_SCR_EXS','');
 insert into "tech_retirement" VALUES ('IND_FEA_EXS','');
+insert into "tech_retirement" VALUES ('IND_PP_SB_BIO_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_PH_HFO_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_PH_NGA_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_PH_COA_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_PH_BIO_EXS','');
+insert into "tech_retirement" VALUES ('IND_PP_EC_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_DH_OIL_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_DH_NGA_EXS','');
 insert into "tech_retirement" VALUES ('IND_PP_DH_LPG_EXS','');
---insert into "tech_retirement" VALUES ('IND_PP_SB_BIO_EXS','');
---insert into "tech_retirement" VALUES ('IND_IS_SB_GEO_EXS','');
 insert into "tech_retirement" VALUES ('IND_OTH_SB_HFO_EXS','');
 insert into "tech_retirement" VALUES ('IND_OTH_SB_OIL_EXS','');
 insert into "tech_retirement" VALUES ('IND_OTH_SB_NGA_EXS','');
@@ -4467,9 +4484,8 @@ INSERT INTO "tech_groups" VALUES ('IND_FT_BFG','');
 INSERT INTO "tech_groups" VALUES ('IND_FT_HFO','');
 INSERT INTO "tech_groups" VALUES ('IND_FT_OIL','');
 INSERT INTO "tech_groups" VALUES ('IND_FT_HET','');
-INSERT INTO "tech_groups" VALUES ('IND_IS_HET_REC','');
-INSERT INTO "tech_groups" VALUES ('IND_CH_HET_REC','');
-INSERT INTO "tech_groups" VALUES ('IND_PP_HET_REC','');
+INSERT INTO "tech_groups" VALUES ('IND_HET_IND_REC','');
+INSERT INTO "tech_groups" VALUES ('IND_HET_OUT_REC','');
 INSERT INTO "tech_groups" VALUES ('IMP_OIL_DMY_ANNUAL_TECH','');
 INSERT INTO "tech_groups" VALUES ('IMP_OIL_USA','');
 INSERT INTO "tech_groups" VALUES ('IMP_OIL_CAN','');
@@ -5618,14 +5634,14 @@ insert into "LifetimeTech" VALUES ('EUR','IND_FT_FS_LNG',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_FS_LPG',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_FS_NAP',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_FT_FS_HFO',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_NGA_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_LPG_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_LNG_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_COA_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_HFO_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_DST_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_ETH_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_NAP_EXS',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_NGA_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_LPG_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_LNG_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_COA_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_HFO_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_DST_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_ETH_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_FS_NAP_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_CH_OTH_ETH_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_CH_OTH_DST_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_CH_OTH_NGA_EXS',35,'');
@@ -5656,26 +5672,27 @@ insert into "LifetimeTech" VALUES ('EUR','IND_NM_GLS_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_NM_CRM_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_NM_EC_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_TECH_EXS',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_CHEM_EXS',35,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_MEC_EXS',35,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_RCP_EXS',35,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_PAP_EXS',35,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_OTH_EXS',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_CHEM_EXS',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_MEC_EXS',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_RCP_EXS',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PAP_EXS',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PRN_EXS',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_SB_BIO_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_HFO_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_NGA_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_COA_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_BIO_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_EC_EXS',15,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_OIL_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_NGA_EXS',35,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_LPG_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_PP_SB_BIO_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_IS_SB_GEO_EXS',35,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_STM_HET',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_IS_HET_REC',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_CH_HET_REC',110,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_HET_REC',110,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_HET_STM_EXS',35,'');
---insert into "LifetimeTech" VALUES ('EUR','IND_SB_TECH_EXS',35,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_NF_STM_HET',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_STM_HET',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_NM_STM_HET',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_CH_STM_HET',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_OTH_STM_HET',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_HET_IND_REC',110,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_HET_OUT_REC',110,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_MD_ELC_EXS',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_IS_MD_OIL_EXS',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_NF_MD_ELC_EXS',30,'');
@@ -5787,7 +5804,7 @@ insert into "LifetimeTech" VALUES ('EUR','IND_NM_EC_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_KRF_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_SUL_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_MEC_NEW',30,'');
-insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_SCH_NEW',30,'');
+--insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_SCH_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PUL_RCP_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PAP_NEW',20,'');
 ---- Energy services
@@ -5803,11 +5820,14 @@ insert into "LifetimeTech" VALUES ('EUR','IND_CH_OTH_BIO_NEW',25,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_HFO_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_NGA_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_BIO_NEW',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_REC_NEW',30,'');
 --insert into "LifetimeTech" VALUES ('EUR','IND_PP_PH_SOL_NEW',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_EC_NEW',15,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_NGA_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_OIL_NEW',30,'');
 --insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_ELC_NEW',30,'');
 insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_LPG_NEW',30,'');
+insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_REC_NEW',30,'');
 --insert into "LifetimeTech" VALUES ('EUR','IND_PP_DH_SOL_NEW',30,'');
 --INSERT INTO "LifetimeTech" VALUES ('EUR','IND_PP_OTH_HFO_NEW',25,'');
 --INSERT INTO "LifetimeTech" VALUES ('EUR','IND_PP_OTH_DST_NEW',25,'');
@@ -8091,7 +8111,7 @@ insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_WOD','IND_FT_BIO',2005,'IND_
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_MUN','IND_FT_BIO',2005,'IND_BIO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_BIO_GAS','IND_FT_BGS',2005,'IND_BGS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','RNW_BIO_ETH','IND_FT_BIO_ETH',2005,'IND_BIO_ETH',0.027,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','RNW_BIO_ETH','IND_FT_BIO_ETH',2030,'IND_BIO_ETH',0.027,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','RNW_POT_GEO','IND_FT_GEO',2005,'IND_GEO',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','ELC','IND_FT_ELC',2005,'IND_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_ELC','IND_DIS_ELC',2005,'IND_IS_ELC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8243,7 +8263,6 @@ insert into "Efficiency" VALUES ('EUR','IND_COG','IND_IS_BOF_EXS',2005,'IND_IS_B
 insert into "Efficiency" VALUES ('EUR','IND_BFG','IND_IS_BOF_EXS',2005,'IND_IS_BOF',9.558E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_IS_BOF_EXS',2005,'IND_IS_BOF',9.558E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_IS_BOF_EXS',2005,'IND_IS_BOF',9.558E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_IS_SB','IND_IS_BOF_EXS',2005,'IND_IS_BOF',9.558E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_BOF_EXS',2005,'IND_IS_BOF',9.558E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8251,7 +8270,6 @@ insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_DRI_EXS',2005,'IND_IS_E
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_IS_SB','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_DRI_EXS',2005,'IND_IS_EAF',5.368E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8259,14 +8277,11 @@ insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_IS_SCR_EXS',2005,'IND_IS_S
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_IS_SB','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_IS_SCR_EXS',2005,'IND_IS_SCR',2.483E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_IS_EC','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_COK','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_IS_SB','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_IS_MD','IND_FEA_EXS',2005,'IND_FEA',8.933E-03,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_IS_BOF','IND_IS_TECH_EXS',2005,'IND_IS',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8317,7 +8332,6 @@ insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_CLK_DRY_EXS',2005,'IND_
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_NM_CLK_DRY_EXS',2005,'IND_NM_CMT',1.779E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_NM_CLK_DRY_EXS',2005,'IND_NM_CMT',1.779E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_NM_CLK_DRY_EXS',2005,'IND_NM_CMT',1.779E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NM_SB','IND_NM_CLK_DRY_EXS',2005,'IND_NM_CMT',1.779E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NM_MD','IND_NM_CLK_DRY_EXS',2005,'IND_NM_CMT',1.779E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8325,25 +8339,21 @@ insert into "Efficiency" VALUES ('EUR','IND_COA','IND_NM_CLK_WET_EXS',2005,'IND_
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PTC','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NM_SB','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NM_MD','IND_NM_CLK_WET_EXS',2005,'IND_NM_CMT',2.809E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_LIM_EXS',2005,'IND_NM_LIM',2.180E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_NM_LIM_EXS',2005,'IND_NM_LIM',2.180E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_NM_LIM_EXS',2005,'IND_NM_LIM',2.180E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NM_SB','IND_NM_LIM_EXS',2005,'IND_NM_LIM',2.180E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NM_MD','IND_NM_LIM_EXS',2005,'IND_NM_LIM',2.180E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_NM_EC','IND_NM_GLS_EXS',2005,'IND_NM_GLS',2.263E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_GLS_EXS',2005,'IND_NM_GLS',2.263E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_NM_GLS_EXS',2005,'IND_NM_GLS',2.263E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NM_SB','IND_NM_GLS_EXS',2005,'IND_NM_GLS',2.263E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NM_MD','IND_NM_GLS_EXS',2005,'IND_NM_GLS',2.263E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_CRM_EXS',2005,'IND_NM_CRM',3.045E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_NM_CRM_EXS',2005,'IND_NM_CRM',3.045E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_NM_CRM_EXS',2005,'IND_NM_CRM',3.045E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
---insert into "Efficiency" VALUES ('EUR','IND_NM_SB','IND_NM_CRM_EXS',2005,'IND_NM_CRM',3.045E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NM_MD','IND_NM_CRM_EXS',2005,'IND_NM_CRM',3.045E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "Efficiency" VALUES ('EUR','IND_NM_CMT','IND_NM_TECH_EXS',2005,'IND_NM',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8355,31 +8365,35 @@ insert into "Efficiency" VALUES ('EUR','IND_NM_CRM','IND_NM_TECH_EXS',2005,'IND_
 insert into "Efficiency" VALUES ('EUR','IND_NM_ELC','IND_NM_EC_EXS',2005,'IND_NM_EC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Pulp and paper
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_PUL',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_PUL',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'MAT_WOD',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'MAT_WOD',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_SB_REC',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_SB_REC',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',5.50E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',5.50E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',5.50E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_CHEM_EXS',2005,'IND_PP_PUL',5.50E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_CHEM_EXS',2005,'MAT_WOD',7.31E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_PUL',3.64e-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_PUL',3.64e-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'MAT_WOD',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'MAT_WOD',1.40E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_SB_REC',3.64e-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_EXS',2005,'IND_PP_SB_REC',3.64e-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_EXS',2005,'IND_PP_PUL',2.49E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_EXS',2005,'IND_PP_PUL',2.49E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PUL_RCP_EXS',2005,'IND_PP_PUL',2.49E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','MAT_RCP','IND_PP_PUL_RCP_EXS',2005,'IND_PP_PUL',2.49E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PAP_EXS',2005,'IND_PP_PAP',1.02E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PAP_EXS',2005,'IND_PP_PAP',1.02E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PAP_EXS',2005,'IND_PP_PAP',1.02E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_PUL','IND_PP_PAP_EXS',2005,'IND_PP_PAP',1.02E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_OTH_EXS',2005,'IND_PP_PRN',6.17E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PAP_EXS',2005,'IND_PP_PAP',9.94E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PAP_EXS',2005,'IND_PP_PAP',9.94E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PAP_EXS',2005,'IND_PP_PAP',9.94E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_PUL','IND_PP_PAP_EXS',2005,'IND_PP_PAP',9.94E-02,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PRN_EXS',2005,'IND_PP_PRN',6.17E-01,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PP_PAP','IND_PP_TECH_EXS',2005,'IND_PP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_PP_PRN','IND_PP_TECH_EXS',2005,'IND_PP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_EC','IND_PP_TECH_EXS',2005,'IND_PP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
+---- Steam
+insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_PP_SB_BIO_EXS',2005,'IND_PP_SB',0.815,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Process heat
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_PP_PH_HFO_EXS',2005,'IND_PP_PH',0.90,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8387,21 +8401,29 @@ insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_PP_PH_NGA_EXS',2005,'IND_P
 insert into "Efficiency" VALUES ('EUR','IND_COA','IND_PP_PH_COA_EXS',2005,'IND_PP_PH',0.85,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_PP_PH_BIO_EXS',2005,'IND_PP_PH',0.85,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
+---- Electricity
+insert into "Efficiency" VALUES ('EUR','IND_PP_ELC','IND_PP_EC_EXS',2005,'IND_PP_EC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_EC_EXS',2005,'IND_PP_EC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
 ---- Direct heat
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_PP_DH_OIL_EXS',2005,'IND_PP_DH',0.82,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_PP_DH_NGA_EXS',2005,'IND_PP_DH',0.82,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_PP_DH_LPG_EXS',2005,'IND_PP_DH',0.82,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Heat
---insert into "Efficiency" VALUES ('EUR','IND_HET','IND_STM_HET',2005,'IND_IS_SB',1.000,'');
-insert into "Efficiency" VALUES ('EUR','IND_HET','IND_STM_HET',2005,'IND_NF_SB',1.000,'');
-insert into "Efficiency" VALUES ('EUR','IND_HET','IND_STM_HET',2005,'IND_CH_SB',1.000,'');
-insert into "Efficiency" VALUES ('EUR','IND_HET','IND_STM_HET',2005,'IND_NM_SB',1.000,'');
-insert into "Efficiency" VALUES ('EUR','IND_HET','IND_STM_HET',2005,'IND_PP_SB',1.000,'');
+insert into "Efficiency" VALUES ('EUR','IND_HET','IND_NF_STM_HET',2005,'IND_NF_SB',1.000,'');
+insert into "Efficiency" VALUES ('EUR','IND_HET','IND_CH_STM_HET',2005,'IND_CH_SB',1.000,'');
+insert into "Efficiency" VALUES ('EUR','IND_HET','IND_NM_STM_HET',2005,'IND_NM_SB',1.000,'');
+insert into "Efficiency" VALUES ('EUR','IND_HET','IND_PP_STM_HET',2005,'IND_PP_SB',1.000,'');
+insert into "Efficiency" VALUES ('EUR','IND_HET','IND_OTH_STM_HET',2005,'IND_OTH_SB',1.000,'');
 
-insert into "Efficiency" VALUES ('EUR','IND_IS_SB_REC','IND_IS_HET_REC',2005,'IND_IS_SB_REC',0.85,'');
-insert into "Efficiency" VALUES ('EUR','IND_CH_SB_REC','IND_CH_HET_REC',2005,'IND_CH_SB_REC',0.85,'');
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB_REC','IND_PP_HET_REC',2005,'IND_PP_SB_REC',0.85,'');
+insert into "Efficiency" VALUES ('EUR','IND_IS_SB_REC','IND_HET_IND_REC',2005,'IND_HET',0.90,'');
+insert into "Efficiency" VALUES ('EUR','IND_CH_SB_REC','IND_HET_IND_REC',2005,'IND_HET',0.90,'');
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB_REC','IND_HET_IND_REC',2005,'IND_HET',0.90,'');
+
+insert into "Efficiency" VALUES ('EUR','IND_IS_SB_REC','IND_HET_OUT_REC',2005,'HET',0.90,'');
+insert into "Efficiency" VALUES ('EUR','IND_CH_SB_REC','IND_HET_OUT_REC',2005,'HET',0.90,'');
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB_REC','IND_HET_OUT_REC',2005,'HET',0.90,'');
 
 ---- Machine drive
 insert into "Efficiency" VALUES ('EUR','IND_IS_ELC','IND_IS_MD_ELC_EXS',2005,'IND_IS_MD',0.86,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -8547,19 +8569,19 @@ insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CH_HVC_ETHSC_NEW',2030,'IN
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_ETHSC_NEW',2030,'IND_CH_OLF',6.30E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_ETH','IND_CH_HVC_ETHSC_NEW',2030,'IND_CH_OLF',6.30E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_SB_REC',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_SB_REC',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_SB_REC',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_SB_REC',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_SB_REC',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_OLF',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_OLF',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_OLF',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_OLF',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_OLF',2.35E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_SB_REC',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_SB_REC',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_SB_REC',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_SB_REC',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_SB_REC',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_OLF',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_OLF',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_OLF',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_OLF',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_OLF',2.61E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_CH_HVC_LPGSC_NEW',2010,'IND_CH_SB_REC',2.58E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -8603,11 +8625,11 @@ insert into "Efficiency" VALUES ('EUR','IND_ETH','IND_CH_HVC_ETHSC_NEW',2030,'IN
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_ETHSC_NEW',2030,'IND_CH_BTX',6.30E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_ETH','IND_CH_HVC_ETHSC_NEW',2030,'IND_CH_BTX',6.30E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_BTX',2.35E-02,'');
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_BTX',2.35E-02,'');
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_BTX',2.35E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_BTX',2.35E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2010,'IND_CH_BTX',2.35E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_BTX',2.61E-02,'');
-insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_BTX',2.61E-02,'');
+--insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_BTX',2.61E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_CH_MD','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_BTX',2.61E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_CH_FS_DST','IND_CH_HVC_GSOSC_NEW',2030,'IND_CH_BTX',2.61E-02,'');
 insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_CH_HVC_LPGSC_NEW',2010,'IND_CH_BTX',2.58E-02,'');
@@ -9069,54 +9091,54 @@ insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_NM_CRM_NEW',2030,'IND_NM_C
 insert into "Efficiency" VALUES ('EUR','IND_NM_EC','IND_NM_CRM_NEW',2030,'IND_NM_CRM',4.24E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_NM_ELC','IND_NM_EC_NEW',2010,'IND_NM_EC',1.04,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Pulp and paper
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+---insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'MAT_WOD',1.08E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',2.54E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',2.54E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',2.54E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_ELC',2.54E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',5.28E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',5.28E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',5.28E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2010,'IND_PP_PUL',5.28E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'MAT_WOD',1.19E+00,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',2.79e-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',2.79e-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',2.79e-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_ELC',2.79e-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',5.72E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',5.72E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',5.72E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_KRF_NEW',2030,'IND_PP_PUL',5.72E-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'MAT_WOD',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_ELC',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2010,'IND_PP_PUL',5.28e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'MAT_WOD',9.40E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_ELC',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_PH','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SUL_NEW',2030,'IND_PP_PUL',5.72e-02,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_NEW',2010,'IND_PP_PUL',3.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_NEW',2010,'IND_PP_PUL',3.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_NEW',2010,'IND_PP_SB_REC',3.99E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -9125,12 +9147,12 @@ insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_NEW',2030,'IN
 insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_NEW',2030,'IND_PP_PUL',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_MEC_NEW',2030,'IND_PP_SB_REC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_MEC_NEW',2030,'IND_PP_SB_REC',8.60E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2010,'IND_PP_PUL',1.96E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "Efficiency" VALUES ('EUR','MAT_WOD','IND_PP_PUL_SCH_NEW',2030,'IND_PP_PUL',2.12E-01,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_SB','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "Efficiency" VALUES ('EUR','IND_PP_DH','IND_PP_PUL_RCP_NEW',2010,'IND_PP_PUL',3.57E-01*0.8,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -9160,11 +9182,15 @@ insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_CH_OTH_BIO_NEW',2010,'IND_
 insert into "Efficiency" VALUES ('EUR','IND_HFO','IND_PP_PH_HFO_NEW',2010,'IND_PP_PH',0.91,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_PP_PH_NGA_NEW',2010,'IND_PP_PH',0.91,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_BIO','IND_PP_PH_BIO_NEW',2010,'IND_PP_PH',0.81,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB_REC','IND_PP_PH_REC_NEW',2010,'IND_PP_PH',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','IND_SOL','IND_PP_PH_SOL_NEW',2010,'IND_PP_PH',0.95,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_ELC','IND_PP_EC_NEW',2010,'IND_PP_EC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_MD','IND_PP_EC_NEW',2010,'IND_PP_EC',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_NGA','IND_PP_DH_NGA_NEW',2010,'IND_PP_DH',0.83,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_OIL','IND_PP_DH_OIL_NEW',2010,'IND_PP_DH',0.83,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','IND_PP_ELC','IND_PP_DH_ELC_NEW',2010,'IND_PP_DH',0.91,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Efficiency" VALUES ('EUR','IND_LPG','IND_PP_DH_LPG_NEW',2010,'IND_PP_DH',0.91,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Efficiency" VALUES ('EUR','IND_PP_SB_REC','IND_PP_DH_REC_NEW',2010,'IND_PP_DH',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "Efficiency" VALUES ('EUR','IND_SOL','IND_PP_DH_SOL_NEW',2010,'IND_PP_DH',0.95,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','IND_HFO','IND_PP_OTH_HFO_NEW',2010,'IND_PP_OTH',0.88,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --INSERT INTO "Efficiency" VALUES ('EUR','IND_OIL','IND_PP_OTH_DST_NEW',2010,'IND_PP_OTH',0.93,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -9410,17 +9436,12 @@ INSERT INTO "Efficiency" VALUES ('EUR','ELC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,
 INSERT INTO "Efficiency" VALUES ('EUR','IND_CH_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','IND_IS_SB_REC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_PH','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_DH','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_PH','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_DH','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 --INSERT INTO "Efficiency" VALUES ('EUR','IND_IS_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_CH_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_NF_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_NM_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_OTH_SB','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','HH2_DT','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 --INSERT INTO "Efficiency" VALUES ('EUR','MAT_BFS','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
-INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_ELC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
+--INSERT INTO "Efficiency" VALUES ('EUR','IND_PP_ELC','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_FP_HLW','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_URA_SPENT','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
 INSERT INTO "Efficiency" VALUES ('EUR','UPS_PU_SPENT','OUT_DMY_TECH',2010,'OUT_DMY',1.00,'');
@@ -10083,7 +10104,6 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_CLK_DRY_EXS',0
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_NM_CLK_DRY_EXS',0.1462,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_HFO','IND_NM_CLK_DRY_EXS',0.0540,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PTC','IND_NM_CLK_DRY_EXS',0.3888,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_SB','IND_NM_CLK_DRY_EXS',0.0000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_MD','IND_NM_CLK_DRY_EXS',0.0964,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_CLK_WET_EXS',0.2620,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -10091,25 +10111,21 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_NM_CLK_WET_EXS',0
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_HFO','IND_NM_CLK_WET_EXS',0.0383,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PTC','IND_NM_CLK_WET_EXS',0.3060,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_BGS','IND_NM_CLK_WET_EXS',0.0976,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_SB','IND_NM_CLK_WET_EXS',0.0000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_MD','IND_NM_CLK_WET_EXS',0.1580,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_LIM_EXS',0.6169,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_NM_LIM_EXS',0.2529,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_HFO','IND_NM_LIM_EXS',0.0668,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_SB','IND_NM_LIM_EXS',0.0000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_MD','IND_NM_LIM_EXS',0.0634,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_EC','IND_NM_GLS_EXS',0.1895,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_GLS_EXS',0.5395,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_HFO','IND_NM_GLS_EXS',0.0406,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_SB','IND_NM_GLS_EXS',0.0000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_MD','IND_NM_GLS_EXS',0.0785,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_CRM_EXS',0.6539,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_COA','IND_NM_CRM_EXS',0.0575,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_HFO','IND_NM_CRM_EXS',0.0796,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_SB','IND_NM_CRM_EXS',0.0000,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_MD','IND_NM_CRM_EXS',0.1464,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_CMT','IND_NM_TECH_EXS',0.4850,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -10134,7 +10150,8 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_DH','IND_PP_PAP_EXS',0.0
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PUL','IND_PP_PAP_EXS',0.099,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PAP','IND_PP_TECH_EXS',0.615,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PRN','IND_PP_TECH_EXS',0.385,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PRN','IND_PP_TECH_EXS',0.252,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_EC','IND_PP_TECH_EXS',0.133,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Machine drive
 --insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OIL','IND_IS_MD_OIL_EXS',0.659,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -10170,7 +10187,7 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PRN','IND_PP_TECH_EXS',0
 --insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NAP','IND_NM_MD_OIL_NEW',0.006,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Other industries
---insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OTH_SB','IND_OTH_TECH_EXS',0.166,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OTH_SB','IND_OTH_TECH_EXS',0.166,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OTH_PH','IND_OTH_TECH_EXS',0.378,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OTH_MD','IND_OTH_TECH_EXS',0.206,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_OTH_EC','IND_OTH_TECH_EXS',0.085,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -10463,32 +10480,32 @@ insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_EC','IND_NM_GLS_ELEC_NEW
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NGA','IND_NM_CRM_NEW',0.88,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_NM_EC','IND_NM_CRM_NEW',0.12,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Pulp and paper
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PH','IND_PP_PUL_KRF_NEW',0.41,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_KRF_NEW',0.09,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_KRF_NEW',0.42,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_KRF_NEW',0.08,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_PH','IND_PP_PUL_KRF_NEW',0.41,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_KRF_NEW',0.09,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_KRF_NEW',0.41,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_KRF_NEW',0.09,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PH','IND_PP_PUL_SUL_NEW',0.38,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_SUL_NEW',0.17,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_SUL_NEW',0.35,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_SUL_NEW',0.10,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_PH','IND_PP_PUL_SUL_NEW',0.38,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_SUL_NEW',0.17,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_SUL_NEW',0.34,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_SUL_NEW',0.11,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_KRF_NEW',0.58,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_KRF_NEW',0.13,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PH','IND_PP_PUL_KRF_NEW',0.06,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_KRF_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_KRF_NEW',0.41,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_KRF_NEW',0.09,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_PH','IND_PP_PUL_KRF_NEW',0.41,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_KRF_NEW',0.09,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_PH','IND_PP_PUL_SUL_NEW',0.58,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_SUL_NEW',0.13,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_SUL_NEW',0.06,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_SUL_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_SUL_NEW',0.57,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_SUL_NEW',0.12,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_PH','IND_PP_PUL_SUL_NEW',0.06,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_SUL_NEW',0.22,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_MEC_NEW',0.86,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_MEC_NEW',0.14,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_MEC_NEW',0.85,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_MEC_NEW',0.15,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_SCH_NEW',0.31,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_SCH_NEW',0.45,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_SCH_NEW',0.24,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_SCH_NEW',0.30,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_SCH_NEW',0.44,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_SCH_NEW',0.26,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_SCH_NEW',0.31,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_SCH_NEW',0.45,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2010,'MAT_WOD','IND_PP_PUL_SCH_NEW',0.24,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_MD','IND_PP_PUL_SCH_NEW',0.30,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'IND_PP_SB','IND_PP_PUL_SCH_NEW',0.44,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechInputSplit" VALUES ('EUR',2030,'MAT_WOD','IND_PP_PUL_SCH_NEW',0.26,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_MD','IND_PP_PUL_RCP_NEW',0.18,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_SB','IND_PP_PUL_RCP_NEW',0.30,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechInputSplit" VALUES ('EUR',2010,'IND_PP_DH','IND_PP_PUL_RCP_NEW',0.21,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -10668,9 +10685,11 @@ INSERT INTO "TechOutputSplit" VALUES ('EUR',2040,'UPS_WDP_HLW_PYRO_ADS_MA_EXS','
 INSERT INTO "TechOutputSplit" VALUES ('EUR',2040,'UPS_WDP_HLW_PYRO_ADS_MA_EXS','UPS_FP_HLW',0.994,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- Pulp and paper
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_CHEM_EXS','MAT_WOD',0.946,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','IND_PP_SB_REC',0.667,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','MAT_WOD',0.0666,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_CHEM_EXS','MAT_WOD',0.946,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','IND_PP_SB_REC',0.667,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','MAT_WOD',0.0666,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','IND_PP_SB_REC',0.715,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS','IND_PP_PUL',0.285,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 ---- New technologies
 ---- Chemicals
@@ -10746,12 +10765,12 @@ insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_IS_DRI_ULCORED_CCS_NEW','I
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_DRI_HDREAF_NEW','IND_IS_EAF',0.83,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_IS_DRI_HDREAF_NEW','IND_IS_SB_REC',0.17,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Pulp and paper
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','MAT_WOD',0.770,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','IND_PP_ELC',0.200,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','IND_PP_PUL',0.030,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','MAT_WOD',0.760,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','IND_PP_ELC',0.180,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','IND_PP_PUL',0.060,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','MAT_WOD',0.770,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','IND_PP_ELC',0.200,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW','IND_PP_PUL',0.030,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','MAT_WOD',0.760,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','IND_PP_ELC',0.180,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW','IND_PP_PUL',0.060,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_NEW','IND_PP_PUL',0.270,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2010,'IND_PP_PUL_MEC_NEW','IND_PP_SB_REC',0.730,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "TechOutputSplit" VALUES ('EUR',2030,'IND_PP_PUL_MEC_NEW','IND_PP_PUL',0.150,''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
@@ -10890,8 +10909,8 @@ INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'RNW_BIO_HVO','TRA_FT_DST_GRP',0.
 --INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'RNW_BIO_ETH','TRA_FT_GSL_E85_GRP',0.859,'');
 --INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'RNW_BIO_ETBE','TRA_FT_GSL_E85_GRP',0.223,'');
 
-insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_HCO','IND_FT_COA_COMP_GRP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_BCO','IND_FT_COA_COMP_GRP',0.50,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_HCO','IND_FT_COA_COMP_GRP',1.00,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_COA_BCO','IND_FT_COA_COMP_GRP',0.50,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_OIL_HFO','IND_FT_HFO_GRP',0.92,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "MaxInputGroup" VALUES ('EUR',2010,'PRI_OIL_CRD','IND_FT_HFO_GRP',0.08,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11012,7 +11031,7 @@ INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'ELC_HYD_DAM','ELC_HYD_GEN_GRP',0
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'ELC_HYD_DAM','ELC_HYD_GEN_GRP',0.900,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'MIN_OIL_HOIL','EXP_OIL_GRP',0.80,'');
-INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'MIN_OIL_HOIL','EXP_OIL_GRP',0.80,'');
+INSERT INTO "MaxInputGroup" VALUES ('EUR',2025,'MIN_OIL_HOIL','EXP_OIL_GRP',0.80,'');
 
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2010,'PRI_GAS_LNG','EXP_NGA_GRP',0.06,'');
 INSERT INTO "MaxInputGroup" VALUES ('EUR',2050,'PRI_GAS_LNG','EXP_NGA_GRP',0.06,'');
@@ -11049,13 +11068,13 @@ insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_COK','IND_OTH_PH_GRP',0.005,
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_OTH_ELC','IND_OTH_PH_GRP',0.25,'');
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_LPG','IND_OTH_PH_GRP',0.05,'');
 
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_PH_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_PH_GRP',0.15,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_PH_GRP',0.60,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COA','IND_OTH_PH_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COK','IND_OTH_PH_GRP',0.005,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_PH_GRP',1.15,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LPG','IND_OTH_PH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_PH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_PH_GRP',0.15,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_PH_GRP',0.60,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COA','IND_OTH_PH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COK','IND_OTH_PH_GRP',0.005,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_PH_GRP',0.45,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LPG','IND_OTH_PH_GRP',0.05,'');
 
 insert into "MaxInputGroup" VALUES ('EUR',2010,'IND_HFO','IND_OTH_SB_GRP',0.10,'');
 insert into "MaxInputGroup" VALUES ('EUR',2010,'IND_OIL','IND_OTH_SB_GRP',0.20,'');
@@ -11075,14 +11094,14 @@ insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_LPG','IND_OTH_SB_GRP',0.05,'
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_BIO','IND_OTH_SB_GRP',0.25,'');
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_OTH_ELC','IND_OTH_SB_GRP',0.00,'');
 
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_SB_GRP',0.10,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_SB_GRP',0.20,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_SB_GRP',0.20,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COA','IND_OTH_SB_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COG','IND_OTH_SB_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LPG','IND_OTH_SB_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_BIO','IND_OTH_SB_GRP',0.45,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_SB_GRP',0.65,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_SB_GRP',0.10,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_SB_GRP',0.20,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_SB_GRP',0.20,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COA','IND_OTH_SB_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COG','IND_OTH_SB_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LPG','IND_OTH_SB_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_BIO','IND_OTH_SB_GRP',0.45,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_SB_GRP',0.25,'');
 
 --insert into "MaxInputGroup" VALUES ('EUR',2010,'IND_OTH_ELC','IND_OTH_OTH_GRP',0.25,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 --insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_OTH_GRP',0.35,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11107,14 +11126,32 @@ insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_OTH_ELC','IND_OTH_OTH_GRP',0
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_GEO','IND_OTH_OTH_GRP',0.05,'');
 insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_BIO','IND_OTH_OTH_GRP',0.10,'');
 
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_OTH_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_OTH_GRP',0.15,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_OTH_GRP',0.25,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COK','IND_OTH_OTH_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LTH','IND_OTH_OTH_GRP',0.30,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_OTH_GRP',0.75,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_GEO','IND_OTH_OTH_GRP',0.05,'');
-insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_BIO','IND_OTH_OTH_GRP',0.25,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_HFO','IND_OTH_OTH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OIL','IND_OTH_OTH_GRP',0.15,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_NGA','IND_OTH_OTH_GRP',0.25,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_COK','IND_OTH_OTH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_LTH','IND_OTH_OTH_GRP',0.30,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_OTH_ELC','IND_OTH_OTH_GRP',0.55,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_GEO','IND_OTH_OTH_GRP',0.05,'');
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_BIO','IND_OTH_OTH_GRP',0.25,'');
+
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_NGA','IND_CH_FS_EXS_GRP',1.89E-01*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_LPG','IND_CH_FS_EXS_GRP',9.10E-02*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_LNG','IND_CH_FS_EXS_GRP',1.67E-04*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_COA','IND_CH_FS_EXS_GRP',4.41E-04*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_HFO','IND_CH_FS_EXS_GRP',1.13E-01*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_DST','IND_CH_FS_EXS_GRP',4.86E-02*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_ETH','IND_CH_FS_EXS_GRP',3.90E-02*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2025,'IND_FS_NAP','IND_CH_FS_EXS_GRP',5.19E-01*1.1,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_NGA','IND_CH_FS_EXS_GRP',1.89E-01*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_LPG','IND_CH_FS_EXS_GRP',9.10E-02*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_LNG','IND_CH_FS_EXS_GRP',1.67E-04*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_COA','IND_CH_FS_EXS_GRP',4.41E-04*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_HFO','IND_CH_FS_EXS_GRP',1.13E-01*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_DST','IND_CH_FS_EXS_GRP',4.86E-02*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_ETH','IND_CH_FS_EXS_GRP',3.90E-02*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "MaxInputGroup" VALUES ('EUR',2050,'IND_FS_NAP','IND_CH_FS_EXS_GRP',5.19E-01*1.5,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 create TABLE "MinInputGroup" (
 	"regions"	      text,
@@ -11775,24 +11812,24 @@ insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_MCY_GSL_EXS',2005,18.112,'
 insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_MOP_GSL_EXS',2005,2.875,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','TRA_ROA_3WH_GSL_EXS',2005,8.600,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 -- Industry sector
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_NGA',2005,5867.970,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_LPG',2005,220.200,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COA',2005,1138.890,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COK',2005,357.410,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COG',2005,172.300,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BFG',2005,364.800,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HFO',2005,922.930,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_OIL',2005,850.915,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ETH',2005,209.500,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_NAP',2005,90.770,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_PTC',2005,426.520,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO',2005,973.622,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BGS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO_ETH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_GEO',2005,11.741,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ELC',2005,4428.489,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_DIS_ELC',2005,4428.489,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HET',2005,681.479,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_NGA',2005,4100.865,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_LPG',2005,198.398,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COA',2005,710.471,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COK',2005,337.681,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_COG',2005,124.910,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BFG',2005,213.94,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HFO',2005,539.677,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_OIL',2005,736.618,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ETH',2005,116.919,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_NAP',2005,84.172,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_PTC',2005,394.464,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO',2005,798.28,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BGS',2005,5.768,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "ExistingCapacity" VALUES ('EUR','IND_FT_BIO_ETH',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_GEO',2005,2.007,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_ELC',2005,4362.646,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_DIS_ELC',2005,4362.646,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_FT_HET',2005,851.946,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_FT_LTH',2005,128.231,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -11864,7 +11901,9 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PUL_CHEM_EXS',2005,31.880,'
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PUL_MEC_EXS',2005,14.490,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PUL_RCP_EXS',2005,34.780,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PAP_EXS',2005,113.070,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "ExistingCapacity" VALUES ('EUR','IND_PP_OTH_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PRN_EXS',2005,46.340,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+
+insert into "ExistingCapacity" VALUES ('EUR','IND_PP_SB_BIO_EXS',2005,498.596,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PH_HFO_EXS',2005,16.160,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_PH_NGA_EXS',2005,30.630,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -11875,7 +11914,7 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_PP_DH_OIL_EXS',2005,19.600,'',
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_DH_NGA_EXS',2005,41.760,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_PP_DH_LPG_EXS',2005,7.770,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
---INSERT INTO "ExistingCapacity" VALUES ('EUR','IND_PP_EC_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+INSERT INTO "ExistingCapacity" VALUES ('EUR','IND_PP_EC_EXS',2005,27.536,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_OTH_TECH_EXS',2005,1,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
@@ -11914,10 +11953,13 @@ insert into "ExistingCapacity" VALUES ('EUR','IND_OTH_OTH_LTH_EXS',2005,193.330,
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_NEU_TECH_EXS',2005,1247.866,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-insert into "ExistingCapacity" VALUES ('EUR','IND_STM_HET',2005,1,'','');
-insert into "ExistingCapacity" VALUES ('EUR','IND_IS_HET_REC',2005,1,'','');
-insert into "ExistingCapacity" VALUES ('EUR','IND_CH_HET_REC',2005,1,'','');
-insert into "ExistingCapacity" VALUES ('EUR','IND_PP_HET_REC',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_NF_STM_HET',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_NM_STM_HET',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_CH_STM_HET',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_OTH_STM_HET',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_PP_STM_HET',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_HET_IND_REC',2005,1,'','');
+insert into "ExistingCapacity" VALUES ('EUR','IND_HET_OUT_REC',2005,1,'','');
 
 insert into "ExistingCapacity" VALUES ('EUR','IND_IS_EC_EXS',2005,112.332,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "ExistingCapacity" VALUES ('EUR','IND_NF_EC_EXS',2005,324.395,'',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -12070,7 +12112,7 @@ insert into "CostInvest" VALUES ('EUR','IND_FT_NAP',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_PTC',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_BIO',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_BGS',2010,100,'','');
-insert into "CostInvest" VALUES ('EUR','IND_FT_BIO_ETH',2010,100,'','');
+insert into "CostInvest" VALUES ('EUR','IND_FT_BIO_ETH',2030,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_GEO',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_ELC',2010,100,'','');
 insert into "CostInvest" VALUES ('EUR','IND_FT_HET',2010,100,'','');
@@ -12251,11 +12293,10 @@ insert into "CostInvest" VALUES ('EUR','IND_PP_PH_HFO_EXS',2010,1e6,'',''); -- R
 insert into "CostInvest" VALUES ('EUR','IND_PP_PH_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_PP_PH_COA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_PP_PH_BIO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
+insert into "CostInvest" VALUES ('EUR','IND_PP_EC_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_PP_DH_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_PP_DH_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_PP_DH_LPG_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_PP_SB_BIO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
---insert into "CostInvest" VALUES ('EUR','IND_IS_SB_GEO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_OTH_SB_HFO_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_OTH_SB_OIL_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
 insert into "CostInvest" VALUES ('EUR','IND_OTH_SB_NGA_EXS',2010,1e6,'',''); -- Required to avoid re-installation of existing capacity
@@ -12551,7 +12592,7 @@ insert into "CostInvest" VALUES ('EUR','ELC_WIN_ON_CEN_NEW',2020,1053,'(MEUR/GW)
 insert into "CostInvest" VALUES ('EUR','ELC_WIN_OFF_NEW',2010,4500,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_WIN_OFF_NEW',2020,3600,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_WIN_OFF_NEW',2030,2020,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "CostInvest" VALUES ('EUR','ELC_WIN_OFF_NEW',2050,1420,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
+--insert into "CostInvest" VALUES ('EUR','ELC_WIN_OFF_NEW',2050,1420,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_SOL_PV_CEN_NEW',2010,2200,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_SOL_PV_CEN_NEW',2020,500,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','ELC_SOL_PV_DEC_NEW',2010,2400,'(MEUR/GW)',''); -- IEA, World Energy Outlook 2022, 2023 - based on differences between the different technologies in EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -13071,7 +13112,7 @@ insert into "CostInvest" VALUES ('EUR','IND_NM_CRM_NEW',2010,1.25E+02,'(MEUR/Mt)
 insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_KRF_NEW',2010,1.36E+03,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_SUL_NEW',2010,1.36E+03,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_MEC_NEW',2010,3.00E+02,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,8.28E+02,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,8.28E+02,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_PP_PUL_RCP_NEW',2010,6.42E+02,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostInvest" VALUES ('EUR','IND_PP_PAP_NEW',2010,1.80E+03,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Energy services
@@ -13267,7 +13308,7 @@ insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_NAP',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_PTC',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_BIO',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_BGS',2005,10,'','');
-insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_BIO_ETH',2005,10,'','');
+insert into "CostFixed" VALUES ('EUR',2030,'IND_FT_BIO_ETH',2030,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_GEO',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_ELC',2005,10,'','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_FT_HET',2005,10,'','');
@@ -14009,10 +14050,10 @@ insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_PH_HFO_EXS',2005,10.0,'(MEUR/
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_PH_NGA_EXS',2005,10.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_PH_COA_EXS',2005,10.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_PH_BIO_EXS',2005,10.0,'(MEUR/PJ)','');
+insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_EC_EXS',2005,10.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_DH_OIL_EXS',2005,1.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_DH_NGA_EXS',2005,1.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_PP_DH_LPG_EXS',2005,1.0,'(MEUR/PJ)','');
---insert into "CostFixed" VALUES ('EUR',2005,'IND_HET_STM_EXS',2005,1.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_IS_MD_ELC_EXS',2005,1.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_IS_MD_OIL_EXS',2005,1.0,'(MEUR/PJ)','');
 insert into "CostFixed" VALUES ('EUR',2005,'IND_NF_MD_ELC_EXS',2005,1.0,'(MEUR/PJ)','');
@@ -14121,7 +14162,7 @@ insert into "CostFixed" VALUES ('EUR',2010,'IND_NM_CRM_NEW',2010,1.50E+01,'(MEUR
 insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_KRF_NEW',2010,4.00E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_SUL_NEW',2010,4.00E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_MEC_NEW',2010,1.50E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
-insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_SCH_NEW',2010,2.80E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
+--insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_SCH_NEW',2010,2.80E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PUL_RCP_NEW',2010,3.00E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 insert into "CostFixed" VALUES ('EUR',2010,'IND_PP_PAP_NEW',2010,8.90E+01,'(MEUR/Mt)',''); -- D. Lerede et al., Techno-economic and environmental characterization of industrial technologies for transparent bottom-up energy modeling, Renewable and Sustainable Energy Reviews, vol. 140, 110742, 2021
 ---- Energy services
@@ -14842,7 +14883,194 @@ insert into "CostVariable" VALUES ('EUR',2010,'ELC_CHP_BIO_NEW',2010,0.70,'(MEUR
 ------ Fuel technologies
 insert into "CostVariable" VALUES ('EUR',2005,'IND_SUP_RCP',2005,90,'(MEUR/t)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
--- Excise duties
+-- Excise duties + Carbon tax
+------ Carbon tax on all emissions
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_NGA',2005,0.30+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_COA',2005,0.30+0.010*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_KER',2005,0.30+0.010*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_KER',2005,0.30+0.080*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_KER',2030,0.30+0.090*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_KER',2005,0.30+0.150*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_DST',2005,0.58+0.010*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_DST',2020,0.58+0.080*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_DST',2030,0.58+0.090*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_DST',2050,0.58+0.150*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_HFO',2005,0.39+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_HFO',2020,0.39+0.080*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_HFO',2030,0.39+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_HFO',2050,0.39+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_LPG',2005,0.00+0.010*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'COM_FT_LPG',2020,0.00+0.080*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'COM_FT_LPG',2030,0.00+0.090*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'COM_FT_LPG',2050,0.00+0.150*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_NGA',2005,0.30+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'RES_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_COA',2005,0.30+0.010*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'RES_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_KER',2005,0.30+0.010*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_KER',2020,0.30+0.080*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'RES_FT_KER',2030,0.30+0.090*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_KER',2050,0.30+0.150*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_DST',2005,0.58+0.010*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_DST',2020,0.58+0.080*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'RES_FT_DST',2030,0.58+0.090*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_DST',2050,0.58+0.150*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_HFO',2005,0.39+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_HFO',2020,0.39+0.080*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'RES_FT_HFO',2030,0.39+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_HFO',2050,0.39+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_LPG',2005,0.00+0.010*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_LPG',2020,0.00+0.080*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'RES_FT_LPG',2030,0.00+0.090*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'RES_FT_LPG',2050,0.00+0.150*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'RES_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_NGA',2005,0.30+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_COA',2005,0.30+0.010*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_KER',2005,0.30+0.010*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_KER',2020,0.30+0.080*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_KER',2030,0.30+0.090*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_KER',2050,0.30+0.150*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_DST',2005,0.58+0.010*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_DST',2020,0.58+0.080*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_DST',2030,0.58+0.090*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_DST',2050,0.58+0.150*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_HFO',2005,0.39+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_HFO',2020,0.39+0.080*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_HFO',2030,0.39+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_HFO',2050,0.39+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_LPG',2005,0.00+0.010*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'AGR_FT_LPG',2020,0.00+0.080*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'AGR_FT_LPG',2030,0.00+0.090*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'AGR_FT_LPG',2050,0.00+0.150*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'AGR_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_GSL',2005,11.22+0.010*70.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_GSL',2020,11.22+0.080*70.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_GSL',2030,11.22+0.090*70.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_GSL',2050,11.22+0.150*70.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_DST',2005,9.17+0.010*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_DST',2020,9.17+0.080*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_DST',2030,9.17+0.090*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_DST',2050,9.17+0.150*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_DST_INT',2005,9.17+0.010*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_DST_INT',2020,9.17+0.080*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_DST_INT',2030,9.17+0.090*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_DST_INT',2050,9.17+0.150*73.25*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_JTK',2005,9.35+0.010*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_JTK',2020,9.35+0.080*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_JTK',2030,9.35+0.090*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_JTK',2050,9.35+0.150*72.22*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_HFO',2005,9.17+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_HFO',2020,9.17+0.080*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_HFO',2030,9.17+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_HFO',2050,9.17+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_HFO_INT',2005,9.17+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_HFO_INT',2020,9.17+0.080*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_HFO_INT',2030,9.17+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_HFO_INT',2050,9.17+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_LPG',2005,2.75+0.010*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_LPG',2020,2.75+0.080*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_LPG',2030,2.75+0.090*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_LPG',2050,2.75+0.150*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_NGA',2005,2.60+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_NGA',2020,2.60+0.080*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_NGA',2030,2.60+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_NGA',2050,2.60+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2010,'TRA_FT_LNG',2010,2.60+0.034*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_LNG',2020,2.60+0.080*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_LNG',2030,2.60+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_LNG',2050,2.60+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2010,'TRA_FT_LNG_INT',2010,2.60+0.034*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'TRA_FT_LNG_INT',2020,2.60+0.080*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'TRA_FT_LNG_INT',2030,2.60+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'TRA_FT_LNG_INT',2050,2.60+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'TRA_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_NGA',2005,0.30+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COA',2005,0.30+0.010*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COK',2005,0.30+0.010*113.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_COK',2020,0.30+0.080*113.67*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_COK',2030,0.30+0.090*113.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_COK',2050,0.30+0.150*113.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_COG',2005,0.30+0.010*46.85*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_COG',2020,0.30+0.080*46.85*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_COG',2005,0.30+0.090*46.85*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_COG',2050,0.30+0.150*46.85*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_BFG',2005,0.30+0.010*274.32*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_BFG',2020,0.30+0.080*274.32*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_BFG',2030,0.30+0.090*274.32*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_BFG',2050,0.30+0.150*274.32*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_e + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_LPG',2005,0.00+0.010*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_LPG',2020,0.00+0.080*61.71*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_LPG',2030,0.00+0.090*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_LPG',2050,0.00+0.150*61.71*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_HFO',2005,0.39+0.010*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_HFO',2020,0.39+0.080*74.92*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_HFO',2030,0.39+0.090*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_HFO',2050,0.39+0.150*74.92*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_OIL',2005,0.58+0.010*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_OIL',2020,0.58+0.080*74.54*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_OIL',2030,0.58+0.090*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_OIL',2050,0.58+0.150*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ELC',2005,0.28,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_ETH',2005,0.28+0.010*59.60*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_ETH',2020,0.28+0.080*59.60*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_ETH',2030,0.28+0.090*59.60*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_ETH',2050,0.28+0.150*59.60*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_NAP',2005,0.00+0.010*68.02*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_NAP',2020,0.00+0.080*68.02*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_NAP',2030,0.00+0.090*68.02*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_NAP',2050,0.00+0.150*68.02*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'IND_FT_PTC',2005,0.30+0.010*102.41*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'IND_FT_PTC',2020,0.30+0.080*102.41*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'IND_FT_PTC',2030,0.30+0.090*102.41*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'IND_FT_PTC',2050,0.30+0.150*102.41*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--
+--insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_NGA',2005,0.30+0.010*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_OIL',2005,0.58+0.010*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2005,'ELC_FT_COA',2005,0.30+0.010*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'ELC_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'ELC_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'ELC_FT_OIL',2020,0.58+0.080*74.54*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'ELC_FT_OIL',2030,0.58+0.090*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'ELC_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)','');
+--insert into "CostVariable" VALUES ('EUR',2030,'ELC_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'ELC_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'ELC_FT_OIL',2050,0.58+0.150*74.54*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'ELC_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--
+--insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_NGA',2015,0.30+0.057*53.06*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'HH2_FT_NGA',2020,0.30+0.080*53.06*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'HH2_FT_NGA',2030,0.30+0.090*53.06*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'HH2_FT_NGA',2050,0.30+0.150*53.06*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_COA',2015,0.30+0.057*94.67*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2020,'HH2_FT_COA',2020,0.30+0.080*94.67*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2030,'HH2_FT_COA',2030,0.30+0.090*94.67*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2050,'HH2_FT_COA',2050,0.30+0.150*94.67*1.055,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en + ETS
+--insert into "CostVariable" VALUES ('EUR',2015,'HH2_FT_ELC',2015,0.28,'(MEUR/PJ)','');  -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
+
+---- Current situation
 insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_NGA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
 insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_COA',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
 insert into "CostVariable" VALUES ('EUR',2005,'COM_FT_KER',2005,0.30,'(MEUR/PJ)',''); -- https://taxation-customs.ec.europa.eu/taxation-1/excise-duties/excise-duty-energy_en
@@ -15139,16 +15367,16 @@ insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_CHEM_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_MEC_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_RCP_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PAP_EXS',2005,0.9,'');
-insert into "CapacityFactor" VALUES ('EUR','IND_PP_OTH_EXS',2005,0.9,'');
+insert into "CapacityFactor" VALUES ('EUR','IND_PP_PRN_EXS',2005,0.9,'');
+insert into "CapacityFactor" VALUES ('EUR','IND_PP_SB_BIO_EXS',2005,0.75,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_HFO_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_NGA_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_COA_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_BIO_EXS',2005,0.9,'');
+insert into "CapacityFactor" VALUES ('EUR','IND_PP_EC_EXS',2005,0.8,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_OIL_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_NGA_EXS',2005,0.9,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_LPG_EXS',2005,0.9,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_HET_STM_EXS',2005,0.75,'');
---insert into "CapacityFactor" VALUES ('EUR','IND_SB_TECH_EXS',2005,0.75,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_MD_ELC_EXS',2005,0.70,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_IS_MD_OIL_EXS',2005,0.70,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_NF_MD_ELC_EXS',2005,0.70,'');
@@ -15229,7 +15457,7 @@ insert into "CapacityFactor" VALUES ('EUR','IND_NM_EC_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_KRF_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_SUL_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_MEC_NEW',2010,0.95,'');
-insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,0.95,'');
+--insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PUL_RCP_NEW',2010,0.95,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PAP_NEW',2010,0.95,'');
 
@@ -15245,6 +15473,7 @@ insert into "CapacityFactor" VALUES ('EUR','IND_CH_OTH_BIO_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_HFO_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_NGA_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_PH_BIO_NEW',2010,0.80,'');
+insert into "CapacityFactor" VALUES ('EUR','IND_PP_EC_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_NGA_NEW',2010,0.80,'');
 insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_OIL_NEW',2010,0.80,'');
 --insert into "CapacityFactor" VALUES ('EUR','IND_PP_DH_ELC_NEW',2010,0.80,'');
@@ -15339,6 +15568,18 @@ insert into "CapacityFactorTech" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW
 insert into "CapacityFactorTech" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',0.00,'');
 insert into "CapacityFactorTech" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',0.21,'');
 insert into "CapacityFactorTech" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_1_NEW',2030,0.25,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW',2030,0.27,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',2030,0.22,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',2030,0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_1_NEW',2050,0.25,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_SOL_CSP_1_NEW',2050,0.27,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_SOL_CSP_1_NEW',2050,0.22,'');
+--insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_SOL_CSP_1_NEW',2050,0.00,'');
 
 INSERT INTO "CapacityFactorTech" VALUES ('EUR','intermediate','day','ELC_SOL_CSP_2_NEW',0.3,'');
 INSERT INTO "CapacityFactorTech" VALUES ('EUR','intermediate','night','ELC_SOL_CSP_2_NEW',0,'');
@@ -15542,24 +15783,24 @@ insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_ON_C
 insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_ON_CEN_NEW',2050,0.399,'');
 insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_ON_CEN_NEW',2050,0.399,'');
 
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2010,0.45,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2010,0.50,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2010,0.41,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2010,0.39,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2010,0.57,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2010,0.42,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2030,0.47,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2030,0.52,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2030,0.43,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2030,0.41,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2030,0.60,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2030,0.44,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2050,0.57,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2050,0.62,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2050,0.57,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2050,0.62,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2050,0.72,'');
-insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2050,0.53,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2010,0.45*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2010,0.50*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2010,0.41*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2010,0.39*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2010,0.57*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2010,0.42*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2030,0.47*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2030,0.52*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2030,0.43*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2030,0.41*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2030,0.60*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2030,0.44*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','day','ELC_WIN_OFF_NEW',2050,0.57*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','intermediate','night','ELC_WIN_OFF_NEW',2050,0.62*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','day','ELC_WIN_OFF_NEW',2050,0.57*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','summer','night','ELC_WIN_OFF_NEW',2050,0.62*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','day','ELC_WIN_OFF_NEW',2050,0.72*0.9,'');
+insert into "CapacityFactorProcess" VALUES ('EUR','winter','night','ELC_WIN_OFF_NEW',2050,0.53*0.9,'');
 
 
 create TABLE "CapacityToActivity" (
@@ -15692,6 +15933,9 @@ insert into "CapacityToActivity" VALUES ('EUR','HH2_COA_CL_CCS_NEW',31.536,'');
 insert into "CapacityToActivity" VALUES ('EUR','HH2_COA_CM_CCS_NEW',31.536,'');
 insert into "CapacityToActivity" VALUES ('EUR','HH2_BIO_CM_CCS_NEW',31.536,'');
 
+insert into "CapacityToActivity" VALUES ('EUR','IND_PP_EC_EXS',31.536,'');
+insert into "CapacityToActivity" VALUES ('EUR','IND_PP_EC_NEW',31.536,'');
+
 create TABLE "CapacityCredit" (
 	"regions"	text,
 	"periods"	integer,
@@ -15714,7 +15958,6 @@ insert into "CapacityCredit" VALUES ('EUR',2010,'ELC_SOL_CSP_4_NEW',2010,0.85,''
 --insert into "CapacityCredit" VALUES ('EUR',2010,'ELC_SOL_CSP_4_NEW',2010,0.30,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
 insert into "CapacityCredit" VALUES ('EUR',2010,'ELC_WIN_ON_CEN_NEW',2010,0.29,''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-
 
 insert into "CapacityCredit" VALUES ('EUR',2010,'ELC_BIO_EXS',2010,0.70,'');
 insert into "CapacityCredit" VALUES ('EUR',2010,'ELC_HYD_GEN_EXS',2010,0.50,'');
@@ -15860,24 +16103,24 @@ INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_2WH_GSL_NEW',2010,0.049,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_2WH_DST_NEW',2010,0.049,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_3WH_GSL_NEW',2010,0.049,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_3WH_DST_NEW',2010,0.049,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2010,0.073,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_ELC_NEW',2010,0.05,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_GHE_NEW',2010,0.073,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2010,0.073,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2020,0.320,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_GPH_NEW',2010,0.05,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_CAR_FCE_NEW',2020,0.150,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_DST_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_LPG_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_NGA_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_LNG_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_ELC_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_DPH_NEW',2015,0.060,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_FCE_NEW',2025,0.060,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_BUS_FCE_NEW',2025,0.150,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_DST_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_LPG_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_NGA_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_LNG_NEW',2010,0.060,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_ELC_NEW',2025,0.240,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_DPH_NEW',2025,0.240,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_FCE_NEW',2025,0.060,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_ELC_NEW',2025,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_DPH_NEW',2025,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_HTR_FCE_NEW',2025,0.150,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_DST_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_LPG_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_NGA_NEW',2010,0.060,'');
@@ -15885,14 +16128,14 @@ INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_GSL_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_ELC_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_DHE_NEW',2015,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_DPH_NEW',2020,0.060,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_FCE_NEW',2025,0.320,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_LCV_FCE_NEW',2025,0.150,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_DST_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_LPG_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_NGA_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_LNG_NEW',2010,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_ELC_NEW',2020,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_DPH_NEW',2020,0.060,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_FCE_NEW',2025,0.060,'');
+INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_MTR_FCE_NEW',2025,0.150,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_2WH_GHE_NEW',2015,0.240,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_2WH_ELC_NEW',2020,0.240,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','TRA_ROA_3WH_ELC_NEW',2020,0.240,'');
@@ -16138,7 +16381,7 @@ INSERT INTO "DiscountRate" VALUES ('EUR','IND_NM_CRM_NEW',2010,0.094,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_KRF_NEW',2010,0.099,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_SUL_NEW',2010,0.099,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_MEC_NEW',2010,0.099,'');
-INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,0.099,'');
+--INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_SCH_NEW',2010,0.099,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PUL_RCP_NEW',2010,0.099,'');
 INSERT INTO "DiscountRate" VALUES ('EUR','IND_PP_PAP_NEW',2010,0.099,'');
 
@@ -17090,7 +17333,7 @@ insert into "Demand" VALUES ('EUR',2005,'TRA_NEU',117.94,'(PJ)',''); -- EUROfusi
 insert into "Demand" VALUES ('EUR',2005,'IND_CH',214.2,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'IND_IS',198.0,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'IND_FEA',2.7,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "Demand" VALUES ('EUR',2005,'IND_PP',101.7,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "Demand" VALUES ('EUR',2005,'IND_PP',101.7+41.71+22.03,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'IND_NF',15.5,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'IND_NM',509.4,'(Mt)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "Demand" VALUES ('EUR',2005,'IND_OTH',4249.8,'(PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
@@ -17429,33 +17672,33 @@ create TABLE "MinEmissions" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("emis_comm") REFERENCES "commodities"("comm_name")
 );
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'IND_CO2',(486.0+194.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'IND_CO2',(446.0+188.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'IND_CO2',(445.0+171.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'TRA_CO2',957.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'TRA_CO2',963.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'TRA_CO2',866.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'RES_CO2',501.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'RES_CO2',405.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'RES_CO2',399.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'COM_CO2',197.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'COM_CO2',177.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'COM_CO2',161.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'AGR_CO2',70.0E+03*0.95,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'AGR_CO2',59.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'AGR_CO2',71.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'ELC_CO2',1400.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'ELC_CO2',1228.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'ELC_CO2',888.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "MinEmissions" VALUES ('EUR',2010,'TOT_CO2',3.820E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2015,'TOT_CO2',3.481E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "MinEmissions" VALUES ('EUR',2020,'TOT_CO2',3.015E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'IND_CO2',(486.0+194.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'IND_CO2',(446.0+188.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'IND_CO2',(445.0+171.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'TRA_CO2',957.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'TRA_CO2',963.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'TRA_CO2',866.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'RES_CO2',501.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'RES_CO2',405.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'RES_CO2',399.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'COM_CO2',197.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'COM_CO2',177.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'COM_CO2',161.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'AGR_CO2',70.0E+03*0.95,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'AGR_CO2',59.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'AGR_CO2',71.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'ELC_CO2',1400.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'ELC_CO2',1228.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'ELC_CO2',888.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "MinEmissions" VALUES ('EUR',2010,'TOT_CO2',3.820E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2015,'TOT_CO2',3.481E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "MinEmissions" VALUES ('EUR',2020,'TOT_CO2',3.015E+06,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 
 create TABLE "EmissionLimit" (
 	"regions"	text,
@@ -17468,47 +17711,46 @@ create TABLE "EmissionLimit" (
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("emis_comm") REFERENCES "commodities"("comm_name")
 );
-INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'IND_CO2',(486.0+194.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'IND_CO2',(446.0+188.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'IND_CO2',(445.0+171.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'IND_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TRA_CO2',957.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TRA_CO2',963.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TRA_CO2',866.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TRA_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
---INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'RES_CO2',501.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'RES_CO2',405.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'RES_CO2',399.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'RES_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'IND_CO2',(486.0+194.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'IND_CO2',(446.0+188.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'IND_CO2',(445.0+171.0)*1E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'IND_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 --
---INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'COM_CO2',197.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'COM_CO2',177.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'COM_CO2',161.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
---INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'COM_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'AGR_CO2',70.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'AGR_CO2',59.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'AGR_CO2',71.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'AGR_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-
-INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'ELC_CO2',1400.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'ELC_CO2',1228.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'ELC_CO2',888.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
-INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'ELC_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TRA_CO2',957.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TRA_CO2',963.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TRA_CO2',866.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TRA_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'RES_CO2',501.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'RES_CO2',405.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'RES_CO2',399.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'RES_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'COM_CO2',197.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'COM_CO2',177.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'COM_CO2',161.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'COM_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'AGR_CO2',70.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'AGR_CO2',59.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'AGR_CO2',71.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'AGR_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'ELC_CO2',1400.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'ELC_CO2',1228.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'ELC_CO2',888.0E+03,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'ELC_CO2',1e9,'',''); -- https://www.iea.org/regions/europe CO2 emissions, OECD Europe 1990-2020
 
 ------ Decarbonization scenario
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',1990,'TOT_CO2_EQ_GWP_100',5.604e+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2010,'TOT_CO2_EQ_GWP_100',5.09E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2015,'TOT_CO2_EQ_GWP_100',4.70E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
 ------INSERT INTO "EmissionLimit" VALUES ('EUR',2020,'TOT_CO2_EQ_GWP_100',4.15E+06,'',''); -- https://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)
---INSERT INTO "EmissionLimit" VALUES ('EUR',2025,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'','');
-INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.550),'',''); -- Fit for 55 target (- 55% wrt 1990 levels)
---INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'',''); -- Educated guess
---INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.900),'',''); -- Educated guess
---INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.925),'',''); -- Educated guess
-INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-1),'',''); -- Net-zero emissions
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2030,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.550),'',''); -- Fit for 55 target (- 55% wrt 1990 levels)
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2035,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.700),'',''); -- Educated guess
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2040,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.900),'',''); -- Educated guess
+----INSERT INTO "EmissionLimit" VALUES ('EUR',2045,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-0.925),'',''); -- Educated guess
+--INSERT INTO "EmissionLimit" VALUES ('EUR',2050,'TOT_CO2_EQ_GWP_100',4.20E+06*(1-1),'',''); -- Net-zero emissions
 
 create TABLE "EmissionActivity" (
 	"regions"	text,
@@ -18507,10 +18749,10 @@ insert into "MaxCapacity" VALUES ('EUR',2010,'IND_NM_LIM_EXS',0.95*34.940,'','')
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_NM_GLS_EXS',0.95*34.300,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_NM_CRM_EXS',0.95*192.960,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_NM_EC_EXS',0.95*33.830,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PUL_CHEM_EXS',0.95*31.880*0.9,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PUL_CHEM_EXS',0.95*31.880,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS',0.95*14.490,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PUL_RCP_EXS',0.95*34.780,'','');
-insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PAP_EXS',0.95*113.070*0.615,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PAP_EXS',0.95*113.070,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_IS_BOF_EXS',0.95*120.660,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_IS_DRI_EXS',0.95*0.560,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_IS_SCR_EXS',0.95*76.800,'','');
@@ -18529,10 +18771,13 @@ insert into "MaxCapacity" VALUES ('EUR',2040,'IND_NM_LIM_EXS',0.000*34.940,'',''
 insert into "MaxCapacity" VALUES ('EUR',2040,'IND_NM_GLS_EXS',0.000*34.300,'','');
 insert into "MaxCapacity" VALUES ('EUR',2040,'IND_NM_CRM_EXS',0.000*192.960,'','');
 insert into "MaxCapacity" VALUES ('EUR',2040,'IND_NM_EC_EXS',0.000*33.830,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'IND_PP_PUL_CHEM_EXS',0.000*31.880*0.9,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'IND_PP_PUL_MEC_EXS',0.000*14.490*0.9,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'IND_PP_PUL_RCP_EXS',0.000*34.780*0.9,'','');
-insert into "MaxCapacity" VALUES ('EUR',2040,'IND_PP_PAP_EXS',0.000*113.070*0.9*0.615,'','');
+insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PUL_CHEM_EXS',0.000*31.880,'','');
+insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PUL_MEC_EXS',0.000*14.490,'','');
+insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PUL_RCP_EXS',0.000*34.780,'','');
+insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PAP_EXS',0.000*113.070,'','');
+
+INSERT INTO "MaxCapacity" VALUES ('EUR',2010,'IND_PP_SB_BIO_EXS',0.95*498.596,'','');
+INSERT INTO "MaxCapacity" VALUES ('EUR',2035,'IND_PP_SB_BIO_EXS',0.0*498.596,'','');
 
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PH_HFO_EXS',0.95*16.160,'','');
 insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_PH_NGA_EXS',0.95*30.630,'','');
@@ -18545,6 +18790,8 @@ insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PH_HFO_EXS',0.000*16.160,''
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PH_NGA_EXS',0.000*30.630,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PH_COA_EXS',0.000*1.720,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_PH_BIO_EXS',0.000*2.370,'','');
+insert into "MaxCapacity" VALUES ('EUR',2010,'IND_PP_EC_EXS',0.95*27.536,'','');
+insert into "MaxCapacity" VALUES ('EUR',2020,'IND_PP_EC_EXS',0.000*27.536,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_DH_OIL_EXS',0.000*19.600,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_DH_NGA_EXS',0.000*41.760,'','');
 insert into "MaxCapacity" VALUES ('EUR',2035,'IND_PP_DH_LPG_EXS',0.000*7.770,'','');
@@ -19582,10 +19829,10 @@ INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IND_FT_ELC',4145.129,'(PJ)',''); -
 INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IND_FT_ELC',4067.867,'(PJ)',''); -- IEA
 INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IND_FT_ELC',1E6,'(PJ)','');
 
-INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IND_FT_FS_COA',65.576,'(PJ)',''); -- IEA
-INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IND_FT_FS_COA',77.924,'(PJ)',''); -- IEA
-INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IND_FT_FS_COA',71.929,'(PJ)',''); -- IEA
-INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IND_FT_FS_COA',1E6,'(PJ)','');
+--INSERT INTO "MaxActivity" VALUES ('EUR',2010,'IND_FT_FS_COA',65.576,'(PJ)',''); -- IEA
+--INSERT INTO "MaxActivity" VALUES ('EUR',2015,'IND_FT_FS_COA',77.924,'(PJ)',''); -- IEA
+--INSERT INTO "MaxActivity" VALUES ('EUR',2020,'IND_FT_FS_COA',71.929,'(PJ)',''); -- IEA
+--INSERT INTO "MaxActivity" VALUES ('EUR',2025,'IND_FT_FS_COA',1E6,'(PJ)','');
 
 --INSERT INTO "MaxActivity" VALUES ('EUR',2010,'AGR_FT_COA',54.780,'(PJ)',''); -- IEA
 --INSERT INTO "MaxActivity" VALUES ('EUR',2015,'AGR_FT_COA',42.253,'(PJ)',''); -- IEA
@@ -20177,15 +20424,6 @@ INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_MOP_GSL_EXS',0.0*2.875,'',
 INSERT INTO "MinActivity" VALUES ('EUR',2020,'TRA_ROA_3WH_GSL_EXS',0.0*8.600,'','');
 
 ---- Industry sector
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_FT_HFO',742.728,'(PJ)','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_FT_OIL',684.779,'(PJ)','');
---
---INSERT INTO "MinActivity" VALUES ('EUR',2030,'IND_FT_HFO',0.0,'(PJ)','');
---INSERT INTO "MinActivity" VALUES ('EUR',2030,'IND_FT_OIL',0.0,'(PJ)','');
---
---INSERT INTO "MinActivity" VALUES ('EUR',2100,'IND_FT_HFO',11.000,'(PJ)','');
---INSERT INTO "MinActivity" VALUES ('EUR',2100,'IND_FT_OIL',11.000,'(PJ)','');
-
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_OLF_EXS',0.5*42.910,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_BTX_EXS',0.5*17.425,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_AMM_EXS',0.5*17.430,'','');
@@ -20214,22 +20452,22 @@ INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CH_OTH_ETH_EXS',0.0*35.370,'',
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CH_OTH_NAP_EXS',0.0*1.370,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CH_OTH_ELC_EXS',0.0*48.750,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_CH_OTH_LPG_EXS',0.0*12.960,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_NGA_EXS',0.5*655.410,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_LPG_EXS',0.5*315.930,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_LNG_EXS',0.5*0.580,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_COA_EXS',0.5*1.530,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_HFO_EXS',0.5*392.080,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_DST_EXS',0.5*168.690,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_ETH_EXS',0.5*135.490,'','');
---insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_NAP_EXS',0.5*1802.330,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_NGA_EXS',0.00*655.410,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_LPG_EXS',0.00*315.930,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_LNG_EXS',0.00*0.580,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_COA_EXS',0.00*1.530,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_HFO_EXS',0.00*392.080,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_DST_EXS',0.00*168.690,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_ETH_EXS',0.00*135.490,'','');
---insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_NAP_EXS',0.00*1802.330,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_NGA_EXS',0.5*655.410,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_LPG_EXS',0.5*315.930,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_LNG_EXS',0.5*0.580,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_COA_EXS',0.5*1.530,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_HFO_EXS',0.5*392.080,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_DST_EXS',0.5*168.690,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_ETH_EXS',0.5*135.490,'','');
+insert into "MinActivity" VALUES ('EUR',2010,'IND_CH_FS_NAP_EXS',0.5*1802.330,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_NGA_EXS',0.00*655.410,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_LPG_EXS',0.00*315.930,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_LNG_EXS',0.00*0.580,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_COA_EXS',0.00*1.530,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_HFO_EXS',0.00*392.080,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_DST_EXS',0.00*168.690,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_ETH_EXS',0.00*135.490,'','');
+insert into "MinActivity" VALUES ('EUR',2040,'IND_CH_FS_NAP_EXS',0.00*1802.330,'','');
 
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_ALU_EXS',0.5*4.950,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_COP_EXS',0.5*1.730,'','');
@@ -20266,19 +20504,23 @@ INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PUL_CHEM_EXS',0.5*31.880*0.
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PUL_MEC_EXS',0.5*14.490*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PUL_RCP_EXS',0.5*34.780*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PAP_EXS',0.5*113.070*0.9,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_PP_PUL_CHEM_EXS',0.0*31.880*0.9,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_PP_PUL_MEC_EXS',0.0*14.490*0.9,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_PP_PUL_RCP_EXS',0.0*34.780*0.9,'','');
-INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_PP_PAP_EXS',0.0*113.070*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PUL_CHEM_EXS',0.0*31.880*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PUL_MEC_EXS',0.0*14.490*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PUL_RCP_EXS',0.0*34.780*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PAP_EXS',0.0*113.070*0.9,'','');
 
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_SB_BIO_EXS',0.5*498.596*0.75,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PH_HFO_EXS',0.5*16.160*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PH_NGA_EXS',0.5*30.630*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PH_COA_EXS',0.5*1.720*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_PH_BIO_EXS',0.5*2.370*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_SB_BIO_EXS',0.0*498.596*0.75,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PH_HFO_EXS',0.0*16.160*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PH_NGA_EXS',0.0*30.630*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PH_COA_EXS',0.0*1.720*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_PH_BIO_EXS',0.0*2.370*0.9,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_EC_EXS',0.5*27.536*0.8,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2020,'IND_PP_EC_EXS',0.0*27.536*0.8,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_DH_LPG_EXS',0.5*7.770*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_DH_OIL_EXS',0.5*19.600*0.9,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_DH_NGA_EXS',0.5*41.760*0.9,'','');
@@ -20338,24 +20580,24 @@ INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_OTH_OTH_GEO_EXS',0.0*1.810,'',
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_OTH_OTH_BIO_EXS',0.0*39.880,'','');
 INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_OTH_OTH_LTH_EXS',0.0*193.330,'','');
 
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_IS_MD_ELC_EXS',0.5*347.234*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_IS_MD_OIL_EXS',0.5*10.305*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_MD_ELC_EXS',0.5*60.044*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_MD_OIL_EXS',0.5*3.002*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_MD_ELC_EXS',0.5*414.196*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_MD_OIL_EXS',0.5*8.229*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NM_MD_ELC_EXS',0.5*232.496*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NM_MD_OIL_EXS',0.5*27.348*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_MD_ELC_EXS',0.5*468.879*0.7,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_IS_MD_ELC_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_IS_MD_OIL_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NF_MD_ELC_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NF_MD_OIL_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_CH_MD_ELC_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_CH_MD_OIL_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NM_MD_ELC_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NM_MD_OIL_EXS',0,'','');
---INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_MD_ELC_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_IS_MD_ELC_EXS',0.5*347.234*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_IS_MD_OIL_EXS',0.5*10.305*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_MD_ELC_EXS',0.5*60.044*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NF_MD_OIL_EXS',0.5*3.002*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_MD_ELC_EXS',0.5*414.196*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_CH_MD_OIL_EXS',0.5*8.229*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NM_MD_ELC_EXS',0.5*232.496*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_NM_MD_OIL_EXS',0.5*27.348*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_PP_MD_ELC_EXS',0.5*468.879*0.7,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_IS_MD_ELC_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_IS_MD_OIL_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NF_MD_ELC_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NF_MD_OIL_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_CH_MD_ELC_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_CH_MD_OIL_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NM_MD_ELC_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_NM_MD_OIL_EXS',0,'','');
+INSERT INTO "MinActivity" VALUES ('EUR',2035,'IND_PP_MD_ELC_EXS',0,'','');
 
 --insert into "MinActivity" VALUES ('EUR',2010,'UPS_BIO_REF_GEN1_ETHAMIDE_EXS',1925.89,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 --insert into "MinActivity" VALUES ('EUR',2010,'UPS_BIO_REF_GEN1_ETHSUG_EXS',994.92,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
@@ -20365,10 +20607,10 @@ INSERT INTO "MinActivity" VALUES ('EUR',2040,'IND_OTH_OTH_LTH_EXS',0.0*193.330,'
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'UPS_BIO_REF_GEN1_TRANSESTER_EXS',9024.300,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 --INSERT INTO "MinActivity" VALUES ('EUR',2015,'UPS_BIO_REF_GEN1_TRANSESTER_EXS',0.0,'',''); -- W. Nijs and P. Ruiz, 01_JRC-EU-TIMES Full model, 2019
 
-INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_FT_FS_COA',65.576,'(PJ)',''); -- IEA
-INSERT INTO "MinActivity" VALUES ('EUR',2015,'IND_FT_FS_COA',77.924,'(PJ)',''); -- IEA
-INSERT INTO "MinActivity" VALUES ('EUR',2020,'IND_FT_FS_COA',71.929,'(PJ)',''); -- IEA
-INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_FT_FS_COA',0,'(PJ)','');
+--INSERT INTO "MinActivity" VALUES ('EUR',2010,'IND_FT_FS_COA',65.576,'(PJ)',''); -- IEA
+--INSERT INTO "MinActivity" VALUES ('EUR',2015,'IND_FT_FS_COA',77.924,'(PJ)',''); -- IEA
+--INSERT INTO "MinActivity" VALUES ('EUR',2020,'IND_FT_FS_COA',71.929,'(PJ)',''); -- IEA
+--INSERT INTO "MinActivity" VALUES ('EUR',2025,'IND_FT_FS_COA',0,'(PJ)','');
 
 --INSERT INTO "MinActivity" VALUES ('EUR',2010,'AGR_FT_COA',54.780,'(PJ)',''); -- IEA
 --INSERT INTO "MinActivity" VALUES ('EUR',2015,'AGR_FT_COA',42.253,'(PJ)',''); -- IEA
@@ -20639,13 +20881,13 @@ INSERT INTO "MaxActivityGroup" VALUES (2010,'IND_FT_OIL_GRP',1572.325,'(PJ)'); -
 INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_OIL_GRP',1233.502,'(PJ)'); -- IEA
 INSERT INTO "MaxActivityGroup" VALUES (2020,'IND_FT_OIL_GRP',1197.332,'(PJ)'); -- IEA
 
-INSERT INTO "MaxActivityGroup" VALUES (2010,'IND_FT_FS_GAS_GRP',631.089,'(PJ)'); -- IEA
-INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_FS_GAS_GRP',647.288,'(PJ)'); -- IEA
-INSERT INTO "MaxActivityGroup" VALUES (2020,'IND_FT_FS_GAS_GRP',709.589,'(PJ)'); -- IEA
-
 INSERT INTO "MaxActivityGroup" VALUES (2010,'IND_FT_FS_OIL_GRP',3980.023,'(PJ)'); -- IEA
 INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_FS_OIL_GRP',3570.080,'(PJ)'); -- IEA
 INSERT INTO "MaxActivityGroup" VALUES (2020,'IND_FT_FS_OIL_GRP',3563.925,'(PJ)'); -- IEA
+
+INSERT INTO "MaxActivityGroup" VALUES (2010,'IND_FT_FS_GAS_GRP',631.089,'(PJ)'); -- IEA
+INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_FS_GAS_GRP',647.288,'(PJ)'); -- IEA
+INSERT INTO "MaxActivityGroup" VALUES (2020,'IND_FT_FS_GAS_GRP',709.589,'(PJ)'); -- IEA
 
 INSERT INTO "MaxActivityGroup" VALUES (2010,'IND_FT_BIO_GRP',958.185,'(PJ)'); -- IEA
 INSERT INTO "MaxActivityGroup" VALUES (2015,'IND_FT_BIO_GRP',1056.898,'(PJ)'); -- IEA
@@ -20909,29 +21151,33 @@ INSERT INTO "MinActivityGroup" VALUES (2010,'ELC_MAR_GRP',1.72,'(PJ)');
 INSERT INTO "MinActivityGroup" VALUES (2015,'ELC_MAR_GRP',1.76,'(PJ)');
 INSERT INTO "MinActivityGroup" VALUES (2020,'ELC_MAR_GRP',1.85,'(PJ)');
 
---INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_COA_GRP',1294.193,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_COA_GRP',1163.636,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_COA_GRP',1002.129,'(PJ)'); -- IEA
---
---INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_NGA_GRP',4136.483,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_NGA_GRP',4041.788,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_NGA_GRP',4102.838,'(PJ)'); -- IEA
---
---INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_OIL_GRP',1572.325,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_OIL_GRP',1233.502,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_OIL_GRP',1197.332,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_COA_GRP',1294.193,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_COA_GRP',1163.636,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_COA_GRP',1002.129,'(PJ)'); -- IEA
+
+INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_NGA_GRP',4136.483,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_NGA_GRP',4041.788,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_NGA_GRP',4102.838,'(PJ)'); -- IEA
+
+INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_OIL_GRP',1572.325,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_OIL_GRP',1233.502,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_OIL_GRP',1197.332,'(PJ)'); -- IEA
 
 INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_FS_GAS_GRP',631.089,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_FS_GAS_GRP',647.288,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_FS_GAS_GRP',709.589,'(PJ)'); -- IEA
 
-INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_FS_OIL_GRP',3980.023,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_FS_OIL_GRP',3570.080,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_FS_OIL_GRP',3563.925,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_FS_OIL_GRP',3980.023,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_FS_OIL_GRP',3570.080,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_FS_OIL_GRP',3563.925,'(PJ)'); -- IEA
 
-INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_BIO_GRP',958.185,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_BIO_GRP',1056.898,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_BIO_GRP',1251.434,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_BIO_GRP',958.185,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_BIO_GRP',1056.898,'(PJ)'); -- IEA
+--INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_BIO_GRP',1251.434,'(PJ)'); -- IEA
+
+INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_HET_GRP',721.635,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_HET_GRP',688.488,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_HET_GRP',683.886,'(PJ)'); -- IEA
 
 INSERT INTO "MinActivityGroup" VALUES (2010,'RES_FT_BIO_GRP',1887.622,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2015,'RES_FT_BIO_GRP',1728.305,'(PJ)'); -- IEA
@@ -20945,13 +21191,9 @@ INSERT INTO "MinActivityGroup" VALUES (2020,'COM_FT_BIO_GRP',189.007,'(PJ)'); --
 --INSERT INTO "MinActivityGroup" VALUES (2015,'TRA_FT_NGA_GRP',154.325,'(PJ)'); -- IEA
 --INSERT INTO "MinActivityGroup" VALUES (2020,'TRA_FT_NGA_GRP',158.081,'(PJ)'); -- IEA
 --
---INSERT INTO "MinActivityGroup" VALUES (2010,'TRA_FT_OIL_BIO_GRP',(13134.803+550.219)*0.95,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2015,'TRA_FT_OIL_BIO_GRP',(13174.980+580.357)*0.95,'(PJ)'); -- IEA
---INSERT INTO "MinActivityGroup" VALUES (2020,'TRA_FT_OIL_BIO_GRP',(11828.738+732.282)*0.95,'(PJ)'); -- IEA
-
-INSERT INTO "MinActivityGroup" VALUES (2010,'IND_FT_HET_GRP',721.635,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2015,'IND_FT_HET_GRP',688.488,'(PJ)'); -- IEA
-INSERT INTO "MinActivityGroup" VALUES (2020,'IND_FT_HET_GRP',683.886,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2010,'TRA_FT_OIL_BIO_GRP',(13134.803+550.219)*0.95,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2015,'TRA_FT_OIL_BIO_GRP',(13174.980+580.357)*0.95,'(PJ)'); -- IEA
+INSERT INTO "MinActivityGroup" VALUES (2020,'TRA_FT_OIL_BIO_GRP',(11828.738+732.282)*0.95,'(PJ)'); -- IEA
 
 INSERT INTO "MinActivityGroup" VALUES (2010,'FT_NAP_GRP',1656.569,'(PJ)'); -- IEA
 INSERT INTO "MinActivityGroup" VALUES (2015,'FT_NAP_GRP',1417.113,'(PJ)'); -- IEA
@@ -21138,7 +21380,15 @@ insert into "MaxCapacityGroup" VALUES (2040,'ELC_NUC_FIS_GRP',97.57,'(GW)');
 insert into "MaxCapacityGroup" VALUES (2045,'ELC_NUC_FIS_GRP',93.46,'(GW)');
 insert into "MaxCapacityGroup" VALUES (2050,'ELC_NUC_FIS_GRP',89.53,'(GW)');
 
------- Fission increase
+------ Fission increase (2 %/year / 10 %/5 years)
+--insert into "MaxCapacityGroup" VALUES (2025,'ELC_NUC_FIS_GRP',110.67,'(GW)');
+--insert into "MaxCapacityGroup" VALUES (2030,'ELC_NUC_FIS_GRP',122.10,'(GW)'); -- *1.10
+--insert into "MaxCapacityGroup" VALUES (2035,'ELC_NUC_FIS_GRP',134.30,'(GW)'); -- *1.21
+--insert into "MaxCapacityGroup" VALUES (2040,'ELC_NUC_FIS_GRP',147.73,'(GW)'); -- *1.33
+--insert into "MaxCapacityGroup" VALUES (2045,'ELC_NUC_FIS_GRP',162.50,'(GW)'); -- *1.46
+--insert into "MaxCapacityGroup" VALUES (2050,'ELC_NUC_FIS_GRP',178.75,'(GW)'); -- *1.61
+
+------ Fission increase X3
 --insert into "MaxCapacityGroup" VALUES (2025,'ELC_NUC_FIS_GRP',110.99,'(GW)');
 --insert into "MaxCapacityGroup" VALUES (2030,'ELC_NUC_FIS_GRP',156.56,'(GW)');
 --insert into "MaxCapacityGroup" VALUES (2035,'ELC_NUC_FIS_GRP',202.12,'(GW)');
@@ -21159,6 +21409,13 @@ INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0.20,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',1.24,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',7.72,'(GW)');
 INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',45.52,'(GW)');
+
+---- Biomass w/ CCS (Saturation capacity 500 GW)
+--INSERT INTO "MaxCapacityGroup" VALUES (2030,'ELC_BIO_CCS_GRP',0,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2035,'ELC_BIO_CCS_GRP',0,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2040,'ELC_BIO_CCS_GRP',0,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2045,'ELC_BIO_CCS_GRP',0,'(GW)');
+--INSERT INTO "MaxCapacityGroup" VALUES (2050,'ELC_BIO_CCS_GRP',0,'(GW)');
 
 --INSERT INTO "MaxCapacityGroup" VALUES (2015,'HH2_PRD_GRP',0.10,'(GW)');
 --INSERT INTO "MaxCapacityGroup" VALUES (2020,'HH2_PRD_GRP',0.60,'(GW)');

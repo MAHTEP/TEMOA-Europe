@@ -6,8 +6,8 @@ database_name = "Temoa_Europe_solved.sqlite"
 sector_name = "_3_Electricity"
 years = np.array([2010,	2015, 2020, 2025, 2030,	2035, 2040, 2045, 2050])
 
-# Following 4 lines should be used to set the export results.
-# Set the flags to 1 to split by technologies/commodities, to 0 to not split.
+# The following 5 lines should be used to set the export results.
+# Set the flags to 1 to split by technologies/commodities, to 0 not to split.
 # Set to_excel_flag to 1 to export data into a Excel file
 # The arrays are used to select the technologies/commodities that should be considered.
 
@@ -96,7 +96,7 @@ technologies=[
 ]
 commodities_in = [
 ]
-commodities_out = ['ELC_CEN','ELC_DIS','ELC_HYD_STG_CEN','ELC_VRES_STG_CEN','ELC_VRES_STG_DIS','IMP_ELC_CEN']
+commodities_out = ['ELC_CEN','ELC_DIS','ELC_HYD_STG_CEN','ELC_VRES_STG_CEN','ELC_VRES_STG_DIS','IMP_ELC']
 
 # Input
 
