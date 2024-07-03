@@ -4,7 +4,7 @@
 
 **TEMOA-Europe** is an energy system model instance based on the **open-source energy system modeling framework** [**TEMOA**](https://temoacloud.com/) for integrated supply and demand optimization. TEMOA-Europe is a case study based on the OECD Europe Reference Energy System and is the first replicable and transparent tool to allow analyses concerning net-zero emissions trajectories.
 
-The developing team includes Prof. Laura Savoldi[^1], Prof. Valeria Di Cosmo[^2], Daniele Lerede[^2], Matteo Nicoli[^3], Gianvito Colucci[^3] and Dario Cottafava[^2]. For any inquiries, please, contact us at:
+The developing team includes Prof. Laura Savoldi[^1], Prof. Valeria Di Cosmo[^2], Daniele Lerede[^2], Matteo Nicoli[^3], Gianvito Colucci[^3] and Dario Cottafava[^4]. For any inquiries, please, contact us at:
 * laura.savoldi@polito.it
 * valeria.dicosmo@unito.it
 * daniele.lerede@unito.it
@@ -15,11 +15,12 @@ The developing team includes Prof. Laura Savoldi[^1], Prof. Valeria Di Cosmo[^2]
 [^1]: Full Professor @ Politecnico di Torino, Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 [^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group](http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
 [^3]: PhD student @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
+[^4]: Postdoctoral researcher @ Università degli Studi di Torino.
 
-Davide Segantini[^4] and Daniele Lerede developed the Endogenous Technology Learning (ETL) extension of the model (branch 'etl').
+Davide Segantini[^5] and Daniele Lerede developed the Endogenous Technology Learning (ETL) extension of the model (branch 'etl').
 * davide.segantini@studenti.polito.it
 * daniele.lerede@unito.it
-[^4]: MSc student @ Politecnico di Torino.
+[^5]: MSc student @ Politecnico di Torino.
 
 The `temoa_energysystem/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to 2050 and results postprocessing files:
 
