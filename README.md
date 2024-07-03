@@ -16,11 +16,10 @@ The developing team includes Prof. Laura Savoldi[^1], Prof. Valeria Di Cosmo[^2]
 [^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
 [^3]: PhD student @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
-Davide Segantini[^1] and Daniele Lerede[^2] developed the Endogenous Technology Learning (ETL) extension of the model (branch 'etl').
+Davide Segantini[^4] and Daniele Lerede developed the Endogenous Technology Learning (ETL) extension of the model (branch 'etl').
 * davide.segantini@studenti.polito.it
 * daniele.lerede@unito.it
-[^1]: MSc student @ Politecnico di Torino.
-[^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
+[^4]: MSc student @ Politecnico di Torino.
 
 The `temoa_energysystem/` directory contains the database of the techno-economic description for the European energy system over a time scale starting from 2005 and up to 2050 and results postprocessing files:
 
