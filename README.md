@@ -13,7 +13,7 @@ The developing team includes Prof. Laura Savoldi[^1], Prof. Valeria Di Cosmo[^2]
 * dario.cottafava@unito.it
 
 [^1]: Full Professor @ Politecnico di Torino, Head of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
-[^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group] (http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
+[^2]: Postdoctoral researcher @ Università degli Studi di Torino, member of the [**MAHTEP** research group](http://www.mahtep.polito.it/). Lead developer of TEMOA-Europe.
 [^3]: PhD student @ Politecnico di Torino, members of the [**MAHTEP** research group](http://www.mahtep.polito.it/).
 
 Davide Segantini[^4] and Daniele Lerede developed the Endogenous Technology Learning (ETL) extension of the model (branch 'etl').
