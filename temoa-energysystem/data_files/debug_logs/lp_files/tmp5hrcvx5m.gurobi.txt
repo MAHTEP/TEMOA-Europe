@@ -1,5 +1,0 @@
-section:problem
-name: x504318
-sense:minimize
-lower_bound: -inf
-number_of_objectives: 1

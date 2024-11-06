@@ -12676,8 +12676,7 @@ insert into "CostInvest" VALUES ('EUR','AGR_LTH_SOL_NEW',2010,100.0,'(MEUR/PJ)',
 
 -- Residential sector
 insert into "CostInvest" VALUES ('EUR','RES_RF_STD_NEW',2010,374.65,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "CostInvest" VALUES ('EUR','RES_RF_IMP_NEW',2010,366.24,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
-insert into "CostInvest" VALUES ('EUR','RES_RF_IMP_NEW',2020,325.55,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
+insert into "CostInvest" VALUES ('EUR','RES_RF_IMP_NEW',2010,406.94,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','RES_RF_GDC_NEW',2010,558.87,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','RES_RF_GDC_NEW',2020,496.77,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023
 insert into "CostInvest" VALUES ('EUR','RES_WH_RES_STD_NEW',2010,0.70,'(MEUR/PJ)',''); -- EUROfusion WPSES, EUROfusion TIMES Model, 2023

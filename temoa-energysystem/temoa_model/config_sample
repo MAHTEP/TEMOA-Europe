@@ -40,7 +40,7 @@
 
 # Save the log file output (Optional)
 # This is the same output provided to the shell
---saveTEXTFILE
+#--saveTEXTFILE
 
 # Solver-related arguments (Optional)
 #--neos                            # Optional, specify if you want to use NEOS server to solve
