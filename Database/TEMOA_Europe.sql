@@ -1,5 +1,4 @@
 BEGIN TRANSACTION;
-
 CREATE TABLE "time_season" (
 	"t_season"	text,
 	PRIMARY KEY("t_season")
@@ -21321,6 +21320,51 @@ INSERT INTO "MinCapacityGroup" VALUES ('EUR',2020,'ELC_MAR_GRP',1.29,'(GW)');
 INSERT INTO "MinCapacityGroup" VALUES ('EUR',2010,'ELC_NUC_FIS_GRP',130.96,'(GW)');
 INSERT INTO "MinCapacityGroup" VALUES ('EUR',2015,'ELC_NUC_FIS_GRP',120.41,'(GW)');
 INSERT INTO "MinCapacityGroup" VALUES ('EUR',2020,'ELC_NUC_FIS_GRP',112.94,'(GW)');
+CREATE TABLE "MyopicBaseyear" (
+	"year"	real,
+	"notes"	text
+);
+CREATE TABLE "GrowthRateSeed" (
+	"regions"	text,
+	"tech"	text,
+	"growthrate_seed"	real,
+	"growthrate_seed_units"	text,
+	"growthrate_seed_notes"	text,
+	PRIMARY KEY("regions","tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
+CREATE TABLE "GrowthRateMax" (
+	"regions"	text,
+	"tech"	text,
+	"growthrate_max"	real,
+	"growthrate_max_notes"	text,
+	PRIMARY KEY("regions","tech"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+);
+
+CREATE TABLE "MaxMaterialReserve" (
+	"regions"	text,
+	"tech"	text,
+	"maxres"	real,
+	"maxres_units"	text,
+	"maxres_notes"	text,
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	PRIMARY KEY("regions","tech")
+);
+CREATE TABLE "MaterialIntensity" (
+	"regions"	text,
+	"comm_name" text,
+	"tech"	text,
+	"vintage"	integer,
+	"mat_int"	real,
+	"mat_int_units"	text,
+	"mat_int_notes"	text,
+	PRIMARY KEY("regions","tech","comm_name","vintage"),
+	FOREIGN KEY("comm_name") REFERENCES "commodities"("comm_name"),
+	FOREIGN KEY("tech") REFERENCES "technologies"("tech"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods")
+);
 
 CREATE TABLE "Output_V_Capacity" (
 	"regions"	text,
@@ -21451,26 +21495,16 @@ CREATE TABLE "Output_CapacityByPeriodAndTech" (
 	FOREIGN KEY("t_periods") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
-CREATE TABLE "MyopicBaseyear" (
-	"year"	real,
-	"notes"	text
-);
-
-CREATE TABLE "GrowthRateSeed" (
+CREATE TABLE "Output_VMat_Cons" (
 	"regions"	text,
+	"scenario"	text,
+	"sector"	text,
+	"material_comm"	text,
 	"tech"	text,
-	"growthrate_seed"	real,
-	"growthrate_seed_units"	text,
-	"growthrate_seed_notes"	text,
-	PRIMARY KEY("regions","tech"),
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
-);
-
-CREATE TABLE "GrowthRateMax" (
-	"regions"	text,
-	"tech"	text,
-	"growthrate_max"	real,
-	"growthrate_max_notes"	text,
-	PRIMARY KEY("regions","tech"),
-	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
+	"vintage"	integer,
+	"vmat_cons"	real,
+	PRIMARY KEY("regions","scenario","material_comm","tech","vintage"),
+	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
+	FOREIGN KEY("sector") REFERENCES "sector_labels"("sector"),
+	FOREIGN KEY("material_comm") REFERENCES "commodities"("comm_name")
 );
