@@ -7,7 +7,7 @@ sql_modules = ['TEMOA_Europe.sql']
 Deleting = True
 Reading = True
 Preprocessing = True
-Simplifying = False
+Simplifying = True
 
 # Check if the SQLite database already exists and delete it
 
