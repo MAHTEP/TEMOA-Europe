@@ -909,7 +909,6 @@ INSERT INTO "technologies" VALUES ('TRA_RAIL_FRG_DST_N','p','TRA','Transport - F
 INSERT INTO "technologies" VALUES ('TRA_RAIL_FRG_ELC_N','p','TRA','Transport - Freight Trains - Electric - New','');
 INSERT INTO "technologies" VALUES ('TRA_RAIL_FRG_GH2_N','p','TRA','Transport - Freight Trains - Hydrogen mainline - New','');
 INSERT INTO "technologies" VALUES ('TRA_NAV_DOM_DST_N','p','TRA','Transport - Domestic Navigation - Diesel - New','');
---INSERT INTO "technologies" VALUES ('TRA_NAV_DOM_GSL_N','p','TRA','Transport - Domestic Navigation - Diesel - New','');
 INSERT INTO "technologies" VALUES ('TRA_NAV_DOM_HFO_N','p','TRA','Transport - Domestic Navigation - Heavy fuel oil - New','');
 INSERT INTO "technologies" VALUES ('TRA_NAV_DOM_LNG_N','p','TRA','Transport - Domestic Navigation - LNG - New','');
 INSERT INTO "technologies" VALUES ('TRA_NAV_DOM_DUAL_N','p','TRA','Transport - Domestic Navigation - Dual fuel - New','');
@@ -1954,7 +1953,6 @@ INSERT INTO "tech_annual" VALUES ('TRA_RAIL_FRG_DST_N','');
 INSERT INTO "tech_annual" VALUES ('TRA_RAIL_FRG_ELC_N','');
 INSERT INTO "tech_annual" VALUES ('TRA_RAIL_FRG_GH2_N','');
 INSERT INTO "tech_annual" VALUES ('TRA_NAV_DOM_DST_N','');
---INSERT INTO "tech_annual" VALUES ('TRA_NAV_DOM_GSL_N','');
 INSERT INTO "tech_annual" VALUES ('TRA_NAV_DOM_HFO_N','');
 INSERT INTO "tech_annual" VALUES ('TRA_NAV_DOM_LNG_N','');
 --INSERT INTO "tech_annual" VALUES ('TRA_NAV_DOM_AMM_N','');
@@ -4187,7 +4185,6 @@ INSERT INTO "tech_groups" VALUES ('TRA_RAIL_PAS_ELC_E','');
 INSERT INTO "tech_groups" VALUES ('TRA_RAIL_PAS_ELC_N','');
 --INSERT INTO "tech_groups" VALUES ('TRA_NAV_DOM_DST_E','');
 --INSERT INTO "tech_groups" VALUES ('TRA_NAV_DOM_DST_N','');
-----INSERT INTO "tech_groups" VALUES ('TRA_NAV_DOM_GSL_N','');
 --INSERT INTO "tech_groups" VALUES ('TRA_NAV_DOM_HFO_N','');
 --INSERT INTO "tech_groups" VALUES ('TRA_NAV_DOM_HFO_E','');
 --INSERT INTO "tech_groups" VALUES ('TRA_NAV_INT_DST_E','');
@@ -6682,45 +6679,12 @@ CREATE TABLE "LifetimeTech" (
 	FOREIGN KEY("tech") REFERENCES "technologies"("tech")
 );
 -- Upstream sector
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_BCO',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_BCO',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HCO',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_HCO',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HOIL_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HOIL_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HOIL_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_HOIL_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_HOIL_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_HOIL_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_HOIL_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_HOIL_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_HOIL_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HSAN_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HSAN_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_HSAN_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_REC_HSAN_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_REC_HSAN_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_REC_HSAN_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_NGA_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_NGA_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_LOC_NGA_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_NGA_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_NGA_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_GRO_NGA_3',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_NGA_1',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_NGA_2',55,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_DIS_NGA_3',55,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_L2G_ON',50,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_L2G_OFF',50,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_HET_GAS_NGA',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_HET_OIL_RPP',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_HET_OIL_RPG',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_COA_OVC',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_GAS_TWN',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_GAS_BFG',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_REF_FDS',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_LIQ',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_TRA',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_SEC_REF_FLX',35,'');
 
 ---- Generation 1 biofuels
@@ -6785,23 +6749,7 @@ INSERT INTO "LifetimeTech" VALUES ('EU','SEQ_REM_AFF_N',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','SEQ_REM_CO2_BKS_N',10,'');
 -- Electricity sector
 -- Fuel technologies
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_OIL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_BGS',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_CRP',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_MUN',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_HYD',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_GEO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_SOL_PV',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_SOL_TH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_SOL_CSP',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_H2',20,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_WAV',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_TDL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_WIN_OFF',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','ELC_FT_WIN_ON',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_OIL_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_NGA_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_COA_E',30,'');
@@ -6888,23 +6836,7 @@ INSERT INTO "LifetimeTech" VALUES ('EU','ELC_BIO_COM_CCS_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_STG_CEN_BTT_N',15,'10.25984/1871952');
 INSERT INTO "LifetimeTech" VALUES ('EU','ELC_STG_DST_BTT_N',15,'10.25984/1871952');
 -- Agriculture sector
----- Fuel technologies
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_DST',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_GSL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_HFO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_KER',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_GEO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_SOL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_FT_HET',110,'');
-
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_MAC_E',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_APP_E',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','AGR_DEM_TECH_E',110,'');
+-- Fuel technologies
 INSERT INTO "LifetimeTech" VALUES ('EU','AGR_LTH_NGA_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','AGR_LTH_DST_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','AGR_LTH_HFO_E',25,'');
@@ -6927,19 +6859,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','AGR_LTH_SOL_N',20,'');
 
 -- Residential sector
 -- Base year technologies
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_DST',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_HFO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_KER',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_BIO_PLT',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_GEO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_SOL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','RES_FT_HET',110,'');
-
 INSERT INTO "LifetimeTech" VALUES ('EU','RES_SH_NGA_BUR_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','RES_SH_NGA_HP_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','RES_SH_DST_E',25,'');
@@ -7077,18 +6996,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','RES_SC_GEO_HP_IMP_N',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','RES_OE_ELC_N',25,'');
 -- Commercial sector
 -- Fuel technologies
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_DST',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_HFO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_KER',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_BIO_PLT',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_GEO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_SOL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','COM_FT_HET',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','COM_SH_NGA_BUR_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','COM_SH_NGA_HP_E',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','COM_SH_DST_E',25,'');
@@ -7235,16 +7142,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','TRA_ROA_MCY_GSL_E',15,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_ROA_MOP_GSL_E',15,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_ROA_3WH_GSL_E',15,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_AMM_IND',25,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_DST',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_GSL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_HFO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_JTK',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_LNG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_MTH',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_MET_IND',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_H2G',20,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_FT_H2L',20,'');
@@ -7308,7 +7205,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','TRA_RAIL_FRG_DST_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_RAIL_FRG_ELC_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_RAIL_FRG_GH2_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_DOM_DST_N',30,'');
---INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_DOM_GSL_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_DOM_HFO_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_DOM_LNG_N',30,'');
 --INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_DOM_AMM_N',30,'');
@@ -7324,32 +7220,8 @@ INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_INT_H2L_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','TRA_NAV_INT_AMM_FCE_N',30,'');
 
 -- Industry sector
----- Base year technologies
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_COK',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_COG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_BFG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_HFO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_OIL',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_ETH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_NAP',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_PTC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_BGS',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_BIO_ETH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_GEO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_HET',110,'');
+-- Base year technologies
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_FT_H2',20,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_DIS_ELC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_SUP_WOD',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_IMP_WOD',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_SUP_RCP',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_SUP_BFS',110,'');
-
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OLF_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_BTX_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_AMM_E',30,'');
@@ -7358,17 +7230,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_CHL_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OCH_E',110,'');
 --INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OCH_N',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_EC_E',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_BIO',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_BIO_ETH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_COA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_DST',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_ETH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_MTH',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_NGA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_LNG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_LPG',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_NAP',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_FS_HFO',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_FS_NGA_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_FS_LPG_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_FS_LNG_E',35,'');
@@ -7386,27 +7247,23 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OTH_HFO_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OTH_NAP_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OTH_ELC_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_OTH_LPG_E',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_BOF_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_DRI_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_SCR_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_FEA_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_EC_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_EC_N',30,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_ALU_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_COP_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_ZNC_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_AMN_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_EC_E',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_CLK_DRY_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_CLK_WET_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_LIM_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_GLS_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_CRM_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_EC_E',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_PUL_CHEM_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_PUL_MEC_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_PUL_RCP_E',30,'');
@@ -7421,13 +7278,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_EC_E',15,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_DH_OIL_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_DH_NGA_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_DH_LPG_E',35,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_STM_HET',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_STM_HET',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_STM_HET',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_STM_HET',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_STM_HET',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_HET_IND_REC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_HET_OUT_REC',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_MD_ELC_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_IS_MD_OIL_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NF_MD_ELC_E',30,'');
@@ -7437,7 +7287,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_MD_OIL_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_MD_ELC_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_MD_OIL_E',30,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_PP_MD_ELC_E',30,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_TECH_E',110,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_SB_HFO_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_SB_OIL_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_SB_NGA_E',35,'');
@@ -7464,8 +7313,6 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_OTH_GEO_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_OTH_BIO_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_OTH_LTH_E',35,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_OTH_EC_ELC_E',35,'');
---INSERT INTO "LifetimeTech" VALUES ('EU','IND_NSP_TECH_E',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','IND_NEU_TECH_E',110,'');
 ---- New technologies
 ---- Chemicals
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_CH_HVC_NAPSC_N',30,'');
@@ -7656,49 +7503,11 @@ INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_CLK_DRY_PCCS_N_LINKED',25,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','IND_NM_CLK_DRY_OCCS_N_LINKED',25,'');
 
 -- Import/Export
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_BIO_EMHV_GLB',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_BIO_ETH_GLB',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_BIO_WOD_GLB',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_ELC_AFR',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_ELC_OEE',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_ELC_RUS',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_ELC_MEA',10,'');
 INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_ELC_CAC',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_USA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_CAN',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_MEX',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_OLA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_BRA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_RUS',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_MEA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_AFR',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_CHI',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_JPN',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_ODA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_OIL_FEE',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_EXP_OIL',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_PIP_AFR',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_PIP_RUS',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_PIP_CAC',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_PIP_MEA',110,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_AFR',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_MEA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_GLB',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_OLA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_USA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_GAS_LNG_RUS',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_EXP_GAS',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_AFR',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_CAC',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_AUS',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_CAN',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_OEE',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_RUS',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_ODA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_USA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_COA_OLA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_EXP_COA',10,'');
-INSERT INTO "LifetimeTech" VALUES ('EU','UPS_IMP_H2_GLB',110,'');
 
 CREATE TABLE "LifetimeProcess" (
 	"regions"	text,
@@ -9274,7 +9083,6 @@ INSERT INTO "Efficiency" VALUES ('EU','ELC_CEN','TRA_FT_H2L',2015,'TRA_H2L',0.77
 -- Transport sector
 -- Base year technologies
 INSERT INTO "Efficiency" VALUES ('EU','TRA_JTK','TRA_AVI_DOM_JTK_E',2005,'TRA_AVI_DOM',4.509E-03*1.08,'');
-INSERT INTO "Efficiency" VALUES ('EU','TRA_JTK','TRA_AVI_DOM_JTK_N',2010,'TRA_AVI_DOM',5.050E-03*1.08,'');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_NAV_INT_DST_E',2005,'TRA_NAV_INT',1.755E-04,'');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_HFO','TRA_NAV_INT_HFO_E',2005,'TRA_NAV_INT',1.755E-04,'');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_NAV_DOM_DST_E',2005,'TRA_NAV_DOM',1.021E-03,'');
@@ -9421,6 +9229,7 @@ INSERT INTO "Efficiency" VALUES ('EU','TRA_GSL','TRA_ROA_3WH_GSL_N',2050,'TRA_RO
 INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_ROA_3WH_DST_N',2050,'TRA_ROA_3WH',1.429E+00,'10.3390/en13143634');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_ELC','TRA_ROA_3WH_ELC_N',2050,'TRA_ROA_3WH',3.815E+00,'10.3390/en13143634');
 
+INSERT INTO "Efficiency" VALUES ('EU','TRA_JTK','TRA_AVI_DOM_JTK_N',2010,'TRA_AVI_DOM',5.050E-03*1.08,'');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_H2L','TRA_AVI_DOM_LH2_N',2040,'TRA_AVI_DOM',1.111E-02,'Assumption');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_RAIL_PAS_DST_N',2010,'TRA_RAIL_PAS',7.457E-03,''); -- ETSAP, "Energy Demand Technologies Data", 2011
 INSERT INTO "Efficiency" VALUES ('EU','TRA_ELC','TRA_RAIL_PAS_ELC_N',2010,'TRA_RAIL_PAS',2.237E-02,''); -- ETSAP, "Energy Demand Technologies Data", 2011
@@ -9429,7 +9238,6 @@ INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_RAIL_FRG_DST_N',2010,'TRA_R
 INSERT INTO "Efficiency" VALUES ('EU','TRA_ELC','TRA_RAIL_FRG_ELC_N',2010,'TRA_RAIL_FRG',2.977E-02,''); -- ETSAP, "Energy Demand Technologies Data", 2011
 INSERT INTO "Efficiency" VALUES ('EU','TRA_H2G','TRA_RAIL_FRG_GH2_N',2030,'TRA_RAIL_FRG',1.985E-02,'Assumption');
 INSERT INTO "Efficiency" VALUES ('EU','TRA_DST','TRA_NAV_DOM_DST_N',2010,'TRA_NAV_DOM',1.531E-03,''); -- ETSAP, "Energy Demand Technologies Data", 2011
---INSERT INTO "Efficiency" VALUES ('EU','TRA_GSL','TRA_NAV_DOM_GSL_N',2010,'TRA_NAV_DOM',1.531E-03,''); -- ETSAP, "Energy Demand Technologies Data", 2011
 INSERT INTO "Efficiency" VALUES ('EU','TRA_HFO','TRA_NAV_DOM_HFO_N',2010,'TRA_NAV_DOM',1.531E-03,''); -- ETSAP, "Energy Demand Technologies Data", 2011
 INSERT INTO "Efficiency" VALUES ('EU','TRA_LNG','TRA_NAV_DOM_LNG_N',2020,'TRA_NAV_DOM',1.531E-03,''); -- ETSAP, "Energy Demand Technologies Data", 2011
 INSERT INTO "Efficiency" VALUES ('EU','TRA_HFO','TRA_NAV_DOM_DUAL_N',2020,'TRA_NAV_DOM',1.531E-03,'Assumption');
@@ -11369,79 +11177,6 @@ CREATE TABLE "CostInvest" (
 );
 
 INSERT INTO "CostInvest" VALUES ('EU','ELC_FT_H2',2020,30.29,'M€/PJ','');
-
-INSERT INTO "CostInvest" VALUES ('EU','UPS_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_FT_ADS_TRU',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_FT_ADS_MA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','H2_FT_NGA',2015,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','H2_FT_COA',2015,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','H2_FT_ETH',2015,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','H2_FT_BIO',2015,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','H2_FT_ELC',2015,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_DST',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_GSL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_HFO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_KER',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_COA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_LPG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_BIO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_GEO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_SOL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','AGR_FT_HET',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_DST',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_HFO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_KER',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_COA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_LPG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_BIO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_BIO_PLT',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_GEO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_SOL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','COM_FT_HET',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_DST',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_HFO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_KER',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_COA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_LPG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_BIO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_BIO_PLT',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_GEO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_SOL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','RES_FT_HET',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_GSL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_DST',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_JTK',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_COA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_HFO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_LPG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_LNG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_FT_MTH',2025,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_NGA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_LPG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_COA',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_COK',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_COG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_BFG',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_HFO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_OIL',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_ETH',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_NAP',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_PTC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_BIO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_BGS',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_BIO_ETH',2030,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_GEO',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_ELC',2010,100,'','');
-INSERT INTO "CostInvest" VALUES ('EU','IND_FT_HET',2010,100,'','');
 INSERT INTO "CostInvest" VALUES ('EU','IND_FT_H2',2015,30.29,'M€/PJ','');
 
 INSERT INTO "CostInvest" VALUES ('EU','ELC_OIL_E',2010,1E6,'',''); -- Required to avoid re-installation of existing capacity
@@ -11675,10 +11410,10 @@ INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_ETHSUG_E',2015,0.2012/0.
 INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_ETHSUG_E',2020,0.1820/0.027,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_ETHSUG_E',2025,0.1653/0.027,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_ETHSUG_E',2030,0.1533/0.027,'M€/PJ','10.5281/zenodo.3544900');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2015,0.25629,'M€/kt','10.5281/zenodo.3544900');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2020,0.24604,'M€/kt','10.5281/zenodo.3544900');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2025,0.20759,'M€/kt','10.5281/zenodo.3544900');
-INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2030,0.18453,'M€/kt','10.5281/zenodo.3544900');
+INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2015,0.25629/0.044,'M€/PJ','10.5281/zenodo.3544900');
+INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2020,0.24604/0.044,'M€/PJ','10.5281/zenodo.3544900');
+INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2025,0.20759/0.044,'M€/PJ','10.5281/zenodo.3544900');
+INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN1_HVO_N',2030,0.18453/0.044,'M€/PJ','10.5281/zenodo.3544900');
 
 ---- Generation 2 biofuels
 INSERT INTO "CostInvest" VALUES ('EU','UPS_BIO_REF_GEN2_LGC_ETH_N',2020,2.8100/0.027,'M€/PJ','10.5281/zenodo.3544900');
@@ -12197,33 +11932,32 @@ INSERT INTO "CostInvest" VALUES ('EU','TRA_ROA_3WH_ELC_N',2020,4140,'M€/Bvkm',
 INSERT INTO "CostInvest" VALUES ('EU','TRA_ROA_3WH_ELC_N',2030,2400,'M€/Bvkm','10.3390/en13143634');
 INSERT INTO "CostInvest" VALUES ('EU','TRA_ROA_3WH_ELC_N',2040,2250,'M€/Bvkm','10.3390/en13143634');
 INSERT INTO "CostInvest" VALUES ('EU','TRA_ROA_3WH_ELC_N',2050,2160,'M€/Bvkm','10.3390/en13143634');
---INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_INT_JTK_N',2010,390.0,'M€/Bpkm','Assumption');
---INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_INT_H2L_N',2050,714.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_DOM_JTK_N',2010,710.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_DOM_LH2_N',2040,1300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_DST_N',2010,300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_ELC_N',2010,300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_GH2_N',2030,800.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_DST_N',2010,300.0,'M€/Bfkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_ELC_N',2010,300.0,'M€/Bfkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_GH2_N',2030,800.0,'M€/Bfkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_DST_N',2010,300.0,'M€/Bpkm','Assumption');
---INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_GSL_N',2010,300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_HFO_N',2010,300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_LNG_N',2020,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_DUAL_N',2020,400.0,'M€/Bpkm','Assumption');
---INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_AMM_N',2030,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_MTH_N',2030,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_LH2_N',2030,800.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_AMM_FCE_N',2030,800.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_DST_N',2010,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_HFO_N',2010,300.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_LNG_N',2020,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_DUAL_N',2020,400.0,'M€/Bpkm','Assumption');
---INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_AMM_N',2030,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_MTH_N',2030,400.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_H2L_N',2030,800.0,'M€/Bpkm','Assumption');
-INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_AMM_FCE_N',2030,800.0,'M€/Bpkm','Assumption');
+--INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_INT_JTK_N',2010,115000,'M€/Bpkm','Assumption');
+--INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_INT_H2L_N',2050,160000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_DOM_JTK_N',2010,92000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_AVI_DOM_LH2_N',2040,120000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_DST_N',2010,24000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_ELC_N',2010,33000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_PAS_GH2_N',2030,50000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_DST_N',2010,23000,'M€/Bfkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_ELC_N',2010,25000,'M€/Bfkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_RAIL_FRG_GH2_N',2030,47000,'M€/Bfkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_DST_N',2010,400000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_HFO_N',2010,400000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_LNG_N',2020,400000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_DUAL_N',2020,500000,'M€/Bpkm','Assumption');
+--INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_AMM_N',2030,500000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_MTH_N',2030,500000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_LH2_N',2030,800000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_DOM_AMM_FCE_N',2030,1000000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_DST_N',2010,1200000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_HFO_N',2010,1200000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_LNG_N',2020,1200000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_DUAL_N',2020,1500000,'M€/Bpkm','Assumption');
+--INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_AMM_N',2030,1500000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_MTH_N',2030,1500000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_H2L_N',2030,2400000,'M€/Bpkm','Assumption');
+INSERT INTO "CostInvest" VALUES ('EU','TRA_NAV_INT_AMM_FCE_N',2030,3000000,'M€/Bpkm','Assumption');
 
 -- Industrial sector
 ---- Fuel technologies
@@ -12416,97 +12150,8 @@ CREATE TABLE "CostFixed" (
 	FOREIGN KEY("vintage") REFERENCES "time_periods"("t_periods"),
 	FOREIGN KEY("periods") REFERENCES "time_periods"("t_periods")
 );
-INSERT INTO "CostFixed" VALUES ('EU',2010,'UPS_FT_NGA',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'UPS_FT_ELC',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'UPS_FT_ADS_TRU',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'UPS_FT_ADS_MA',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'H2_FT_NGA',2015,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'H2_FT_COA',2015,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'H2_FT_ETH',2015,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'H2_FT_BIO',2015,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'H2_FT_ELC',2015,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_NGA',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_OIL',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_COA',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_BIO',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_BGS',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_CRP',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_MUN',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_HYD',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_GEO',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_SOL_PV',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_SOL_TH',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_SOL_CSP',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_WAV',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_TDL',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_WIN_ON',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_WIN_OFF',2010,10,'','');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'ELC_FT_HH2',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_NGA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_DST',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_GSL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_HFO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_KER',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_COA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_LPG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_BIO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_GEO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_SOL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_ELC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'AGR_FT_HET',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_NGA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_DST',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_HFO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_KER',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_COA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_LPG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_BIO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_BIO_PLT',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_GEO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_SOL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_ELC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'COM_FT_HET',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_NGA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_DST',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_HFO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_KER',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_COA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_LPG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_BIO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_BIO_PLT',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_GEO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_SOL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_ELC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'RES_FT_HET',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_GSL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_DST',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_JTK',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_COA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_ELC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_HFO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_LPG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'TRA_FT_NGA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_FT_LNG',2010,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2025,'TRA_FT_MTH',2025,10,'','');
 INSERT INTO "CostFixed" VALUES ('EU',2015,'TRA_FT_H2G',2015,3.25,'M€/PJ','');
 INSERT INTO "CostFixed" VALUES ('EU',2015,'TRA_FT_H2L',2015,2.98,'M€/PJ','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_NGA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_LPG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_COA',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_COK',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_COG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_BFG',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_HFO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_OIL',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_ETH',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_NAP',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_PTC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_BIO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_BGS',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'IND_FT_BIO_ETH',2030,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_GEO',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_ELC',2005,10,'','');
-INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_FT_HET',2005,10,'','');
 INSERT INTO "CostFixed" VALUES ('EU',2015,'IND_FT_H2',2015,1.57,'M€/PJ','');
 INSERT INTO "CostFixed" VALUES ('EU',2020,'ELC_FT_H2',2020,1.57,'M€/PJ','');
 
@@ -12516,7 +12161,7 @@ INSERT INTO "CostFixed" VALUES ('EU',2010,'UPS_BIO_REF_GEN1_CRUSHING_E',2010,0.0
 INSERT INTO "CostFixed" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_TRANSESTER_E',2005,0.0168/0.0385,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostFixed" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_ETHAMIDE_E',2005,0.1224/0.027,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostFixed" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_ETHSUG_E',2005,0.04801/0.027,'M€/PJ','10.5281/zenodo.3544900');
-INSERT INTO "CostFixed" VALUES ('EU',2015,'UPS_BIO_REF_GEN1_HVO_N',2015,0.053562,'M€/kt','10.5281/zenodo.3544900');
+INSERT INTO "CostFixed" VALUES ('EU',2015,'UPS_BIO_REF_GEN1_HVO_N',2015,0.053562/0.044,'M€/PJ','10.5281/zenodo.3544900');
 
 ---- Generation 2 biofuels
 INSERT INTO "CostFixed" VALUES ('EU',2020,'UPS_BIO_REF_GEN2_LGC_ETH_N',2020,0.2025/0.027,'M€/PJ','10.5281/zenodo.3544900');
@@ -13079,33 +12724,32 @@ INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_ROA_2WH_ELC_N',2020,51.33,'M€/B
 INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_ROA_3WH_GSL_N',2010,62.63,'M€/Bvkm','10.3390/en13143634');
 INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_ROA_3WH_DST_N',2010,62.63,'M€/Bvkm','10.3390/en13143634');
 INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_ROA_3WH_ELC_N',2020,51.33,'M€/Bvkm','10.3390/en13143634');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_AVI_INT_JTK_N',2010,390.0*0.02,'M€/Bvkm','Assumption');
---INSERT INTO "CostFixed" VALUES ('EU',2050,'TRA_AVI_INT_H2L_N',2050,714.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_AVI_DOM_JTK_N',2010,710.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2040,'TRA_AVI_DOM_LH2_N',2040,1300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_PAS_DST_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_PAS_ELC_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_RAIL_PAS_GH2_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_FRG_DST_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_FRG_ELC_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_RAIL_FRG_GH2_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_DOM_DST_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
---INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_DOM_GSL_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_DOM_HFO_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_DOM_LNG_N',2020,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_DOM_DUAL_N',2020,400.0*0.02,'M€/Bvkm','Assumption');
---INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_AMM_N',2030,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_MTH_N',2030,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_LH2_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_AMM_FCE_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_INT_DST_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_INT_HFO_N',2010,300.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_INT_LNG_N',2020,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_INT_DUAL_N',2020,400.0*0.02,'M€/Bvkm','Assumption');
---INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_AMM_N',2030,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_MTH_N',2030,400.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_H2L_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
-INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_AMM_FCE_N',2030,800.0*0.02,'M€/Bvkm','Assumption');
+--INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_AVI_INT_JTK_N',2010,115000*0.02,'M€/Bvkm','Assumption');
+--INSERT INTO "CostFixed" VALUES ('EU',2050,'TRA_AVI_INT_H2L_N',2050,160000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_AVI_DOM_JTK_N',2010,92000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2040,'TRA_AVI_DOM_LH2_N',2040,120000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_PAS_DST_N',2010,24000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_PAS_ELC_N',2010,33000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_RAIL_PAS_GH2_N',2030,50000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_FRG_DST_N',2010,23000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_RAIL_FRG_ELC_N',2010,25000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_RAIL_FRG_GH2_N',2030,47000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_DOM_DST_N',2010,400000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_DOM_HFO_N',2010,400000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_DOM_LNG_N',2020,400000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_DOM_DUAL_N',2020,500000*0.02,'M€/Bvkm','Assumption');
+--INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_AMM_N',2030,500000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_MTH_N',2030,500000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_LH2_N',2030,800000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_DOM_AMM_FCE_N',2030,1000000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_INT_DST_N',2010,1200000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2010,'TRA_NAV_INT_HFO_N',2010,1200000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_INT_LNG_N',2020,1200000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2020,'TRA_NAV_INT_DUAL_N',2020,1500000*0.02,'M€/Bvkm','Assumption');
+--INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_AMM_N',2030,1500000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_MTH_N',2030,1500000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_H2L_N',2030,2400000*0.02,'M€/Bvkm','Assumption');
+INSERT INTO "CostFixed" VALUES ('EU',2030,'TRA_NAV_INT_AMM_FCE_N',2030,3000000*0.02,'M€/Bvkm','Assumption');
 -- Industrial sector
 INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_CH_OLF_E',2005,70.0,'M€/PJ','');
 INSERT INTO "CostFixed" VALUES ('EU',2005,'IND_CH_BTX_E',2005,70.0,'M€/PJ','');
@@ -13519,7 +13163,7 @@ INSERT INTO "CostVariable" VALUES ('EU',2025,'UPS_IMP_COA_ODA',2025,3.19+1.39,'M
 INSERT INTO "CostVariable" VALUES ('EU',2025,'UPS_IMP_COA_USA',2025,3.19+0.61,'M€/PJ',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 INSERT INTO "CostVariable" VALUES ('EU',2025,'UPS_IMP_COA_OLA',2025,3.19+0.61,'M€/PJ',''); -- World Bank data - Update April 2024 + transport cost as in EUROfusion WPSES, EUROfusion TIMES Model, 2023
 
-INSERT INTO "CostVariable" VALUES ('EU',2025,'UPS_IMP_H2_GLB',2025,41.7,'M€/PJ',''); -- 5 €/kg https://www.hydrogeninsight.com/production/green-hydrogen-made-in-germany-will-be-cheaper-than-shipped-imports-in-2030-study/2-1-1477657
+INSERT INTO "CostVariable" VALUES ('EU',2025,'UPS_IMP_H2_GLB',2025,41.7,'M€/PJ',''); -- 5.00 €/kg https://www.hydrogeninsight.com/production/green-hydrogen-made-in-germany-will-be-cheaper-than-shipped-imports-in-2030-study/2-1-1477657
 INSERT INTO "CostVariable" VALUES ('EU',2050,'UPS_IMP_H2_GLB',2050,13.9,'M€/PJ',''); -- 1.67 €/kg https://www.hydrogeninsight.com/production/green-hydrogen-made-in-germany-will-be-cheaper-than-shipped-imports-in-2030-study/2-1-1477657
 
 -- Upstream sector
@@ -13666,7 +13310,7 @@ INSERT INTO "CostVariable" VALUES ('EU',2010,'UPS_BIO_REF_GEN1_CRUSHING_E',2010,
 INSERT INTO "CostVariable" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_TRANSESTER_E',2005,0.0029/0.0385,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostVariable" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_ETHAMIDE_E',2005,0.0097/0.027,'M€/PJ','10.5281/zenodo.3544900');
 INSERT INTO "CostVariable" VALUES ('EU',2005,'UPS_BIO_REF_GEN1_ETHSUG_E',2005,0.00975/0.027,'M€/PJ','10.5281/zenodo.3544900');
-INSERT INTO "CostVariable" VALUES ('EU',2015,'UPS_BIO_REF_GEN1_HVO_N',2015,0.00240,'M€/kt','10.5281/zenodo.3544900');
+INSERT INTO "CostVariable" VALUES ('EU',2015,'UPS_BIO_REF_GEN1_HVO_N',2015,0.00240/0.044,'M€/PJ','10.5281/zenodo.3544900');
 
 ---- Generation 2 biofuels
 INSERT INTO "CostVariable" VALUES ('EU',2020,'UPS_BIO_REF_GEN2_LGC_ETH_N',2020,0.0114/0.027,'M€/PJ','10.5281/zenodo.3544900');
@@ -14933,30 +14577,32 @@ INSERT INTO "DiscountRate" VALUES ('EU','TRA_ROA_MTR_ELC_N',2020,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_ROA_MTR_FCELL_N',2025,0.060,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_ROA_2WH_ELC_N',2020,0.240,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_ROA_3WH_ELC_N',2020,0.240,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_DST_N',2010,0.042,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_ELC_N',2010,0.240,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_GH2_N',2030,0.320,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_DST_N',2010,0.042,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_ELC_N',2010,0.240,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_GH2_N',2030,0.320,'');
---INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_INT_JTK_N',2010,0.15,'');
+--INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_INT_JTK_N',2010,0.060,'');
+--INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_INT_H2L_N',2050,0.100,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_DOM_JTK_N',2010,0.060,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_DOM_LH2_N',2040,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_DST_N',2010,0.042,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_ELC_N',2010,0.042,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_PAS_GH2_N',2030,0.010,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_DST_N',2010,0.042,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_ELC_N',2010,0.042,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_RAIL_FRG_GH2_N',2030,0.010,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_DST_N',2010,0.058,'');
---INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_GSL_N',2010,0.15,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_HFO_N',2010,0.058,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_LNG_N',2020,0.058,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_DUAL_N',2020,0.058,'');
+--INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_AMM_N',2030,0.10,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_MTH_N',2030,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_LH2_N',2030,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_AMM_FCE_N',2030,0.100,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_DST_N',2010,0.058,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_HFO_N',2010,0.058,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_LNG_N',2020,0.058,'');
---INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_INT_H2L_N',2050,0.10,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_AVI_DOM_LH2_N',2040,0.320,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_DUAL_N',2020,0.058,'');
---INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_AMM_N',2030,0.10,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_LH2_N',2030,0.320,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_DOM_AMM_FCE_N',2030,0.320,'');
---INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_AMM_N',2030,0.10,'');
 INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_DUAL_N',2020,0.058,'');
-INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_H2L_N',2030,0.320,'');
+--INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_AMM_N',2030,0.10,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_MTH_N',2030,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_H2L_N',2030,0.100,'');
+INSERT INTO "DiscountRate" VALUES ('EU','TRA_NAV_INT_AMM_FCE_N',2030,0.100,'');
 
 --INSERT INTO "DiscountRate" VALUES ('EU','COM_LG_INC_S_STD_N',2010,0.50,'');
 --INSERT INTO "DiscountRate" VALUES ('EU','COM_LG_HAL_S_STD_N',2010,0.50,'');
@@ -16394,9 +16040,9 @@ CREATE TABLE "EmissionLimit" (
 --INSERT INTO "EmissionLimit" VALUES ('EU',2010,'GWP_100',5.09E+06,'kt','ttps://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)');
 --INSERT INTO "EmissionLimit" VALUES ('EU',2015,'GWP_100',4.70E+06,'kt','ttps://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)');
 --INSERT INTO "EmissionLimit" VALUES ('EU',2020,'GWP_100',4.15E+06,'kt','ttps://data.oecd.org/air/air-and-ghg-emissions.htm (Including non-energy activities)');
-INSERT INTO "EmissionLimit" VALUES ('EU',2030,'GWP_100',4.20E+06*(1-0.550) + 160000,'kt','Fit for 55 target (- 55% wrt 1990 levels) + Bunkers');
-INSERT INTO "EmissionLimit" VALUES ('EU',2040,'GWP_100',4.20E+06*(1-0.900) + 140000,'kt','Assumption + Bunkers');
-INSERT INTO "EmissionLimit" VALUES ('EU',2050,'GWP_100',4.20E+06*(1-1) + 10000,'kt','Net-zero emissions + Bunkers');
+--INSERT INTO "EmissionLimit" VALUES ('EU',2030,'GWP_100',4.20E+06*(1-0.550) + 160000,'kt','Fit for 55 target (- 55% wrt 1990 levels) + Bunkers');
+--INSERT INTO "EmissionLimit" VALUES ('EU',2040,'GWP_100',4.20E+06*(1-0.900) + 140000,'kt','Assumption + Bunkers');
+--INSERT INTO "EmissionLimit" VALUES ('EU',2050,'GWP_100',4.20E+06*(1-1) + 10000,'kt','Net-zero emissions + Bunkers');
 
 CREATE TABLE "EmissionActivity" (
 	"regions"	text,
