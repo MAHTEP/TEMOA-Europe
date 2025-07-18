@@ -1,8 +1,12 @@
 BEGIN TRANSACTION;
+
+--DELETE FROM "ExistingCapacity" WHERE "vintage" IN (2005);
+
 DELETE FROM "CapacityCredit" WHERE "vintage" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CapacityCredit" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CapacityFactor" WHERE "vintage" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CapacityFactorProcess" WHERE "vintage" IN (2015, 2025, 2035, 2045);
+DELETE FROM "CostEmission" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CostFixed" WHERE "vintage" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CostFixed" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "CostInvest" WHERE "vintage" IN (2015, 2025, 2035, 2045);
@@ -33,4 +37,5 @@ DELETE FROM "MinOutputGroup" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "TechInputSplit" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "TechOutputSplit" WHERE "periods" IN (2015, 2025, 2035, 2045);
 DELETE FROM "TechnologyMaterialSupplyRisk" WHERE "vintage" IN (2015, 2025, 2035, 2045);
+
 DELETE FROM "time_periods" WHERE "t_periods" IN (2015, 2025, 2035, 2045);
