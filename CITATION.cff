@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+title: TEMOA-Europe
+message: >-
+  If you use TEMOA-Europe in your work, please cite the article
+  listed under "preferred-citation" below.
+type: software
+authors:
+  - given-names: Daniele
+    family-names: Lerede
+    affiliation: Politecnico di Torino
+  - given-names: Valeria
+    family-names: Di Cosmo
+    affiliation: Università di Torino
+  - given-names: Laura
+    family-names: Savoldi
+    affiliation: Politecnico di Torino
+  - given-names: Matteo
+    family-names: Nicoli
+    email: matteo.nicoli@polito.it
+    affiliation: Politecnico di Torino
+  - name: MAHTEP Group, Politecnico di Torino
+    website: 'http://www.mahtep.polito.it/'
+abstract: >-
+  A single-region (OECD Europe) model instance for the optimization of the
+  European energy system up to 2050, developed within an extended version of
+  the TEMOA (Tools for Energy Modeling Optimization and Analysis) modeling
+  framework, in an open-source and open-data environment.
+repository-code: 'https://github.com/MAHTEP/TEMOA-Europe'
+url: 'http://www.mahtep.polito.it/'
+license: AGPL-3.0-or-later
+keywords:
+  - energy system optimization
+  - energy planning
+  - TEMOA
+  - Europe
+  - European Green Deal
+  - net-zero emissions by 2050
+  - open source
+preferred-citation:
+  type: article
+  title: >-
+    TEMOA-europe: An open-source and open-data energy system optimization
+    model for the analysis of the European energy mix
+  authors:
+    - given-names: Daniele
+      family-names: Lerede
+    - given-names: Valeria
+      family-names: Di Cosmo
+    - given-names: Laura
+      family-names: Savoldi
+  journal: Energy
+  volume: 308
+  number: 132850
+  year: 2024
+  month: 11
+  issn: 0360-5442
+  publisher:
+    name: Elsevier
+  doi: 10.1016/j.energy.2024.132850
