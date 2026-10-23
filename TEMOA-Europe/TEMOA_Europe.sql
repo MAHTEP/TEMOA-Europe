@@ -19,7 +19,7 @@ CREATE TABLE commodity (
     description TEXT,
     units       TEXT
 );
-INSERT INTO "commodity" VALUES('DMY_OUT','d','Dummy output commodity','DMY_OUT');
+INSERT INTO "commodity" VALUES('DMY_OUT','wa','Dummy output commodity','DMY_OUT');
 INSERT INTO "commodity" VALUES('ethos','s','Dummy generation commodity','ethos');
 INSERT INTO "commodity" VALUES('BIO_GRS','a','Grass crops','PJ');
 INSERT INTO "commodity" VALUES('BIO_STC','a','Starch crops','PJ');
@@ -44,14 +44,14 @@ INSERT INTO "commodity" VALUES('COA_BCO_MIN','a','Brown coal (ground)','PJ');
 INSERT INTO "commodity" VALUES('COA_HCO','a','Hard coal','PJ');
 INSERT INTO "commodity" VALUES('COA_HCO_MIN','a','Hard coal (ground)','PJ');
 INSERT INTO "commodity" VALUES('COA_OVC','a','Coke oven coke','PJ');
-INSERT INTO "commodity" VALUES('GAS_BFG','a','Blast furnace gas','PJ');
+INSERT INTO "commodity" VALUES('GAS_BFG','wa','Blast furnace gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_COG','a','Coke oven gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_ETH','a','Ethane','PJ');
 INSERT INTO "commodity" VALUES('GAS_GWG','a','Gas works gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_LNG','a','Liquified natural gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_NGA','a','Natural gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_NGA_MIN','a','Natural gas (ground)','PJ');
-INSERT INTO "commodity" VALUES('GAS_OXY','a','Oxygen steel furnace gas','PJ');
+INSERT INTO "commodity" VALUES('GAS_OXY','wa','Oxygen steel furnace gas','PJ');
 INSERT INTO "commodity" VALUES('GAS_RFG','a','Refinery gas','PJ');
 INSERT INTO "commodity" VALUES('GEO','a','Geothermal energy','PJ');
 INSERT INTO "commodity" VALUES('HYD','a','Hydro energy','PJ');
@@ -135,14 +135,14 @@ INSERT INTO "commodity" VALUES('UPS_REP_HLW_ABWR_TRU','a','HLW from PYRO reproce
 INSERT INTO "commodity" VALUES('UPS_REP_HLW_ABWR_UTR','a','HLW from PYRO reprocessing of spent fuel from ABWR (Uranium + TRU)','t');
 INSERT INTO "commodity" VALUES('UPS_REP_HLW_ADS_TRU','a','HLW from PYRO reprocessing of spent fuel from ADS (TRU)','t');
 INSERT INTO "commodity" VALUES('UPS_REP_HLW_ADS_MA','a','HLW from PYRO reprocessing of spent fuel from ADS (MA)','t');
-INSERT INTO "commodity" VALUES('UPS_URA_HLW','a','Uranium component of HLW','t');
-INSERT INTO "commodity" VALUES('UPS_PU_HLW','a','Plutonium component of HLW','t');
-INSERT INTO "commodity" VALUES('UPS_MA_HLW','a','MA component of HLW','t');
-INSERT INTO "commodity" VALUES('UPS_FP_HLW','a','FP component of HLW','t');
-INSERT INTO "commodity" VALUES('UPS_URA_SPENT','a','Uranium component of spent fuel','t');
-INSERT INTO "commodity" VALUES('UPS_PU_SPENT','a','Plutonium component of spent fuel','t');
-INSERT INTO "commodity" VALUES('UPS_MA_SPENT','a','MA component of spent fuel','t');
-INSERT INTO "commodity" VALUES('UPS_FP_SPENT','a','FP component of spent fuel','t');
+INSERT INTO "commodity" VALUES('UPS_URA_HLW','wa','Uranium component of HLW','t');
+INSERT INTO "commodity" VALUES('UPS_PU_HLW','wa','Plutonium component of HLW','t');
+INSERT INTO "commodity" VALUES('UPS_MA_HLW','wa','MA component of HLW','t');
+INSERT INTO "commodity" VALUES('UPS_FP_HLW','wa','FP component of HLW','t');
+INSERT INTO "commodity" VALUES('UPS_URA_SPENT','wa','Uranium component of spent fuel','t');
+INSERT INTO "commodity" VALUES('UPS_PU_SPENT','wa','Plutonium component of spent fuel','t');
+INSERT INTO "commodity" VALUES('UPS_MA_SPENT','wa','MA component of spent fuel','t');
+INSERT INTO "commodity" VALUES('UPS_FP_SPENT','wa','FP component of spent fuel','t');
 INSERT INTO "commodity" VALUES('UPS_MA','a','MA for ADS fuel production','t');
 INSERT INTO "commodity" VALUES('UPS_PU_FR','a','Plutonium for FR MOX fuel production','t');
 INSERT INTO "commodity" VALUES('UPS_PU_LWR','a','Plutonium for LWR MOX fuel production','t');
@@ -326,7 +326,7 @@ INSERT INTO "commodity" VALUES('IND_ETH','a','Ethane','PJ');
 INSERT INTO "commodity" VALUES('IND_GEO','a','Geothermal','PJ');
 INSERT INTO "commodity" VALUES('IND_HET','a','Heat','PJ');
 INSERT INTO "commodity" VALUES('IND_HFO','a','Heavy fuel oil','PJ');
-INSERT INTO "commodity" VALUES('IND_H2','a','Hydrogen','PJ');
+INSERT INTO "commodity" VALUES('IND_H2','wa','Hydrogen','PJ');
 INSERT INTO "commodity" VALUES('IND_H2_EL','a','Hydrogen from electrolysis','PJ');
 INSERT INTO "commodity" VALUES('IND_LPG','a','Liquified petroleum gas','PJ');
 INSERT INTO "commodity" VALUES('IND_NAP','a','Naphtha','PJ');
@@ -503,7 +503,6 @@ INSERT INTO "allocation" VALUES('IND_NF','PISNF','');
 INSERT INTO "allocation" VALUES('IND_NM','POEI','');
 INSERT INTO "allocation" VALUES('IND_OTH','POEI','');
 INSERT INTO "allocation" VALUES('IND_NEU','GDP','');
-INSERT INTO "allocation" VALUES('DMY_OUT','GDP','');
 
 CREATE TABLE sector_label (
     sector TEXT PRIMARY KEY,
@@ -789,7 +788,6 @@ INSERT INTO "technology" VALUES('SEQ_REM_MIN_N','p','CCUS','',NULL,0,1,0,0,0,0,0
 INSERT INTO "technology" VALUES('SEQ_REM_AFF_N','p','CCUS','',NULL,0,1,0,0,0,0,0,0,'Sequestration - Removal - Afforestation - New');
 INSERT INTO "technology" VALUES('SEQ_SNK_CO2_BKS_N','p','CCUS','',NULL,0,1,0,0,0,0,0,0,'Sequestration - Sink Pot - CO2 Backstop technology');
 INSERT INTO "technology" VALUES('SEQ_REM_CO2_BKS_N','p','CCUS','',NULL,0,1,0,0,0,0,0,0,'Sequestration - Removal - CO2 Backstop technology');
-INSERT INTO "technology" VALUES('DMY_OUT_TECH','p','UPS','',NULL,0,1,0,0,0,0,0,0,'Dummy demand technology to produce DMY_OUT');
 INSERT INTO "technology" VALUES('ELC_FT_NGA','p','ELC','',NULL,0,1,0,0,0,0,0,0,'Electricity - Fuel technology - Natural gas');
 INSERT INTO "technology" VALUES('ELC_FT_OIL','p','ELC','',NULL,0,1,0,0,0,0,0,0,'Electricity - Fuel technology - Oil');
 INSERT INTO "technology" VALUES('ELC_FT_COA','p','ELC','',NULL,0,1,0,0,0,0,0,0,'Electricity - Fuel technology - Coal');
@@ -5043,7 +5041,6 @@ INSERT INTO "demand" VALUES('EU',2005,'IND_NF',15.5,'Mt','10.1016/j.fusengdes.20
 INSERT INTO "demand" VALUES('EU',2005,'IND_NM',509.4,'Mt','10.1016/j.fusengdes.2024.114679');
 INSERT INTO "demand" VALUES('EU',2005,'IND_OTH',4249.8,'PJ','10.1016/j.fusengdes.2024.114679');
 INSERT INTO "demand" VALUES('EU',2005,'IND_NEU',1247.8,'PJ','10.1016/j.fusengdes.2024.114679');
-INSERT INTO "demand" VALUES('EU',2005,'DMY_OUT',1E9,'DMY_OUT','');
 
 CREATE TABLE demand_specific_distribution (
     region      TEXT,
@@ -8315,45 +8312,6 @@ INSERT INTO "efficiency" VALUES('EU','IND_OTH_ELC','IND_OTH_OTH_GEO_N',2050,'IND
 INSERT INTO "efficiency" VALUES('EU','IND_LPG','IND_OTH_OTH_LPG_N',2050,'IND_OTH_OTH',0.98,'PJ/(PJ)','10.1016/j.fusengdes.2024.114679');
 INSERT INTO "efficiency" VALUES('EU','IND_BIO','IND_OTH_OTH_BIO_N',2050,'IND_OTH_OTH',0.84,'PJ/(PJ)','10.1016/j.fusengdes.2024.114679');
 INSERT INTO "efficiency" VALUES('EU','IND_OTH_ELC','IND_OTH_EC_ELC_N',2050,'IND_OTH_EC',1.11,'PJ/(PJ)','10.1016/j.fusengdes.2024.114679');
-INSERT INTO "efficiency" VALUES('EU','ethos','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(ethos)','');
-INSERT INTO "efficiency" VALUES('EU','HET','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_HET','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_ELC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_NAP','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','BIO_NAP','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','ELC_CEN','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','ELC_DST','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','IND_CH_SB_REC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','IND_PP_SB_REC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','IND_IS_SB_REC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','H2','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','IND_H2','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_FP_HLW','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_URA_SPENT','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_PU_SPENT','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_MA_SPENT','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_FP_SPENT','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_URA_HLW','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_PU_HLW','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','UPS_MA_HLW','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','URA_DEP','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(t)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_CRD_PRI','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_CRD','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_DST','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_NSP','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_HFO','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_PTC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_LPG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_LNG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_NCR','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','OIL_ADD','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_NGA','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_RFG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_BFG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_OXY','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','COA_OVC','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','GAS_COG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
-INSERT INTO "efficiency" VALUES('EU','IND_BFG','DMY_OUT_TECH',2010,'DMY_OUT',1.00,'DMY_OUT/(PJ)','');
 INSERT INTO "efficiency" VALUES('EU','ethos','ELC_COA_CCO_IG_CCS_N_LINKED',2030,'SNK_CO2',1.00,'kt/(ethos)','');
 INSERT INTO "efficiency" VALUES('EU','ethos','ELC_COA_CCO_FG_CCS_N_LINKED',2030,'SNK_CO2',1.00,'kt/(ethos)','');
 INSERT INTO "efficiency" VALUES('EU','ethos','ELC_COA_PUL_FG_CCS_N_LINKED',2030,'SNK_CO2',1.00,'kt/(ethos)','');
@@ -9128,15 +9086,6 @@ INSERT INTO "elasticity" VALUES('EU',2035,'IND_NEU',0.413,NULL,NULL);
 INSERT INTO "elasticity" VALUES('EU',2040,'IND_NEU',0.351,NULL,NULL);
 INSERT INTO "elasticity" VALUES('EU',2045,'IND_NEU',0.298,NULL,NULL);
 INSERT INTO "elasticity" VALUES('EU',2050,'IND_NEU',0.254,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2010,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2015,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2020,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2025,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2030,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2035,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2040,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2045,'DMY_OUT',0.000,NULL,NULL);
-INSERT INTO "elasticity" VALUES('EU',2050,'DMY_OUT',0.000,NULL,NULL);
 
 CREATE TABLE emission_activity (
     region      TEXT,
@@ -14123,8 +14072,8 @@ INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2020,'TRA_HFO','TRA_NAV_
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2020,'TRA_AMM','TRA_NAV_DOM_DUAL_N','ge',0.50,'');
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2020,'TRA_HFO','TRA_NAV_INT_DUAL_N','ge',0.50,'');
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2020,'TRA_AMM','TRA_NAV_INT_DUAL_N','ge',0.50,'');
-INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'GAS_BFG','IND_FT_BFG','ge',0.80,'');
-INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'GAS_OXY','IND_FT_BFG','ge',0.20,'');
+INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'GAS_BFG','IND_FT_BFG','ge',0.960,'');
+INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'GAS_OXY','IND_FT_BFG','ge',0.040,'');
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'IND_CH_EC','IND_CH_OLF_E','ge',0.012,'');
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'IND_NGA','IND_CH_OLF_E','ge',0.033,'');
 INSERT INTO "limit_tech_input_split_annual" VALUES('EU',2010,'IND_LPG','IND_CH_OLF_E','ge',0.005,'');
